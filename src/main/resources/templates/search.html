@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="${lang}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Пошук по Великому електронному словнику української мови</title>
+
+    <link rel="stylesheet" href="bootstrap-4.5.3.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png">
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="popper-1.16.1.min.js"></script>
+    <script src="bootstrap-4.5.3.bundle.min.js"></script>
+    <script src="jsrender-1.0.11.min.js"></script>
+</head>
+
+<body>
+
+<!-- Static navbar -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">ВЕСУМ</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <form onSubmit="grammarService.search(); return false;">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="form-row">
+                            <div class="form-inline form-group my-1">
+                                <label class="inputword-lemma-prompt">Слова</label>
+                                <input id="grammarword-word" type="text" placeholder="вводити тут" class="form-control ml-2 w-50" name="wordText">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group form-inline my-1">
+                                <label class="radio-inline">
+                                    <input id="grammarword-firstform" type="radio" name="wordForm" class="form-control mr-2" checked>
+                                    За початковою формою</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group form-inline my-1">
+                                <label class="radio-inline">
+                                    <input id="grammarword-multiform" type="radio" name="wordForm" class="form-control mr-2">
+                                    За всіма формами</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div id="grammar-show-grammardetails" class="form-inline form-group my-1 word-select">
+                                <span id="grammarword-grammar" class="d-none wordgram-grammar-string"></span>
+                                <label>Укласти граматику</label>
+                                <a href="#" id="grammarword-grammarshow" class="form-control wordgram-display ml-2"
+                                   onClick="dialogWordGrammar = DialogWordGrammar.createParadigmTagsDialog(this, document.getElementById('grammarword-multiform').checked); return false;">---</a>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div id="grammar-show-all" class="form-inline form-group my-1" style="display: none">
+                                <label><input id="grammarword-full" type="checkbox" name="wordForm" class="form-control mr-2">
+                                    Шукати по всій базі</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group form-inline my-1">
+                                &nbsp;
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div id="grammar-show-reset" class="form-group form-inline my-1" style="display: none">
+                                <button type="button" class="btn btn-secondary btn-sm form-control"
+                                        onClick="grammarui.resetControls();">Скинути наштування пошуку</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <div id="grammar-show-order" class="form-inline my-1" style="display: none">
+                            Порядок:
+                            <label class="radio-inline pl-2"><input type="radio" id="inputOrderStandard" name="inputOrder" class="form-control mr-2" value="STANDARD" checked> Звичайний</label>
+                            <label class="radio-inline pl-2"><input type="radio" id="inputOrderReverse"  name="inputOrder" class="form-control mr-2" value="REVERSE"> Зворотній</label>
+                        </div>
+                        <div id="grammar-show-forms" class="form-inline my-1 word-select" style="display: none">
+                            <span id="grammarwordshow-grammar" class="d-none wordgram-grammar-string"></span>
+                            <label>Показувати особливу форму: <a href="#" id="grammarwordshow-grammarshow" class="form-control wordgram-display wordgram-display-formsonly ml-2"
+                                                                  onClick="dialogWordGrammar = DialogWordGrammar.createFormOnlyTagsDialog(this, 'grammarword-grammar'); return false;">---</a>
+                            </label>
+                        </div>
+                        <div id="grammar-show-grouping" class="form-inline my-1" style="display: none">
+                            <label class="checkbox-inline"><input type="checkbox" id="inputGrouping" class="form-control mr-2" name="grouping" onChange="grammarui.visibilityChange()"> Групувати</label>
+                        </div>
+                        <div id="grammar-show-noforms" class="form-inline my-1" style="display: none">
+                            Якщо укласти граматику і обрати частину мови, у якій слово може мати декілька форм, можна виводити форму, інакшу від початкової
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-end my-4">
+            <button type="submit" class="btn btn-danger btn-lg">Пошук</button>
+        </div>
+    </form>
+
+    <div id="error" class="alert alert-danger fade show" role="alert"></div>
+    <div id="status" class="alert alert-info fade show" role="alert"></div>
+
+    <div class="row">
+        <div id="output" class="col-md-12"></div>
+    </div>
+    <div class="row">
+        <div id="desc" class="col-md-12">
+            <div class="accordion" id="accordionExample">
+
+                <div class="card2">
+                    <div class="card-header2" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Список скорочень (для граматичних таблиць)
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <br/>
+                            <i>Д</i>. — давальний відмінок<br/>
+                            <i>ж.</i> — жіночий рід<br/>
+                            <i>Зн.</i> — знахідний відмінок<br/>
+                            <i>іст.</i> — істота<br/>
+                            <i>Кл.</i> — кличний відмінок<br/>
+                            <i>мин. час</i> — минулий час<br/>
+                            <i>мн.</i> — множина<br/>
+                            <i>Н.</i> — називний відмінок<br/>
+                            <i>неіст.</i> — неістота<br/>
+                            <i>незм.</i> — незмінювані слова<br/>
+                            <i>одн.</i> — однина<br/>
+                            <i>Ор.</i> — орудний відмінок<br/>
+                            <i>ос.</i> — особа дієслова<br/>
+                            <i>Р.</i> — родовий відмінок<br/>
+                            <i>с.</i> — середній рід<br/>
+                            <i>теп. час</i> — теперішній час<br/>
+                            <i>ч.</i> — чоловічий рід
+<!--                            <i>вищ.</i> — вищий ступінь порівняння<br/>-->
+<!--                            <i>найвищ.</i> — найвищий ступінь порівняння<br/>-->
+<!--                            <i>поз.</i> — позитивний ступень порівняння<br/>-->
+                        </div>
+                    </div>
+                </div>
+
+<!--                <div class="card2">-->
+<!--                    <div class="card-header2" id="headingThree">-->
+<!--                        <h2 class="mb-0">-->
+<!--                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">-->
+<!--                                TODO: Будова Граматычнай базы-->
+<!--                            </button>-->
+<!--                        </h2>-->
+<!--                    </div>-->
+<!--                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">-->
+<!--                        <div class="card-body">-->
+<!--                            <br/>-->
+<!--                            <p>База прадстаўлена ў фармаце XML-файлаў і ўяўляе сабой збор слоў з марфалагічнымі і іншымі паметамі.</p>-->
+<!--                            <p>Кожная лексема аформлена ў асобную парадыгму. Кожная парадыгма змяшчае адзін ці больш варыянтаў, якія могуць адрознівацца правапісам, націскам і г.д. Кожны варыянт змяшчае спіс форм.</p>-->
+<!--                            <p>Атрыбуты парадыгмаў (Paradigm):</p>-->
+<!--                            <ul>-->
+<!--                                <li>pdgId - унікальны ідэнтыфікацыйны нумар парадыгмы;</li>-->
+<!--                                <li>lemma - пачатковая форма асноўнага варыянту;</li>-->
+<!--                                <li>tag - граматычная прыкмета лексемы;</li>-->
+<!--                                <li>meaning - значэнне (неабавязковае поле);</li>-->
+<!--                                <li>govern - кіраванне для дзеяслова (неабавязковае поле - у гэты рэліз не ўваходзіць).</li>-->
+<!--                            </ul>-->
+<!--                            <p>Атрыбуты варыянтаў (Variant):</p>-->
+<!--                            <ul>-->
+<!--                                <li>id - унікальны ідэнтыфікацыйны нумар варыянту;</li>-->
+<!--                                <li>lemma - пачатковая форма варыянту;</li>-->
+<!--                                <li>tag - граматычная прыкмета лексемы;</li>-->
+<!--                                <li>slouniki - крыніцы, дзе фіксуецца слова;</li>-->
+<!--                                <li>pravapis - правапіс;</li>-->
+<!--                                <li>type - тып (nonstandard, potential - у гэты рэліз не ўваходзіць).</li>-->
+<!--                            </ul>-->
+<!--                            <p>Атрыбуты форм (Form):</p>-->
+<!--                            <ul>-->
+<!--                                <li>tag - граматычная прыкмета формы;</li>-->
+<!--                                <li>slouniki - крыніцы, дзе фіксуецца форма;</li>-->
+<!--                                <li>pravapis - правапіс;</li>-->
+<!--                                <li>type - тып (numeral, short, у гэты рэліз не ўваходзіць: nonstandard, potential);</li>-->
+<!--                                <li>options - адушаўлёнасць (anim, inanim).</li>-->
+<!--                            </ul>-->
+
+<!--                            <p>Граматычная інфармацыя рэпрэзентавана тэгамі, якія складаюцца з літар і лічбаў у пэўнай паслядоўнасці:</p>-->
+<!--                            <table>-->
+<!--                                <colgroup><col/><col/></colgroup>-->
+<!--                                <tr><td colspan="2" style="text-align: center; font-size: 120%; color: #080"><b>Назоўнік</b></td></tr>-->
+<!--                                <tr><td colspan="2" style="text-align: center"><b>Граматычныя пазнакі для ўсёй парадыгмы</b>:</td></tr>-->
+<!--                                <tr><td>1) <b>Часціна мова</b></td><td>-->
+<!--                                    <b>&lt;N&gt;</b> - назоўнік</td></tr>-->
+<!--                                <tr><td>2) <b>Уласнасць</b></td><td>-->
+<!--                                    <b>&lt;C&gt;</b> - агульны<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - уласны</td></tr>-->
+<!--                                <tr><td>3) <b>Адушаўлёнасць</b></td><td>-->
+<!--                                    <b>&lt;A&gt;</b> - адушаўлёны<br/>-->
+<!--                                    <b>&lt;I&gt;</b> - неадушаўлёны</td></tr>-->
+<!--                                <tr><td>4) <b>Асабовасць</b></td><td>-->
+<!--                                    <b>&lt;P&gt;</b> - асабовы<br/>-->
+<!--                                    <b>&lt;I&gt;</b> - неасабовы</td></tr>-->
+<!--                                <tr><td>5) <b>Скарачэнне</b></td><td>-->
+<!--                                    <b>&lt;B&gt;</b> - скарачэнне<br/>-->
+<!--                                    <b>&lt;N&gt;</b> - не скарачэнне</td></tr>-->
+<!--                                <tr><td>6) <b>Род</b> (апрача субстантываваных і множналікавых назоўнікаў)</td><td>-->
+<!--                                    <b>&lt;M&gt;</b> - мужчынскі<br/>-->
+<!--                                    <b>&lt;F&gt;</b> - жаночы<br/>-->
+<!--                                    <b>&lt;N&gt;</b> - ніякі<br/>-->
+<!--                                    <b>&lt;С&gt;</b> - агульны<br/>-->
+<!--                                    <b>&lt;S&gt;</b> - субстантываваны<br/>-->
+<!--                                    <b>&lt;U&gt;</b> - субстантываваны множналікавы<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - толькі множны лік</td></tr>-->
+<!--                                <tr><td>7) <b>Скланенне</b> (апрача субстантываваных і множналікавых назоўнікаў)</td><td>-->
+<!--                                    <b>&lt;1&gt;</b> - 1 скланенне<br/>-->
+<!--                                    <b>&lt;2&gt;</b> - 2 скланенне<br/>-->
+<!--                                    <b>&lt;3&gt;</b> - 3 скланенне<br/>-->
+<!--                                    <b>&lt;0&gt;</b> - нескланяльны<br/>-->
+<!--                                    <b>&lt;4&gt;</b> - рознаскланяльны<br/>-->
+<!--                                    <b>&lt;6&gt;</b> - змешаны тып скланення</td></tr>-->
+<!--                                <tr><td>7) <b>Скланенне</b> (для субстантываваных і множналікавых прыметнікаў)</td><td>-->
+<!--                                    <b>&lt;5&gt;</b> - ад’ектыўны тып скланення</td></tr>-->
+<!--                                <tr><td>7) <b>Скланенне</b> (для множналікавых назоўнікаў)</td><td>-->
+<!--                                    <b>&lt;0&gt;</b> - нескланяльны<br/>-->
+<!--                                    <b>&lt;7&gt;</b> - множналікавы</td></tr>-->
+<!--                                <tr><td colspan="2" style="text-align: center"><b>Граматычныя пазнакі, уласцівыя асобным формам (уласна назоўнікі)</b>:</td></tr>-->
+<!--                                <tr><td>8) <b>Склон</b></td><td>-->
+<!--                                    <b>&lt;N&gt;</b> - Назоўны<br/>-->
+<!--                                    <b>&lt;G&gt;</b> - Родны<br/>-->
+<!--                                    <b>&lt;D&gt;</b> - Давальны<br/>-->
+<!--                                    <b>&lt;A&gt;</b> - Вінавальны<br/>-->
+<!--                                    <b>&lt;I&gt;</b> - Творны<br/>-->
+<!--                                    <b>&lt;L&gt;</b> - Месны<br/>-->
+<!--                                    <b>&lt;V&gt;</b> - Клічны (у асобных выпадках)</td></tr>-->
+<!--                                <tr><td>9) <b>Лік</b></td><td>-->
+<!--                                    <b>&lt;S&gt;</b> - адзіночны<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - множны</td></tr>-->
+<!--                                <tr><td colspan="2" style="text-align: center"><b>Граматычныя пазнакі, уласцівыя асобным формам  (субстантываваныя прыметнікі)</b>:</td></tr>-->
+<!--                                <tr><td>8) <b>Род</b></td><td>-->
+<!--                                    <b>&lt;M&gt;</b> - мужчынскі<br/>-->
+<!--                                    <b>&lt;F&gt;</b> - жаночы<br/>-->
+<!--                                    <b>&lt;N&gt;</b> - ніякі<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - адсутнасць роду ў множным ліку</td></tr>-->
+<!--                                <tr><td>9) <b>Склон</b></td><td>-->
+<!--                                    <b>&lt;N&gt;</b> - Назоўны<br/>-->
+<!--                                    <b>&lt;G&gt;</b> - Родны<br/>-->
+<!--                                    <b>&lt;D&gt;</b> - Давальны<br/>-->
+<!--                                    <b>&lt;A&gt;</b> - Вінавальны<br/>-->
+<!--                                    <b>&lt;I&gt;</b> - Творны<br/>-->
+<!--                                    <b>&lt;L&gt;</b> - Месны<br/>-->
+<!--                                    <b>&lt;V&gt;</b> - Клічны (у асобных выпадках)</td></tr>-->
+<!--                                <tr><td>10) <b>Лік</b></td><td>-->
+<!--                                    <b>&lt;S&gt;</b> - адзіночны<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - множны</td></tr>-->
+<!--                            </table>-->
+<!--                            <br/>-->
+<!--                            <table>-->
+<!--                                <colgroup><col/><col/></colgroup>-->
+<!--                                <tr><td colspan="2" style="text-align: center; font-size: 120%; color: #080"><b>Прыметнік</b></td></tr>-->
+<!--                                <tr><td colspan="2" style="text-align: center"><b>Граматычныя пазнакі для ўсёй парадыгмы</b>:</td></tr>-->
+<!--                                <tr><td>1) <b>Часціна мовы</b></td><td>-->
+<!--                                    <b>&lt;A&gt;</b> - прыметнік</td></tr>-->
+<!--                                <tr><td>2) <b>Тып</b></td><td>-->
+<!--                                    <b>&lt;Q&gt;</b> - якасны<br/>-->
+<!--                                    <b>&lt;R&gt;</b> - адносны<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - прыналежны<br/>-->
+<!--                                    <b>&lt;0&gt;</b> - нескланяльны</td></tr>-->
+<!--                                <tr><td>3) <b>Ступень параўнання</b> (апрача нескланяльных)</td><td>-->
+<!--                                    <b>&lt;P&gt;</b> - станоўчая<br/>-->
+<!--                                    <b>&lt;C&gt;</b> - вышэйшая<br/>-->
+<!--                                    <b>&lt;S&gt;</b> - найвышэйшая</td></tr>-->
+<!--                                <tr><td colspan="2" style="text-align: center"><b>Граматычныя пазнакі, уласцівыя асобным формам</b>:</td></tr>-->
+<!--                                <tr><td>4) <b>Прыметнік у функцыі прыслоўя</b></td><td>-->
+<!--                                    <b>&lt;R&gt;</b></td></tr>-->
+<!--                                <tr><td>4) <b>Род</b> (апрача нескланяльных)</td><td>-->
+<!--                                    <b>&lt;M&gt;</b> - мужчынскі<br/>-->
+<!--                                    <b>&lt;F&gt;</b> - жаночы<br/>-->
+<!--                                    <b>&lt;N&gt;</b> - ніякі<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - множны лік</td></tr>-->
+<!--                                <tr><td>5) <b>Склон</b> (апрача нескланяльных)</td><td>-->
+<!--                                    <b>&lt;N&gt;</b> - Назоўны<br/>-->
+<!--                                    <b>&lt;G&gt;</b> - Родны<br/>-->
+<!--                                    <b>&lt;D&gt;</b> - Давальны<br/>-->
+<!--                                    <b>&lt;A&gt;</b> - Вінавальны<br/>-->
+<!--                                    <b>&lt;I&gt;</b> - Творны<br/>-->
+<!--                                    <b>&lt;L&gt;</b> - Месны</td></tr>-->
+<!--                                <tr><td>6) <b>Лік</b> (апрача нескланяльных)</td><td>-->
+<!--                                    <b>&lt;S&gt;</b> - адзіночны<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - множны</td></tr>-->
+<!--                            </table>-->
+<!--                            <br/>-->
+<!--                            <table>-->
+<!--                                <colgroup><col/><col/></colgroup>-->
+<!--                                <tr><td colspan="2" style="text-align: center; font-size: 120%; color: #080"><b>Лічэбнік</b></td></tr>-->
+<!--                                <tr><td colspan="2" style="text-align: center"><b>Граматычныя пазнакі для ўсёй парадыгмы</b>:</td></tr>-->
+<!--                                <tr><td>1) <b>Часціна мовы</b></td><td>-->
+<!--                                    <b>&lt;M&gt;</b> - лічэбнік</td></tr>-->
+<!--                                <tr><td>2) <b>Словазмяненне</b></td><td>-->
+<!--                                    <b>&lt;N&gt;</b> - як у назоўніка<br/>-->
+<!--                                    <b>&lt;A&gt;</b> - як у прыметніка<br/>-->
+<!--                                    <b>&lt;0&gt;</b> - нязменны</td></tr>-->
+<!--                                <tr><td>3) <b>Значэнне</b></td><td>-->
+<!--                                    <b>&lt;C&gt;</b> - колькасны<br/>-->
+<!--                                    <b>&lt;O&gt;</b> - парадкавы<br/>-->
+<!--                                    <b>&lt;K&gt;</b> - зборны<br/>-->
+<!--                                    <b>&lt;F&gt;</b> - дробавы</td></tr>-->
+<!--                                <tr><td>4) <b>Форма</b></td><td>-->
+<!--                                    <b>&lt;S&gt;</b> - просты<br/>-->
+<!--                                    <b>&lt;C&gt;</b> - складаны</td></tr>-->
+<!--                                <tr><td colspan="2" style="text-align: center"><b>Граматычныя пазнакі, уласцівыя асобным формам</b>:</td></tr>-->
+<!--                                <tr><td>5) <b>Род</b></td><td>-->
+<!--                                    <b>&lt;M&gt;</b> - мужчынскі<br/>-->
+<!--                                    <b>&lt;F&gt;</b> - жаночы<br/>-->
+<!--                                    <b>&lt;N&gt;</b> - ніякі<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - адсутны</td></tr>-->
+<!--                                <tr><td>5) <b>Нескланяльны</b></td><td>-->
+<!--                                    <b>&lt;0&gt;</b> - нескланяльны</td></tr>-->
+<!--                                <tr><td>6) <b>Склон</b> (апрача нескланяльных)</td><td>-->
+<!--                                    <b>&lt;N&gt;</b> - Назоўны<br/>-->
+<!--                                    <b>&lt;G&gt;</b> - Родны<br/>-->
+<!--                                    <b>&lt;D&gt;</b> - Давальны<br/>-->
+<!--                                    <b>&lt;A&gt;</b> - Вінавальны<br/>-->
+<!--                                    <b>&lt;I&gt;</b> - Творны<br/>-->
+<!--                                    <b>&lt;L&gt;</b> - Месны</td></tr>-->
+<!--                                <tr><td>7) <b>Лік</b> (апрача нескланяльных)</td><td>-->
+<!--                                    <b>&lt;S&gt;</b> - адзіночны<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - множны</td></tr>-->
+<!--                            </table>-->
+<!--                            <br/>-->
+<!--                            <table>-->
+<!--                                <colgroup><col/><col/></colgroup>-->
+<!--                                <tr><td colspan="2" style="text-align: center; font-size: 120%; color: #080"><b>Займеннік</b></td></tr>-->
+<!--                                <tr><td colspan="2" style="text-align: center"><b>Граматычныя пазнакі для ўсёй парадыгмы</b>:</td></tr>-->
+<!--                                <tr><td>1) <b>Часціна мовы</b></td><td>-->
+<!--                                    <b>&lt;S&gt;</b> - займеннік</td></tr>-->
+<!--                                <tr><td>2) <b>Словазмяненне</b></td><td>-->
+<!--                                    <b>&lt;N&gt;</b> - як у назоўніка<br/>-->
+<!--                                    <b>&lt;A&gt;</b> - як у прыметніка</td></tr>-->
+<!--                                <tr><td>3) <b>Разрад</b></td><td>-->
+<!--                                    <b>&lt;P&gt;</b> - асабовы<br/>-->
+<!--                                    <b>&lt;R&gt;</b> - зваротны<br/>-->
+<!--                                    <b>&lt;S&gt;</b> - прыналежны<br/>-->
+<!--                                    <b>&lt;D&gt;</b> - указальны<br/>-->
+<!--                                    <b>&lt;E&gt;</b> - азначальны<br/>-->
+<!--                                    <b>&lt;L&gt;</b> - пытальна–адносны<br/>-->
+<!--                                    <b>&lt;N&gt;</b> - адмоўны<br/>-->
+<!--                                    <b>&lt;F&gt;</b> - няпэўны</td></tr>-->
+<!--                                <tr><td>4) <b>Асоба</b></td><td>-->
+<!--                                    <b>&lt;1&gt;</b> - першая<br/>-->
+<!--                                    <b>&lt;2&gt;</b> - другая<br/>-->
+<!--                                    <b>&lt;3&gt;</b> - трэцяя<br/>-->
+<!--                                    <b>&lt;0&gt;</b> - безасабовы</td></tr>-->
+<!--                                <tr><td colspan="2" style="text-align: center"><b>Уласцівыя асобным формам</b>:</td></tr>-->
+<!--                                <tr><td>5) <b>Род</b></td><td>-->
+<!--                                    <b>&lt;M&gt;</b> - мужчынскі<br/>-->
+<!--                                    <b>&lt;F&gt;</b> - жаночы<br/>-->
+<!--                                    <b>&lt;N&gt;</b> - ніякі<br/>-->
+<!--                                    <b>&lt;0&gt;</b> - адсутнасць роду<br/>-->
+<!--                                    <b>&lt;1&gt;</b> - адсутнасць форм</td></tr>-->
+<!--                                <tr><td>6) <b>Склон</b></td><td>-->
+<!--                                    <b>&lt;N&gt;</b> - Назоўны<br/>-->
+<!--                                    <b>&lt;G&gt;</b> - Родны<br/>-->
+<!--                                    <b>&lt;D&gt;</b> - Давальны<br/>-->
+<!--                                    <b>&lt;A&gt;</b> - Вінавальны<br/>-->
+<!--                                    <b>&lt;I&gt;</b> - Творны<br/>-->
+<!--                                    <b>&lt;L&gt;</b> - Месны</td></tr>-->
+<!--                                <tr><td>7) <b>Лік</b></td><td>-->
+<!--                                    <b>&lt;S&gt;</b> - адзіночны<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - множны</td></tr>-->
+<!--                            </table>-->
+<!--                            <br/>-->
+<!--                            <table>-->
+<!--                                <colgroup><col/><col/></colgroup>-->
+<!--                                <tr><td colspan="2" style="text-align: center; font-size: 120%; color: #080"><b>Дзеяслоў</b></td></tr>-->
+<!--                                <tr><td colspan="2" style="text-align: center"><b>Граматычныя пазнакі для ўсёй парадыгмы</b>:</td></tr>-->
+<!--                                <tr><td>1) <b>Часціна мовы</b></td><td>-->
+<!--                                    <b>&lt;V&gt;</b> - дзеяслоў</td></tr>-->
+<!--                                <tr><td>2) <b>Пераходнасць</b></td><td>-->
+<!--                                    <b>&lt;T&gt;</b> - пераходны<br/>-->
+<!--                                    <b>&lt;I&gt;</b> - непераходны<br/>-->
+<!--                                    <b>&lt;D&gt;</b> - пераходны/непераходны</td></tr>-->
+<!--                                <tr><td>3) <b>Трыванне</b></td><td>-->
+<!--                                    <b>&lt;P&gt;</b> - закончанае<br/>-->
+<!--                                    <b>&lt;M&gt;</b> - незакончанае</td></tr>-->
+<!--                                <tr><td>4) <b>Зваротнасць</b></td><td>-->
+<!--                                    <b>&lt;R&gt;</b> - зваротны<br/>-->
+<!--                                    <b>&lt;N&gt;</b> - незваротны</td></tr>-->
+<!--                                <tr><td>5) <b>Спражэнне</b></td><td>-->
+<!--                                    <b>&lt;1&gt;</b> - першае<br/>-->
+<!--                                    <b>&lt;2&gt;</b> - другое<br/>-->
+<!--                                    <b>&lt;3&gt;</b> - рознаспрагальны</td></tr>-->
+<!--                                <tr><td colspan="2" style="text-align: center"><b>Граматычныя пазнакі, уласцівыя асобным формам</b>:</td></tr>-->
+<!--                                <tr><td>6) <b>Час</b></td><td>-->
+<!--                                    <b>&lt;R&gt;</b> - цяперашні<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - прошлы<br/>-->
+<!--                                    <b>&lt;F&gt;</b> - будучы<br/>-->
+<!--                                <tr><td>6) <b>Загадны лад</b></td><td>-->
+<!--                                    <b>&lt;I&gt;</b></td></tr>-->
+<!--                                <tr><td>6) <b>Інфінітыў</b></td><td>-->
+<!--                                    <b>&lt;0&gt;</b></td></tr>-->
+<!--                                <tr><td>7) <b>Асоба</b></td><td>-->
+<!--                                    <b>&lt;1&gt;</b> - першая<br/>-->
+<!--                                    <b>&lt;2&gt;</b> - другая<br/>-->
+<!--                                    <b>&lt;3&gt;</b> - трэцяя<br/>-->
+<!--                                    <b>&lt;0&gt;</b> - безасабовы</td></tr>-->
+<!--                                <tr><td>7) <b>Дзеепрыслоўе</b></td><td>-->
+<!--                                    <b>&lt;G&gt;</b> - дзеепрыслоўе</td></tr>-->
+<!--                                <tr><td>7) <b>Род</b> (прошлы час)</td><td>-->
+<!--                                    <b>&lt;M&gt;</b> - мужчынскі<br/>-->
+<!--                                    <b>&lt;F&gt;</b> - жаночы<br/>-->
+<!--                                    <b>&lt;N&gt;</b> - ніякі</td></tr>-->
+<!--                                <tr><td>8) <b>Лік</b></td><td>-->
+<!--                                    <b>&lt;S&gt;</b> - адзіночны<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - множны</td></tr>-->
+<!--                            </table>-->
+<!--                            <br/>-->
+<!--                            <table>-->
+<!--                                <colgroup><col/><col/></colgroup>-->
+<!--                                <tr><td colspan="2" style="text-align: center; font-size: 120%; color: #080"><b>Дзеепрыметнік</b></td></tr>-->
+<!--                                <tr><td colspan="2" style="text-align: center"><b>Граматычныя пазнакі для ўсёй парадыгмы</b>:</td></tr>-->
+<!--                                <tr><td>1) <b>Часціна мовы</b></td><td>-->
+<!--                                    <b>&lt;P&gt;</b> - дзеепрыметнік</td></tr>-->
+<!--                                <tr><td>2) <b>Стан</b></td><td>-->
+<!--                                    <b>&lt;A&gt;</b> - незалежны<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - залежны</td></tr>-->
+<!--                                <tr><td>3) <b>Час</b></td><td>-->
+<!--                                    <b>&lt;R&gt;</b> - цяперашні<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - прошлы</td></tr>-->
+<!--                                <tr><td>4)Трыванне</td><td>-->
+<!--                                    <b>&lt;P&gt;</b> - закончанае<br/>-->
+<!--                                    <b>&lt;M&gt;</b> - незакончанае</td></tr>-->
+<!--                                <tr><td colspan="2" style="text-align: center"><b>Граматычныя пазнакі, уласцівыя асобным формам</b>:</td></tr>-->
+<!--                                <tr><td>5) <b>Род</b></td><td>-->
+<!--                                    <b>&lt;M&gt;</b> - мужчынскі<br/>-->
+<!--                                    <b>&lt;F&gt;</b> - жаночы<br/>-->
+<!--                                    <b>&lt;N&gt;</b> - ніякі<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - множны лік</td></tr>-->
+<!--                                <tr><td>5) <b>Кароткая форма</b></td><td>-->
+<!--                                    <b>&lt;R&gt;</b></td></tr>-->
+<!--                                <tr><td>6) <b>Склон</b></td><td>-->
+<!--                                    <b>&lt;N&gt;</b> - Назоўны<br/>-->
+<!--                                    <b>&lt;G&gt;</b> - Родны<br/>-->
+<!--                                    <b>&lt;D&gt;</b> - Давальны<br/>-->
+<!--                                    <b>&lt;A&gt;</b> - Вінавальны<br/>-->
+<!--                                    <b>&lt;I&gt;</b> - Творны<br/>-->
+<!--                                    <b>&lt;L&gt;</b> - Месны</td></tr>-->
+<!--                                <tr><td>7) <b>Лік</b></td><td>-->
+<!--                                    <b>&lt;S&gt;</b> - адзіночны<br/>-->
+<!--                                    <b>&lt;P&gt;</b> - множны</td></tr>-->
+<!--                            </table>-->
+<!--                            <br/>-->
+<!--                            <table>-->
+<!--                                <colgroup><col/><col/></colgroup>-->
+<!--                                <tr><td colspan="2" style="text-align: center; font-size: 120%; color: #080"><b>Прыслоўе</b></td></tr>-->
+<!--                                <tr><td colspan="2" style="text-align: center"><b>Граматычныя пазнакі для ўсёй парадыгмы</b>:</td></tr>-->
+<!--                                <tr><td>1) <b>Часціна мовы</b></td><td>-->
+<!--                                    <b>&lt;R&gt;</b> - прыслоўе</td></tr>-->
+<!--                                <tr><td>2) <b>Спосаб утварэння</b></td><td>-->
+<!--                                    <b>&lt;N&gt;</b> - ад назоўнікаў<br/>-->
+<!--                                    <b>&lt;A&gt;</b> - ад прыметнікаў<br/>-->
+<!--                                    <b>&lt;M&gt;</b> - ад лічэбнікаў<br/>-->
+<!--                                    <b>&lt;S&gt;</b> - ад займеннікаў<br/>-->
+<!--                                    <b>&lt;G&gt;</b> - ад дзеепрыслоўяў<br/>-->
+<!--                                    <b>&lt;V&gt;</b> - ад дзеясловаў<br/>-->
+<!--                                    <b>&lt;E&gt;</b> - ад часціц<br/>-->
+<!--                                    <b>&lt;I&gt;</b> - ад прыназоўнікаў</td></tr>-->
+<!--                                <tr><td colspan="2" style="text-align: center"><b>Граматычныя пазнакі, уласцівыя асобным формам</b>:</td></tr>-->
+<!--                                <tr><td>3) <b>Ступень параўнання</b></td><td>-->
+<!--                                    <b>&lt;P&gt;</b> - станоўчая<br/>-->
+<!--                                    <b>&lt;C&gt;</b> - вышэйшая<br/>-->
+<!--                                    <b>&lt;S&gt;</b> - найвышэйшая</td></tr>-->
+<!--                            </table>-->
+<!--                            <br/>-->
+<!--                            <table>-->
+<!--                                <colgroup><col/><col/></colgroup>-->
+<!--                                <tr><td colspan="2" style="text-align: center; font-size: 120%; color: #080"><b>Злучнік</b></td></tr>-->
+<!--                                <tr><td>1) <b>Часціна мовы</b></td><td>-->
+<!--                                    <b>&lt;C&gt;</b> - злучнік</td></tr>-->
+<!--                                <tr><td>2) <b>Тып</b></td><td>-->
+<!--                                    <b>&lt;S&gt;</b> - падпарадкавальны<br/>-->
+<!--                                    <b>&lt;K&gt;</b> - злучальны</td></tr>-->
+<!--                                <tr><td>3) <b>Тып падпарадкавальнага злучніка</b></td><td>-->
+<!--                                    <b>&lt;B&gt;</b> - прычынны<br/>-->
+<!--                                    <b>&lt;C&gt;</b> - часавы<br/>-->
+<!--                                    <b>&lt;D&gt;</b> - умоўны<br/>-->
+<!--                                    <b>&lt;F&gt;</b> - мэтавы<br/>-->
+<!--                                    <b>&lt;G&gt;</b> - уступальны<br/>-->
+<!--                                    <b>&lt;H&gt;</b> - параўнальны<br/>-->
+<!--                                    <b>&lt;K&gt;</b> - следства</td></tr>-->
+<!--                                <tr><td>3) <b>Тып злучальнага злучніка</b></td><td>-->
+<!--                                    <b>&lt;A&gt;</b> - спалучальны<br/>-->
+<!--                                    <b>&lt;E&gt;</b> - супастаўляльны<br/>-->
+<!--                                    <b>&lt;O&gt;</b> - пералічальна-размеркавальны<br/>-->
+<!--                                    <b>&lt;L&gt;</b> - далучальны<br/>-->
+<!--                                    <b>&lt;U&gt;</b> - градацыйны</td></tr>-->
+<!--                            </table>-->
+<!--                            <br/>-->
+<!--                            <table>-->
+<!--                                <colgroup><col/><col/></colgroup>-->
+<!--                                <tr><td colspan="2" style="text-align: center; font-size: 120%; color: #080"><b>Прыназоўнік</b></td></tr>-->
+<!--                                <tr><td>1) <b>Часціна мовы</b></td><td>-->
+<!--                                    <b>&lt;I&gt;</b> - прыназоўнік</td></tr>-->
+<!--                            </table>-->
+<!--                            <br/>-->
+<!--                            <table>-->
+<!--                                <colgroup><col/><col/></colgroup>-->
+<!--                                <tr><td colspan="2" style="text-align: center; font-size: 120%; color: #080"><b>Часціца</b></td></tr>-->
+<!--                                <tr><td>1) <b>Часціна мовы</b></td><td>-->
+<!--                                    <b>&lt;E&gt;</b> - часціца</td></tr>-->
+<!--                            </table>-->
+<!--                            <br/>-->
+<!--                            <table>-->
+<!--                                <colgroup><col/><col/></colgroup>-->
+<!--                                <tr><td colspan="2" style="text-align: center; font-size: 120%; color: #080"><b>Выклічнік</b></td></tr>-->
+<!--                                <tr><td>1) <b>Часціна мовы</b></td><td>-->
+<!--                                    <b>&lt;Y&gt;</b> - выклічнік</td></tr>-->
+<!--                            </table>-->
+<!--                            <br/>-->
+<!--                            <table>-->
+<!--                                <colgroup><col/><col/></colgroup>-->
+<!--                                <tr><td colspan="2" style="text-align: center; font-size: 120%; color: #080"><b>Пабочнае слова</b></td></tr>-->
+<!--                                <tr><td>1) <b>Функцыя</b></td><td>-->
+<!--                                    <b>&lt;Z&gt;</b> - пабочнае слова</td></tr>-->
+<!--                            </table>-->
+<!--                            <br/>-->
+<!--                            <table>-->
+<!--                                <colgroup><col/><col/></colgroup>-->
+<!--                                <tr><td colspan="2" style="text-align: center; font-size: 120%; color: #080"><b>Прэдыкатыў</b></td></tr>-->
+<!--                                <tr><td>1) <b>Часціна мовы</b></td><td>-->
+<!--                                    <b>&lt;W&gt;</b> - прэдыкатыў</td></tr>-->
+<!--                            </table>-->
+<!--                            <br/>-->
+<!--                            <table>-->
+<!--                                <colgroup><col/><col/></colgroup>-->
+<!--                                <tr><td colspan="2" style="text-align: center; font-size: 120%; color: #080"><b>Часткі слоў</b></td></tr>-->
+<!--                                <tr><td>1) <b>Частка слова</b></td><td>-->
+<!--                                    <b>&lt;F&gt;</b> - частка</td></tr>-->
+<!--                                <tr><td>2) <b>Тып</b></td><td>-->
+<!--                                    <b>&lt;P&gt;</b> - прыстаўка<br/>-->
+<!--                                    <b>&lt;F&gt;</b> - першая састаўная частка складаных слоў<br/>-->
+<!--                                    <b>&lt;S&gt;</b> - другая састаўная частка складаных слоў</td></tr>-->
+<!--                            </table>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="card2">-->
+<!--                    <div class="card-header2" id="headingFour">-->
+<!--                        <h2 class="mb-0">-->
+<!--                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">-->
+<!--                                TODO: Інтэрфейс для пошуку-->
+<!--                            </button>-->
+<!--                        </h2>-->
+<!--                    </div>-->
+<!--                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">-->
+<!--                        <div class="card-body">-->
+<!--                            <br/>-->
+<!--                            <p>Для зручнага карыстання базай распрацаваны візуальны інтэрфейс, які дазваляе хутка атрымліваць інфармацыю пра слова ў анлайн-рэжыме.</p>-->
+<!--                            <p>Пошук можна рабіць у двух рэжымах: па пачатковай форме слова, па ўсіх формах слова.</p>-->
+<!--                            <p><b>Па пачатковай форме</b>: трэба абраць адпаведны рэжым, у поле пошуку ўвесці пачатковую форму слова (інфінітыў для дзеясловаў, назоўны склон для назоўнікаў і г.д.) і націснуць кнопку “Пошук”:</p>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <img src="images/grdesc/2.png"/>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <p>Унізе з’явяцца вынікі пошуку ў выглядзе слова (ці спісу слоў) і яго граматычнай характарыстыкі. Часам падаецца значэнне слова (калі слова рэдкае або ў выпадку аманіміі).</p>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <img src="images/grdesc/3.png"/>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <p>Пры націсканні на слова адкрываецца акно з яго граматычным апісаннем:</p>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <img src="images/grdesc/4.png"/>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <p>Таксама можна рабіць пошук па частках слоў з выкарыстаннем знака «*» і з улікам граматычных характарыстык (палі “Удакладніць граматыку” і “Паказаць адмысловую форму”. Вынікі пошуку можна выводзіць як у прамым алфавітным парадку, так і ў адваротным.</p>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <img src="images/grdesc/5.png"/>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <img src="images/grdesc/6.png"/>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <img src="images/grdesc/7.png"/>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <p>Рэжым “<b>Па ўсіх формах</b>” дазваляе шукаць аманімічныя формы, а таксама ўсе формы слоў (уключна з пачатковымі) паводле зададзеных характарыстык.</p>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <img src="images/grdesc/10.png"/>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <img src="images/grdesc/11.png"/>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <p>Пошук у абодвух рэжымах можна рабіць з указаннем толькі граматычных характарыстык; у такім выпадку генеруецца спіс усіх слоў з абранымі характарыстыкамі як у пачатковай форме, так ва ўскосных.</p>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <img src="images/grdesc/8.png"/>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <img src="images/grdesc/9.png"/>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <img src="images/grdesc/12.png"/>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <p>Калі абрана “Паказваць адмысловую форму” і ў выніках мусіць выводзіцца  некалькі ўскосных форм аднаго слова, то такія выпадкі можна згрупаваць, паставіўшы гачак у чэкбокс “Групаваць”.</p>-->
+<!--                            <div>&nbsp;</div>-->
+<!--                            <img src="images/grdesc/15.png"/>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+                <br/>
+
+
+                <div class="card2">
+                    <div class="card-header2" id="headingFive">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Файли словника
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Вихідне джерело словника знаходиться на <a href="https://github.com/brown-uk/dict_uk">github.com</a> і розповсюджуються під ліцензією <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL-3.0 license</a>. <br/>
+                            TODO: скрипт перетворення на формат цього пошуковика
+                        </div>
+                    </div>
+                </div>
+
+
+                <br/>
+                <br/>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div id="grammarStat" class="col-md-12"></div>
+    </div>
+
+    <script id="template-grammaroutput" type="text/x-jsrender">
+  {{for lemmas}}
+    {{if !~root.reverse}}
+     <div class="row">
+       <div style="width: 100%; font-size: 120%">
+       <a href="#" onClick="grammarService.loadDetails({{:pdgId}}); return false;">{{>output}}</a>
+       {{if meaning}}&nbsp;&nbsp;‘{{>meaning}}’{{/if}}
+       <span class="grtag">&ndash; {{>grammar}}</span>
+       </div>
+     </div>
+    {{else}}
+     <div class="row" style="text-align: right">
+       <div  style="width: 100%; font-size: 120%">
+       <span class="grtag">{{>grammar}} &ndash;</span>
+       {{if meaning}}‘{{>meaning}}’&nbsp;&nbsp;{{/if}}
+       <a href="#" onClick="grammarService.loadDetails({{:pdgId}}); return false;">{{>output}}</a>
+       </div>
+     </div>
+    {{/if}}
+  {{/for}}
+</script>
+
+<script id="template-grammar-stat" type="text/x-jsrender">
+  <table class="table table-sm hspacing d-flex justify-content-center">
+    <tr>
+      <th>Частина мови</th>
+      <th>Парадигм</th>
+      <th>Словоформ</th>
+    </tr>
+    {{for initial.stat}}
+      <tr>
+        <td>{{if title}}{{:title}}{{else}}Загалом{{/if}}</td>
+        <td class="text-right text-nowrap" title="{{:paradigmCount}}">{{roundnum:paradigmCount}}</td>
+        <td class="text-right text-nowrap" title="{{:formCount}}">{{roundnum:formCount}}</td>
+      </tr>
+    {{/for}}
+  </table>
+</script>
+
+    <script id="template-wordgrammar" type="text/x-jsrender">
+	<select id="dialog-wordgrammar-grselected" class="form-control {{if ~root.hideParadigmGroups}}d-none{{/if}}" onChange="dialogWordGrammar.changeType(this.value)">
+		<option value="">-- Не обрана --</option>
+		{{for ~root.grammar.grammarWordTypes}}
+			<option value="{{>key}}">{{>value}}</option>
+		{{/for}}
+	</select>
+	<br/>
+	<div id="dialog-wordgrammar-place2">
+	</div>
+</script>
+    <script id="template-wordgrammar2" type="text/x-jsrender">
+	{{for ~root.grammar.grammarWordTypesGroups[~root.grselected].groups itemVar="~group"}}
+		<div class="my-2 panel-default {{if (!~group.formGroup && ~root.hideParadigmGroups)}}d-none{{/if}} {{if (~group.formGroup && ~root.hideFormGroups)}}d-none{{/if}} {{if (~root.grammar.skipGrammar[~root.grselected] && ~root.grammar.skipGrammar[~root.grselected].includes(~group.name))}}d-none{{/if}}">
+			<div style="font-size: 120%; font-weight: bold;">{{>~group.name}}</div>
+			<div>
+			{{for ~group.items}}
+				{{if code != '_' && code != 'X'}}
+					<label class="ml-2"><input type="checkbox" name="{{>~group.name}}" value="{{>code}}"> {{>description}}</label>
+				{{/if}}
+			{{/for}}
+			</div>
+		</div>
+	{{/for}}
+</script>
+
+    <div id="dialog-wordgrammar" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title pull-left">Граматика</h4>
+                    <span>
+          <button type="button" class="btn btn-secondary" onClick="dialogWordGrammar.onCancel()">Скасувати</button>
+          <button type="button" class="btn btn-primary" onClick="dialogWordGrammar.onOk()">Обрати</button>
+        </span>
+                </div>
+                <div id="dialog-wordgrammar-place" class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script id="template-grammardb" type="text/x-jsrender">
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">{{>details.lemma}}
+      {{if details.meaning}}
+        : {{>details.meaning}}
+      {{/if}}
+    </h4>
+      <button type="button" class="close pull-right" aria-label="Close" onClick="dialogGrammarDB.onClose()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+   {{for details.variants itemVar="~v"}}
+    <div class="card mx-auto" style="width: fit-content;">
+      <div class="card-header">
+        <div style="color: #995731; font-style: italic; font-size:110%">
+        {{for catText}}{{if #index > 0}}, {{/if}}<span>{{>value}}</span>{{/for}}
+          <!--div><span class="grheadertag">{{>key}}</span>: {{>value}}</div-->
+        </div>
+      </div>
+        <div class="card-body">
+          {{if tag.match("^N.....5$") tmpl="#template-grammardb-prymietnik"}}
+          {{else tag.match("^N.+$") tmpl="#template-grammardb-nazounik"}}
+          {{else tag.match("^A0$") tmpl="#template-grammardb-prosta"}}
+          {{else tag.match("^A.+$") tmpl="#template-grammardb-prymietnik"}}
+          <!--{{else tag.match("^P.+$") tmpl="#template-grammardb-dziejeprymietnik"}}-->
+          <!--{{else tag.match("^M0.+$") tmpl="#template-grammardb-licebnik0"}}-->
+          <!--{{else tag.match("^M.O.*$") tmpl="#template-grammardb-licebnikLik"}}-->
+          <!--{{else tag.match("^[MS]N.+$") tmpl="#template-grammardb-licebnikN"}}-->
+          <!--{{else tag.match("^SA.+$") tmpl="#template-grammardb-prymietnik"}}-->
+          <!--{{else tag.match("^S0.+$") tmpl="#template-grammardb-prosta"}}-->
+          {{else tag.match("^V.P.+$") tmpl="#template-grammardb-dziejaslouP"}}
+          {{else tag.match("^V.+$") tmpl="#template-grammardb-dziejaslouM"}}
+          {{else tag.match("^R.+$") tmpl="#template-grammardb-pryslouje"}}
+          {{else tag.match("^[CIEYZWKM].*$") tmpl="#template-grammardb-prosta"}}
+          {{else tmpl="#template-grammardb-other"}}
+          {{/if}}
+        </div>
+      {{if dictionaries || authors}}
+        <div class="card-footer">
+          <div>
+          {{for dictionaries}}
+            <span class="badge badge-info" data-toggle="tooltip" data-placement="top" title="{{>desc}}">{{>name}}</span>
+          {{/for}}
+          </div>
+        </div>
+      {{/if}}
+    </div>
+    {{/for}}
+  </div>
+</script>
+
+    <script id="template-grammardb-nazounik" type="text/x-jsrender">
+  <table class="table-borders hspacing">
+    <tr><td class="grtagcenter">Число</td><td class="grtagcenter">Відмінок</td><td> </td></tr>
+    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Відмінок:N;Число:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Відмінок:G;Число:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Відмінок:D;Число:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">Зн.</td><td class="grvalue">{{:~root.getter('Відмінок:A;Число:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">Ор.</td><td class="grvalue">{{:~root.getter('Відмінок:I;Число:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Відмінок:L;Число:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">Кл.</td><td class="grvalue">{{:~root.getter('Відмінок:V;Число:S',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Відмінок:N;Число:P',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Відмінок:G;Число:P',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Відмінок:D;Число:P',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">Зн.</td><td class="grvalue">{{:~root.getter('Відмінок:A;Число:P',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">Ор.</td><td class="grvalue">{{:~root.getter('Відмінок:I;Число:P',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Відмінок:L;Число:P',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">Кл.</td><td class="grvalue">{{:~root.getter('Відмінок:V;Число:P',~v)}}</td></tr>
+  </table>
+  {{> ~root.log(~v) }}
+</script>
+
+    <script id="template-grammardb-licebnikN" type="text/x-jsrender">
+  <table class="table-borders hspacing">
+    <tr><td class="grtagcenter">Склон</td><td> </td></tr>
+    <tr class="gr-p1"><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Склон:N;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Склон:G;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Склон:D;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">В.</td><td class="grvalue">{{:~root.getter('Склон:A;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">Т.</td><td class="grvalue">{{:~root.getter('Склон:I;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Склон:L;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Склон:N;Лік:P',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Склон:G;Лік:P',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Склон:D;Лік:P',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">В.</td><td class="grvalue">{{:~root.getter('Склон:A;Лік:P',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">Т.</td><td class="grvalue">{{:~root.getter('Склон:I;Лік:P',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Склон:L;Лік:P',~v)}}</td></tr>
+  </table>
+  {{> ~root.log(~v) }}
+</script>
+
+    <script id="template-grammardb-licebnikLik" type="text/x-jsrender">
+  <table class="table-borders hspacing">
+    <tr><td class="grtagcenter">Лік</td><td class="grtagcenter">Склон</td><td> </td></tr>
+    <tr class="gr-p1"><td class="grtag">адз.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Склон:N;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">адз.</td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Склон:G;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">адз.</td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Склон:D;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">адз.</td><td class="grtag">В.</td><td class="grvalue">{{:~root.getter('Склон:A;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">адз.</td><td class="grtag">Т.</td><td class="grvalue">{{:~root.getter('Склон:I;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">адз.</td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Склон:L;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Склон:N;Лік:P',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Склон:G;Лік:P',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Склон:D;Лік:P',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">В.</td><td class="grvalue">{{:~root.getter('Склон:A;Лік:P',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">Т.</td><td class="grvalue">{{:~root.getter('Склон:I;Лік:P',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Склон:L;Лік:P',~v)}}</td></tr>
+  </table>
+  {{> ~root.log(~v) }}
+</script>
+
+    <script id="template-grammardb-prymietnik" type="text/x-jsrender">
+  <table class="table-borders hspacing">
+    <tr><td class="grtagcenter">Число</td><td class="grtagcenter">Рід</td><td class="grtagcenter">Відмінок</td><td> </td></tr>
+    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">ч.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:N;Число:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">ч.</td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:G;Число:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">ч.</td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:D;Число:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">ч.</td><td class="grtag">Зн.</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:A;Число:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">ч.</td><td class="grtag">Ор.</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:I;Число:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">ч.</td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:L;Число:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">ч.</td><td class="grtag">Кл.</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:V;Число:S',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">одн.</td><td class="grtag">с.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Рід:N;Відмінок:N;Число:S',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">одн.</td><td class="grtag">с.</td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Рід:N;Відмінок:G;Число:S',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">одн.</td><td class="grtag">с.</td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Рід:N;Відмінок:D;Число:S',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">одн.</td><td class="grtag">с.</td><td class="grtag">Зн.</td><td class="grvalue">{{:~root.getter('Рід:N;Відмінок:A;Число:S',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">одн.</td><td class="grtag">с.</td><td class="grtag">Ор.</td><td class="grvalue">{{:~root.getter('Рід:N;Відмінок:I;Число:S',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">одн.</td><td class="grtag">с.</td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Рід:N;Відмінок:L;Число:S',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">одн.</td><td class="grtag">с.</td><td class="grtag">Кл.</td><td class="grvalue">{{:~root.getter('Рід:N;Відмінок:V;Число:S',~v)}}</td></tr>
+    <tr class="gr-p3"><td class="grtag">одн.</td><td class="grtag">ж.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Рід:F;Відмінок:N;Число:S',~v)}}</td></tr>
+    <tr class="gr-p3"><td class="grtag">одн.</td><td class="grtag">ж.</td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Рід:F;Відмінок:G;Число:S',~v)}}</td></tr>
+    <tr class="gr-p3"><td class="grtag">одн.</td><td class="grtag">ж.</td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Рід:F;Відмінок:D;Число:S',~v)}}</td></tr>
+    <tr class="gr-p3"><td class="grtag">одн.</td><td class="grtag">ж.</td><td class="grtag">Зн.</td><td class="grvalue">{{:~root.getter('Рід:F;Відмінок:A;Число:S',~v)}}</td></tr>
+    <tr class="gr-p3"><td class="grtag">одн.</td><td class="grtag">ж.</td><td class="grtag">Ор.</td><td class="grvalue">{{:~root.getter('Рід:F;Відмінок:I;Число:S',~v)}}</td></tr>
+    <tr class="gr-p3"><td class="grtag">одн.</td><td class="grtag">ж.</td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Рід:F;Відмінок:L;Число:S',~v)}}</td></tr>
+    <tr class="gr-p3"><td class="grtag">одн.</td><td class="grtag">ж.</td><td class="grtag">Кл.</td><td class="grvalue">{{:~root.getter('Рід:F;Відмінок:V;Число:S',~v)}}</td></tr>
+    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Відмінок:N;Число:P',~v)}}</td></tr>
+    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Відмінок:G;Число:P',~v)}}</td></tr>
+    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Відмінок:D;Число:P',~v)}}</td></tr>
+    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">Зн.</td><td class="grvalue">{{:~root.getter('Відмінок:A;Число:P',~v)}}</td></tr>
+    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">Ор.</td><td class="grvalue">{{:~root.getter('Відмінок:I;Число:P',~v)}}</td></tr>
+    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Відмінок:L;Число:P',~v)}}</td></tr>
+    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">Кл.</td><td class="grvalue">{{:~root.getter('Відмінок:V;Число:P',~v)}}</td></tr>
+  </table>
+  {{> ~root.log(~v) }}
+</script>
+
+    <script id="template-grammardb-dziejeprymietnik" type="text/x-jsrender">
+  <table class="table-borders hspacing">
+    <tr><td class="grtagcenter">Число</td><td class="grtagcenter">Рід</td><td class="grtagcenter">Відмінок</td><td> </td></tr>
+    <tr class="gr-p1"><td class="grtag">адз.</td><td class="grtag">м.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Род:M;Склон:N;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">адз.</td><td class="grtag">м.</td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Род:M;Склон:G;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">адз.</td><td class="grtag">м.</td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Род:M;Склон:D;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">адз.</td><td class="grtag">м.</td><td class="grtag">В.</td><td class="grvalue">{{:~root.getter('Род:M;Склон:A;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">адз.</td><td class="grtag">м.</td><td class="grtag">Т.</td><td class="grvalue">{{:~root.getter('Род:M;Склон:I;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">адз.</td><td class="grtag">м.</td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Род:M;Склон:L;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">адз.</td><td class="grtag">н.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Род:N;Склон:N;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">адз.</td><td class="grtag">н.</td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Род:N;Склон:G;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">адз.</td><td class="grtag">н.</td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Род:N;Склон:D;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">адз.</td><td class="grtag">н.</td><td class="grtag">В.</td><td class="grvalue">{{:~root.getter('Род:N;Склон:A;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">адз.</td><td class="grtag">н.</td><td class="grtag">Т.</td><td class="grvalue">{{:~root.getter('Род:N;Склон:I;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p2"><td class="grtag">адз.</td><td class="grtag">н.</td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Род:N;Склон:L;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p3"><td class="grtag">адз.</td><td class="grtag">ж.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Род:F;Склон:N;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p3"><td class="grtag">адз.</td><td class="grtag">ж.</td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Род:F;Склон:G;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p3"><td class="grtag">адз.</td><td class="grtag">ж.</td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Род:F;Склон:D;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p3"><td class="grtag">адз.</td><td class="grtag">ж.</td><td class="grtag">В.</td><td class="grvalue">{{:~root.getter('Род:F;Склон:A;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p3"><td class="grtag">адз.</td><td class="grtag">ж.</td><td class="grtag">Т.</td><td class="grvalue">{{:~root.getter('Род:F;Склон:I;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p3"><td class="grtag">адз.</td><td class="grtag">ж.</td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Род:F;Склон:L;Лік:S',~v)}}</td></tr>
+    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Склон:N;Лік:P',~v)}}</td></tr>
+    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Склон:G;Лік:P',~v)}}</td></tr>
+    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Склон:D;Лік:P',~v)}}</td></tr>
+    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">В.</td><td class="grvalue">{{:~root.getter('Склон:A;Лік:P',~v)}}</td></tr>
+    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">Т.</td><td class="grvalue">{{:~root.getter('Склон:I;Лік:P',~v)}}</td></tr>
+    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Склон:L;Лік:P',~v)}}</td></tr>
+    <!-- <tr class="gr-p5"><td class="grtag" colspan="3">кароткая форма</td><td class="grvalue">{{:~root.getter('Кароткая форма:R',~v)}}</td></tr> -->
+  </table>
+  {{> ~root.log(~v) }}
+</script>
+
+    <script id="template-grammardb-licebnik0" type="text/x-jsrender">
+  <table class="table-borders hspacing">
+    <tr><td class="grtagcenter">Нескланяльны</td></tr>
+    <tr><td class="grvalue">{{:~root.getter('',~v)}}</td></tr>
+  </table>
+  {{> ~root.log(~v) }}
+</script>
+
+    <script id="template-grammardb-pryslouje" type="text/x-jsrender">
+  <table class="table-borders hspacing">
+    <tr><td class="grtagcenter">Ступінь порівняння</td><td> </td></tr>
+    <tr><td class="grtag">базовий.</td><td class="grvalue">{{:~root.getter('Ступінь порівняння:P',~v)}}</td></tr>
+    <tr><td class="grtag">вищий.</td><td class="grvalue">{{:~root.getter('Ступінь порівняння:C',~v)}}</td></tr>
+    <tr><td class="grtag">найвищий.</td><td class="grvalue">{{:~root.getter('Ступінь порівняння:S',~v)}}</td></tr>
+  </table>
+  {{> ~root.log(~v) }}
+</script>
+
+    <script id="template-grammardb-dziejaslouP" type="text/x-jsrender">
+  <table class="table-borders hspacing">
+    <!-- {{:~root.getter('Інфінітив:0',~v)}} -->
+    <tr><td class="grtagcenter" colspan="3">Майбутній час</td></tr>
+    <tr><td> </td><td class="grtagcenter">одн.</td><td class="grtagcenter">мн.</td></tr>
+    <tr><td class="grtag">1-а ос.</td><td class="grvalue">{{:~root.getter('Час:F;Особа:1;Число:S',~v)}}</td><td class="grvalue">{{:~root.getter('Час:F;Особа:1;Число:P',~v)}}</td></tr>
+    <tr><td class="grtag">2-а ос.</td><td class="grvalue">{{:~root.getter('Час:F;Особа:2;Число:S',~v)}}</td><td class="grvalue">{{:~root.getter('Час:F;Особа:2;Число:P',~v)}}</td></tr>
+    <tr><td class="grtag">3-я ос.</td><td class="grvalue">{{:~root.getter('Час:F;Особа:3;Число:S',~v)}}</td><td class="grvalue">{{:~root.getter('Час:F;Особа:3;Число:P',~v)}}</td></tr>
+    <tr><td class="grtagcenter" colspan="3">Минулий час</td></tr>
+    <tr><td class="grtag">ч., одн.</td><td class="grvalue" colspan="2">{{:~root.getter('Час:P;Рід:M;Число:S',~v)}}</td></tr>
+    <tr><td class="grtag">ж., одн.</td><td class="grvalue" colspan="2">{{:~root.getter('Час:P;Рід:F;Число:S',~v)}}</td></tr>
+    <tr><td class="grtag">с., одн.</td><td class="grvalue" colspan="2">{{:~root.getter('Час:P;Рід:N;Число:S',~v)}}</td></tr>
+    <tr><td class="grtag">мн.</td><td class="grvalue" colspan="2">{{:~root.getter('Час:P;Рід:X;Число:P',~v)}}</td></tr>
+    <tr><td class="grtagcenter" colspan="3">Наказовий спосіб</td></tr>
+    <tr><td class="grtag">2-а ос., одн.</td><td class="grvalue" colspan="2">{{:~root.getter('Наказовий спосіб:I;Особа:2;Число:S',~v)}}</td></tr>
+    <tr><td class="grtag">2-а ос., мн.</td><td class="grvalue" colspan="2">{{:~root.getter('Наказовий спосіб:I;Особа:2;Число:P',~v)}}</td></tr>
+    <!--<tr><td class="grtagcenter" colspan="3">Дієсприслівник</td></tr>-->
+    <!--<tr><td class="grtag">мин. час</td><td class="grvalue" colspan="2">{{:~root.getter('Час:P;Дієприслівник:G',~v)}}</td></tr>-->
+  </table>
+  {{> ~root.log(~v) }}
+</script>
+
+    <script id="template-grammardb-dziejaslouM" type="text/x-jsrender">
+  <table class="table-borders hspacing">
+    <!-- {{:~root.getter('Інфінітыў:0',~v)}} -->
+    <tr><td class="grtagcenter" colspan="3">Теперішній час</td></tr>
+    <tr><td> </td><td class="grtagcenter">одн.</td><td class="grtagcenter">мн.</td></tr>
+    <tr><td class="grtag">1-а ос.</td><td class="grvalue">{{:~root.getter('Час:R;Особа:1;Число:S',~v)}}</td><td class="grvalue">{{:~root.getter('Час:R;Особа:1;Число:P',~v)}}</td></tr>
+    <tr><td class="grtag">2-а ос.</td><td class="grvalue">{{:~root.getter('Час:R;Особа:2;Число:S',~v)}}</td><td class="grvalue">{{:~root.getter('Час:R;Особа:2;Число:P',~v)}}</td></tr>
+    <tr><td class="grtag">3-я ос.</td><td class="grvalue">{{:~root.getter('Час:R;Особа:3;Число:S',~v)}}</td><td class="grvalue">{{:~root.getter('Час:R;Особа:3;Число:P',~v)}}</td></tr>
+    <tr><td class="grtagcenter" colspan="3">Минулий час</td></tr>
+    <tr><td class="grtag">ч., одн.</td><td class="grvalue" colspan="2">{{:~root.getter('Час:P;Рід:M;Число:S',~v)}}</td></tr>
+    <tr><td class="grtag">ж., одн.</td><td class="grvalue" colspan="2">{{:~root.getter('Час:P;Рід:F;Число:S',~v)}}</td></tr>
+    <tr><td class="grtag">с., одн.</td><td class="grvalue" colspan="2">{{:~root.getter('Час:P;Рід:N;Число:S',~v)}}</td></tr>
+    <tr><td class="grtag">мн.</td><td class="grvalue" colspan="2">{{:~root.getter('Час:P;Рід:X;Число:P',~v)}}</td></tr>
+    <tr><td class="grtagcenter" colspan="3">Наказовий спосіб</td></tr>
+    <tr><td class="grtag">2-а ос., одн.</td><td class="grvalue" colspan="2">{{:~root.getter('Наказовий спосіб:I;Особа:2;Число:S',~v)}}</td></tr>
+    <tr><td class="grtag">2-а ос., мн.</td><td class="grvalue" colspan="2">{{:~root.getter('Наказовий спосіб:I;Особа:2;Число:P',~v)}}</td></tr>
+    <!--<tr class="hide-gr1-"><td class="grtagcenter" colspan="3">Дзеепрыслоўе</td></tr> -->
+    <!--<tr class="hide-no-w- hide-gr1-mark-"><td class="grtag">цяп. час</td><td class="grvalue" colspan="2">{{:~root.getter('Час:R;Дзеепрыслоўе:G',~v)}}</td></tr> -->
+  </table>
+  {{> ~root.log(~v) }}
+</script>
+
+    <script id="template-grammardb-prosta" type="text/x-jsrender">
+  <div class="grvalue">{{:~root.getter('',~v)}}</div>
+  {{> ~root.log(~v) }}
+</script>
+
+    <script id="template-grammardb-other" type="text/x-jsrender">
+  <table class="table-borders hspacing">
+    <tr class="grheaderdefault">
+      {{for catnames}}
+        <th>{{>}}</th>
+      {{/for}}
+      <th></th>
+    </tr>
+    {{for forms itemVar="~f"}}
+    <tr>
+      {{for data}}
+        {{if ~f.colspan[#index] > 0}}
+          <td class="grtag" rowSpan="{{:~f.colspan[#getIndex()]}}">{{>}}</td>
+        {{/if}}
+      {{/for}}
+      <td class="grvalue">{{>value}}</td>
+    </tr>
+    {{/for}}
+  </table>
+</script>
+
+    <div id="dialog-grammardb" class="modal fade" bsModal #lemmaModal="bs-modal" [config]="{backdrop: 'static'}"
+         tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div id="dialog-grammardb-details" class="modal-content">
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<div class="container text-center" style="font-size: 80%">
+    <hr/><hr/>...ВЕСУМ 2023...
+</div>
+
+<script src="app2.js"></script>
+<script>
+      initializeGrammarPage();
+    </script>
+
+</body></html>

@@ -1,0 +1,389 @@
+package com.github.tamilakrashtan.vesumsearch.belarusian;
+
+import com.github.tamilakrashtan.vesumsearch.belarusian.TagLetter.OneLetterInfo;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+/**
+ * Граматычныя пазнакі паказваюцца ў наступных месцах:
+ * 1) Фільтар граматыкі для слова - checkboxes.
+ * 2) Паказ граматычных табліц для слова.
+ * 3) Паказ граматычных характарыстык аднаго слова.
+ * 4) Граматычны слоўнік у "праектах у распрацоўцы".
+ */
+public class BelarusianTags {
+    public static final String NO_GROUP_ITEM = "не ўжываецца";
+    public static final String HALOSNYJA = "ёуеыаоэяіюЁУЕЫАОЭЯІЮ";
+    public static final String USUALLY_STRESSED = "ёоЁО";
+
+    private static BelarusianTags INSTANCE = new BelarusianTags();
+
+    public static BelarusianTags getInstance() {
+        return INSTANCE;
+    }
+
+    private TagLetter root;
+
+    public static void main(String[] a) {
+        INSTANCE.isValidParadigmTag("VTPN1", "err p");
+        INSTANCE.isValidFormTag("VTPN1PG", "err f");
+    }
+
+    private BelarusianTags() {
+        root = new TagLetter();
+
+        nazounik(root);
+        licebnik(root);
+        //zajmiennik(root);
+        prymietnik(root);
+        dziejaslou(root);
+        //dziejeprymietnik(root);
+        pryslouje(root);
+        zlucnik(root);
+        prynazounik(root);
+        cascica(root);
+        vyklicnik(root);
+        pabocnaje(root);
+        //predykatyu(root);
+        //abrev(root);
+        castki(root);
+
+        checkParadigmMarks(root, "", 0);
+        checkDuplicateGroups(root, new ArrayList<>());
+        // праверыць якія групы не выкарыстоўваюцца
+    }
+
+    /**
+     * шукаем ва ўсіх тэгах count(latestInParadigm)==1
+     */
+    private void checkParadigmMarks(TagLetter tl, String code, int pmCount) {
+        if (tl.isLatestInParadigm()) {
+            pmCount++;
+        }
+        if (tl.isFinish()) {
+            if (pmCount != 1) {
+                throw new RuntimeException("pmCount=" + pmCount + " for " + code);
+            }
+        } else {
+            for (OneLetterInfo letterInfo : tl.letters) {
+                checkParadigmMarks(letterInfo.nextLetters, code + letterInfo.letter, pmCount);
+            }
+        }
+    }
+
+    /**
+     * Павярае ці няма аднолькавых назваў груп у іерархіі.
+     */
+    private void checkDuplicateGroups(TagLetter tl, List<String> path) {
+        for (OneLetterInfo li : tl.letters) {
+            if (path.contains(li.groupName) && !"Невідомо".equals(li.groupName)) {
+                throw new RuntimeException("Duplicate group '" + li.groupName + "' in " + path);
+            }
+            path.add(li.groupName);
+            checkDuplicateGroups(li.nextLetters, path);
+            path.remove(path.size() - 1);
+        }
+    }
+
+    /**
+     * Ці правільны тэг у парадыгме ? latestInParadigm==true
+     */
+    public boolean isValidParadigmTag(String code, String w) {
+        TagLetter after = getTagLetterAfter(code, w);
+        if (after == null) {
+            return false;
+        }
+        if (!after.isLatestInParadigm()) {
+            if (w != null) {
+                System.out.println(code + " " + w + " - няправільны тэг парадыгмы");
+            }
+            return false;
+        }
+        return true;
+    }
+
+    public boolean isValidFormTag(String code, String w) {
+        TagLetter after = getTagLetterAfter(code, w);
+        if (after == null) {
+            return false;
+        }
+        if (!after.isFinish()) {
+            if (w != null) {
+                System.out.println(code + " " + w + " - замалы код");
+            }
+            return false;
+        }
+        return true;
+    }
+
+    private TagLetter getTagLetterAfter(String code, String w) {
+        TagLetter tags = root;
+        for (char c : code.toCharArray()) {
+            if (c == 'x') { // TODO
+                if (tags.isFinish()) {
+                    if (w != null) {
+                        System.out.println(code + " " + w + " - зашмат літараў у кодзе");
+                    }
+                    return null;
+                }
+                TagLetter first = tags.letters.get(0).nextLetters;
+                for (TagLetter.OneLetterInfo li : tags.letters) {
+                    if (li.nextLetters != first) {
+                        if (w != null) {
+                            System.out.println(code + " " + w + " - незразумелы шлях раскадаваньня");
+                        }
+                        return null;
+                    }
+                }
+                tags = first;
+            } else {
+                tags = tags.next(c);
+                if (tags == null) {
+                    if (w != null) {
+                        System.out.println(code + " " + w + " - невядомая літара ў кодзе");
+                    }
+                    return null;
+                }
+            }
+        }
+        return tags;
+    }
+
+    public TagLetter getRoot() {
+        return root;
+    }
+
+    public TagLetter getNextAfter(String codeBegin) {
+        TagLetter tags = root;
+        for (char c : codeBegin.toCharArray()) {
+            tags = tags.next(c);
+            if (tags == null) {
+                throw new RuntimeException("Error code: " + codeBegin);
+            }
+        }
+        return tags;
+    }
+
+    public List<String> describe(String codeBegin, Set<String> excludeGroups) {
+        List<String> result = new ArrayList<String>();
+        TagLetter tags = root;
+        for (char c : codeBegin.toCharArray()) {
+            OneLetterInfo info = tags.getLetterInfo(c);
+            if (info == null) {
+                throw new RuntimeException("Wrong tag: " + codeBegin);
+            }
+            tags = tags.next(c);
+            if (tags == null) {
+                throw new RuntimeException("Wrong tag: " + codeBegin);
+            }
+            if (excludeGroups == null || !excludeGroups.contains(info.groupName)) {
+                result.add(info.description);
+            }
+        }
+        return result;
+    }
+
+    public char getValueOfGroup(String code, String group) {
+        TagLetter tags = root;
+        for (char c : code.toCharArray()) {
+            OneLetterInfo li = tags.getLetterInfo(c);
+            if (li == null) {
+                throw new RuntimeException("Wrong tag: " + code);
+            }
+            if (group.equals(li.groupName)) {
+                return li.letter;
+            }
+            tags = tags.next(c);
+            if (tags == null) {
+                throw new RuntimeException("Wrong tag: " + code);
+            }
+        }
+        return 0;
+    }
+
+    public String setValueOfGroup(String code, String group, char newValue) {
+        TagLetter tags = root;
+        for (int i=0;i<code.length();i++) {
+            char c= code.charAt(i);
+            OneLetterInfo li = tags.getLetterInfo(c);
+            if (li == null) {
+                throw new RuntimeException("Wrong tag: " + code);
+            }
+            if (group.equals(li.groupName)) {
+                return code.substring(0, i) + newValue + code.substring(i + 1);
+            }
+            tags = tags.next(c);
+            if (tags == null) {
+                throw new RuntimeException("Wrong tag: " + code);
+            }
+        }
+        return null;
+    }
+
+    private void nazounik(TagLetter t) {
+        t = t.add("Частина мови => N:іменник");
+        t.add("Новий=>+:новий").latestInParadigm();
+        t = t.add("Власна назва => C:загальна назва;P:власна назва;X:-");
+        t = t.add("Істота => A:істота;I:неістота;X:-");
+        //t = t.add("Асабовасць => P:асабовы;I:неасабовы;X:-");
+        t = t.add("Абревіатура => B:абревіатура;N:не абревіатура;X:-");
+
+        TagLetter z = t.add("Рід => M:чоловічий рід;F:жіночий рід;N:середній рід род;X:-");
+//        z = z.add(
+//                "Скланенне => 1:1-е скланенне;2:2-е скланенне;3:3-е скланенне;0:нескланяльны;4:рознаскланяльны;6:змешанае скланенне;X:-")
+//                .latestInParadigm();
+        z = z.add("Відмінок => N:називний відмінок;G:родовий відмінок;D:давальний відмінок;A:знахідний відмінок;I:орудний відмінок;L:місцевий відмінок;V:кличний відмінок");
+        z = z.add("Число => S:однина;P:множина").latestInParadigm();;
+
+        TagLetter p = t.add("Множинні => P:множина");
+//        p = p.add("Скланенне => 0:нескланяльны;7:множналікавы").latestInParadigm();
+        p = p.add("Відмінок => N:називний відмінок;G:родовий відмінок;D:давальний відмінок;A:знахідний відмінок;I:орудний відмінок;L:місцевий відмінок;V:кличний відмінок");
+        p = p.add("Число => S:однина;P:множина").latestInParadigm();;
+
+//        TagLetter su = t.add("Субстантываванасць => S:субстантываваны;U:субстантываваны множналікавы");
+//        su = su.add("Скланенне => 5:ад’ектыўнае скланенне").latestInParadigm();
+//        su = su.add("Род => M:мужчынскі род;F:жаночы род;N:ніякі род;P:адсутнасць роду ў множным ліку;X:-"); // для субстантываваных
+//        su = su.add("Склон => N:назоўны склон;G:родны склон;D:давальны склон;A:вінавальны склон;I:творны склон;L:месны склон;V:клічны склон");
+//        su = su.add("Лік => S:адзіночны лік;P:множны лік");
+    }
+
+    private void licebnik(TagLetter t) {
+
+        t = t.add("Частина мови => M:числівник").latestInParadigm();
+
+//        TagLetter t0 = t.add("Часціна мовы => M:лічэбнік");
+//        t = t0.add("Словазмяненне => N:словазмяненне як у назоўніка;A:словазмяненне як у прыметніка;X:-");
+//        TagLetter t2=t0.add("Словазмяненне => 0:няма словазмянення");
+//        t = t.add("Значэнне => C:колькасны;O:парадкавы;K:зборны;F:дробавы");
+//        t2 = t2.add("Значэнне => C:колькасны;O:парадкавы;K:зборны;F:дробавы");
+//        t = t.add("Форма => S:просты;C:складаны").latestInParadigm();
+//        t2 = t2.add("Форма => S:просты;C:складаны").latestInParadigm();
+//
+//        TagLetter z = t.add("Род => M:мужчынскі род;F:жаночы род;N:ніякі род;P:няма;X:-");
+//        t2.add("Нескланяльны => 0:нескланяльны");
+//        z = z.add("Склон => N:назоўны склон;G:родны склон;D:давальны склон;A:вінавальны склон;I:творны склон;L:месны склон;X:-");
+//        z = z.add("Лік => S:адзіночны лік;P:множны лік;X:-");
+    }
+
+    private void zajmiennik(TagLetter t) {
+        t = t.add("Частина мови => S:займенник");
+        t = t.add("Словазмяненне => N:N:словазмяненне як у назоўніка;A:N:словазмяненне як у прыметніка;0:нязменны");
+        t = t.add(
+                "Разрад => P:асабовы;R:зваротны;S:прыналежны;D:указальны;E:азначальны;L:пытальна-адносны;N:адмоўны;F:няпэўны");
+        t = t.add("Асоба => 1:1-я асоба;2:2-я асоба;3:3-я асоба;0:безасабовы;X:-").latestInParadigm();
+
+        TagLetter z = t.add("Род => M:мужчынскі род;F:жаночы род;N:ніякі род;X:-;0:-");
+        t.add("Формы => 1:-");
+        z = z.add("Склон => N:назоўны склон;G:родны склон;D:давальны склон;A:вінавальны склон;I:творны склон;L:месны склон;X:-");
+        z = z.add("Лік => S:адзіночны лік;P:множны лік;X:-");
+    }
+
+    private void prymietnik(TagLetter t) {
+        t = t.add("Частина мови => A:прикметник");
+        t.add("Тип => 0:невідмінюваний").latestInParadigm();
+        //t = t.add("Тып => Q:якасны;R:адносны;P:прыналежны;X:-");
+        TagLetter a = t.add("Ступінь порівняння => P:базова форма;C:порівняльна форма;S:найвища форма").latestInParadigm();
+
+        //a.add("Прикметник у функцыі прыслоўя => R:прыслоў'е");
+        t = a.add("Рід => M:чоловічий рід;F:жіночий рід;N:середній рід;P:множина;X:-");
+        t = t.add("Відмінок => N:називний відмінок;G:родовий відмінок;D:давальний відмінок;A:знахідний відмінок;I:орудний відмінок;L:місцевий відмінок;V:кличний відмінок");
+        t = t.add("Число => S:однина;P:множина");
+    }
+
+    private void dziejaslou(TagLetter t) {
+        t = t.add("Частина мови => V:дієслово");
+        t.add("Новий=>+:новий").latestInParadigm();
+        //t = t.add("Перехідність => T:перехідний;I:неперехідний;X:-");
+        t = t.add("Доконаність => P:доконане;M:недоконане;X:-");
+        t = t.add("Зворотність => R:зворотне;N:незворотне").latestInParadigm();;
+        //t = t.add("Спражэнне => 1:1-е спражэнне;2:2-е спражэнне;3:рознаспрагальны;X:-").latestInParadigm();
+
+        TagLetter casR = t.add("Час => R:теперішній час");
+        TagLetter casM = t.add("Час => P:минулий час");
+        TagLetter casO = t.add("Час => F:майбутній час");
+        TagLetter zah = t.add("Наказовий спосіб => I:наказовий спосіб");
+        t.add("Інфінітив => 0:інфінітив");
+        t.add("Невідомо => X:-").add("Невідомо => X:-").add("Невідомо => X:-")
+                .add("Невідомо => X:-");
+
+        TagLetter casRL = casR.add("Особа => 1:1-а особа;2:2-а особа;3:3-я особа;0:безособове");
+        //casR.add("Дзеепрыслоўе => G:дзеепрыслоўе");
+        //casM.add("Дзеепрыслоўе => G:дзеепрыслоўе");
+        TagLetter casOL = casO.add("Особа => 1:1-а особа;2:2-а особа;3:3-я особа;0:безособове");
+        //casO.add("Дзеепрыслоўе => G:дзеепрыслоўе");
+        zah = zah.add("Особа => 1:1-а особа;2:2-а особа;3:3-я особа;0:безособове");
+
+        casRL = casRL.add("Число => S:однина;P:множина");
+        casOL = casOL.add("Число => S:однина;P:множина");
+        zah = zah.add("Число => S:однина;P:множина");
+
+        casM = casM.add("Рід => M:чоловічий рід;F:жіночий рід;N:середній рід;X:-");
+        casM = casM.add("Число => S:однина;P:множина");
+    }
+
+    private void dziejeprymietnik(TagLetter t) {
+        t = t.add("Часціна мовы => P:дзеепрыметнік");
+        t = t.add("Стан => A:незалежны стан;P:залежны стан");
+        t = t.add("Час => R:цяперашні час;P:прошлы час");
+        TagLetter pt = t.add("Трыванне => P:закончанае трыванне;M:незакончанае трыванне;X:-")
+                .latestInParadigm();
+
+        t = pt.add("Род => M:мужчынскі род;F:жаночы род;N:ніякі род;P:множны лік;X:-");
+        t = t.add("Склон => N:назоўны склон;G:родны склон;D:давальны склон;A:вінавальны склон;I:творны склон;L:месны склон;H:-");
+        t = t.add("Лік => S:адзіночны лік;P:множны лік;X:-");
+        pt.add("Кароткая форма => R:ж. і н.");
+    }
+
+    private void pryslouje(TagLetter t) {
+        t = t.add("Частина мовы => R:прислівник");
+        t.add("Новий=>+:новий").latestInParadigm();
+//        t = t.add(
+//                "Спосаб утварэння => N:утворана ад назоўніка;A:утворана ад прыметніка;M:утворана ад лічэбніка;S:утворана ад займенніка;G:утворана ад дзеепрыслоўя;V:утворана ад дзеяслова;E:утворана ад часціцы;I:утворана ад прыназоўніка;X:-")
+//                .latestInParadigm();
+
+        t = t.add("Ступінь порівняння => P:базова форма;C:порівняльна форма;S:найвища форма").latestInParadigm();;
+    }
+
+    private void zlucnik(TagLetter t) {
+        t = t.add("Частина мови => C:сполучник");
+        TagLetter s = t.add("Тип => S:підрядний").latestInParadigm();;
+        TagLetter k = t.add("Тип => K:сурядний").latestInParadigm();;
+//        t.add("Тып => P:паясняльны").latestInParadigm();
+//        s.add("Падпарадкавальны => B:прычынны;C:часавы;D:умоўны;F:мэтавы;G:уступальны;H:параўнальны;K:следства;X:-")
+//                .latestInParadigm();
+//        k.add("Злучальны => A:спалучальны;E:супастаўляльны;O:пералічальна-размеркавальны;L:далучальны;U:градацыйны;X:-")
+//                .latestInParadigm();
+    }
+
+    private void prynazounik(TagLetter t) {
+        t.add("Частина мови => I:прийменник").latestInParadigm();
+    }
+
+    private void cascica(TagLetter t) {
+        t.add("Частина мови => E:частка").latestInParadigm();
+    }
+
+    private void vyklicnik(TagLetter t) {
+        t.add("Частина мови => Y:вигук").latestInParadigm();
+    }
+
+    private void pabocnaje(TagLetter t) {
+        t.add("Частина мови => Z:інше").latestInParadigm();
+    }
+
+    private void predykatyu(TagLetter t) {
+        t.add("Частина мови => W:прэдыкатыў").latestInParadigm();
+    }
+
+    private void abrev(TagLetter t) {
+        t = t.add("Частина мови => K:абрэвіятуры").latestInParadigm();
+    }
+
+    private void castki(TagLetter t) {
+        t = t.add("Частина мови => F:частка слова").latestInParadigm();
+//        t.add("Тып => P:прыстаўка;F:1-я састаўная частка складаных слоў;S:2-я састаўная частка складаных слоў")
+//                .latestInParadigm();
+    }
+}

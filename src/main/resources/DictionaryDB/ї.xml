@@ -1,0 +1,1986 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Wordlist>
+    <Paradigm pdgId="144780" lemma="Ївга" tag="NPANF">
+        <Variant id="a" lemma="Ївга">
+            <Form tag="NS">Ївга</Form>
+            <Form tag="GS">Ївги</Form>
+            <Form tag="DS">Ївзі</Form>
+            <Form tag="AS">Ївгу</Form>
+            <Form tag="IS">Ївгою</Form>
+            <Form tag="LS">Ївзі</Form>
+            <Form tag="VS">Ївго</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144781" lemma="Ївженки" tag="NPINP">
+        <Variant id="a" lemma="Ївженки">
+            <Form tag="NP">Ївженки</Form>
+            <Form tag="GP">Ївженків</Form>
+            <Form tag="DP">Ївженкам</Form>
+            <Form tag="AP">Ївженки</Form>
+            <Form tag="IP">Ївженками</Form>
+            <Form tag="LP">Ївженках</Form>
+            <Form tag="VP">Ївженки</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144782" lemma="Ївжин" tag="AP">
+        <Variant id="a" lemma="Ївжин">
+            <Form tag="MNS">Ївжин</Form>
+            <Form tag="MGS">Ївжиного</Form>
+            <Form tag="MDS">Ївжиному</Form>
+            <Form tag="MAS" options="anim">Ївжиного</Form>
+            <Form tag="MAS" options="inanim">Ївжин</Form>
+            <Form tag="MIS">Ївжиним</Form>
+            <Form tag="MLS">Ївжинім</Form>
+            <Form tag="MLS">Ївжиному</Form>
+            <Form tag="MVS">Ївжин</Form>
+            <Form tag="FNS">Ївжина</Form>
+            <Form tag="FGS">Ївжиної</Form>
+            <Form tag="FDS">Ївжиній</Form>
+            <Form tag="FAS">Ївжину</Form>
+            <Form tag="FIS">Ївжиною</Form>
+            <Form tag="FLS">Ївжиній</Form>
+            <Form tag="FVS">Ївжина</Form>
+            <Form tag="NNS">Ївжине</Form>
+            <Form tag="NGS">Ївжиного</Form>
+            <Form tag="NDS">Ївжиному</Form>
+            <Form tag="NAS">Ївжине</Form>
+            <Form tag="NIS">Ївжиним</Form>
+            <Form tag="NLS">Ївжинім</Form>
+            <Form tag="NLS">Ївжиному</Form>
+            <Form tag="NVS">Ївжине</Form>
+            <Form tag="PNP">Ївжині</Form>
+            <Form tag="PGP">Ївжиних</Form>
+            <Form tag="PDP">Ївжиним</Form>
+            <Form tag="PAP" options="anim">Ївжиних</Form>
+            <Form tag="PAP" options="inanim">Ївжині</Form>
+            <Form tag="PIP">Ївжиними</Form>
+            <Form tag="PLP">Ївжиних</Form>
+            <Form tag="PVP">Ївжині</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144784" lemma="їда" tag="NCINF">
+        <Variant id="a" lemma="їда">
+            <Form tag="NS">їда</Form>
+            <Form tag="GS">їди</Form>
+            <Form tag="DS">їді</Form>
+            <Form tag="AS">їду</Form>
+            <Form tag="IS">їдою</Form>
+            <Form tag="LS">їді</Form>
+            <Form tag="VS">їдо</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144785" lemma="їдак" tag="NCANM">
+        <Variant id="a" lemma="їдак">
+            <Form tag="NS">їдак</Form>
+            <Form tag="GS">їдака</Form>
+            <Form tag="DS">їдакові</Form>
+            <Form tag="DS">їдаку</Form>
+            <Form tag="AS">їдака</Form>
+            <Form tag="IS">їдаком</Form>
+            <Form tag="LS">їдакові</Form>
+            <Form tag="LS">їдаку</Form>
+            <Form tag="VS">їдаку</Form>
+            <Form tag="NP">їдаки</Form>
+            <Form tag="GP">їдаків</Form>
+            <Form tag="DP">їдакам</Form>
+            <Form tag="AP">їдаків</Form>
+            <Form tag="AP">їдаки</Form>
+            <Form tag="IP">їдаками</Form>
+            <Form tag="LP">їдаках</Form>
+            <Form tag="VP">їдаки</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144786" lemma="їдаленька" tag="NCINF">
+        <Variant id="a" lemma="їдаленька">
+            <Form tag="NS">їдаленька</Form>
+            <Form tag="GS">їдаленьки</Form>
+            <Form tag="DS">їдаленьці</Form>
+            <Form tag="AS">їдаленьку</Form>
+            <Form tag="IS">їдаленькою</Form>
+            <Form tag="LS">їдаленьці</Form>
+            <Form tag="VS">їдаленько</Form>
+            <Form tag="NP">їдаленьки</Form>
+            <Form tag="GP">їдаленьок</Form>
+            <Form tag="DP">їдаленькам</Form>
+            <Form tag="AP">їдаленьки</Form>
+            <Form tag="IP">їдаленьками</Form>
+            <Form tag="LP">їдаленьках</Form>
+            <Form tag="VP">їдаленьки</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144787" lemma="їдало" tag="NCINN">
+        <Variant id="a" lemma="їдало">
+            <Form tag="NS">їдало</Form>
+            <Form tag="GS">їдала</Form>
+            <Form tag="DS">їдалу</Form>
+            <Form tag="AS">їдало</Form>
+            <Form tag="IS">їдалом</Form>
+            <Form tag="LS">їдалі</Form>
+            <Form tag="LS">їдалу</Form>
+            <Form tag="VS">їдало</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144788" lemma="їдальня" tag="NCINF">
+        <Variant id="a" lemma="їдальня">
+            <Form tag="NS">їдальня</Form>
+            <Form tag="GS">їдальні</Form>
+            <Form tag="DS">їдальні</Form>
+            <Form tag="AS">їдальню</Form>
+            <Form tag="IS">їдальнею</Form>
+            <Form tag="LS">їдальні</Form>
+            <Form tag="VS">їдальне</Form>
+            <Form tag="NP">їдальні</Form>
+            <Form tag="GP">їдалень</Form>
+            <Form tag="DP">їдальням</Form>
+            <Form tag="AP">їдальні</Form>
+            <Form tag="IP">їдальнями</Form>
+            <Form tag="LP">їдальнях</Form>
+            <Form tag="VP">їдальні</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144789" lemma="їдати" tag="VMN">
+        <Variant id="a" lemma="їдати">
+            <Form tag="0">їдати</Form>
+            <Form tag="PMS">їдав</Form>
+            <Form tag="PFS">їдала</Form>
+            <Form tag="PNS">їдало</Form>
+            <Form tag="PXP">їдали</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144790" lemma="їден" tag="AP">
+        <Variant id="a" lemma="їден">
+            <Form tag="MNS">їден</Form>
+            <Form tag="MGS">їдного</Form>
+            <Form tag="MDS">їдному</Form>
+            <Form tag="MAS" options="anim">їдного</Form>
+            <Form tag="MAS" options="inanim">їден</Form>
+            <Form tag="MIS">їдним</Form>
+            <Form tag="MLS">їднім</Form>
+            <Form tag="MLS">їдному</Form>
+            <Form tag="FNS">їдна</Form>
+            <Form tag="FGS">їднієї</Form>
+            <Form tag="FGS">їдної</Form>
+            <Form tag="FDS">їдній</Form>
+            <Form tag="FAS">їдну</Form>
+            <Form tag="FIS">їднією</Form>
+            <Form tag="FIS">їдною</Form>
+            <Form tag="FLS">їдній</Form>
+            <Form tag="NNS">їдне</Form>
+            <Form tag="NNS">їдно</Form>
+            <Form tag="NGS">їдного</Form>
+            <Form tag="NDS">їдному</Form>
+            <Form tag="NAS">їдне</Form>
+            <Form tag="NAS">їдно</Form>
+            <Form tag="NIS">їдним</Form>
+            <Form tag="NLS">їднім</Form>
+            <Form tag="NLS">їдному</Form>
+            <Form tag="PNP">їдні</Form>
+            <Form tag="PGP">їдних</Form>
+            <Form tag="PDP">їдним</Form>
+            <Form tag="PAP" options="anim">їдних</Form>
+            <Form tag="PAP" options="inanim">їдні</Form>
+            <Form tag="PIP">їдними</Form>
+            <Form tag="PLP">їдних</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144791" lemma="їдений" tag="AP">
+        <Variant id="a" lemma="їдений">
+            <Form tag="MNS">їдений</Form>
+            <Form tag="MGS">їденого</Form>
+            <Form tag="MDS">їденому</Form>
+            <Form tag="MAS" options="anim">їденого</Form>
+            <Form tag="MAS" options="inanim">їдений</Form>
+            <Form tag="MIS">їденим</Form>
+            <Form tag="MLS">їденім</Form>
+            <Form tag="MLS">їденому</Form>
+            <Form tag="MVS">їдений</Form>
+            <Form tag="FNS">їдена</Form>
+            <Form tag="FGS">їденої</Form>
+            <Form tag="FDS">їденій</Form>
+            <Form tag="FAS">їдену</Form>
+            <Form tag="FIS">їденою</Form>
+            <Form tag="FLS">їденій</Form>
+            <Form tag="FVS">їдена</Form>
+            <Form tag="NNS">їдене</Form>
+            <Form tag="NGS">їденого</Form>
+            <Form tag="NDS">їденому</Form>
+            <Form tag="NAS">їдене</Form>
+            <Form tag="NIS">їденим</Form>
+            <Form tag="NLS">їденім</Form>
+            <Form tag="NLS">їденому</Form>
+            <Form tag="NVS">їдене</Form>
+            <Form tag="PNP">їдені</Form>
+            <Form tag="PGP">їдених</Form>
+            <Form tag="PDP">їденим</Form>
+            <Form tag="PAP" options="anim">їдених</Form>
+            <Form tag="PAP" options="inanim">їдені</Form>
+            <Form tag="PIP">їденими</Form>
+            <Form tag="PLP">їдених</Form>
+            <Form tag="PVP">їдені</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144792" lemma="їдець" tag="NCANM">
+        <Variant id="a" lemma="їдець">
+            <Form tag="NS">їдець</Form>
+            <Form tag="GS">їдця</Form>
+            <Form tag="DS">їдцеві</Form>
+            <Form tag="DS">їдцю</Form>
+            <Form tag="AS">їдця</Form>
+            <Form tag="IS">їдцем</Form>
+            <Form tag="LS">їдцеві</Form>
+            <Form tag="LS">їдці</Form>
+            <Form tag="LS">їдцю</Form>
+            <Form tag="VS">їдцю</Form>
+            <Form tag="NP">їдці</Form>
+            <Form tag="GP">їдців</Form>
+            <Form tag="DP">їдцям</Form>
+            <Form tag="AP">їдців</Form>
+            <Form tag="AP">їдці</Form>
+            <Form tag="IP">їдцями</Form>
+            <Form tag="LP">їдцях</Form>
+            <Form tag="VP">їдці</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144793" lemma="їдження" tag="NCINN">
+        <Variant id="a" lemma="їдження">
+            <Form tag="NS">їдження</Form>
+            <Form tag="GS">їдження</Form>
+            <Form tag="DS">їдженню</Form>
+            <Form tag="AS">їдження</Form>
+            <Form tag="IS">їдженням</Form>
+            <Form tag="LS">їдженні</Form>
+            <Form tag="LS">їдженню</Form>
+            <Form tag="VS">їдження</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144794" lemma="їдиш" tag="NCINM">
+        <Variant id="a" lemma="їдиш">
+            <Form tag="NS">їдиш</Form>
+            <Form tag="GS">їдишу</Form>
+            <Form tag="DS">їдишеві</Form>
+            <Form tag="DS">їдишу</Form>
+            <Form tag="AS">їдиш</Form>
+            <Form tag="IS">їдишем</Form>
+            <Form tag="LS">їдишеві</Form>
+            <Form tag="LS">їдиші</Form>
+            <Form tag="LS">їдишу</Form>
+            <Form tag="VS">їдишу</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144795" lemma="їдишизм" tag="NCINM">
+        <Variant id="a" lemma="їдишизм">
+            <Form tag="NS">їдишизм</Form>
+            <Form tag="GS">їдишизму</Form>
+            <Form tag="DS">їдишизмові</Form>
+            <Form tag="DS">їдишизму</Form>
+            <Form tag="AS">їдишизм</Form>
+            <Form tag="IS">їдишизмом</Form>
+            <Form tag="LS">їдишизмі</Form>
+            <Form tag="LS">їдишизмові</Form>
+            <Form tag="LS">їдишизму</Form>
+            <Form tag="VS">їдишизме</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144796" lemma="їдишомовний" tag="AP">
+        <Variant id="a" lemma="їдишомовний">
+            <Form tag="MNS">їдишомовний</Form>
+            <Form tag="MGS">їдишомовного</Form>
+            <Form tag="MDS">їдишомовному</Form>
+            <Form tag="MAS" options="anim">їдишомовного</Form>
+            <Form tag="MAS" options="inanim">їдишомовний</Form>
+            <Form tag="MIS">їдишомовним</Form>
+            <Form tag="MLS">їдишомовнім</Form>
+            <Form tag="MLS">їдишомовному</Form>
+            <Form tag="MVS">їдишомовний</Form>
+            <Form tag="FNS">їдишомовна</Form>
+            <Form tag="FGS">їдишомовної</Form>
+            <Form tag="FDS">їдишомовній</Form>
+            <Form tag="FAS">їдишомовну</Form>
+            <Form tag="FIS">їдишомовною</Form>
+            <Form tag="FLS">їдишомовній</Form>
+            <Form tag="FVS">їдишомовна</Form>
+            <Form tag="NNS">їдишомовне</Form>
+            <Form tag="NGS">їдишомовного</Form>
+            <Form tag="NDS">їдишомовному</Form>
+            <Form tag="NAS">їдишомовне</Form>
+            <Form tag="NIS">їдишомовним</Form>
+            <Form tag="NLS">їдишомовнім</Form>
+            <Form tag="NLS">їдишомовному</Form>
+            <Form tag="NVS">їдишомовне</Form>
+            <Form tag="PNP">їдишомовні</Form>
+            <Form tag="PGP">їдишомовних</Form>
+            <Form tag="PDP">їдишомовним</Form>
+            <Form tag="PAP" options="anim">їдишомовних</Form>
+            <Form tag="PAP" options="inanim">їдишомовні</Form>
+            <Form tag="PIP">їдишомовними</Form>
+            <Form tag="PLP">їдишомовних</Form>
+            <Form tag="PVP">їдишомовні</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144797" lemma="їдишський" tag="AP">
+        <Variant id="a" lemma="їдишський">
+            <Form tag="MNS">їдишський</Form>
+            <Form tag="MGS">їдишського</Form>
+            <Form tag="MDS">їдишському</Form>
+            <Form tag="MAS" options="anim">їдишського</Form>
+            <Form tag="MAS" options="inanim">їдишський</Form>
+            <Form tag="MIS">їдишським</Form>
+            <Form tag="MLS">їдишськім</Form>
+            <Form tag="MLS">їдишському</Form>
+            <Form tag="MVS">їдишський</Form>
+            <Form tag="FNS">їдишська</Form>
+            <Form tag="FGS">їдишської</Form>
+            <Form tag="FDS">їдишській</Form>
+            <Form tag="FAS">їдишську</Form>
+            <Form tag="FIS">їдишською</Form>
+            <Form tag="FLS">їдишській</Form>
+            <Form tag="FVS">їдишська</Form>
+            <Form tag="NNS">їдишське</Form>
+            <Form tag="NGS">їдишського</Form>
+            <Form tag="NDS">їдишському</Form>
+            <Form tag="NAS">їдишське</Form>
+            <Form tag="NIS">їдишським</Form>
+            <Form tag="NLS">їдишськім</Form>
+            <Form tag="NLS">їдишському</Form>
+            <Form tag="NVS">їдишське</Form>
+            <Form tag="PNP">їдишські</Form>
+            <Form tag="PGP">їдишських</Form>
+            <Form tag="PDP">їдишським</Form>
+            <Form tag="PAP" options="anim">їдишських</Form>
+            <Form tag="PAP" options="inanim">їдишські</Form>
+            <Form tag="PIP">їдишськими</Form>
+            <Form tag="PLP">їдишських</Form>
+            <Form tag="PVP">їдишські</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144798" lemma="їдіння" tag="NCINN">
+        <Variant id="a" lemma="їдіння">
+            <Form tag="NS">їдіння</Form>
+            <Form tag="GS">їдіння</Form>
+            <Form tag="DS">їдінню</Form>
+            <Form tag="AS">їдіння</Form>
+            <Form tag="IS">їдінням</Form>
+            <Form tag="LS">їдінні</Form>
+            <Form tag="LS">їдінню</Form>
+            <Form tag="VS">їдіння</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144799" lemma="їдкий" tag="AP">
+        <Variant id="a" lemma="їдкий">
+            <Form tag="MNS">їдкий</Form>
+            <Form tag="MGS">їдкого</Form>
+            <Form tag="MDS">їдкому</Form>
+            <Form tag="MAS" options="anim">їдкого</Form>
+            <Form tag="MAS" options="inanim">їдкий</Form>
+            <Form tag="MIS">їдким</Form>
+            <Form tag="MLS">їдкім</Form>
+            <Form tag="MLS">їдкому</Form>
+            <Form tag="MVS">їдкий</Form>
+            <Form tag="FNS">їдка</Form>
+            <Form tag="FGS">їдкої</Form>
+            <Form tag="FDS">їдкій</Form>
+            <Form tag="FAS">їдку</Form>
+            <Form tag="FIS">їдкою</Form>
+            <Form tag="FLS">їдкій</Form>
+            <Form tag="FVS">їдка</Form>
+            <Form tag="NNS">їдке</Form>
+            <Form tag="NGS">їдкого</Form>
+            <Form tag="NDS">їдкому</Form>
+            <Form tag="NAS">їдке</Form>
+            <Form tag="NIS">їдким</Form>
+            <Form tag="NLS">їдкім</Form>
+            <Form tag="NLS">їдкому</Form>
+            <Form tag="NVS">їдке</Form>
+            <Form tag="PNP">їдкі</Form>
+            <Form tag="PGP">їдких</Form>
+            <Form tag="PDP">їдким</Form>
+            <Form tag="PAP" options="anim">їдких</Form>
+            <Form tag="PAP" options="inanim">їдкі</Form>
+            <Form tag="PIP">їдкими</Form>
+            <Form tag="PLP">їдких</Form>
+            <Form tag="PVP">їдкі</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144800" lemma="їдкість" tag="NCINF">
+        <Variant id="a" lemma="їдкість">
+            <Form tag="NS">їдкість</Form>
+            <Form tag="GS">їдкості</Form>
+            <Form tag="GS">їдкости</Form>
+            <Form tag="DS">їдкості</Form>
+            <Form tag="AS">їдкість</Form>
+            <Form tag="IS">їдкістю</Form>
+            <Form tag="LS">їдкості</Form>
+            <Form tag="VS">їдкосте</Form>
+            <Form tag="NP">їдкості</Form>
+            <Form tag="GP">їдкостей</Form>
+            <Form tag="DP">їдкостям</Form>
+            <Form tag="AP">їдкості</Form>
+            <Form tag="IP">їдкостями</Form>
+            <Form tag="LP">їдкостях</Form>
+            <Form tag="VP">їдкості</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144801" lemma="їдкіше" tag="R">
+        <Variant id="a" lemma="їдкіше">
+            <Form tag="C">їдкіше</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144802" lemma="їдкіший" tag="AC">
+        <Variant id="a" lemma="їдкіший">
+            <Form tag="MNS">їдкіший</Form>
+            <Form tag="MGS">їдкішого</Form>
+            <Form tag="MDS">їдкішому</Form>
+            <Form tag="MAS" options="anim">їдкішого</Form>
+            <Form tag="MAS" options="inanim">їдкіший</Form>
+            <Form tag="MIS">їдкішим</Form>
+            <Form tag="MLS">їдкішім</Form>
+            <Form tag="MLS">їдкішому</Form>
+            <Form tag="MVS">їдкіший</Form>
+            <Form tag="FNS">їдкіша</Form>
+            <Form tag="FGS">їдкішої</Form>
+            <Form tag="FDS">їдкішій</Form>
+            <Form tag="FAS">їдкішу</Form>
+            <Form tag="FIS">їдкішою</Form>
+            <Form tag="FLS">їдкішій</Form>
+            <Form tag="FVS">їдкіша</Form>
+            <Form tag="NNS">їдкіше</Form>
+            <Form tag="NGS">їдкішого</Form>
+            <Form tag="NDS">їдкішому</Form>
+            <Form tag="NAS">їдкіше</Form>
+            <Form tag="NIS">їдкішим</Form>
+            <Form tag="NLS">їдкішім</Form>
+            <Form tag="NLS">їдкішому</Form>
+            <Form tag="NVS">їдкіше</Form>
+            <Form tag="PNP">їдкіші</Form>
+            <Form tag="PGP">їдкіших</Form>
+            <Form tag="PDP">їдкішим</Form>
+            <Form tag="PAP" options="anim">їдкіших</Form>
+            <Form tag="PAP" options="inanim">їдкіші</Form>
+            <Form tag="PIP">їдкішими</Form>
+            <Form tag="PLP">їдкіших</Form>
+            <Form tag="PVP">їдкіші</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144803" lemma="їдко" tag="R">
+        <Variant id="a" lemma="їдко">
+            <Form tag="P">їдко</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144804" lemma="їдкуватий" tag="AP">
+        <Variant id="a" lemma="їдкуватий">
+            <Form tag="MNS">їдкуватий</Form>
+            <Form tag="MGS">їдкуватого</Form>
+            <Form tag="MDS">їдкуватому</Form>
+            <Form tag="MAS" options="anim">їдкуватого</Form>
+            <Form tag="MAS" options="inanim">їдкуватий</Form>
+            <Form tag="MIS">їдкуватим</Form>
+            <Form tag="MLS">їдкуватім</Form>
+            <Form tag="MLS">їдкуватому</Form>
+            <Form tag="MVS">їдкуватий</Form>
+            <Form tag="FNS">їдкувата</Form>
+            <Form tag="FGS">їдкуватої</Form>
+            <Form tag="FDS">їдкуватій</Form>
+            <Form tag="FAS">їдкувату</Form>
+            <Form tag="FIS">їдкуватою</Form>
+            <Form tag="FLS">їдкуватій</Form>
+            <Form tag="FVS">їдкувата</Form>
+            <Form tag="NNS">їдкувате</Form>
+            <Form tag="NGS">їдкуватого</Form>
+            <Form tag="NDS">їдкуватому</Form>
+            <Form tag="NAS">їдкувате</Form>
+            <Form tag="NIS">їдкуватим</Form>
+            <Form tag="NLS">їдкуватім</Form>
+            <Form tag="NLS">їдкуватому</Form>
+            <Form tag="NVS">їдкувате</Form>
+            <Form tag="PNP">їдкуваті</Form>
+            <Form tag="PGP">їдкуватих</Form>
+            <Form tag="PDP">їдкуватим</Form>
+            <Form tag="PAP" options="anim">їдкуватих</Form>
+            <Form tag="PAP" options="inanim">їдкуваті</Form>
+            <Form tag="PIP">їдкуватими</Form>
+            <Form tag="PLP">їдкуватих</Form>
+            <Form tag="PVP">їдкуваті</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144805" lemma="їдкувато" tag="R">
+        <Variant id="a" lemma="їдкувато">
+            <Form tag="P">їдкувато</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144806" lemma="їдло" tag="NCINN">
+        <Variant id="a" lemma="їдло">
+            <Form tag="NS">їдло</Form>
+            <Form tag="GS">їдла</Form>
+            <Form tag="DS">їдлу</Form>
+            <Form tag="AS">їдло</Form>
+            <Form tag="IS">їдлом</Form>
+            <Form tag="LS">їдлі</Form>
+            <Form tag="LS">їдлу</Form>
+            <Form tag="VS">їдло</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144807" lemma="їдок" tag="NCANM">
+        <Variant id="a" lemma="їдок">
+            <Form tag="NS">їдок</Form>
+            <Form tag="GS">їдока</Form>
+            <Form tag="DS">їдокові</Form>
+            <Form tag="DS">їдоку</Form>
+            <Form tag="AS">їдока</Form>
+            <Form tag="IS">їдоком</Form>
+            <Form tag="LS">їдокові</Form>
+            <Form tag="LS">їдоку</Form>
+            <Form tag="VS">їдоку</Form>
+            <Form tag="NP">їдоки</Form>
+            <Form tag="GP">їдоків</Form>
+            <Form tag="DP">їдокам</Form>
+            <Form tag="AP">їдоків</Form>
+            <Form tag="AP">їдоки</Form>
+            <Form tag="IP">їдоками</Form>
+            <Form tag="LP">їдоках</Form>
+            <Form tag="VP">їдоки</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144808" lemma="їдом" tag="R">
+        <Variant id="a" lemma="їдом">
+            <Form tag="P">їдом</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144809" lemma="їдуха" tag="NCANM">
+        <Variant id="a" lemma="їдуха">
+            <Form tag="NS">їдуха</Form>
+            <Form tag="GS">їдухи</Form>
+            <Form tag="DS">їдусі</Form>
+            <Form tag="AS">їдуху</Form>
+            <Form tag="IS">їдухою</Form>
+            <Form tag="LS">їдусі</Form>
+            <Form tag="VS">їдухо</Form>
+            <Form tag="NS">їдуха</Form>
+            <Form tag="GS">їдухи</Form>
+            <Form tag="DS">їдусі</Form>
+            <Form tag="AS">їдуху</Form>
+            <Form tag="IS">їдухою</Form>
+            <Form tag="LS">їдусі</Form>
+            <Form tag="VS">їдухо</Form>
+            <Form tag="NP">їдухи</Form>
+            <Form tag="GP">їдух</Form>
+            <Form tag="DP">їдухам</Form>
+            <Form tag="AP">їдух</Form>
+            <Form tag="AP">їдухи</Form>
+            <Form tag="IP">їдухами</Form>
+            <Form tag="LP">їдухах</Form>
+            <Form tag="VP">їдухи</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144811" lemma="їдучий" tag="AP">
+        <Variant id="a" lemma="їдучий">
+            <Form tag="MNS">їдучий</Form>
+            <Form tag="MGS">їдучого</Form>
+            <Form tag="MDS">їдучому</Form>
+            <Form tag="MAS" options="anim">їдучого</Form>
+            <Form tag="MAS" options="inanim">їдучий</Form>
+            <Form tag="MIS">їдучим</Form>
+            <Form tag="MLS">їдучім</Form>
+            <Form tag="MLS">їдучому</Form>
+            <Form tag="MVS">їдучий</Form>
+            <Form tag="FNS">їдуча</Form>
+            <Form tag="FGS">їдучої</Form>
+            <Form tag="FDS">їдучій</Form>
+            <Form tag="FAS">їдучу</Form>
+            <Form tag="FIS">їдучою</Form>
+            <Form tag="FLS">їдучій</Form>
+            <Form tag="FVS">їдуча</Form>
+            <Form tag="NNS">їдуче</Form>
+            <Form tag="NGS">їдучого</Form>
+            <Form tag="NDS">їдучому</Form>
+            <Form tag="NAS">їдуче</Form>
+            <Form tag="NIS">їдучим</Form>
+            <Form tag="NLS">їдучім</Form>
+            <Form tag="NLS">їдучому</Form>
+            <Form tag="NVS">їдуче</Form>
+            <Form tag="PNP">їдучі</Form>
+            <Form tag="PGP">їдучих</Form>
+            <Form tag="PDP">їдучим</Form>
+            <Form tag="PAP" options="anim">їдучих</Form>
+            <Form tag="PAP" options="inanim">їдучі</Form>
+            <Form tag="PIP">їдучими</Form>
+            <Form tag="PLP">їдучих</Form>
+            <Form tag="PVP">їдучі</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144812" lemma="їдьма" tag="R">
+        <Variant id="a" lemma="їдьма">
+            <Form tag="P">їдьма</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144813" lemma="їжа" tag="NCINF">
+        <Variant id="a" lemma="їжа">
+            <Form tag="NS">їжа</Form>
+            <Form tag="GS">їжі</Form>
+            <Form tag="DS">їжі</Form>
+            <Form tag="AS">їжу</Form>
+            <Form tag="IS">їжею</Form>
+            <Form tag="LS">їжі</Form>
+            <Form tag="VS">їже</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144814" lemma="Їжак" tag="NPANM">
+        <Variant id="a" lemma="Їжак">
+            <Form tag="NS">Їжак</Form>
+            <Form tag="GS">Їжака</Form>
+            <Form tag="DS">Їжакові</Form>
+            <Form tag="DS">Їжаку</Form>
+            <Form tag="AS">Їжака</Form>
+            <Form tag="IS">Їжаком</Form>
+            <Form tag="LS">Їжакові</Form>
+            <Form tag="LS">Їжаку</Form>
+            <Form tag="VS">Їжаку</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144815" lemma="Їжак" tag="NPANF">
+        <Variant id="a" lemma="Їжак">
+            <Form tag="NS">Їжак</Form>
+            <Form tag="GS">Їжак</Form>
+            <Form tag="DS">Їжак</Form>
+            <Form tag="AS">Їжак</Form>
+            <Form tag="IS">Їжак</Form>
+            <Form tag="LS">Їжак</Form>
+            <Form tag="VS">Їжак</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144816" lemma="їжак" tag="NCANM">
+        <Variant id="a" lemma="їжак">
+            <Form tag="NS">їжак</Form>
+            <Form tag="GS">їжака</Form>
+            <Form tag="DS">їжакові</Form>
+            <Form tag="DS">їжаку</Form>
+            <Form tag="AS">їжака</Form>
+            <Form tag="IS">їжаком</Form>
+            <Form tag="LS">їжакові</Form>
+            <Form tag="LS">їжаку</Form>
+            <Form tag="VS">їжаче</Form>
+            <Form tag="NP">їжаки</Form>
+            <Form tag="GP">їжаків</Form>
+            <Form tag="DP">їжакам</Form>
+            <Form tag="AP">їжаки</Form>
+            <Form tag="AP">їжаків</Form>
+            <Form tag="IP">їжаками</Form>
+            <Form tag="LP">їжаках</Form>
+            <Form tag="VP">їжаки</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144817" lemma="їжак" tag="NCINM">
+        <Variant id="a" lemma="їжак">
+            <Form tag="NS">їжак</Form>
+            <Form tag="GS">їжака</Form>
+            <Form tag="DS">їжакові</Form>
+            <Form tag="DS">їжаку</Form>
+            <Form tag="AS">їжак</Form>
+            <Form tag="IS">їжаком</Form>
+            <Form tag="LS">їжакові</Form>
+            <Form tag="LS">їжаку</Form>
+            <Form tag="VS">їжаче</Form>
+            <Form tag="NP">їжаки</Form>
+            <Form tag="GP">їжаків</Form>
+            <Form tag="DP">їжакам</Form>
+            <Form tag="AP">їжаки</Form>
+            <Form tag="IP">їжаками</Form>
+            <Form tag="LP">їжаках</Form>
+            <Form tag="VP">їжаки</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144818" lemma="Їжакевич" tag="NPANM">
+        <Variant id="a" lemma="Їжакевич">
+            <Form tag="NS">Їжакевич</Form>
+            <Form tag="GS">Їжакевича</Form>
+            <Form tag="DS">Їжакевичеві</Form>
+            <Form tag="DS">Їжакевичу</Form>
+            <Form tag="AS">Їжакевича</Form>
+            <Form tag="IS">Їжакевичем</Form>
+            <Form tag="LS">Їжакевичеві</Form>
+            <Form tag="LS">Їжакевичі</Form>
+            <Form tag="LS">Їжакевичу</Form>
+            <Form tag="VS">Їжакевичу</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144819" lemma="Їжакевич" tag="NPANF">
+        <Variant id="a" lemma="Їжакевич">
+            <Form tag="NS">Їжакевич</Form>
+            <Form tag="GS">Їжакевич</Form>
+            <Form tag="DS">Їжакевич</Form>
+            <Form tag="AS">Їжакевич</Form>
+            <Form tag="IS">Їжакевич</Form>
+            <Form tag="LS">Їжакевич</Form>
+            <Form tag="VS">Їжакевич</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144820" lemma="Їжаківка" tag="NPINF">
+        <Variant id="a" lemma="Їжаківка">
+            <Form tag="NS">Їжаківка</Form>
+            <Form tag="GS">Їжаківки</Form>
+            <Form tag="DS">Їжаківці</Form>
+            <Form tag="AS">Їжаківку</Form>
+            <Form tag="IS">Їжаківкою</Form>
+            <Form tag="LS">Їжаківці</Form>
+            <Form tag="VS">Їжаківко</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144821" lemma="їжаковий" tag="AP">
+        <Variant id="a" lemma="їжаковий">
+            <Form tag="MNS">їжаковий</Form>
+            <Form tag="MGS">їжакового</Form>
+            <Form tag="MDS">їжаковому</Form>
+            <Form tag="MAS" options="anim">їжакового</Form>
+            <Form tag="MAS" options="inanim">їжаковий</Form>
+            <Form tag="MIS">їжаковим</Form>
+            <Form tag="MLS">їжаковім</Form>
+            <Form tag="MLS">їжаковому</Form>
+            <Form tag="MVS">їжаковий</Form>
+            <Form tag="FNS">їжакова</Form>
+            <Form tag="FGS">їжакової</Form>
+            <Form tag="FDS">їжаковій</Form>
+            <Form tag="FAS">їжакову</Form>
+            <Form tag="FIS">їжаковою</Form>
+            <Form tag="FLS">їжаковій</Form>
+            <Form tag="FVS">їжакова</Form>
+            <Form tag="NNS">їжакове</Form>
+            <Form tag="NGS">їжакового</Form>
+            <Form tag="NDS">їжаковому</Form>
+            <Form tag="NAS">їжакове</Form>
+            <Form tag="NIS">їжаковим</Form>
+            <Form tag="NLS">їжаковім</Form>
+            <Form tag="NLS">їжаковому</Form>
+            <Form tag="NVS">їжакове</Form>
+            <Form tag="PNP">їжакові</Form>
+            <Form tag="PGP">їжакових</Form>
+            <Form tag="PDP">їжаковим</Form>
+            <Form tag="PAP" options="anim">їжакових</Form>
+            <Form tag="PAP" options="inanim">їжакові</Form>
+            <Form tag="PIP">їжаковими</Form>
+            <Form tag="PLP">їжакових</Form>
+            <Form tag="PVP">їжакові</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144822" lemma="їжак-риба" tag="NCANF">
+        <Variant id="a" lemma="їжак-риба">
+            <Form tag="NS">їжак-риба</Form>
+            <Form tag="GS">їжак-риби</Form>
+            <Form tag="DS">їжак-рибі</Form>
+            <Form tag="AS">їжак-рибу</Form>
+            <Form tag="IS">їжак-рибою</Form>
+            <Form tag="LS">їжак-рибі</Form>
+            <Form tag="VS">їжак-рибо</Form>
+            <Form tag="NP">їжак-риби</Form>
+            <Form tag="GP">їжак-риб</Form>
+            <Form tag="DP">їжак-рибам</Form>
+            <Form tag="AP">їжак-риб</Form>
+            <Form tag="AP">їжак-риби</Form>
+            <Form tag="IP">їжак-рибами</Form>
+            <Form tag="LP">їжак-рибах</Form>
+            <Form tag="VP">їжак-риби</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144823" lemma="їжакуватий" tag="AP">
+        <Variant id="a" lemma="їжакуватий">
+            <Form tag="MNS">їжакуватий</Form>
+            <Form tag="MGS">їжакуватого</Form>
+            <Form tag="MDS">їжакуватому</Form>
+            <Form tag="MAS" options="anim">їжакуватого</Form>
+            <Form tag="MAS" options="inanim">їжакуватий</Form>
+            <Form tag="MIS">їжакуватим</Form>
+            <Form tag="MLS">їжакуватім</Form>
+            <Form tag="MLS">їжакуватому</Form>
+            <Form tag="MVS">їжакуватий</Form>
+            <Form tag="FNS">їжакувата</Form>
+            <Form tag="FGS">їжакуватої</Form>
+            <Form tag="FDS">їжакуватій</Form>
+            <Form tag="FAS">їжакувату</Form>
+            <Form tag="FIS">їжакуватою</Form>
+            <Form tag="FLS">їжакуватій</Form>
+            <Form tag="FVS">їжакувата</Form>
+            <Form tag="NNS">їжакувате</Form>
+            <Form tag="NGS">їжакуватого</Form>
+            <Form tag="NDS">їжакуватому</Form>
+            <Form tag="NAS">їжакувате</Form>
+            <Form tag="NIS">їжакуватим</Form>
+            <Form tag="NLS">їжакуватім</Form>
+            <Form tag="NLS">їжакуватому</Form>
+            <Form tag="NVS">їжакувате</Form>
+            <Form tag="PNP">їжакуваті</Form>
+            <Form tag="PGP">їжакуватих</Form>
+            <Form tag="PDP">їжакуватим</Form>
+            <Form tag="PAP" options="anim">їжакуватих</Form>
+            <Form tag="PAP" options="inanim">їжакуваті</Form>
+            <Form tag="PIP">їжакуватими</Form>
+            <Form tag="PLP">їжакуватих</Form>
+            <Form tag="PVP">їжакуваті</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144824" lemma="їжакувато" tag="R">
+        <Variant id="a" lemma="їжакувато">
+            <Form tag="P">їжакувато</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144825" lemma="їжатець" tag="NCANM">
+        <Variant id="a" lemma="їжатець">
+            <Form tag="NS">їжатець</Form>
+            <Form tag="GS">їжатця</Form>
+            <Form tag="DS">їжатцеві</Form>
+            <Form tag="DS">їжатцю</Form>
+            <Form tag="AS">їжатця</Form>
+            <Form tag="IS">їжатцем</Form>
+            <Form tag="LS">їжатцеві</Form>
+            <Form tag="LS">їжатці</Form>
+            <Form tag="LS">їжатцю</Form>
+            <Form tag="VS">їжатцю</Form>
+            <Form tag="NP">їжатці</Form>
+            <Form tag="GP">їжатців</Form>
+            <Form tag="DP">їжатцям</Form>
+            <Form tag="AP">їжатці</Form>
+            <Form tag="AP">їжатців</Form>
+            <Form tag="IP">їжатцями</Form>
+            <Form tag="LP">їжатцях</Form>
+            <Form tag="VP">їжатці</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144827" lemma="їжаченя" tag="NCANN">
+        <Variant id="a" lemma="їжаченя">
+            <Form tag="NS">їжаченя</Form>
+            <Form tag="GS">їжаченяти</Form>
+            <Form tag="DS">їжаченяті</Form>
+            <Form tag="AS">їжаченя</Form>
+            <Form tag="IS">їжаченям</Form>
+            <Form tag="LS">їжаченяті</Form>
+            <Form tag="VS">їжаченя</Form>
+            <Form tag="NP">їжаченята</Form>
+            <Form tag="GP">їжаченят</Form>
+            <Form tag="DP">їжаченятам</Form>
+            <Form tag="AP">їжаченят</Form>
+            <Form tag="AP">їжаченята</Form>
+            <Form tag="IP">їжаченятами</Form>
+            <Form tag="LP">їжаченятах</Form>
+            <Form tag="VP">їжаченята</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144829" lemma="їжачий" tag="AP">
+        <Variant id="a" lemma="їжачий">
+            <Form tag="MNS">їжачий</Form>
+            <Form tag="MGS">їжачого</Form>
+            <Form tag="MDS">їжачому</Form>
+            <Form tag="MAS" options="anim">їжачого</Form>
+            <Form tag="MAS" options="inanim">їжачий</Form>
+            <Form tag="MIS">їжачим</Form>
+            <Form tag="MLS">їжачім</Form>
+            <Form tag="MLS">їжачому</Form>
+            <Form tag="MVS">їжачий</Form>
+            <Form tag="FNS">їжача</Form>
+            <Form tag="FGS">їжачої</Form>
+            <Form tag="FDS">їжачій</Form>
+            <Form tag="FAS">їжачу</Form>
+            <Form tag="FIS">їжачою</Form>
+            <Form tag="FLS">їжачій</Form>
+            <Form tag="FVS">їжача</Form>
+            <Form tag="NNS">їжаче</Form>
+            <Form tag="NGS">їжачого</Form>
+            <Form tag="NDS">їжачому</Form>
+            <Form tag="NAS">їжаче</Form>
+            <Form tag="NIS">їжачим</Form>
+            <Form tag="NLS">їжачім</Form>
+            <Form tag="NLS">їжачому</Form>
+            <Form tag="NVS">їжаче</Form>
+            <Form tag="PNP">їжачі</Form>
+            <Form tag="PGP">їжачих</Form>
+            <Form tag="PDP">їжачим</Form>
+            <Form tag="PAP" options="anim">їжачих</Form>
+            <Form tag="PAP" options="inanim">їжачі</Form>
+            <Form tag="PIP">їжачими</Form>
+            <Form tag="PLP">їжачих</Form>
+            <Form tag="PVP">їжачі</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144831" lemma="їжачисько" tag="NCANM">
+        <Variant id="a" lemma="їжачисько">
+            <Form tag="NS">їжачисько</Form>
+            <Form tag="GS">їжачиська</Form>
+            <Form tag="DS">їжачиськові</Form>
+            <Form tag="DS">їжачиську</Form>
+            <Form tag="AS">їжачиська</Form>
+            <Form tag="IS">їжачиськом</Form>
+            <Form tag="LS">їжачиськові</Form>
+            <Form tag="LS">їжачиську</Form>
+            <Form tag="VS">їжачиську</Form>
+            <Form tag="NS">їжачисько</Form>
+            <Form tag="GS">їжачиська</Form>
+            <Form tag="DS">їжачиськові</Form>
+            <Form tag="DS">їжачиську</Form>
+            <Form tag="AS">їжачисько</Form>
+            <Form tag="IS">їжачиськом</Form>
+            <Form tag="LS">їжачиськові</Form>
+            <Form tag="LS">їжачиську</Form>
+            <Form tag="VS">їжачисько</Form>
+            <Form tag="NP">їжачиська</Form>
+            <Form tag="GP">їжачиськ</Form>
+            <Form tag="GP">їжачисьок</Form>
+            <Form tag="DP">їжачиськам</Form>
+            <Form tag="AP">їжачиськ</Form>
+            <Form tag="AP">їжачиська</Form>
+            <Form tag="AP">їжачисьок</Form>
+            <Form tag="IP">їжачиськами</Form>
+            <Form tag="LP">їжачиськах</Form>
+            <Form tag="VP">їжачиська</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144832" lemma="їжачитися" tag="VMR" meaning="rv_oru">
+        <Variant id="a" lemma="їжачитися">
+            <Form tag="0">їжачитися</Form>
+            <Form tag="R1S">їжачусь</Form>
+            <Form tag="R1S">їжачуся</Form>
+            <Form tag="R2S">їжачишся</Form>
+            <Form tag="R3S">їжачиться</Form>
+            <Form tag="R1P">їжачимось</Form>
+            <Form tag="R1P">їжачимося</Form>
+            <Form tag="R1P">їжачимся</Form>
+            <Form tag="R2P">їжачитесь</Form>
+            <Form tag="R2P">їжачитеся</Form>
+            <Form tag="R3P">їжачаться</Form>
+            <Form tag="F1S">їжачитимусь</Form>
+            <Form tag="F1S">їжачитимуся</Form>
+            <Form tag="F2S">їжачитимешся</Form>
+            <Form tag="F3S">їжачитиметься</Form>
+            <Form tag="F1P">їжачитимемось</Form>
+            <Form tag="F1P">їжачитимемося</Form>
+            <Form tag="F1P">їжачитимемся</Form>
+            <Form tag="F2P">їжачитиметесь</Form>
+            <Form tag="F2P">їжачитиметеся</Form>
+            <Form tag="F3P">їжачитимуться</Form>
+            <Form tag="PMS">їжачивсь</Form>
+            <Form tag="PMS">їжачився</Form>
+            <Form tag="PFS">їжачилась</Form>
+            <Form tag="PFS">їжачилася</Form>
+            <Form tag="PNS">їжачилось</Form>
+            <Form tag="PNS">їжачилося</Form>
+            <Form tag="PXP">їжачились</Form>
+            <Form tag="PXP">їжачилися</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144833" lemma="їжачиха" tag="NCANF">
+        <Variant id="a" lemma="їжачиха">
+            <Form tag="NS">їжачиха</Form>
+            <Form tag="GS">їжачихи</Form>
+            <Form tag="DS">їжачисі</Form>
+            <Form tag="AS">їжачиху</Form>
+            <Form tag="IS">їжачихою</Form>
+            <Form tag="LS">їжачисі</Form>
+            <Form tag="VS">їжачихо</Form>
+            <Form tag="NP">їжачихи</Form>
+            <Form tag="GP">їжачих</Form>
+            <Form tag="DP">їжачихам</Form>
+            <Form tag="AP">їжачих</Form>
+            <Form tag="AP">їжачихи</Form>
+            <Form tag="IP">їжачихами</Form>
+            <Form tag="LP">їжачихах</Form>
+            <Form tag="VP">їжачихи</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144834" lemma="їжачкуватий" tag="AP">
+        <Variant id="a" lemma="їжачкуватий">
+            <Form tag="MNS">їжачкуватий</Form>
+            <Form tag="MGS">їжачкуватого</Form>
+            <Form tag="MDS">їжачкуватому</Form>
+            <Form tag="MAS" options="anim">їжачкуватого</Form>
+            <Form tag="MAS" options="inanim">їжачкуватий</Form>
+            <Form tag="MIS">їжачкуватим</Form>
+            <Form tag="MLS">їжачкуватім</Form>
+            <Form tag="MLS">їжачкуватому</Form>
+            <Form tag="MVS">їжачкуватий</Form>
+            <Form tag="FNS">їжачкувата</Form>
+            <Form tag="FGS">їжачкуватої</Form>
+            <Form tag="FDS">їжачкуватій</Form>
+            <Form tag="FAS">їжачкувату</Form>
+            <Form tag="FIS">їжачкуватою</Form>
+            <Form tag="FLS">їжачкуватій</Form>
+            <Form tag="FVS">їжачкувата</Form>
+            <Form tag="NNS">їжачкувате</Form>
+            <Form tag="NGS">їжачкуватого</Form>
+            <Form tag="NDS">їжачкуватому</Form>
+            <Form tag="NAS">їжачкувате</Form>
+            <Form tag="NIS">їжачкуватим</Form>
+            <Form tag="NLS">їжачкуватім</Form>
+            <Form tag="NLS">їжачкуватому</Form>
+            <Form tag="NVS">їжачкувате</Form>
+            <Form tag="PNP">їжачкуваті</Form>
+            <Form tag="PGP">їжачкуватих</Form>
+            <Form tag="PDP">їжачкуватим</Form>
+            <Form tag="PAP" options="anim">їжачкуватих</Form>
+            <Form tag="PAP" options="inanim">їжачкуваті</Form>
+            <Form tag="PIP">їжачкуватими</Form>
+            <Form tag="PLP">їжачкуватих</Form>
+            <Form tag="PVP">їжачкуваті</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144835" lemma="їжачник" tag="NCINM">
+        <Variant id="a" lemma="їжачник">
+            <Form tag="NS">їжачник</Form>
+            <Form tag="GS">їжачнику</Form>
+            <Form tag="DS">їжачникові</Form>
+            <Form tag="DS">їжачнику</Form>
+            <Form tag="AS">їжачник</Form>
+            <Form tag="IS">їжачником</Form>
+            <Form tag="LS">їжачникові</Form>
+            <Form tag="LS">їжачнику</Form>
+            <Form tag="VS">їжачнику</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144836" lemma="їжачоголівкові" tag="NCANP">
+        <Variant id="a" lemma="їжачоголівкові">
+            <Form tag="NP">їжачоголівкові</Form>
+            <Form tag="GP">їжачоголівкових</Form>
+            <Form tag="DP">їжачоголівковим</Form>
+            <Form tag="AP">їжачоголівкових</Form>
+            <Form tag="AP">їжачоголівкові</Form>
+            <Form tag="IP">їжачоголівковими</Form>
+            <Form tag="LP">їжачоголівкових</Form>
+            <Form tag="VP">їжачоголівкові</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144837" lemma="їжачок" tag="NCANM">
+        <Variant id="a" lemma="їжачок">
+            <Form tag="NS">їжачок</Form>
+            <Form tag="GS">їжачка</Form>
+            <Form tag="DS">їжачкові</Form>
+            <Form tag="DS">їжачку</Form>
+            <Form tag="AS">їжачка</Form>
+            <Form tag="IS">їжачком</Form>
+            <Form tag="LS">їжачкові</Form>
+            <Form tag="LS">їжачку</Form>
+            <Form tag="VS">їжачку</Form>
+            <Form tag="NP">їжачки</Form>
+            <Form tag="GP">їжачків</Form>
+            <Form tag="DP">їжачкам</Form>
+            <Form tag="AP">їжачки</Form>
+            <Form tag="AP">їжачків</Form>
+            <Form tag="IP">їжачками</Form>
+            <Form tag="LP">їжачках</Form>
+            <Form tag="VP">їжачки</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144838" lemma="їжджений" tag="AP">
+        <Variant id="a" lemma="їжджений">
+            <Form tag="MNS">їжджений</Form>
+            <Form tag="MGS">їждженого</Form>
+            <Form tag="MDS">їждженому</Form>
+            <Form tag="MAS" options="anim">їждженого</Form>
+            <Form tag="MAS" options="inanim">їжджений</Form>
+            <Form tag="MIS">їждженим</Form>
+            <Form tag="MLS">їждженім</Form>
+            <Form tag="MLS">їждженому</Form>
+            <Form tag="MVS">їжджений</Form>
+            <Form tag="FNS">їжджена</Form>
+            <Form tag="FGS">їждженої</Form>
+            <Form tag="FDS">їждженій</Form>
+            <Form tag="FAS">їжджену</Form>
+            <Form tag="FIS">їждженою</Form>
+            <Form tag="FLS">їждженій</Form>
+            <Form tag="FVS">їжджена</Form>
+            <Form tag="NNS">їжджене</Form>
+            <Form tag="NGS">їждженого</Form>
+            <Form tag="NDS">їждженому</Form>
+            <Form tag="NAS">їжджене</Form>
+            <Form tag="NIS">їждженим</Form>
+            <Form tag="NLS">їждженім</Form>
+            <Form tag="NLS">їждженому</Form>
+            <Form tag="NVS">їжджене</Form>
+            <Form tag="PNP">їжджені</Form>
+            <Form tag="PGP">їжджених</Form>
+            <Form tag="PDP">їждженим</Form>
+            <Form tag="PAP" options="anim">їжджених</Form>
+            <Form tag="PAP" options="inanim">їжджені</Form>
+            <Form tag="PIP">їждженими</Form>
+            <Form tag="PLP">їжджених</Form>
+            <Form tag="PVP">їжджені</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144839" lemma="їждження" tag="NCINN">
+        <Variant id="a" lemma="їждження">
+            <Form tag="NS">їждження</Form>
+            <Form tag="GS">їждження</Form>
+            <Form tag="DS">їждженню</Form>
+            <Form tag="AS">їждження</Form>
+            <Form tag="IS">їждженням</Form>
+            <Form tag="LS">їждженні</Form>
+            <Form tag="LS">їждженню</Form>
+            <Form tag="VS">їждження</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144842" lemma="їжитися" tag="VMR" meaning="rv_oru">
+        <Variant id="a" lemma="їжитися">
+            <Form tag="0">їжитися</Form>
+            <Form tag="R1S">їжусь</Form>
+            <Form tag="R1S">їжуся</Form>
+            <Form tag="R2S">їжишся</Form>
+            <Form tag="R3S">їжиться</Form>
+            <Form tag="R1P">їжимось</Form>
+            <Form tag="R1P">їжимося</Form>
+            <Form tag="R1P">їжимся</Form>
+            <Form tag="R2P">їжитесь</Form>
+            <Form tag="R2P">їжитеся</Form>
+            <Form tag="R3P">їжаться</Form>
+            <Form tag="F1S">їжитимусь</Form>
+            <Form tag="F1S">їжитимуся</Form>
+            <Form tag="F2S">їжитимешся</Form>
+            <Form tag="F3S">їжитиметься</Form>
+            <Form tag="F1P">їжитимемось</Form>
+            <Form tag="F1P">їжитимемося</Form>
+            <Form tag="F1P">їжитимемся</Form>
+            <Form tag="F2P">їжитиметесь</Form>
+            <Form tag="F2P">їжитиметеся</Form>
+            <Form tag="F3P">їжитимуться</Form>
+            <Form tag="PMS">їживсь</Form>
+            <Form tag="PMS">їжився</Form>
+            <Form tag="PFS">їжилась</Form>
+            <Form tag="PFS">їжилася</Form>
+            <Form tag="PNS">їжилось</Form>
+            <Form tag="PNS">їжилося</Form>
+            <Form tag="PXP">їжились</Form>
+            <Form tag="PXP">їжилися</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144843" lemma="Їжицьке" tag="NPINN">
+        <Variant id="a" lemma="Їжицьке">
+            <Form tag="NS">Їжицьке</Form>
+            <Form tag="GS">Їжицького</Form>
+            <Form tag="DS">Їжицькому</Form>
+            <Form tag="AS">Їжицьке</Form>
+            <Form tag="IS">Їжицьким</Form>
+            <Form tag="LS">Їжицькім</Form>
+            <Form tag="LS">Їжицькому</Form>
+            <Form tag="VS">Їжицьке</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144844" lemma="їжівський" tag="AP">
+        <Variant id="a" lemma="їжівський">
+            <Form tag="MNS">їжівський</Form>
+            <Form tag="MGS">їжівського</Form>
+            <Form tag="MDS">їжівському</Form>
+            <Form tag="MAS" options="anim">їжівського</Form>
+            <Form tag="MAS" options="inanim">їжівський</Form>
+            <Form tag="MIS">їжівським</Form>
+            <Form tag="MLS">їжівськім</Form>
+            <Form tag="MLS">їжівському</Form>
+            <Form tag="MVS">їжівський</Form>
+            <Form tag="FNS">їжівська</Form>
+            <Form tag="FGS">їжівської</Form>
+            <Form tag="FDS">їжівській</Form>
+            <Form tag="FAS">їжівську</Form>
+            <Form tag="FIS">їжівською</Form>
+            <Form tag="FLS">їжівській</Form>
+            <Form tag="FVS">їжівська</Form>
+            <Form tag="NNS">їжівське</Form>
+            <Form tag="NGS">їжівського</Form>
+            <Form tag="NDS">їжівському</Form>
+            <Form tag="NAS">їжівське</Form>
+            <Form tag="NIS">їжівським</Form>
+            <Form tag="NLS">їжівськім</Form>
+            <Form tag="NLS">їжівському</Form>
+            <Form tag="NVS">їжівське</Form>
+            <Form tag="PNP">їжівські</Form>
+            <Form tag="PGP">їжівських</Form>
+            <Form tag="PDP">їжівським</Form>
+            <Form tag="PAP" options="anim">їжівських</Form>
+            <Form tag="PAP" options="inanim">їжівські</Form>
+            <Form tag="PIP">їжівськими</Form>
+            <Form tag="PLP">їжівських</Form>
+            <Form tag="PVP">їжівські</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144845" lemma="Їжівці" tag="NPINP">
+        <Variant id="a" lemma="Їжівці">
+            <Form tag="NP">Їжівці</Form>
+            <Form tag="GP">Їжівців</Form>
+            <Form tag="DP">Їжівцям</Form>
+            <Form tag="AP">Їжівці</Form>
+            <Form tag="IP">Їжівцями</Form>
+            <Form tag="LP">Їжівцях</Form>
+            <Form tag="VP">Їжівці</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144846" lemma="їзда" tag="NCINF">
+        <Variant id="a" lemma="їзда">
+            <Form tag="NS">їзда</Form>
+            <Form tag="GS">їзди</Form>
+            <Form tag="DS">їзді</Form>
+            <Form tag="AS">їзду</Form>
+            <Form tag="IS">їздою</Form>
+            <Form tag="LS">їзді</Form>
+            <Form tag="VS">їздо</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144847" lemma="їздак" tag="NCANM">
+        <Variant id="a" lemma="їздак">
+            <Form tag="NS">їздак</Form>
+            <Form tag="GS">їздака</Form>
+            <Form tag="DS">їздакові</Form>
+            <Form tag="DS">їздаку</Form>
+            <Form tag="AS">їздака</Form>
+            <Form tag="IS">їздаком</Form>
+            <Form tag="LS">їздакові</Form>
+            <Form tag="LS">їздаку</Form>
+            <Form tag="VS">їздаку</Form>
+            <Form tag="NP">їздаки</Form>
+            <Form tag="GP">їздаків</Form>
+            <Form tag="DP">їздакам</Form>
+            <Form tag="AP">їздаків</Form>
+            <Form tag="AP">їздаки</Form>
+            <Form tag="IP">їздаками</Form>
+            <Form tag="LP">їздаках</Form>
+            <Form tag="VP">їздаки</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144848" lemma="їздецтво" tag="NCINN">
+        <Variant id="a" lemma="їздецтво">
+            <Form tag="NS">їздецтво</Form>
+            <Form tag="GS">їздецтва</Form>
+            <Form tag="DS">їздецтву</Form>
+            <Form tag="AS">їздецтво</Form>
+            <Form tag="IS">їздецтвом</Form>
+            <Form tag="LS">їздецтві</Form>
+            <Form tag="LS">їздецтву</Form>
+            <Form tag="VS">їздецтво</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144849" lemma="їздець" tag="NCANM">
+        <Variant id="a" lemma="їздець">
+            <Form tag="NS">їздець</Form>
+            <Form tag="GS">їздця</Form>
+            <Form tag="DS">їздцеві</Form>
+            <Form tag="DS">їздцю</Form>
+            <Form tag="AS">їздця</Form>
+            <Form tag="IS">їздцем</Form>
+            <Form tag="LS">їздцеві</Form>
+            <Form tag="LS">їздці</Form>
+            <Form tag="LS">їздцю</Form>
+            <Form tag="VS">їздцю</Form>
+            <Form tag="NP">їздці</Form>
+            <Form tag="GP">їздців</Form>
+            <Form tag="DP">їздцям</Form>
+            <Form tag="AP">їздців</Form>
+            <Form tag="AP">їздці</Form>
+            <Form tag="IP">їздцями</Form>
+            <Form tag="LP">їздцях</Form>
+            <Form tag="VP">їздці</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144850" lemma="їздецький" tag="AP">
+        <Variant id="a" lemma="їздецький">
+            <Form tag="MNS">їздецький</Form>
+            <Form tag="MGS">їздецького</Form>
+            <Form tag="MDS">їздецькому</Form>
+            <Form tag="MAS" options="anim">їздецького</Form>
+            <Form tag="MAS" options="inanim">їздецький</Form>
+            <Form tag="MIS">їздецьким</Form>
+            <Form tag="MLS">їздецькім</Form>
+            <Form tag="MLS">їздецькому</Form>
+            <Form tag="MVS">їздецький</Form>
+            <Form tag="FNS">їздецька</Form>
+            <Form tag="FGS">їздецької</Form>
+            <Form tag="FDS">їздецькій</Form>
+            <Form tag="FAS">їздецьку</Form>
+            <Form tag="FIS">їздецькою</Form>
+            <Form tag="FLS">їздецькій</Form>
+            <Form tag="FVS">їздецька</Form>
+            <Form tag="NNS">їздецьке</Form>
+            <Form tag="NGS">їздецького</Form>
+            <Form tag="NDS">їздецькому</Form>
+            <Form tag="NAS">їздецьке</Form>
+            <Form tag="NIS">їздецьким</Form>
+            <Form tag="NLS">їздецькім</Form>
+            <Form tag="NLS">їздецькому</Form>
+            <Form tag="NVS">їздецьке</Form>
+            <Form tag="PNP">їздецькі</Form>
+            <Form tag="PGP">їздецьких</Form>
+            <Form tag="PDP">їздецьким</Form>
+            <Form tag="PAP" options="anim">їздецьких</Form>
+            <Form tag="PAP" options="inanim">їздецькі</Form>
+            <Form tag="PIP">їздецькими</Form>
+            <Form tag="PLP">їздецьких</Form>
+            <Form tag="PVP">їздецькі</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144852" lemma="їздити" tag="VMN">
+        <Variant id="a" lemma="їздити">
+            <Form tag="0">їздити</Form>
+            <Form tag="R1S">їжджу</Form>
+            <Form tag="R2S">їздиш</Form>
+            <Form tag="R3S">їздить</Form>
+            <Form tag="R1P">їздимо</Form>
+            <Form tag="R1P">їздим</Form>
+            <Form tag="R2P">їздите</Form>
+            <Form tag="R3P">їздять</Form>
+            <Form tag="F1S">їздитиму</Form>
+            <Form tag="F2S">їздитимеш</Form>
+            <Form tag="F3S">їздитиме</Form>
+            <Form tag="F1P">їздитимем</Form>
+            <Form tag="F1P">їздитимемо</Form>
+            <Form tag="F2P">їздитимете</Form>
+            <Form tag="F3P">їздитимуть</Form>
+            <Form tag="PMS">їздив</Form>
+            <Form tag="PFS">їздила</Form>
+            <Form tag="PNS">їздило</Form>
+            <Form tag="PXP">їздили</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144853" lemma="їздитися" tag="VMR">
+        <Variant id="a" lemma="їздитися">
+            <Form tag="0">їздитися</Form>
+            <Form tag="R3S">їздиться</Form>
+            <Form tag="F3S">їздитиметься</Form>
+            <Form tag="PNS">їздилось</Form>
+            <Form tag="PNS">їздилося</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144854" lemma="їздка" tag="NCINF">
+        <Variant id="a" lemma="їздка">
+            <Form tag="NS">їздка</Form>
+            <Form tag="GS">їздки</Form>
+            <Form tag="DS">їздці</Form>
+            <Form tag="AS">їздку</Form>
+            <Form tag="IS">їздкою</Form>
+            <Form tag="LS">їздці</Form>
+            <Form tag="VS">їздко</Form>
+            <Form tag="NP">їздки</Form>
+            <Form tag="GP">їздок</Form>
+            <Form tag="DP">їздкам</Form>
+            <Form tag="AP">їздки</Form>
+            <Form tag="IP">їздками</Form>
+            <Form tag="LP">їздках</Form>
+            <Form tag="VP">їздки</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144855" lemma="їздовий" tag="AP">
+        <Variant id="a" lemma="їздовий">
+            <Form tag="MNS">їздовий</Form>
+            <Form tag="MGS">їздового</Form>
+            <Form tag="MDS">їздовому</Form>
+            <Form tag="MAS" options="anim">їздового</Form>
+            <Form tag="MAS" options="inanim">їздовий</Form>
+            <Form tag="MIS">їздовим</Form>
+            <Form tag="MLS">їздовім</Form>
+            <Form tag="MLS">їздовому</Form>
+            <Form tag="MVS">їздовий</Form>
+            <Form tag="FNS">їздова</Form>
+            <Form tag="FGS">їздової</Form>
+            <Form tag="FDS">їздовій</Form>
+            <Form tag="FAS">їздову</Form>
+            <Form tag="FIS">їздовою</Form>
+            <Form tag="FLS">їздовій</Form>
+            <Form tag="FVS">їздова</Form>
+            <Form tag="NNS">їздове</Form>
+            <Form tag="NGS">їздового</Form>
+            <Form tag="NDS">їздовому</Form>
+            <Form tag="NAS">їздове</Form>
+            <Form tag="NIS">їздовим</Form>
+            <Form tag="NLS">їздовім</Form>
+            <Form tag="NLS">їздовому</Form>
+            <Form tag="NVS">їздове</Form>
+            <Form tag="PNP">їздові</Form>
+            <Form tag="PGP">їздових</Form>
+            <Form tag="PDP">їздовим</Form>
+            <Form tag="PAP" options="anim">їздових</Form>
+            <Form tag="PAP" options="inanim">їздові</Form>
+            <Form tag="PIP">їздовими</Form>
+            <Form tag="PLP">їздових</Form>
+            <Form tag="PVP">їздові</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144856" lemma="їздовий" tag="NCANM">
+        <Variant id="a" lemma="їздовий">
+            <Form tag="NS">їздовий</Form>
+            <Form tag="GS">їздового</Form>
+            <Form tag="DS">їздовому</Form>
+            <Form tag="AS">їздового</Form>
+            <Form tag="IS">їздовим</Form>
+            <Form tag="LS">їздовім</Form>
+            <Form tag="LS">їздовому</Form>
+            <Form tag="VS">їздовий</Form>
+            <Form tag="NP">їздові</Form>
+            <Form tag="GP">їздових</Form>
+            <Form tag="DP">їздовим</Form>
+            <Form tag="AP">їздових</Form>
+            <Form tag="AP">їздові</Form>
+            <Form tag="IP">їздовими</Form>
+            <Form tag="LP">їздових</Form>
+            <Form tag="VP">їздові</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144857" lemma="їздок" tag="NCANM">
+        <Variant id="a" lemma="їздок">
+            <Form tag="NS">їздок</Form>
+            <Form tag="GS">їздока</Form>
+            <Form tag="DS">їздокові</Form>
+            <Form tag="DS">їздоку</Form>
+            <Form tag="AS">їздока</Form>
+            <Form tag="IS">їздоком</Form>
+            <Form tag="LS">їздокові</Form>
+            <Form tag="LS">їздоку</Form>
+            <Form tag="VS">їздоку</Form>
+            <Form tag="NP">їздоки</Form>
+            <Form tag="GP">їздоків</Form>
+            <Form tag="DP">їздокам</Form>
+            <Form tag="AP">їздоків</Form>
+            <Form tag="AP">їздоки</Form>
+            <Form tag="IP">їздоками</Form>
+            <Form tag="LP">їздоках</Form>
+            <Form tag="VP">їздоки</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144858" lemma="їздун" tag="NCANM">
+        <Variant id="a" lemma="їздун">
+            <Form tag="NS">їздун</Form>
+            <Form tag="GS">їздуна</Form>
+            <Form tag="DS">їздунові</Form>
+            <Form tag="DS">їздуну</Form>
+            <Form tag="AS">їздуна</Form>
+            <Form tag="IS">їздуном</Form>
+            <Form tag="LS">їздуні</Form>
+            <Form tag="LS">їздунові</Form>
+            <Form tag="LS">їздуну</Form>
+            <Form tag="VS">їздуне</Form>
+            <Form tag="NP">їздуни</Form>
+            <Form tag="GP">їздунів</Form>
+            <Form tag="DP">їздунам</Form>
+            <Form tag="AP">їздунів</Form>
+            <Form tag="AP">їздуни</Form>
+            <Form tag="IP">їздунами</Form>
+            <Form tag="LP">їздунах</Form>
+            <Form tag="VP">їздуни</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144860" lemma="її" tag="AP">
+        <Variant id="a" lemma="її">
+            <Form tag="MNS">її</Form>
+            <Form tag="MGS">її</Form>
+            <Form tag="MDS">її</Form>
+            <Form tag="MAS" options="anim">її</Form>
+            <Form tag="MAS" options="inanim">її</Form>
+            <Form tag="MIS">її</Form>
+            <Form tag="MLS">її</Form>
+            <Form tag="FNS">її</Form>
+            <Form tag="FGS">її</Form>
+            <Form tag="FDS">її</Form>
+            <Form tag="FAS">її</Form>
+            <Form tag="FIS">її</Form>
+            <Form tag="FLS">її</Form>
+            <Form tag="NNS">її</Form>
+            <Form tag="NGS">її</Form>
+            <Form tag="NDS">її</Form>
+            <Form tag="NAS">її</Form>
+            <Form tag="NIS">її</Form>
+            <Form tag="NLS">її</Form>
+            <Form tag="PNP">її</Form>
+            <Form tag="PGP">її</Form>
+            <Form tag="PDP">її</Form>
+            <Form tag="PAP" options="anim">її</Form>
+            <Form tag="PAP" options="inanim">її</Form>
+            <Form tag="PIP">її</Form>
+            <Form tag="PLP">її</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144861" lemma="їйбо" tag="Y">
+        <Variant id="a" lemma="їйбо">
+            <Form tag="">їйбо</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144862" lemma="їй-бо" tag="Y">
+        <Variant id="a" lemma="їй-бо">
+            <Form tag="">їй-бо</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144863" lemma="Їй-Богу" tag="Y">
+        <Variant id="a" lemma="Їй-Богу">
+            <Form tag="">Їй-Богу</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144864" lemma="їй-Богу" tag="Y">
+        <Variant id="a" lemma="їй-Богу">
+            <Form tag="">їй-Богу</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144865" lemma="їйбогу" tag="Y">
+        <Variant id="a" lemma="їйбогу">
+            <Form tag="">їйбогу</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144866" lemma="їй-богу" tag="Y">
+        <Variant id="a" lemma="їй-богу">
+            <Form tag="">їй-богу</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144867" lemma="їй-пра" tag="Y">
+        <Variant id="a" lemma="їй-пра">
+            <Form tag="">їй-пра</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144868" lemma="їй-право" tag="Y">
+        <Variant id="a" lemma="їй-право">
+            <Form tag="">їй-право</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144869" lemma="Їлдиз" tag="NPANM">
+        <Variant id="a" lemma="Їлдиз">
+            <Form tag="NS">Їлдиз</Form>
+            <Form tag="GS">Їлдиза</Form>
+            <Form tag="DS">Їлдизові</Form>
+            <Form tag="DS">Їлдизу</Form>
+            <Form tag="AS">Їлдиза</Form>
+            <Form tag="IS">Їлдизом</Form>
+            <Form tag="LS">Їлдизі</Form>
+            <Form tag="LS">Їлдизові</Form>
+            <Form tag="LS">Їлдизу</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144870" lemma="Їлдиз" tag="NPANF">
+        <Variant id="a" lemma="Їлдиз">
+            <Form tag="NS">Їлдиз</Form>
+            <Form tag="GS">Їлдиз</Form>
+            <Form tag="DS">Їлдиз</Form>
+            <Form tag="AS">Їлдиз</Form>
+            <Form tag="IS">Їлдиз</Form>
+            <Form tag="LS">Їлдиз</Form>
+            <Form tag="VS">Їлдиз</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144871" lemma="їмость" tag="NCANF">
+        <Variant id="a" lemma="їмость">
+            <Form tag="NS">їмость</Form>
+            <Form tag="GS">їмості</Form>
+            <Form tag="GS">їмости</Form>
+            <Form tag="DS">їмості</Form>
+            <Form tag="AS">їмость</Form>
+            <Form tag="IS">їмостю</Form>
+            <Form tag="LS">їмості</Form>
+            <Form tag="VS">їмосте</Form>
+            <Form tag="NP">їмості</Form>
+            <Form tag="GP">їмостей</Form>
+            <Form tag="DP">їмостям</Form>
+            <Form tag="AP">їмостей</Form>
+            <Form tag="AP">їмості</Form>
+            <Form tag="IP">їмостями</Form>
+            <Form tag="LP">їмостях</Form>
+            <Form tag="VP">їмості</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144872" lemma="їмосць" tag="NCANF">
+        <Variant id="a" lemma="їмосць">
+            <Form tag="NS">їмосць</Form>
+            <Form tag="GS">їмосці</Form>
+            <Form tag="DS">їмосці</Form>
+            <Form tag="AS">їмосць</Form>
+            <Form tag="IS">їмосцю</Form>
+            <Form tag="LS">їмосці</Form>
+            <Form tag="VS">їмосце</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144873" lemma="їнь" tag="NCINN">
+        <Variant id="a" lemma="їнь">
+            <Form tag="NS">їнь</Form>
+            <Form tag="GS">їнь</Form>
+            <Form tag="DS">їнь</Form>
+            <Form tag="AS">їнь</Form>
+            <Form tag="IS">їнь</Form>
+            <Form tag="LS">їнь</Form>
+            <Form tag="VS">їнь</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144874" lemma="Їньчуань" tag="NPINM">
+        <Variant id="a" lemma="Їньчуань">
+            <Form tag="NS">Їньчуань</Form>
+            <Form tag="GS">Їньчуаня</Form>
+            <Form tag="GS">Їньчуаню</Form>
+            <Form tag="DS">Їньчуаневі</Form>
+            <Form tag="DS">Їньчуаню</Form>
+            <Form tag="AS">Їньчуань</Form>
+            <Form tag="IS">Їньчуанем</Form>
+            <Form tag="LS">Їньчуаневі</Form>
+            <Form tag="LS">Їньчуані</Form>
+            <Form tag="LS">Їньчуаню</Form>
+            <Form tag="VS">Їньчуаню</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144875" lemma="Їречек" tag="NPANM">
+        <Variant id="a" lemma="Їречек">
+            <Form tag="NS">Їречек</Form>
+            <Form tag="GS">Їречека</Form>
+            <Form tag="DS">Їречекові</Form>
+            <Form tag="DS">Їречеку</Form>
+            <Form tag="AS">Їречека</Form>
+            <Form tag="IS">Їречеком</Form>
+            <Form tag="LS">Їречекові</Form>
+            <Form tag="LS">Їречеку</Form>
+            <Form tag="VS">Їречеку</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144876" lemma="Їржі" tag="NPANM">
+        <Variant id="a" lemma="Їржі">
+            <Form tag="NS">Їржі</Form>
+            <Form tag="GS">Їржі</Form>
+            <Form tag="DS">Їржі</Form>
+            <Form tag="AS">Їржі</Form>
+            <Form tag="IS">Їржі</Form>
+            <Form tag="LS">Їржі</Form>
+            <Form tag="VS">Їржі</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144877" lemma="їство" tag="NCINN">
+        <Variant id="a" lemma="їство">
+            <Form tag="NS">їство</Form>
+            <Form tag="GS">їства</Form>
+            <Form tag="DS">їству</Form>
+            <Form tag="AS">їство</Form>
+            <Form tag="IS">їством</Form>
+            <Form tag="LS">їстві</Form>
+            <Form tag="LS">їству</Form>
+            <Form tag="VS">їство</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144878" lemma="їсти" tag="VMN">
+        <Variant id="a" lemma="їсти">
+            <Form tag="0">їсти</Form>
+            <Form tag="R1S">їм</Form>
+            <Form tag="R2S">їси</Form>
+            <Form tag="R3S">їсть</Form>
+            <Form tag="R1P">їмо</Form>
+            <Form tag="R2P">їсте</Form>
+            <Form tag="R3P">їдять</Form>
+            <Form tag="F1S">їстиму</Form>
+            <Form tag="F2S">їстимеш</Form>
+            <Form tag="F3S">їстиме</Form>
+            <Form tag="F1P">їстимем</Form>
+            <Form tag="F1P">їстимемо</Form>
+            <Form tag="F2P">їстимете</Form>
+            <Form tag="F3P">їстимуть</Form>
+            <Form tag="PMS">їв</Form>
+            <Form tag="PFS">їла</Form>
+            <Form tag="PNS">їло</Form>
+            <Form tag="PXP">їли</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144879" lemma="їстивний" tag="AP">
+        <Variant id="a" lemma="їстивний">
+            <Form tag="MNS">їстивний</Form>
+            <Form tag="MGS">їстивного</Form>
+            <Form tag="MDS">їстивному</Form>
+            <Form tag="MAS" options="anim">їстивного</Form>
+            <Form tag="MAS" options="inanim">їстивний</Form>
+            <Form tag="MIS">їстивним</Form>
+            <Form tag="MLS">їстивнім</Form>
+            <Form tag="MLS">їстивному</Form>
+            <Form tag="MVS">їстивний</Form>
+            <Form tag="FNS">їстивна</Form>
+            <Form tag="FGS">їстивної</Form>
+            <Form tag="FDS">їстивній</Form>
+            <Form tag="FAS">їстивну</Form>
+            <Form tag="FIS">їстивною</Form>
+            <Form tag="FLS">їстивній</Form>
+            <Form tag="FVS">їстивна</Form>
+            <Form tag="NNS">їстивне</Form>
+            <Form tag="NGS">їстивного</Form>
+            <Form tag="NDS">їстивному</Form>
+            <Form tag="NAS">їстивне</Form>
+            <Form tag="NIS">їстивним</Form>
+            <Form tag="NLS">їстивнім</Form>
+            <Form tag="NLS">їстивному</Form>
+            <Form tag="NVS">їстивне</Form>
+            <Form tag="PNP">їстивні</Form>
+            <Form tag="PGP">їстивних</Form>
+            <Form tag="PDP">їстивним</Form>
+            <Form tag="PAP" options="anim">їстивних</Form>
+            <Form tag="PAP" options="inanim">їстивні</Form>
+            <Form tag="PIP">їстивними</Form>
+            <Form tag="PLP">їстивних</Form>
+            <Form tag="PVP">їстивні</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144880" lemma="їстися" tag="VMR">
+        <Variant id="a" lemma="їстися">
+            <Form tag="0">їстися</Form>
+            <Form tag="R3S">їсться</Form>
+            <Form tag="F3S">їстиметься</Form>
+            <Form tag="PNS">їлось</Form>
+            <Form tag="PNS">їлося</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144881" lemma="їстівець" tag="NCINM">
+        <Variant id="a" lemma="їстівець">
+            <Form tag="NS">їстівець</Form>
+            <Form tag="GS">їстівця</Form>
+            <Form tag="DS">їстівцеві</Form>
+            <Form tag="DS">їстівцю</Form>
+            <Form tag="AS">їстівець</Form>
+            <Form tag="IS">їстівцем</Form>
+            <Form tag="LS">їстівцеві</Form>
+            <Form tag="LS">їстівці</Form>
+            <Form tag="LS">їстівцю</Form>
+            <Form tag="VS">їстівцю</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144882" lemma="їстівне" tag="NCINN">
+        <Variant id="a" lemma="їстівне">
+            <Form tag="NS">їстівне</Form>
+            <Form tag="GS">їстівного</Form>
+            <Form tag="DS">їстівному</Form>
+            <Form tag="AS">їстівне</Form>
+            <Form tag="IS">їстівним</Form>
+            <Form tag="LS">їстівнім</Form>
+            <Form tag="LS">їстівному</Form>
+            <Form tag="VS">їстівне</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144883" lemma="їстівний" tag="AP">
+        <Variant id="a" lemma="їстівний">
+            <Form tag="MNS">їстівний</Form>
+            <Form tag="MGS">їстівного</Form>
+            <Form tag="MDS">їстівному</Form>
+            <Form tag="MAS" options="anim">їстівного</Form>
+            <Form tag="MAS" options="inanim">їстівний</Form>
+            <Form tag="MIS">їстівним</Form>
+            <Form tag="MLS">їстівнім</Form>
+            <Form tag="MLS">їстівному</Form>
+            <Form tag="MVS">їстівний</Form>
+            <Form tag="FNS">їстівна</Form>
+            <Form tag="FGS">їстівної</Form>
+            <Form tag="FDS">їстівній</Form>
+            <Form tag="FAS">їстівну</Form>
+            <Form tag="FIS">їстівною</Form>
+            <Form tag="FLS">їстівній</Form>
+            <Form tag="FVS">їстівна</Form>
+            <Form tag="NNS">їстівне</Form>
+            <Form tag="NGS">їстівного</Form>
+            <Form tag="NDS">їстівному</Form>
+            <Form tag="NAS">їстівне</Form>
+            <Form tag="NIS">їстівним</Form>
+            <Form tag="NLS">їстівнім</Form>
+            <Form tag="NLS">їстівному</Form>
+            <Form tag="NVS">їстівне</Form>
+            <Form tag="PNP">їстівні</Form>
+            <Form tag="PGP">їстівних</Form>
+            <Form tag="PDP">їстівним</Form>
+            <Form tag="PAP" options="anim">їстівних</Form>
+            <Form tag="PAP" options="inanim">їстівні</Form>
+            <Form tag="PIP">їстівними</Form>
+            <Form tag="PLP">їстівних</Form>
+            <Form tag="PVP">їстівні</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144884" lemma="їстівність" tag="NCINF">
+        <Variant id="a" lemma="їстівність">
+            <Form tag="NS">їстівність</Form>
+            <Form tag="GS">їстівності</Form>
+            <Form tag="GS">їстівности</Form>
+            <Form tag="DS">їстівності</Form>
+            <Form tag="AS">їстівність</Form>
+            <Form tag="IS">їстівністю</Form>
+            <Form tag="LS">їстівності</Form>
+            <Form tag="VS">їстівносте</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144885" lemma="їстівніший" tag="AC">
+        <Variant id="a" lemma="їстівніший">
+            <Form tag="MNS">їстівніший</Form>
+            <Form tag="MGS">їстівнішого</Form>
+            <Form tag="MDS">їстівнішому</Form>
+            <Form tag="MAS" options="anim">їстівнішого</Form>
+            <Form tag="MAS" options="inanim">їстівніший</Form>
+            <Form tag="MIS">їстівнішим</Form>
+            <Form tag="MLS">їстівнішім</Form>
+            <Form tag="MLS">їстівнішому</Form>
+            <Form tag="MVS">їстівніший</Form>
+            <Form tag="FNS">їстівніша</Form>
+            <Form tag="FGS">їстівнішої</Form>
+            <Form tag="FDS">їстівнішій</Form>
+            <Form tag="FAS">їстівнішу</Form>
+            <Form tag="FIS">їстівнішою</Form>
+            <Form tag="FLS">їстівнішій</Form>
+            <Form tag="FVS">їстівніша</Form>
+            <Form tag="NNS">їстівніше</Form>
+            <Form tag="NGS">їстівнішого</Form>
+            <Form tag="NDS">їстівнішому</Form>
+            <Form tag="NAS">їстівніше</Form>
+            <Form tag="NIS">їстівнішим</Form>
+            <Form tag="NLS">їстівнішім</Form>
+            <Form tag="NLS">їстівнішому</Form>
+            <Form tag="NVS">їстівніше</Form>
+            <Form tag="PNP">їстівніші</Form>
+            <Form tag="PGP">їстівніших</Form>
+            <Form tag="PDP">їстівнішим</Form>
+            <Form tag="PAP" options="anim">їстівніших</Form>
+            <Form tag="PAP" options="inanim">їстівніші</Form>
+            <Form tag="PIP">їстівнішими</Form>
+            <Form tag="PLP">їстівніших</Form>
+            <Form tag="PVP">їстівніші</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144886" lemma="їстки" tag="VMN">
+        <Variant id="a" lemma="їстки">
+            <Form tag="0">їстки</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144887" lemma="їстовний" tag="AP">
+        <Variant id="a" lemma="їстовний">
+            <Form tag="MNS">їстовний</Form>
+            <Form tag="MGS">їстовного</Form>
+            <Form tag="MDS">їстовному</Form>
+            <Form tag="MAS" options="anim">їстовного</Form>
+            <Form tag="MAS" options="inanim">їстовний</Form>
+            <Form tag="MIS">їстовним</Form>
+            <Form tag="MLS">їстовнім</Form>
+            <Form tag="MLS">їстовному</Form>
+            <Form tag="MVS">їстовний</Form>
+            <Form tag="FNS">їстовна</Form>
+            <Form tag="FGS">їстовної</Form>
+            <Form tag="FDS">їстовній</Form>
+            <Form tag="FAS">їстовну</Form>
+            <Form tag="FIS">їстовною</Form>
+            <Form tag="FLS">їстовній</Form>
+            <Form tag="FVS">їстовна</Form>
+            <Form tag="NNS">їстовне</Form>
+            <Form tag="NGS">їстовного</Form>
+            <Form tag="NDS">їстовному</Form>
+            <Form tag="NAS">їстовне</Form>
+            <Form tag="NIS">їстовним</Form>
+            <Form tag="NLS">їстовнім</Form>
+            <Form tag="NLS">їстовному</Form>
+            <Form tag="NVS">їстовне</Form>
+            <Form tag="PNP">їстовні</Form>
+            <Form tag="PGP">їстовних</Form>
+            <Form tag="PDP">їстовним</Form>
+            <Form tag="PAP" options="anim">їстовних</Form>
+            <Form tag="PAP" options="inanim">їстовні</Form>
+            <Form tag="PIP">їстовними</Form>
+            <Form tag="PLP">їстовних</Form>
+            <Form tag="PVP">їстовні</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144888" lemma="їстоньки" tag="VMN">
+        <Variant id="a" lemma="їстоньки">
+            <Form tag="0">їстоньки</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144889" lemma="їсточки" tag="VMN">
+        <Variant id="a" lemma="їсточки">
+            <Form tag="0">їсточки</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144890" lemma="їх" tag="AP">
+        <Variant id="a" lemma="їх">
+            <Form tag="MNS">їх</Form>
+            <Form tag="MGS">їх</Form>
+            <Form tag="MDS">їх</Form>
+            <Form tag="MAS" options="anim">їх</Form>
+            <Form tag="MAS" options="inanim">їх</Form>
+            <Form tag="MIS">їх</Form>
+            <Form tag="MLS">їх</Form>
+            <Form tag="FNS">їх</Form>
+            <Form tag="FGS">їх</Form>
+            <Form tag="FDS">їх</Form>
+            <Form tag="FAS">їх</Form>
+            <Form tag="FIS">їх</Form>
+            <Form tag="FLS">їх</Form>
+            <Form tag="NNS">їх</Form>
+            <Form tag="NGS">їх</Form>
+            <Form tag="NDS">їх</Form>
+            <Form tag="NAS">їх</Form>
+            <Form tag="NIS">їх</Form>
+            <Form tag="NLS">їх</Form>
+            <Form tag="PNP">їх</Form>
+            <Form tag="PGP">їх</Form>
+            <Form tag="PDP">їх</Form>
+            <Form tag="PAP" options="anim">їх</Form>
+            <Form tag="PAP" options="inanim">їх</Form>
+            <Form tag="PIP">їх</Form>
+            <Form tag="PLP">їх</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144892" lemma="їхати" tag="VMN">
+        <Variant id="a" lemma="їхати">
+            <Form tag="0">їхати</Form>
+            <Form tag="R1S">їду</Form>
+            <Form tag="R2S">їдеш</Form>
+            <Form tag="R3S">їде</Form>
+            <Form tag="R1P">їдемо</Form>
+            <Form tag="R1P">їдем</Form>
+            <Form tag="R2P">їдете</Form>
+            <Form tag="R3P">їдуть</Form>
+            <Form tag="F1S">їхатиму</Form>
+            <Form tag="F2S">їхатимеш</Form>
+            <Form tag="F3S">їхатиме</Form>
+            <Form tag="F1P">їхатимем</Form>
+            <Form tag="F1P">їхатимемо</Form>
+            <Form tag="F2P">їхатимете</Form>
+            <Form tag="F3P">їхатимуть</Form>
+            <Form tag="PMS">їхав</Form>
+            <Form tag="PFS">їхала</Form>
+            <Form tag="PNS">їхало</Form>
+            <Form tag="PXP">їхали</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144893" lemma="їхатися" tag="VMR">
+        <Variant id="a" lemma="їхатися">
+            <Form tag="0">їхатися</Form>
+            <Form tag="R3S">їдеться</Form>
+            <Form tag="F3S">їхатиметься</Form>
+            <Form tag="PNS">їхалось</Form>
+            <Form tag="PNS">їхалося</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144894" lemma="їхній" tag="AP">
+        <Variant id="a" lemma="їхній">
+            <Form tag="MNS">їхній</Form>
+            <Form tag="MGS">їхнього</Form>
+            <Form tag="MDS">їхньому</Form>
+            <Form tag="MAS" options="anim">їхнього</Form>
+            <Form tag="MAS" options="inanim">їхній</Form>
+            <Form tag="MIS">їхнім</Form>
+            <Form tag="MLS">їхнім</Form>
+            <Form tag="MLS">їхньому</Form>
+            <Form tag="FNS">їхня</Form>
+            <Form tag="FNS">їхняя</Form>
+            <Form tag="FGS">їхньої</Form>
+            <Form tag="FDS">їхній</Form>
+            <Form tag="FAS">їхню</Form>
+            <Form tag="FAS">їхнюю</Form>
+            <Form tag="FIS">їхньою</Form>
+            <Form tag="FLS">їхній</Form>
+            <Form tag="NNS">їхнє</Form>
+            <Form tag="NNS">їхнєє</Form>
+            <Form tag="NGS">їхнього</Form>
+            <Form tag="NDS">їхньому</Form>
+            <Form tag="NAS">їхнє</Form>
+            <Form tag="NAS">їхнєє</Form>
+            <Form tag="NIS">їхнім</Form>
+            <Form tag="NLS">їхнім</Form>
+            <Form tag="NLS">їхньому</Form>
+            <Form tag="PNP">їхні</Form>
+            <Form tag="PNP">їхнії</Form>
+            <Form tag="PGP">їхніх</Form>
+            <Form tag="PDP">їхнім</Form>
+            <Form tag="PAP" options="anim">їхніх</Form>
+            <Form tag="PAP" options="inanim">їхні</Form>
+            <Form tag="PAP" options="inanim">їхнії</Form>
+            <Form tag="PIP">їхніми</Form>
+            <Form tag="PLP">їхніх</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="144895" lemma="Їчин" tag="NPINM">
+        <Variant id="a" lemma="Їчин">
+            <Form tag="NS">Їчин</Form>
+            <Form tag="GS">Їчина</Form>
+            <Form tag="DS">Їчинові</Form>
+            <Form tag="DS">Їчину</Form>
+            <Form tag="AS">Їчин</Form>
+            <Form tag="IS">Їчином</Form>
+            <Form tag="LS">Їчині</Form>
+            <Form tag="LS">Їчинові</Form>
+            <Form tag="LS">Їчину</Form>
+            <Form tag="VS">Їчине</Form>
+        </Variant>
+    </Paradigm>
+</Wordlist>

@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Wordlist>
+    <Paradigm pdgId="139503" lemma="идол" tag="NCANM">
+        <Variant id="a" lemma="идол">
+            <Form tag="NS">идол</Form>
+            <Form tag="GS">идола</Form>
+            <Form tag="DS">идолові</Form>
+            <Form tag="DS">идолу</Form>
+            <Form tag="AS">идола</Form>
+            <Form tag="IS">идолом</Form>
+            <Form tag="LS">идолі</Form>
+            <Form tag="LS">идолові</Form>
+            <Form tag="LS">идолу</Form>
+            <Form tag="VS">идоле</Form>
+            <Form tag="NP">идоли</Form>
+            <Form tag="GP">идолів</Form>
+            <Form tag="DP">идолам</Form>
+            <Form tag="AP">идолів</Form>
+            <Form tag="AP">идоли</Form>
+            <Form tag="IP">идолами</Form>
+            <Form tag="LP">идолах</Form>
+            <Form tag="VP">идоли</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139504" lemma="икавка" tag="NCINF">
+        <Variant id="a" lemma="икавка">
+            <Form tag="NS">икавка</Form>
+            <Form tag="GS">икавки</Form>
+            <Form tag="DS">икавці</Form>
+            <Form tag="AS">икавку</Form>
+            <Form tag="IS">икавкою</Form>
+            <Form tag="LS">икавці</Form>
+            <Form tag="VS">икавко</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139506" lemma="икати" tag="VMN">
+        <Variant id="a" lemma="икати">
+            <Form tag="0">икати</Form>
+            <Form tag="R1S">икаю</Form>
+            <Form tag="R2S">икаєш</Form>
+            <Form tag="R3S">икає</Form>
+            <Form tag="R1P">икаємо</Form>
+            <Form tag="R1P">икаєм</Form>
+            <Form tag="R2P">икаєте</Form>
+            <Form tag="R3P">икають</Form>
+            <Form tag="F1S">икатиму</Form>
+            <Form tag="F2S">икатимеш</Form>
+            <Form tag="F3S">икатиме</Form>
+            <Form tag="F1P">икатимем</Form>
+            <Form tag="F1P">икатимемо</Form>
+            <Form tag="F2P">икатимете</Form>
+            <Form tag="F3P">икатимуть</Form>
+            <Form tag="PMS">икав</Form>
+            <Form tag="PFS">икала</Form>
+            <Form tag="PNS">икало</Form>
+            <Form tag="PXP">икали</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139508" lemma="импонуючий" tag="AP">
+        <Variant id="a" lemma="импонуючий">
+            <Form tag="MNS">импонуючий</Form>
+            <Form tag="MGS">импонуючого</Form>
+            <Form tag="MDS">импонуючому</Form>
+            <Form tag="MAS" options="anim">импонуючого</Form>
+            <Form tag="MAS" options="inanim">импонуючий</Form>
+            <Form tag="MIS">импонуючим</Form>
+            <Form tag="MLS">импонуючім</Form>
+            <Form tag="MLS">импонуючому</Form>
+            <Form tag="MVS">импонуючий</Form>
+            <Form tag="FNS">импонуюча</Form>
+            <Form tag="FGS">импонуючої</Form>
+            <Form tag="FDS">импонуючій</Form>
+            <Form tag="FAS">импонуючу</Form>
+            <Form tag="FIS">импонуючою</Form>
+            <Form tag="FLS">импонуючій</Form>
+            <Form tag="FVS">импонуюча</Form>
+            <Form tag="NNS">импонуюче</Form>
+            <Form tag="NGS">импонуючого</Form>
+            <Form tag="NDS">импонуючому</Form>
+            <Form tag="NAS">импонуюче</Form>
+            <Form tag="NIS">импонуючим</Form>
+            <Form tag="NLS">импонуючім</Form>
+            <Form tag="NLS">импонуючому</Form>
+            <Form tag="NVS">импонуюче</Form>
+            <Form tag="PNP">импонуючі</Form>
+            <Form tag="PGP">импонуючих</Form>
+            <Form tag="PDP">импонуючим</Form>
+            <Form tag="PAP" options="anim">импонуючих</Form>
+            <Form tag="PAP" options="inanim">импонуючі</Form>
+            <Form tag="PIP">импонуючими</Form>
+            <Form tag="PLP">импонуючих</Form>
+            <Form tag="PVP">импонуючі</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139509" lemma="Ин" tag="NPANM" meaning="Кім Чен Ин">
+        <Variant id="a" lemma="Ин">
+            <Form tag="NS">Ин</Form>
+            <Form tag="GS">Ина</Form>
+            <Form tag="DS">Инові</Form>
+            <Form tag="DS">Ину</Form>
+            <Form tag="AS">Ина</Form>
+            <Form tag="IS">Ином</Form>
+            <Form tag="LS">Ині</Form>
+            <Form tag="LS">Инові</Form>
+            <Form tag="LS">Ину</Form>
+            <Form tag="VS">Ине</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139510" lemma="инакодумець" tag="NCANM">
+        <Variant id="a" lemma="инакодумець">
+            <Form tag="NS">инакодумець</Form>
+            <Form tag="GS">инакодумця</Form>
+            <Form tag="DS">инакодумцеві</Form>
+            <Form tag="DS">инакодумцю</Form>
+            <Form tag="AS">инакодумця</Form>
+            <Form tag="IS">инакодумцем</Form>
+            <Form tag="LS">инакодумцеві</Form>
+            <Form tag="LS">инакодумці</Form>
+            <Form tag="LS">инакодумцю</Form>
+            <Form tag="VS">инакодумцю</Form>
+            <Form tag="NP">инакодумці</Form>
+            <Form tag="GP">инакодумців</Form>
+            <Form tag="DP">инакодумцям</Form>
+            <Form tag="AP">инакодумців</Form>
+            <Form tag="AP">инакодумці</Form>
+            <Form tag="IP">инакодумцями</Form>
+            <Form tag="LP">инакодумцях</Form>
+            <Form tag="VP">инакодумці</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139511" lemma="инакше" tag="R">
+        <Variant id="a" lemma="инакше">
+            <Form tag="P">инакше</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139512" lemma="инакший" tag="AP">
+        <Variant id="a" lemma="инакший">
+            <Form tag="MNS">инакший</Form>
+            <Form tag="MGS">инакшого</Form>
+            <Form tag="MDS">инакшому</Form>
+            <Form tag="MAS" options="anim">инакшого</Form>
+            <Form tag="MAS" options="inanim">инакший</Form>
+            <Form tag="MIS">инакшим</Form>
+            <Form tag="MLS">инакшім</Form>
+            <Form tag="MLS">инакшому</Form>
+            <Form tag="MVS">инакший</Form>
+            <Form tag="FNS">инакша</Form>
+            <Form tag="FGS">инакшої</Form>
+            <Form tag="FDS">инакшій</Form>
+            <Form tag="FAS">инакшу</Form>
+            <Form tag="FIS">инакшою</Form>
+            <Form tag="FLS">инакшій</Form>
+            <Form tag="FVS">инакша</Form>
+            <Form tag="NNS">инакше</Form>
+            <Form tag="NGS">инакшого</Form>
+            <Form tag="NDS">инакшому</Form>
+            <Form tag="NAS">инакше</Form>
+            <Form tag="NIS">инакшим</Form>
+            <Form tag="NLS">инакшім</Form>
+            <Form tag="NLS">инакшому</Form>
+            <Form tag="NVS">инакше</Form>
+            <Form tag="PNP">инакші</Form>
+            <Form tag="PGP">инакших</Form>
+            <Form tag="PDP">инакшим</Form>
+            <Form tag="PAP" options="anim">инакших</Form>
+            <Form tag="PAP" options="inanim">инакші</Form>
+            <Form tag="PIP">инакшими</Form>
+            <Form tag="PLP">инакших</Form>
+            <Form tag="PVP">инакші</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139513" lemma="инде" tag="R">
+        <Variant id="a" lemma="инде">
+            <Form tag="P">инде</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139514" lemma="индик" tag="NCANM">
+        <Variant id="a" lemma="индик">
+            <Form tag="NS">индик</Form>
+            <Form tag="GS">индика</Form>
+            <Form tag="DS">индикові</Form>
+            <Form tag="DS">индику</Form>
+            <Form tag="AS">индика</Form>
+            <Form tag="IS">индиком</Form>
+            <Form tag="LS">индикові</Form>
+            <Form tag="LS">индику</Form>
+            <Form tag="VS">индиче</Form>
+            <Form tag="NP">индики</Form>
+            <Form tag="GP">индиків</Form>
+            <Form tag="DP">индикам</Form>
+            <Form tag="AP">индики</Form>
+            <Form tag="AP">индиків</Form>
+            <Form tag="IP">индиками</Form>
+            <Form tag="LP">индиках</Form>
+            <Form tag="VP">индики</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139515" lemma="иній" tag="NCINM">
+        <Variant id="a" lemma="иній">
+            <Form tag="NS">иній</Form>
+            <Form tag="GS">инею</Form>
+            <Form tag="DS">инеєві</Form>
+            <Form tag="DS">инею</Form>
+            <Form tag="AS">иній</Form>
+            <Form tag="IS">инеєм</Form>
+            <Form tag="LS">инеєві</Form>
+            <Form tag="LS">инеї</Form>
+            <Form tag="LS">инею</Form>
+            <Form tag="VS">инею</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139516" lemma="инколи" tag="R">
+        <Variant id="a" lemma="инколи">
+            <Form tag="P">инколи</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139517" lemma="иноді" tag="R">
+        <Variant id="a" lemma="иноді">
+            <Form tag="P">иноді</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139518" lemma="инокуючий" tag="AP">
+        <Variant id="a" lemma="инокуючий">
+            <Form tag="MNS">инокуючий</Form>
+            <Form tag="MGS">инокуючого</Form>
+            <Form tag="MDS">инокуючому</Form>
+            <Form tag="MAS" options="anim">инокуючого</Form>
+            <Form tag="MAS" options="inanim">инокуючий</Form>
+            <Form tag="MIS">инокуючим</Form>
+            <Form tag="MLS">инокуючім</Form>
+            <Form tag="MLS">инокуючому</Form>
+            <Form tag="MVS">инокуючий</Form>
+            <Form tag="FNS">инокуюча</Form>
+            <Form tag="FGS">инокуючої</Form>
+            <Form tag="FDS">инокуючій</Form>
+            <Form tag="FAS">инокуючу</Form>
+            <Form tag="FIS">инокуючою</Form>
+            <Form tag="FLS">инокуючій</Form>
+            <Form tag="FVS">инокуюча</Form>
+            <Form tag="NNS">инокуюче</Form>
+            <Form tag="NGS">инокуючого</Form>
+            <Form tag="NDS">инокуючому</Form>
+            <Form tag="NAS">инокуюче</Form>
+            <Form tag="NIS">инокуючим</Form>
+            <Form tag="NLS">инокуючім</Form>
+            <Form tag="NLS">инокуючому</Form>
+            <Form tag="NVS">инокуюче</Form>
+            <Form tag="PNP">инокуючі</Form>
+            <Form tag="PGP">инокуючих</Form>
+            <Form tag="PDP">инокуючим</Form>
+            <Form tag="PAP" options="anim">инокуючих</Form>
+            <Form tag="PAP" options="inanim">инокуючі</Form>
+            <Form tag="PIP">инокуючими</Form>
+            <Form tag="PLP">инокуючих</Form>
+            <Form tag="PVP">инокуючі</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139519" lemma="инопланетянин" tag="NCANM">
+        <Variant id="a" lemma="инопланетянин">
+            <Form tag="NS">инопланетянин</Form>
+            <Form tag="GS">инопланетянина</Form>
+            <Form tag="DS">инопланетянинові</Form>
+            <Form tag="DS">инопланетянину</Form>
+            <Form tag="AS">инопланетянина</Form>
+            <Form tag="IS">инопланетянином</Form>
+            <Form tag="LS">инопланетянині</Form>
+            <Form tag="LS">инопланетянинові</Form>
+            <Form tag="LS">инопланетянину</Form>
+            <Form tag="VS">инопланетянине</Form>
+            <Form tag="NP">инопланетяни</Form>
+            <Form tag="GP">инопланетян</Form>
+            <Form tag="DP">инопланетянам</Form>
+            <Form tag="AP">инопланетян</Form>
+            <Form tag="AP">инопланетяни</Form>
+            <Form tag="IP">инопланетянами</Form>
+            <Form tag="LP">инопланетянах</Form>
+            <Form tag="VP">инопланетяни</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139520" lemma="инородець" tag="NCANM">
+        <Variant id="a" lemma="инородець">
+            <Form tag="NS">инородець</Form>
+            <Form tag="GS">инородця</Form>
+            <Form tag="DS">инородцеві</Form>
+            <Form tag="DS">инородцю</Form>
+            <Form tag="AS">инородця</Form>
+            <Form tag="IS">инородцем</Form>
+            <Form tag="LS">инородцеві</Form>
+            <Form tag="LS">инородці</Form>
+            <Form tag="LS">инородцю</Form>
+            <Form tag="VS">инородцю</Form>
+            <Form tag="NP">инородці</Form>
+            <Form tag="GP">инородців</Form>
+            <Form tag="DP">инородцям</Form>
+            <Form tag="AP">инородців</Form>
+            <Form tag="AP">инородці</Form>
+            <Form tag="IP">инородцями</Form>
+            <Form tag="LP">инородцях</Form>
+            <Form tag="VP">инородці</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139521" lemma="инший" tag="AP">
+        <Variant id="a" lemma="инший">
+            <Form tag="MNS">инший</Form>
+            <Form tag="MGS">иншого</Form>
+            <Form tag="MDS">иншому</Form>
+            <Form tag="MAS" options="anim">иншого</Form>
+            <Form tag="MAS" options="inanim">инший</Form>
+            <Form tag="MIS">иншим</Form>
+            <Form tag="MLS">иншім</Form>
+            <Form tag="MLS">иншому</Form>
+            <Form tag="MVS">инший</Form>
+            <Form tag="FNS">инша</Form>
+            <Form tag="FGS">иншої</Form>
+            <Form tag="FDS">иншій</Form>
+            <Form tag="FAS">иншу</Form>
+            <Form tag="FIS">иншою</Form>
+            <Form tag="FLS">иншій</Form>
+            <Form tag="FVS">инша</Form>
+            <Form tag="NNS">инше</Form>
+            <Form tag="NGS">иншого</Form>
+            <Form tag="NDS">иншому</Form>
+            <Form tag="NAS">инше</Form>
+            <Form tag="NIS">иншим</Form>
+            <Form tag="NLS">иншім</Form>
+            <Form tag="NLS">иншому</Form>
+            <Form tag="NVS">инше</Form>
+            <Form tag="PNP">инші</Form>
+            <Form tag="PGP">инших</Form>
+            <Form tag="PDP">иншим</Form>
+            <Form tag="PAP" options="anim">инших</Form>
+            <Form tag="PAP" options="inanim">инші</Form>
+            <Form tag="PIP">иншими</Form>
+            <Form tag="PLP">инших</Form>
+            <Form tag="PVP">инші</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139522" lemma="иншомовний" tag="AP">
+        <Variant id="a" lemma="иншомовний">
+            <Form tag="MNS">иншомовний</Form>
+            <Form tag="MGS">иншомовного</Form>
+            <Form tag="MDS">иншомовному</Form>
+            <Form tag="MAS" options="anim">иншомовного</Form>
+            <Form tag="MAS" options="inanim">иншомовний</Form>
+            <Form tag="MIS">иншомовним</Form>
+            <Form tag="MLS">иншомовнім</Form>
+            <Form tag="MLS">иншомовному</Form>
+            <Form tag="MVS">иншомовний</Form>
+            <Form tag="FNS">иншомовна</Form>
+            <Form tag="FGS">иншомовної</Form>
+            <Form tag="FDS">иншомовній</Form>
+            <Form tag="FAS">иншомовну</Form>
+            <Form tag="FIS">иншомовною</Form>
+            <Form tag="FLS">иншомовній</Form>
+            <Form tag="FVS">иншомовна</Form>
+            <Form tag="NNS">иншомовне</Form>
+            <Form tag="NGS">иншомовного</Form>
+            <Form tag="NDS">иншомовному</Form>
+            <Form tag="NAS">иншомовне</Form>
+            <Form tag="NIS">иншомовним</Form>
+            <Form tag="NLS">иншомовнім</Form>
+            <Form tag="NLS">иншомовному</Form>
+            <Form tag="NVS">иншомовне</Form>
+            <Form tag="PNP">иншомовні</Form>
+            <Form tag="PGP">иншомовних</Form>
+            <Form tag="PDP">иншомовним</Form>
+            <Form tag="PAP" options="anim">иншомовних</Form>
+            <Form tag="PAP" options="inanim">иншомовні</Form>
+            <Form tag="PIP">иншомовними</Form>
+            <Form tag="PLP">иншомовних</Form>
+            <Form tag="PVP">иншомовні</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139523" lemma="иржа" tag="NCINF">
+        <Variant id="a" lemma="иржа">
+            <Form tag="NS">иржа</Form>
+            <Form tag="GS">иржі</Form>
+            <Form tag="DS">иржі</Form>
+            <Form tag="AS">иржу</Form>
+            <Form tag="IS">иржею</Form>
+            <Form tag="LS">иржі</Form>
+            <Form tag="VS">ирже</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139525" lemma="иржавіти" tag="VMN">
+        <Variant id="a" lemma="иржавіти">
+            <Form tag="0">иржавіти</Form>
+            <Form tag="R1S">иржавію</Form>
+            <Form tag="R2S">иржавієш</Form>
+            <Form tag="R3S">иржавіє</Form>
+            <Form tag="R1P">иржавіємо</Form>
+            <Form tag="R1P">иржавієм</Form>
+            <Form tag="R2P">иржавієте</Form>
+            <Form tag="R3P">иржавіють</Form>
+            <Form tag="F1S">иржавітиму</Form>
+            <Form tag="F2S">иржавітимеш</Form>
+            <Form tag="F3S">иржавітиме</Form>
+            <Form tag="F1P">иржавітимем</Form>
+            <Form tag="F1P">иржавітимемо</Form>
+            <Form tag="F2P">иржавітимете</Form>
+            <Form tag="F3P">иржавітимуть</Form>
+            <Form tag="PMS">иржавів</Form>
+            <Form tag="PFS">иржавіла</Form>
+            <Form tag="PNS">иржавіло</Form>
+            <Form tag="PXP">иржавіли</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139528" lemma="иржати" tag="VMN">
+        <Variant id="a" lemma="иржати">
+            <Form tag="0">иржати</Form>
+            <Form tag="R1S">иржу</Form>
+            <Form tag="R2S">иржеш</Form>
+            <Form tag="R3S">ирже</Form>
+            <Form tag="R1P">иржемо</Form>
+            <Form tag="R1P">иржем</Form>
+            <Form tag="R2P">иржете</Form>
+            <Form tag="R3P">иржуть</Form>
+            <Form tag="F1S">иржатиму</Form>
+            <Form tag="F2S">иржатимеш</Form>
+            <Form tag="F3S">иржатиме</Form>
+            <Form tag="F1P">иржатимем</Form>
+            <Form tag="F1P">иржатимемо</Form>
+            <Form tag="F2P">иржатимете</Form>
+            <Form tag="F3P">иржатимуть</Form>
+            <Form tag="PMS">иржав</Form>
+            <Form tag="PFS">иржала</Form>
+            <Form tag="PNS">иржало</Form>
+            <Form tag="PXP">иржали</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139530" lemma="ирій" tag="NCINM">
+        <Variant id="a" lemma="ирій" pravapis="ua_2019">
+            <Form tag="NS">ирій</Form>
+            <Form tag="GS">ирію</Form>
+            <Form tag="DS">ирієві</Form>
+            <Form tag="DS">ирію</Form>
+            <Form tag="AS">ирій</Form>
+            <Form tag="IS">ирієм</Form>
+            <Form tag="LS">ирієві</Form>
+            <Form tag="LS">ирії</Form>
+            <Form tag="LS">ирію</Form>
+            <Form tag="VS">ирію</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139531" lemma="ирод" tag="NCANM">
+        <Variant id="a" lemma="ирод" pravapis="ua_2019">
+            <Form tag="NS">ирод</Form>
+            <Form tag="GS">ирода</Form>
+            <Form tag="DS">иродові</Form>
+            <Form tag="DS">ироду</Form>
+            <Form tag="AS">ирода</Form>
+            <Form tag="IS">иродом</Form>
+            <Form tag="LS">ироді</Form>
+            <Form tag="LS">иродові</Form>
+            <Form tag="LS">ироду</Form>
+            <Form tag="VS">ироде</Form>
+            <Form tag="NP">ироди</Form>
+            <Form tag="GP">иродів</Form>
+            <Form tag="DP">иродам</Form>
+            <Form tag="AP">иродів</Form>
+            <Form tag="AP">ироди</Form>
+            <Form tag="IP">иродами</Form>
+            <Form tag="LP">иродах</Form>
+            <Form tag="VP">ироди</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139532" lemma="истнуючий" tag="AP">
+        <Variant id="a" lemma="истнуючий">
+            <Form tag="MNS">истнуючий</Form>
+            <Form tag="MGS">истнуючого</Form>
+            <Form tag="MDS">истнуючому</Form>
+            <Form tag="MAS" options="anim">истнуючого</Form>
+            <Form tag="MAS" options="inanim">истнуючий</Form>
+            <Form tag="MIS">истнуючим</Form>
+            <Form tag="MLS">истнуючім</Form>
+            <Form tag="MLS">истнуючому</Form>
+            <Form tag="MVS">истнуючий</Form>
+            <Form tag="FNS">истнуюча</Form>
+            <Form tag="FGS">истнуючої</Form>
+            <Form tag="FDS">истнуючій</Form>
+            <Form tag="FAS">истнуючу</Form>
+            <Form tag="FIS">истнуючою</Form>
+            <Form tag="FLS">истнуючій</Form>
+            <Form tag="FVS">истнуюча</Form>
+            <Form tag="NNS">истнуюче</Form>
+            <Form tag="NGS">истнуючого</Form>
+            <Form tag="NDS">истнуючому</Form>
+            <Form tag="NAS">истнуюче</Form>
+            <Form tag="NIS">истнуючим</Form>
+            <Form tag="NLS">истнуючім</Form>
+            <Form tag="NLS">истнуючому</Form>
+            <Form tag="NVS">истнуюче</Form>
+            <Form tag="PNP">истнуючі</Form>
+            <Form tag="PGP">истнуючих</Form>
+            <Form tag="PDP">истнуючим</Form>
+            <Form tag="PAP" options="anim">истнуючих</Form>
+            <Form tag="PAP" options="inanim">истнуючі</Form>
+            <Form tag="PIP">истнуючими</Form>
+            <Form tag="PLP">истнуючих</Form>
+            <Form tag="PVP">истнуючі</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139533" lemma="ит" tag="Y">
+        <Variant id="a" lemma="ит">
+            <Form tag="">ит</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139534" lemma="ич" tag="Y">
+        <Variant id="a" lemma="ич">
+            <Form tag="">ич</Form>
+        </Variant>
+    </Paradigm>
+    <Paradigm pdgId="139535" lemma="ич" tag="E">
+        <Variant id="a" lemma="ич">
+            <Form tag="">ич</Form>
+        </Variant>
+    </Paradigm>
+</Wordlist>
