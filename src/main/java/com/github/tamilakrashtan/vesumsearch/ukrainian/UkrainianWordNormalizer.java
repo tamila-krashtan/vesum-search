@@ -1,52 +1,52 @@
-package com.github.tamilakrashtan.vesumsearch.belarusian;
+package com.github.tamilakrashtan.vesumsearch.ukrainian;
 
 import java.util.Locale;
 
-public class BelarusianWordNormalizer {
-    public static final Locale BEL = new Locale("be");
-    public static final char pravilny_nacisk = '\u0301';
-    public static final String usie_naciski = pravilny_nacisk + "\u00B4";
-    public static final char pravilny_apostraf = '\u02BC';
-    public static final String usie_apostrafy = pravilny_apostraf + "\'\u2019";
-    public static final String letters = usie_naciski + usie_apostrafy
-            + "-ёйцукенгшўзхфывапролджэячсмітьбющиЁЙЦУКЕНГШЎЗХФЫВАПРОЛДЖЭЯЧСМІТЬБЮЩИqwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789їЇєЄґҐиИ";
+public class UkrainianWordNormalizer {
+    public static final Locale UKR = new Locale("uk");
+    public static final char correct_stress = '\u0301';
+    public static final String all_stresses = correct_stress + "\u00B4";
+    public static final char correct_apostrophe = '\u02BC';
+    public static final String all_apostrophes = correct_apostrophe + "\'\u2019";
+    public static final String letters = all_stresses + all_apostrophes
+            + "-йцукенгшщзхїґфівапролджєячсмитьбюЙЦУКЕНГШЩЗХЇҐФІВАПРОЛДЖЄЯЧСМИТЬБЮ";
 
     private static final int CHARS_LEN = 0x2020;
-    // Максімальная нармалізацыя - прывядзенне да агульнага хэшу ці для індэксацыі ў
-    // Lucene. Патрабуе абавязковай дадатковай праверкі.
+    // Maximum normalization - turning into general hash or for indexing in
+    // Lucene. Requires additional validation.
     private static final char[] SUPERNORMALIZE = new char[CHARS_LEN];
-    // Мінімальная нармалізацыя - толькі націскі і апострафы да правільнай формы.
+    // Minimum normalization - only stress and apostrophe to a correct form.
     private static final char[] LITENORMALIZE = new char[CHARS_LEN];
-    // Ператварэнне ў малыя літары
-    private static final char[] UMALYJA = new char[CHARS_LEN];
-    // Ці вялікая літара
-    private static final boolean[] CIVIALIKIJA = new boolean[CHARS_LEN];
+    // Turning to lowercase letters
+    private static final char[] TOLOWER = new char[CHARS_LEN];
+    // Is an uppercase letter?
+    private static final boolean[] ISUPPER = new boolean[CHARS_LEN];
 
     static {
         for (char c = 0; c < CHARS_LEN; c++) {
             if (Character.isLetterOrDigit(c)) {
                 SUPERNORMALIZE[c] = Character.toLowerCase(c);
-                UMALYJA[c] = Character.toLowerCase(c);
+                TOLOWER[c] = Character.toLowerCase(c);
                 LITENORMALIZE[c] = c;
             }
-            CIVIALIKIJA[c] = Character.isUpperCase(c);
+            ISUPPER[c] = Character.isUpperCase(c);
         }
-        UMALYJA[pravilny_nacisk] = pravilny_nacisk;
-        UMALYJA['\''] = '\'';
-        UMALYJA['-'] = '-';
+        TOLOWER[correct_stress] = correct_stress;
+        TOLOWER['\''] = '\'';
+        TOLOWER['-'] = '-';
 
         LITENORMALIZE['ґ'] = 'г'; // ґ -> г
         LITENORMALIZE['Ґ'] = 'Г';
-        // Правільны апостраф - 02BC
-        LITENORMALIZE['\''] = pravilny_apostraf;
-        LITENORMALIZE['\u02BC'] = pravilny_apostraf;
-        LITENORMALIZE['\u2019'] = pravilny_apostraf;
-        // Націскі
-        LITENORMALIZE[pravilny_nacisk] = pravilny_nacisk;
-        LITENORMALIZE['\u00B4'] = pravilny_nacisk;
-        LITENORMALIZE['\u0301'] = pravilny_nacisk; // combined accent
+        // Correct apostrophe - 02BC
+        LITENORMALIZE['\''] = correct_apostrophe;
+        LITENORMALIZE['\u02BC'] = correct_apostrophe;
+        LITENORMALIZE['\u2019'] = correct_apostrophe;
+        // Stress
+        LITENORMALIZE[correct_stress] = correct_stress;
+        LITENORMALIZE['\u00B4'] = correct_stress;
+        LITENORMALIZE['\u0301'] = correct_stress; // combined accent
         LITENORMALIZE['-'] = '-';
-        // пошук
+        // search
         LITENORMALIZE['?'] = '?';
         LITENORMALIZE['*'] = '*';
 
@@ -54,10 +54,10 @@ public class BelarusianWordNormalizer {
         SUPERNORMALIZE['Ґ'] = 'г';
         SUPERNORMALIZE['ў'] = 'у'; // ў -> у
         SUPERNORMALIZE['Ў'] = 'у';
-        // Правільны апостраф - 02BC, але паўсюль ужываем лацінкавы
-        SUPERNORMALIZE['\''] = pravilny_apostraf;
-        SUPERNORMALIZE['\u02BC'] = pravilny_apostraf;
-        SUPERNORMALIZE['\u2019'] = pravilny_apostraf;
+        // Correct apostrophe - 02BC, but we use the Latin-script everywhere
+        SUPERNORMALIZE['\''] = correct_apostrophe;
+        SUPERNORMALIZE['\u02BC'] = correct_apostrophe;
+        SUPERNORMALIZE['\u2019'] = correct_apostrophe;
         SUPERNORMALIZE['-'] = '-';
         SUPERNORMALIZE['?'] = '?';
         SUPERNORMALIZE['*'] = '*';
@@ -91,7 +91,7 @@ public class BelarusianWordNormalizer {
     }
 
     /**
-     * Нармалізацыя, але дапускае зорачкі - для пошуку некалькіх.
+     * Normalization, but allows asterisks - for searching several.
      */
     public static String lightNormalizedWithStars(CharSequence word) {
         StringBuilder str = new StringBuilder();
@@ -118,18 +118,14 @@ public class BelarusianWordNormalizer {
     }
 
     /**
-     * Параўноўвае слова ў базе(ці ўведзенае карыстальнікам слова) з словам у
-     * тэксце. Тут правяраюцца ўсе "несупярэчнасці": націскі, вялікія літары,
-     * апострафы, Г выбухная, Ў напачатку слова.
+     * Compares words in the database(or the input word) to a word in the text.
+     * Checks all "inconsistencies": stress, uppercase letters, apostrophes, ґ
      * 
-     * Націскі могуць быць альбо не быць як у базе, так і ў тэксце.
+     * Stresses can be present or absent both in the database and in the text.
      */
     public static boolean equals(String dbWord, String anyWord) {
-        /* Націск супаў у той самай пазіцыі. */
         byte stressWasEquals = 0;
-        /* Націск з базы быў прапушчаны. */
         byte stressWasMissedInWord = 0;
-        /* Націск у баз прапушчаны. */
         byte stressWasMissedInDb = 0;
         for (int iDb = 0, iAny = 0;; iDb++, iAny++) {
             char cDb = iDb < dbWord.length() ? dbWord.charAt(iDb) : Character.MAX_VALUE;
@@ -148,10 +144,10 @@ public class BelarusianWordNormalizer {
                 return stressWasEquals + stressWasMissedInWord + stressWasMissedInDb <= 1;
             }
             if (cAny == Character.MAX_VALUE || cDb == Character.MAX_VALUE) {
-                if (cDb == pravilny_nacisk) {
+                if (cDb == correct_stress) {
                     stressWasMissedInWord = 1;
                     continue;
-                } else if (cAny == pravilny_nacisk) {
+                } else if (cAny == correct_stress) {
                     stressWasMissedInDb = 1;
                     continue;
                 }
@@ -160,35 +156,22 @@ public class BelarusianWordNormalizer {
             if (cAny == 0 || cDb == 0) {
                 return false;
             }
-            // першы сімвал - можа вялікі ?
-            boolean vialikiDb = CIVIALIKIJA[cDb];
-            boolean vialikiAny = CIVIALIKIJA[cAny];
+            // first character - maybe capital ?
+            boolean vialikiDb = ISUPPER[cDb];
+            boolean vialikiAny = ISUPPER[cAny];
             if (vialikiDb && !vialikiAny) {
                 return false;
             }
-            cDb = UMALYJA[cDb];
-            cAny = UMALYJA[cAny];
-            // першы сімвал - можа у/ў?
-            if (iDb == 0 && iAny == 0) {
-                if (cDb == 'ў') {
-                    if (cAny == 'ў') {
-                        continue;
-                    } else {
-                        return false;
-                    }
-                }
-                if (cAny == 'ў') {
-                    cAny = 'у';
-                }
-            }
-            if (cDb == pravilny_nacisk && cAny == pravilny_nacisk) {
+            cDb = TOLOWER[cDb];
+            cAny = TOLOWER[cAny];
+            if (cDb == correct_stress && cAny == correct_stress) {
                 stressWasEquals = 1;
                 continue;
-            } else if (cDb == pravilny_nacisk) {
+            } else if (cDb == correct_stress) {
                 stressWasMissedInWord = 1;
                 iAny--;
                 continue;
-            } else if (cAny == pravilny_nacisk) {
+            } else if (cAny == correct_stress) {
                 stressWasMissedInDb = 1;
                 iDb--;
                 continue;

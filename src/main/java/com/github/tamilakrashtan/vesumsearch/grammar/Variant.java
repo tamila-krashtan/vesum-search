@@ -1,4 +1,3 @@
-
 package com.github.tamilakrashtan.vesumsearch.grammar;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -22,16 +21,14 @@ import java.util.List;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="Note" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{}Slounik" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element ref="{}Dictionary" maxOccurs="unbounded" minOccurs="0"/>
  *         &lt;element ref="{}Form" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="Morph" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{}Fan" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *       &lt;attribute name="id" type="{}latin_char" />
  *       &lt;attribute name="lemma" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
  *       &lt;attribute name="tag" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="slouniki" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="pravapis" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       &lt;attribute name="dictionaries" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       &lt;attribute name="orthography" type="{http://www.w3.org/2001/XMLSchema}string" />
  *       &lt;attribute name="type" type="{}VariantType" />
  *       &lt;attribute name="rules" type="{http://www.w3.org/2001/XMLSchema}string" />
  *       &lt;attribute name="regulation" type="{}RegulationType" />
@@ -45,34 +42,28 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "note",
-    "slounik",
-    "form",
-    "morph",
-    "fan"
+    "dictionary",
+    "form"
 })
 @XmlRootElement(name = "Variant")
 public class Variant {
 
     @XmlElement(name = "Note")
     protected List<String> note;
-    @XmlElement(name = "Slounik")
-    protected List<Slounik> slounik;
+    @XmlElement(name = "Dictionary")
+    protected List<Dictionary> dictionary;
     @XmlElement(name = "Form")
     protected List<Form> form;
-    @XmlElement(name = "Morph")
-    protected List<String> morph;
-    @XmlElement(name = "Fan")
-    protected List<Fan> fan;
     @XmlAttribute(name = "id")
     protected String id;
     @XmlAttribute(name = "lemma", required = true)
     protected String lemma;
     @XmlAttribute(name = "tag")
     protected String tag;
-    @XmlAttribute(name = "slouniki")
-    protected String slouniki;
-    @XmlAttribute(name = "pravapis")
-    protected String pravapis;
+    @XmlAttribute(name = "dictionaries")
+    protected String dictionaries;
+    @XmlAttribute(name = "orthography")
+    protected String orthography;
     @XmlAttribute(name = "type")
     protected VariantType type;
     @XmlAttribute(name = "rules")
@@ -110,32 +101,32 @@ public class Variant {
     }
 
     /**
-     * Gets the value of the slounik property.
+     * Gets the value of the dictionary property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the slounik property.
+     * This is why there is not a <CODE>set</CODE> method for the dictionary property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getSlounik().add(newItem);
+     *    getDictionary().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Slounik }
+     * {@link Dictionary }
      * 
      * 
      */
-    public List<Slounik> getSlounik() {
-        if (slounik == null) {
-            slounik = new ArrayList<Slounik>();
+    public List<Dictionary> getDictionary() {
+        if (dictionary == null) {
+            dictionary = new ArrayList<Dictionary>();
         }
-        return this.slounik;
+        return this.dictionary;
     }
 
     /**
@@ -165,64 +156,6 @@ public class Variant {
             form = new ArrayList<Form>();
         }
         return this.form;
-    }
-
-    /**
-     * Gets the value of the morph property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the morph property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getMorph().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link String }
-     * 
-     * 
-     */
-    public List<String> getMorph() {
-        if (morph == null) {
-            morph = new ArrayList<String>();
-        }
-        return this.morph;
-    }
-
-    /**
-     * Gets the value of the fan property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the fan property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getFan().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Fan }
-     * 
-     * 
-     */
-    public List<Fan> getFan() {
-        if (fan == null) {
-            fan = new ArrayList<Fan>();
-        }
-        return this.fan;
     }
 
     /**
@@ -298,51 +231,51 @@ public class Variant {
     }
 
     /**
-     * Gets the value of the slouniki property.
+     * Gets the value of the dictionaries property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getSlouniki() {
-        return slouniki;
+    public String getDictionaries() {
+        return dictionaries;
     }
 
     /**
-     * Sets the value of the slouniki property.
+     * Sets the value of the dictionaries property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setSlouniki(String value) {
-        this.slouniki = value;
+    public void setDictionaries(String value) {
+        this.dictionaries = value;
     }
 
     /**
-     * Gets the value of the pravapis property.
+     * Gets the value of the orthography property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getPravapis() {
-        return pravapis;
+    public String getOrthography() {
+        return orthography;
     }
 
     /**
-     * Sets the value of the pravapis property.
+     * Sets the value of the orthography property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setPravapis(String value) {
-        this.pravapis = value;
+    public void setOrthography(String value) {
+        this.orthography = value;
     }
 
     /**

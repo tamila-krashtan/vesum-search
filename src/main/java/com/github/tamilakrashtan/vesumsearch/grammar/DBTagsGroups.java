@@ -1,7 +1,7 @@
 package com.github.tamilakrashtan.vesumsearch.grammar;
 
-import com.github.tamilakrashtan.vesumsearch.belarusian.BelarusianTags;
-import com.github.tamilakrashtan.vesumsearch.belarusian.TagLetter;
+import com.github.tamilakrashtan.vesumsearch.ukrainian.UkrainianTags;
+import com.github.tamilakrashtan.vesumsearch.ukrainian.TagLetter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,8 +10,7 @@ import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Зьбірае усе магчымыя назвы груп і ўсе магчымыя літары тэгаў ва ўсіх
- * варыянтах.
+ * Collects all possible group names and all possible tag letters in all variants.
  */
 public class DBTagsGroups {
     public static final List<KeyValue> wordTypes;
@@ -20,7 +19,7 @@ public class DBTagsGroups {
     static {
         wordTypes = new ArrayList<KeyValue>();
         tagGroupsByWordType = new TreeMap<Character, DBTagsGroups>();
-        TagLetter tag = BelarusianTags.getInstance().getRoot();
+        TagLetter tag = UkrainianTags.getInstance().getRoot();
         for (TagLetter.OneLetterInfo li : tag.letters) {
             wordTypes.add(new KeyValue(Character.toString(li.letter), li.description));
             tagGroupsByWordType.put(li.letter, new DBTagsGroups(li.nextLetters));
@@ -49,15 +48,13 @@ public class DBTagsGroups {
             result[i] = '_';
         }
 
-        System.out.println(grammarTag);
-        TagLetter tags = BelarusianTags.getInstance().getNextAfter(grammarTag.substring(0, 1));
+        TagLetter tags = UkrainianTags.getInstance().getNextAfter(grammarTag.substring(0, 1));
         for (int i = 1; i < grammarTag.length(); i++) {
             char ch = grammarTag.charAt(i);
             if (ch == 'x') {// TODO
                 ch = tags.letters.get(0).letter;
             }
             TagLetter.OneLetterInfo li = tags.getLetterInfo(ch);
-            System.out.println(ch);
             assert (li != null);
             int pos = wt.getGroupIndex(li.groupName);
             result[pos + 1] = ch;
@@ -92,7 +89,7 @@ public class DBTagsGroups {
 
     public static class Item {
         public final char code;
-        public String description = BelarusianTags.NO_GROUP_ITEM;
+        public String description = UkrainianTags.NO_GROUP_ITEM;
 
         public Item(char code) {
             this.code = code;
@@ -189,7 +186,7 @@ public class DBTagsGroups {
     }
 
     public static void main(String[] args) throws Exception {
-        TagLetter tl = BelarusianTags.getInstance().getNextAfter("N");
+        TagLetter tl = UkrainianTags.getInstance().getNextAfter("N");
         DBTagsGroups g = new DBTagsGroups(tl);
         for (Group a : g.groups) {
             System.out.print(a.name + (a.formGroup ? "[form]" : "") + " : ");

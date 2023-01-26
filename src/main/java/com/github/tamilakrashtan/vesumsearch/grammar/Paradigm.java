@@ -1,4 +1,3 @@
-
 package com.github.tamilakrashtan.vesumsearch.grammar;
 
 import jakarta.xml.bind.annotation.XmlAccessType;

@@ -4,13 +4,13 @@ import com.github.tamilakrashtan.vesumsearch.grammar.Form;
 import com.github.tamilakrashtan.vesumsearch.grammar.Paradigm;
 import com.github.tamilakrashtan.vesumsearch.grammar.Variant;
 import com.github.tamilakrashtan.vesumsearch.grammar.DBTagsGroups;
-import com.github.tamilakrashtan.vesumsearch.belarusian.BelarusianTags;
-import com.github.tamilakrashtan.vesumsearch.belarusian.BelarusianWordNormalizer;
-import com.github.tamilakrashtan.vesumsearch.belarusian.FormsReadyFilter;
+import com.github.tamilakrashtan.vesumsearch.ukrainian.UkrainianTags;
+import com.github.tamilakrashtan.vesumsearch.ukrainian.UkrainianWordNormalizer;
+import com.github.tamilakrashtan.vesumsearch.ukrainian.FormsReadyFilter;
 import com.github.tamilakrashtan.vesumsearch.grammar.GrammarSearchResult;
 import com.github.tamilakrashtan.vesumsearch.grammar.LemmaInfo;
-import com.github.tamilakrashtan.vesumsearch.server.data.GrammarInitial;
-import com.github.tamilakrashtan.vesumsearch.server.KorpusApplication;
+import com.github.tamilakrashtan.vesumsearch.server.GrammarInitial;
+import com.github.tamilakrashtan.vesumsearch.server.GrammarApplication;
 import com.github.tamilakrashtan.vesumsearch.server.Settings;
 import com.github.tamilakrashtan.vesumsearch.server.WordsDetailsChecks;
 import com.github.tamilakrashtan.vesumsearch.utils.SetUtils;
@@ -34,12 +34,12 @@ import java.util.stream.StreamSupport;
 @RequestMapping("/grammar")
 public class GrammarServiceImpl {
 
-    public static Locale BE = new Locale("be");
-    public static Collator BEL = Collator.getInstance(BE);
-    private final KorpusApplication korpusApp = new KorpusApplication();
+    public static Locale UK = new Locale("uk");
+    public static Collator UKR = Collator.getInstance(UK);
+    private final GrammarApplication grammarApp = new GrammarApplication();
 
-    private KorpusApplication getApp() {
-        return korpusApp;
+    private GrammarApplication getApp() {
+        return grammarApp;
     }
 
     @GetMapping(value = "/initial", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -84,7 +84,7 @@ public class GrammarServiceImpl {
             if (rq.word != null) {
                 hasStar = WordsDetailsChecks.needWildcardRegexp(rq.word);
                 for (char c : rq.word.toCharArray()) {
-                    if ("абвгґдеєжзиіїйклмнопрстуфхцчшщьюяїи'".indexOf(Character.toLowerCase(c)) >= 0) {
+                    if ("абвгґдеєжзиіїйклмнопрстуфхцчшщьюя'".indexOf(Character.toLowerCase(c)) >= 0) {
                         lettersCount++;
                     }
                 }
@@ -122,7 +122,7 @@ public class GrammarServiceImpl {
             Collections.sort(result.output, (a, b) -> {
                 int r = Long.compare(a.pdgId, b.pdgId);
                 if (r == 0) {
-                    r = BEL.compare(a.output, b.output);
+                    r = UKR.compare(a.output, b.output);
                 }
                 return r;
             });
@@ -157,21 +157,21 @@ public class GrammarServiceImpl {
                 Collections.sort(result.output, new Comparator<LemmaInfo>() {
                     @Override
                     public int compare(LemmaInfo o1, LemmaInfo o2) {
-                        return BEL.compare(o1.output, o2.output);
+                        return UKR.compare(o1.output, o2.output);
                     }
                 });
             } else if (rq.orderReverse) {
                 Collections.sort(result.output, new Comparator<LemmaInfo>() {
                     @Override
                     public int compare(LemmaInfo o1, LemmaInfo o2) {
-                        return BEL.compare(revert(o1.output), revert(o2.output));
+                        return UKR.compare(revert(o1.output), revert(o2.output));
                     }
                 });
             } else {
                 Collections.sort(result.output, new Comparator<LemmaInfo>() {
                     @Override
                     public int compare(LemmaInfo o1, LemmaInfo o2) {
-                        return BEL.compare(o1.output, o2.output);
+                        return UKR.compare(o1.output, o2.output);
                     }
                 });
             }
@@ -232,11 +232,11 @@ public class GrammarServiceImpl {
 
     private Stream<LemmaInfo> searchExact(String word, Pattern reGrammar, boolean multiform, boolean fullDatabase,
             Pattern reOutputGrammar) {
-        String normWord = BelarusianWordNormalizer.lightNormalized(word.trim());
+        String normWord = UkrainianWordNormalizer.lightNormalized(word.trim());
         Paradigm[] data = getApp().grFinder.getParadigms(normWord);
         List<LemmaInfo> result = new ArrayList<>();
         for (Paradigm p : data) {
-            createLemmaInfoFromParadigm(p, s -> BelarusianWordNormalizer.equals(normWord, s), multiform, fullDatabase,
+            createLemmaInfoFromParadigm(p, s -> UkrainianWordNormalizer.equals(normWord, s), multiform, fullDatabase,
                     reOutputGrammar, reGrammar, result);
         }
         return result.stream();
@@ -247,7 +247,7 @@ public class GrammarServiceImpl {
         Set<String> found = new TreeSet<>();
         for (Variant v : p.getVariant()) {
             List<Form> forms = fullDatabase ? v.getForm()
-                    : FormsReadyFilter.getAcceptedForms(FormsReadyFilter.MODE.SHOW, p, v);
+                    : FormsReadyFilter.getAcceptedForms(p, v);
             if (forms == null) {
                 return;
             }
@@ -266,7 +266,6 @@ public class GrammarServiceImpl {
                     if (reGrammar != null) {
                         boolean tagFound = false;
                         for (Form f : forms) {
-                            System.out.println(f.getValue());
                             if (reGrammar.matcher(DBTagsGroups.getDBTagString(SetUtils.tag(p, v, f))).matches()) {
                                 tagFound = true;
                                 break;
@@ -301,7 +300,7 @@ public class GrammarServiceImpl {
                 w.meaning = p.getMeaning();
                 w.output = StressUtils.combineAccute(f);
                 w.grammar = String.join(", ",
-                        BelarusianTags.getInstance().describe(tag, getApp().grammarInitial.skipGrammar.get(tag.charAt(0))));
+                        UkrainianTags.getInstance().describe(tag, getApp().grammarInitial.skipGrammar.get(tag.charAt(0))));
                 result.add(w);
             }
         } else {
@@ -310,7 +309,7 @@ public class GrammarServiceImpl {
             w.meaning = p.getMeaning();
             w.output = StressUtils.combineAccute(output);
             w.grammar = String.join(", ",
-                    BelarusianTags.getInstance().describe(tag, getApp().grammarInitial.skipGrammar.get(tag.charAt(0))));
+                    UkrainianTags.getInstance().describe(tag, getApp().grammarInitial.skipGrammar.get(tag.charAt(0))));
             result.add(w);
         }
     }
@@ -350,11 +349,11 @@ public class GrammarServiceImpl {
         System.out.println(">> Find lemmas by form " + form);
         Set<String> result = Collections.synchronizedSet(new TreeSet<>());
         try {
-            form = BelarusianWordNormalizer.lightNormalized(form);
+            form = UkrainianWordNormalizer.lightNormalized(form);
             for (Paradigm p : getApp().grFinder.getParadigms(form)) {
                 for (Variant v : p.getVariant()) {
                     for (Form f : v.getForm()) {
-                        if (BelarusianWordNormalizer.equals(f.getValue(), form)) {
+                        if (UkrainianWordNormalizer.equals(f.getValue(), form)) {
                             result.add(p.getLemma());
                             break;
                         }
@@ -363,7 +362,7 @@ public class GrammarServiceImpl {
             }
             System.out.println("<< Find lemmas by form result: " + result);
             List<String> resultList = new ArrayList<>(result);
-            Collections.sort(resultList, BEL);
+            Collections.sort(resultList, UKR);
             return resultList.toArray(new String[result.size()]);
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -378,14 +377,14 @@ public class GrammarServiceImpl {
         r.meaning = p.getMeaning();
         for (Variant v : p.getVariant()) {
             List<Form> forms = fullDatabase ? v.getForm()
-                    : FormsReadyFilter.getAcceptedForms(FormsReadyFilter.MODE.SHOW, p, v);
+                    : FormsReadyFilter.getAcceptedForms(p, v);
             if (forms == null) {
                 continue;
             }
             LemmaInfo.LemmaVariant rv = new LemmaInfo.LemmaVariant();
             rv.id = v.getId();
             rv.tag = v.getTag();
-            rv.dictionaries.addAll(SetUtils.getSlouniki(v.getSlouniki()).keySet());
+            rv.dictionaries.addAll(SetUtils.getDictionaries(v.getDictionaries()).keySet());
             r.variants.add(rv);
             for (Form f : forms) {
                 LemmaInfo.LemmaForm rf = new LemmaInfo.LemmaForm();
@@ -393,7 +392,7 @@ public class GrammarServiceImpl {
                 rf.tag = f.getTag();
                 rf.options = f.getOptions() != null ? f.getOptions().name() : null;
                 rf.type = f.getType() != null ? f.getType().name() : null;
-                rv.dictionaries.addAll(SetUtils.getSlouniki(f.getSlouniki()).keySet());
+                rv.dictionaries.addAll(SetUtils.getDictionaries(f.getDictionaries()).keySet());
                 rv.forms.add(rf);
             }
         }

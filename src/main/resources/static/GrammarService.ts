@@ -4,7 +4,6 @@ class GrammarService {
 
   public initial: GrammarInitial;
 
-  public inputWord: WordRequest = new WordRequest();
   public inputOrder: string = "STANDARD"; // "STANDARD" | "REVERSE";
 
   public result: GrammarSearchResult;

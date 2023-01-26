@@ -3,10 +3,7 @@ package com.github.tamilakrashtan.vesumsearch.grammar;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
-import com.github.tamilakrashtan.vesumsearch.grammar.Wordlist;
-import com.github.tamilakrashtan.vesumsearch.belarusian.BelarusianWordNormalizer;
-import com.github.tamilakrashtan.vesumsearch.utils.Theme;
-import com.github.tamilakrashtan.vesumsearch.text.BOMBufferedReader;
+import com.github.tamilakrashtan.vesumsearch.ukrainian.UkrainianWordNormalizer;
 
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.Unmarshaller;
@@ -20,9 +17,7 @@ import java.util.zip.GZIPInputStream;
 
 public class GrammarDB2 {
     public static final String CACHE_FILE = "db.cache";
-    public static final String THEMES_FILE = "themes.txt";
 
-    private Map<String, Theme> themes;
     private List<Paradigm> allParadigms = new ArrayList<>();
 
     private static JAXBContext CONTEXT;
@@ -83,26 +78,18 @@ public class GrammarDB2 {
     }
 
     /**
-     * Get files for load(xml and themes.txt)
+     * Get files for loading(xml and themes.txt)
      */
     public static File[] getFilesForLoad(File dir) throws Exception {
         File[] result = dir.listFiles(new FileFilter() {
             public boolean accept(File pathname) {
                 return pathname.isFile() && (pathname.getName().endsWith(".xml")
-                        || pathname.getName().endsWith(".xml.gz") || pathname.getName().equals(THEMES_FILE));
+                        || pathname.getName().endsWith(".xml.gz"));
             }
         });
         if (result == null) {
             throw new Exception("There are no files for GrammarDB in the " + dir.getAbsolutePath());
         }
-        /*
-         * Arrays.sort(result, new Comparator<File>() {
-         * 
-         * @Override public int compare(File o1, File o2) { String n1 =
-         * o1.getName(); String n2 = o2.getName(); if (n1.equals(THEMES_FILE)) {
-         * return -1; } else if (n2.equals(THEMES_FILE)) { return 1; } else {
-         * return n1.compareTo(n2); } } });
-         */
         Arrays.sort(result);
         return result;
     }
@@ -110,33 +97,6 @@ public class GrammarDB2 {
     private static GrammarDB2 loadFromCache(Input input) throws Exception {
         Kryo kryo = new Kryo();
         return kryo.readObject(input, GrammarDB2.class);
-    }
-
-    private void addTheme(String part, String theme) {
-        Theme th = themes.get(part);
-        if (th == null) {
-            th = new Theme("");
-            themes.put(part, th);
-        }
-        for (String p : theme.split("/")) {
-            th = th.getOrCreateChild(p);
-        }
-    }
-
-    public synchronized void addThemesFile(File file) throws Exception {
-        themes = new TreeMap<>();
-        BOMBufferedReader rd = new BOMBufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
-        String s;
-        String part = "";
-        while ((s = rd.readLine()) != null) {
-            s = s.trim();
-            if (s.length() == 1) {
-                part = s;
-            } else if (s.length() > 1) {
-                addTheme(part, s);
-            }
-        }
-        rd.close();
     }
 
     /**
@@ -147,12 +107,12 @@ public class GrammarDB2 {
         p.setTag(optimizeString(p.getTag()));
         for (Variant v : p.getVariant()) {
             v.setLemma(optimizeString(fix(v.getLemma())));
-            v.setPravapis(optimizeString(v.getPravapis()));
+            v.setOrthography(optimizeString(v.getOrthography()));
             for (Form f : v.getForm()) {
                 f.setTag(optimizeString(f.getTag()));
                 f.setValue(optimizeString(fix(f.getValue())));
-                f.setSlouniki(optimizeString(f.getSlouniki()));
-                f.setPravapis(optimizeString(f.getPravapis()));
+                f.setDictionaries(optimizeString(f.getDictionaries()));
+                f.setOrthography(optimizeString(f.getOrthography()));
             }
         }
     }
@@ -165,10 +125,10 @@ public class GrammarDB2 {
     }
 
     /**
-     * Змяняе націск і апостраф.
+     * Changes stress and apostrophe
      */
     public static String fix(String s) {
-        return s == null ? null : s.replace('\'', BelarusianWordNormalizer.pravilny_apostraf).replace('+', BelarusianWordNormalizer.pravilny_nacisk);
+        return s == null ? null : s.replace('\'', UkrainianWordNormalizer.correct_apostrophe).replace('+', UkrainianWordNormalizer.correct_stress);
     }
 
     public void addXMLFile(File file) throws Exception {
@@ -216,11 +176,7 @@ public class GrammarDB2 {
                 @Override
                 public void run() {
                     try {
-                        if (process.getName().equals(THEMES_FILE)) {
-                            addThemesFile(process);
-                        } else {
-                            addXMLFile(process);
-                        }
+                        addXMLFile(process);
                     } catch (Exception ex) {
                         throw new RuntimeException("Error in " + process, ex);
                     }
@@ -236,9 +192,5 @@ public class GrammarDB2 {
         }
         long af = System.currentTimeMillis();
         System.out.println("GrammarDB loading time: " + (af - be) + "ms");
-    }
-
-    public Theme getThemes(String grammar) {
-        return themes.get(grammar);
     }
 }

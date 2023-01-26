@@ -1,4 +1,4 @@
-package com.github.tamilakrashtan.vesumsearch.server.data;
+package com.github.tamilakrashtan.vesumsearch.server;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -15,7 +15,7 @@ public class GrammarInitial {
     public List<KeyValue> grammarWordTypes;
     public Map<Character, DBTagsGroups> grammarWordTypesGroups;
     public Map<Character, Set<String>> skipGrammar;
-    public List<GrammarDict> slouniki;
+    public List<GrammarDict> dictionaries;
     public List<Stat> stat;
     public Map<String, Map<String, String>> localization;
 

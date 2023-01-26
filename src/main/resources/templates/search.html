@@ -178,15 +178,15 @@
 <!--                                <li>id - унікальны ідэнтыфікацыйны нумар варыянту;</li>-->
 <!--                                <li>lemma - пачатковая форма варыянту;</li>-->
 <!--                                <li>tag - граматычная прыкмета лексемы;</li>-->
-<!--                                <li>slouniki - крыніцы, дзе фіксуецца слова;</li>-->
-<!--                                <li>pravapis - правапіс;</li>-->
+<!--                                <li>dictionaries - крыніцы, дзе фіксуецца слова;</li>-->
+<!--                                <li>orthography - правапіс;</li>-->
 <!--                                <li>type - тып (nonstandard, potential - у гэты рэліз не ўваходзіць).</li>-->
 <!--                            </ul>-->
 <!--                            <p>Атрыбуты форм (Form):</p>-->
 <!--                            <ul>-->
 <!--                                <li>tag - граматычная прыкмета формы;</li>-->
-<!--                                <li>slouniki - крыніцы, дзе фіксуецца форма;</li>-->
-<!--                                <li>pravapis - правапіс;</li>-->
+<!--                                <li>dictionaries - крыніцы, дзе фіксуецца форма;</li>-->
+<!--                                <li>orthography - правапіс;</li>-->
 <!--                                <li>type - тып (numeral, short, у гэты рэліз не ўваходзіць: nonstandard, potential);</li>-->
 <!--                                <li>options - адушаўлёнасць (anim, inanim).</li>-->
 <!--                            </ul>-->
@@ -739,20 +739,20 @@
         </div>
       </div>
         <div class="card-body">
-          {{if tag.match("^N.....5$") tmpl="#template-grammardb-prymietnik"}}
-          {{else tag.match("^N.+$") tmpl="#template-grammardb-nazounik"}}
-          {{else tag.match("^A0$") tmpl="#template-grammardb-prosta"}}
-          {{else tag.match("^A.+$") tmpl="#template-grammardb-prymietnik"}}
-          <!--{{else tag.match("^P.+$") tmpl="#template-grammardb-dziejeprymietnik"}}-->
-          <!--{{else tag.match("^M0.+$") tmpl="#template-grammardb-licebnik0"}}-->
-          <!--{{else tag.match("^M.O.*$") tmpl="#template-grammardb-licebnikLik"}}-->
-          <!--{{else tag.match("^[MS]N.+$") tmpl="#template-grammardb-licebnikN"}}-->
-          <!--{{else tag.match("^SA.+$") tmpl="#template-grammardb-prymietnik"}}-->
-          <!--{{else tag.match("^S0.+$") tmpl="#template-grammardb-prosta"}}-->
-          {{else tag.match("^V.P.+$") tmpl="#template-grammardb-dziejaslouP"}}
-          {{else tag.match("^V.+$") tmpl="#template-grammardb-dziejaslouM"}}
-          {{else tag.match("^R.+$") tmpl="#template-grammardb-pryslouje"}}
-          {{else tag.match("^[CIEYZWKM].*$") tmpl="#template-grammardb-prosta"}}
+          {{if tag.match("^N.....5$") tmpl="#template-grammardb-adjective"}}
+          {{else tag.match("^N.+$") tmpl="#template-grammardb-noun"}}
+          {{else tag.match("^A0$") tmpl="#template-grammardb-simple"}}
+          {{else tag.match("^A.+$") tmpl="#template-grammardb-adjective"}}
+          <!--{{else tag.match("^P.+$") tmpl="#template-grammardb-participle"}}-->
+          <!--{{else tag.match("^M0.+$") tmpl="#template-grammardb-numeral0"}}-->
+          <!--{{else tag.match("^M.O.*$") tmpl="#template-grammardb-numeralOrd"}}-->
+          <!--{{else tag.match("^[MS]N.+$") tmpl="#template-grammardb-numeralN"}}-->
+          <!--{{else tag.match("^SA.+$") tmpl="#template-grammardb-adjecctive"}}-->
+          <!--{{else tag.match("^S0.+$") tmpl="#template-grammardb-simple"}}-->
+          {{else tag.match("^V.P.+$") tmpl="#template-grammardb-verbP"}}
+          {{else tag.match("^V.+$") tmpl="#template-grammardb-verbF"}}
+          {{else tag.match("^R.+$") tmpl="#template-grammardb-adverb"}}
+          {{else tag.match("^[CIEYZWKM].*$") tmpl="#template-grammardb-simple"}}
           {{else tmpl="#template-grammardb-other"}}
           {{/if}}
         </div>
@@ -770,7 +770,7 @@
   </div>
 </script>
 
-    <script id="template-grammardb-nazounik" type="text/x-jsrender">
+    <script id="template-grammardb-noun" type="text/x-jsrender">
   <table class="table-borders hspacing">
     <tr><td class="grtagcenter">Число</td><td class="grtagcenter">Відмінок</td><td> </td></tr>
     <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Відмінок:N;Число:S',~v)}}</td></tr>
@@ -791,7 +791,7 @@
   {{> ~root.log(~v) }}
 </script>
 
-    <script id="template-grammardb-licebnikN" type="text/x-jsrender">
+    <script id="template-grammardb-numeralN" type="text/x-jsrender">
   <table class="table-borders hspacing">
     <tr><td class="grtagcenter">Склон</td><td> </td></tr>
     <tr class="gr-p1"><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Склон:N;Лік:S',~v)}}</td></tr>
@@ -810,7 +810,7 @@
   {{> ~root.log(~v) }}
 </script>
 
-    <script id="template-grammardb-licebnikLik" type="text/x-jsrender">
+    <script id="template-grammardb-NumeralOrd" type="text/x-jsrender">
   <table class="table-borders hspacing">
     <tr><td class="grtagcenter">Лік</td><td class="grtagcenter">Склон</td><td> </td></tr>
     <tr class="gr-p1"><td class="grtag">адз.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Склон:N;Лік:S',~v)}}</td></tr>
@@ -829,7 +829,7 @@
   {{> ~root.log(~v) }}
 </script>
 
-    <script id="template-grammardb-prymietnik" type="text/x-jsrender">
+    <script id="template-grammardb-adjective" type="text/x-jsrender">
   <table class="table-borders hspacing">
     <tr><td class="grtagcenter">Число</td><td class="grtagcenter">Рід</td><td class="grtagcenter">Відмінок</td><td> </td></tr>
     <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">ч.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:N;Число:S',~v)}}</td></tr>
@@ -864,7 +864,7 @@
   {{> ~root.log(~v) }}
 </script>
 
-    <script id="template-grammardb-dziejeprymietnik" type="text/x-jsrender">
+    <script id="template-grammardb-participle" type="text/x-jsrender">
   <table class="table-borders hspacing">
     <tr><td class="grtagcenter">Число</td><td class="grtagcenter">Рід</td><td class="grtagcenter">Відмінок</td><td> </td></tr>
     <tr class="gr-p1"><td class="grtag">адз.</td><td class="grtag">м.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Род:M;Склон:N;Лік:S',~v)}}</td></tr>
@@ -896,7 +896,7 @@
   {{> ~root.log(~v) }}
 </script>
 
-    <script id="template-grammardb-licebnik0" type="text/x-jsrender">
+    <script id="template-grammardb-numeral0" type="text/x-jsrender">
   <table class="table-borders hspacing">
     <tr><td class="grtagcenter">Нескланяльны</td></tr>
     <tr><td class="grvalue">{{:~root.getter('',~v)}}</td></tr>
@@ -904,7 +904,7 @@
   {{> ~root.log(~v) }}
 </script>
 
-    <script id="template-grammardb-pryslouje" type="text/x-jsrender">
+    <script id="template-grammardb-adverb" type="text/x-jsrender">
   <table class="table-borders hspacing">
     <tr><td class="grtagcenter">Ступінь порівняння</td><td> </td></tr>
     <tr><td class="grtag">базовий.</td><td class="grvalue">{{:~root.getter('Ступінь порівняння:P',~v)}}</td></tr>
@@ -914,7 +914,7 @@
   {{> ~root.log(~v) }}
 </script>
 
-    <script id="template-grammardb-dziejaslouP" type="text/x-jsrender">
+    <script id="template-grammardb-verbP" type="text/x-jsrender">
   <table class="table-borders hspacing">
     <!-- {{:~root.getter('Інфінітив:0',~v)}} -->
     <tr><td class="grtagcenter" colspan="3">Майбутній час</td></tr>
@@ -936,7 +936,7 @@
   {{> ~root.log(~v) }}
 </script>
 
-    <script id="template-grammardb-dziejaslouM" type="text/x-jsrender">
+    <script id="template-grammardb-verbF" type="text/x-jsrender">
   <table class="table-borders hspacing">
     <!-- {{:~root.getter('Інфінітыў:0',~v)}} -->
     <tr><td class="grtagcenter" colspan="3">Теперішній час</td></tr>
@@ -958,7 +958,7 @@
   {{> ~root.log(~v) }}
 </script>
 
-    <script id="template-grammardb-prosta" type="text/x-jsrender">
+    <script id="template-grammardb-simple" type="text/x-jsrender">
   <div class="grvalue">{{:~root.getter('',~v)}}</div>
   {{> ~root.log(~v) }}
 </script>
@@ -999,7 +999,7 @@
     <hr/><hr/>...ВЕСУМ 2023...
 </div>
 
-<script src="app2.js"></script>
+<script src="app.js"></script>
 <script>
       initializeGrammarPage();
     </script>

@@ -1,4 +1,3 @@
-
 package com.github.tamilakrashtan.vesumsearch.grammar;
 
 import jakarta.xml.bind.annotation.XmlEnum;
@@ -26,8 +25,7 @@ public enum ParadigmOptions {
 
 
     /**
-     * Звычайна у множным ліку
-     * 
+     * Usually a plural
      */
     @XmlEnumValue("usually_plurals")
     USUALLY_PLURALS("usually_plurals");

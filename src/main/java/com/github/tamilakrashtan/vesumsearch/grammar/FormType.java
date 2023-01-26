@@ -1,4 +1,3 @@
-
 package com.github.tamilakrashtan.vesumsearch.grammar;
 
 import jakarta.xml.bind.annotation.XmlEnum;
@@ -29,29 +28,25 @@ public enum FormType {
 
 
     /**
-     * Нестандартная
-     * 
+     * Nonstandard
      */
     @XmlEnumValue("nonstandard")
     NONSTANDARD("nonstandard"),
 
     /**
-     * Патэнцыйная
-     * 
+     * Potential
      */
     @XmlEnumValue("potential")
     POTENTIAL("potential"),
 
     /**
-     * з ліч. 2, 3, 4
-     * 
+     * With numerals 2, 3, 4
      */
     @XmlEnumValue("numeral")
     NUMERAL("numeral"),
 
     /**
-     * кароткая форма (у прыметніках)
-     * 
+     * Short form (in adjectives)
      */
     @XmlEnumValue("short")
     SHORT("short");

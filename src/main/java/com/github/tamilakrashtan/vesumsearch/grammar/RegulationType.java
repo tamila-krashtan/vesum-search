@@ -1,4 +1,3 @@
-
 package com.github.tamilakrashtan.vesumsearch.grammar;
 
 import jakarta.xml.bind.annotation.XmlEnum;
@@ -34,64 +33,55 @@ public enum RegulationType {
 
 
     /**
-     * Якія няма ў слоўніках, але мусяць быць
-     * 
+     * Absent in the dictionaries, but should be there
      */
     @XmlEnumValue("add")
     ADD("add"),
 
     /**
-     * Памылковыя  ў асобных слоўніках: калашы+на
-     * 
+     * Contain mistakes in some dictionaries
      */
     @XmlEnumValue("mistake")
     MISTAKE("mistake"),
 
     /**
-     * Няісныя словы: трудава+ны
-     * 
+     * Strange words
      */
     @XmlEnumValue("fantasy")
     FANTASY("fantasy"),
 
     /**
-     * Якія не варта выкарыстоўваць: першынству+ючы
-     * 
+     * Better to be avoided
      */
     @XmlEnumValue("undesirable")
     UNDESIRABLE("undesirable"),
 
     /**
-     * Якія варта рэгуляваць: пушкіні+ст
-     * 
+     * Better to be limited in usage
      */
     @XmlEnumValue("limited")
     LIMITED("limited"),
 
     /**
-     * Рэдкія: вісо+н
-     * 
+     * Rare
      */
     @XmlEnumValue("rare")
     RARE("rare"),
 
     /**
-     * Рэдкая галіновая тэрміналогія
-     * 
+     * Rare narrow-field terminology
      */
     @XmlEnumValue("rare_branch")
     RARE_BRANCH("rare_branch"),
 
     /**
-     * Мацюкі(абсцэнізмы)
-     * 
+     * Obscene
      */
     @XmlEnumValue("obscenism")
     OBSCENISM("obscenism"),
 
     /**
-     * Лаянкі(інвектывы)
-     * 
+     * Invective
      */
     @XmlEnumValue("invective")
     INVECTIVE("invective");

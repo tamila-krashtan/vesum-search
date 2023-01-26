@@ -1,4 +1,3 @@
-
 package com.github.tamilakrashtan.vesumsearch.grammar;
 
 import jakarta.xml.bind.annotation.XmlEnum;
@@ -27,15 +26,13 @@ public enum FormOptions {
 
 
     /**
-     * Адушаўлёны
-     * 
+     * Animate
      */
     @XmlEnumValue("anim")
     ANIM("anim"),
 
     /**
-     * Неадушаўлёны
-     * 
+     * Inanimate
      */
     @XmlEnumValue("inanim")
     INANIM("inanim");

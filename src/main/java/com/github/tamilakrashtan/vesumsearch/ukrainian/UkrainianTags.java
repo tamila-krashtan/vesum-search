@@ -1,26 +1,24 @@
-package com.github.tamilakrashtan.vesumsearch.belarusian;
+package com.github.tamilakrashtan.vesumsearch.ukrainian;
 
-import com.github.tamilakrashtan.vesumsearch.belarusian.TagLetter.OneLetterInfo;
+import com.github.tamilakrashtan.vesumsearch.ukrainian.TagLetter.OneLetterInfo;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
 /**
- * Граматычныя пазнакі паказваюцца ў наступных месцах:
- * 1) Фільтар граматыкі для слова - checkboxes.
- * 2) Паказ граматычных табліц для слова.
- * 3) Паказ граматычных характарыстык аднаго слова.
- * 4) Граматычны слоўнік у "праектах у распрацоўцы".
+ * Grammar marks are shown in the following placecs:
+ * 1) Grammar filter for a word - checkboxes.
+ * 2) Showing grammar tables for a word.
+ * 3) Showing grammar characteristics for one word.
  */
-public class BelarusianTags {
-    public static final String NO_GROUP_ITEM = "не ўжываецца";
-    public static final String HALOSNYJA = "ёуеыаоэяіюЁУЕЫАОЭЯІЮ";
-    public static final String USUALLY_STRESSED = "ёоЁО";
+public class UkrainianTags {
+    public static final String NO_GROUP_ITEM = "not used";
+    public static final String VOWELS = "уеїіаоєяиюУЕЇІАОЄЯИЮ";
 
-    private static BelarusianTags INSTANCE = new BelarusianTags();
+    private static UkrainianTags INSTANCE = new UkrainianTags();
 
-    public static BelarusianTags getInstance() {
+    public static UkrainianTags getInstance() {
         return INSTANCE;
     }
 
@@ -31,32 +29,32 @@ public class BelarusianTags {
         INSTANCE.isValidFormTag("VTPN1PG", "err f");
     }
 
-    private BelarusianTags() {
+    private UkrainianTags() {
         root = new TagLetter();
 
-        nazounik(root);
-        licebnik(root);
-        //zajmiennik(root);
-        prymietnik(root);
-        dziejaslou(root);
-        //dziejeprymietnik(root);
-        pryslouje(root);
-        zlucnik(root);
-        prynazounik(root);
-        cascica(root);
-        vyklicnik(root);
-        pabocnaje(root);
-        //predykatyu(root);
-        //abrev(root);
-        castki(root);
+        noun(root);
+        numeral(root);
+        //pronoun(root);
+        adjective(root);
+        verb(root);
+        //participle(root);
+        adverb(root);
+        conjunction(root);
+        preposition(root);
+        particle(root);
+        interjection(root);
+        other(root);
+        //predicative(root);
+        //abbreviation(root);
+        parts(root);
 
         checkParadigmMarks(root, "", 0);
         checkDuplicateGroups(root, new ArrayList<>());
-        // праверыць якія групы не выкарыстоўваюцца
+        // check which groups are not used
     }
 
     /**
-     * шукаем ва ўсіх тэгах count(latestInParadigm)==1
+     * searching in all tags count(latestInParadigm)==1
      */
     private void checkParadigmMarks(TagLetter tl, String code, int pmCount) {
         if (tl.isLatestInParadigm()) {
@@ -74,7 +72,7 @@ public class BelarusianTags {
     }
 
     /**
-     * Павярае ці няма аднолькавых назваў груп у іерархіі.
+     * Checks whether there are any duplicate groups in the hierarchy
      */
     private void checkDuplicateGroups(TagLetter tl, List<String> path) {
         for (OneLetterInfo li : tl.letters) {
@@ -88,7 +86,7 @@ public class BelarusianTags {
     }
 
     /**
-     * Ці правільны тэг у парадыгме ? latestInParadigm==true
+     * Is the paradigm tag correct? latestInParadigm==true
      */
     public boolean isValidParadigmTag(String code, String w) {
         TagLetter after = getTagLetterAfter(code, w);
@@ -97,7 +95,7 @@ public class BelarusianTags {
         }
         if (!after.isLatestInParadigm()) {
             if (w != null) {
-                System.out.println(code + " " + w + " - няправільны тэг парадыгмы");
+                System.out.println(code + " " + w + " - wrong paradigm tag");
             }
             return false;
         }
@@ -111,7 +109,7 @@ public class BelarusianTags {
         }
         if (!after.isFinish()) {
             if (w != null) {
-                System.out.println(code + " " + w + " - замалы код");
+                System.out.println(code + " " + w + " - code too small");
             }
             return false;
         }
@@ -124,7 +122,7 @@ public class BelarusianTags {
             if (c == 'x') { // TODO
                 if (tags.isFinish()) {
                     if (w != null) {
-                        System.out.println(code + " " + w + " - зашмат літараў у кодзе");
+                        System.out.println(code + " " + w + " - too many letters in the code");
                     }
                     return null;
                 }
@@ -132,7 +130,7 @@ public class BelarusianTags {
                 for (TagLetter.OneLetterInfo li : tags.letters) {
                     if (li.nextLetters != first) {
                         if (w != null) {
-                            System.out.println(code + " " + w + " - незразумелы шлях раскадаваньня");
+                            System.out.println(code + " " + w + " - unclear how to decode");
                         }
                         return null;
                     }
@@ -142,7 +140,7 @@ public class BelarusianTags {
                 tags = tags.next(c);
                 if (tags == null) {
                     if (w != null) {
-                        System.out.println(code + " " + w + " - невядомая літара ў кодзе");
+                        System.out.println(code + " " + w + " - unknown letters in the code");
                     }
                     return null;
                 }
@@ -222,7 +220,7 @@ public class BelarusianTags {
         return null;
     }
 
-    private void nazounik(TagLetter t) {
+    private void noun(TagLetter t) {
         t = t.add("Частина мови => N:іменник");
         t.add("Новий=>+:новий").latestInParadigm();
         t = t.add("Власна назва => C:загальна назва;P:власна назва;X:-");
@@ -249,7 +247,7 @@ public class BelarusianTags {
 //        su = su.add("Лік => S:адзіночны лік;P:множны лік");
     }
 
-    private void licebnik(TagLetter t) {
+    private void numeral(TagLetter t) {
 
         t = t.add("Частина мови => M:числівник").latestInParadigm();
 
@@ -267,7 +265,7 @@ public class BelarusianTags {
 //        z = z.add("Лік => S:адзіночны лік;P:множны лік;X:-");
     }
 
-    private void zajmiennik(TagLetter t) {
+    private void pronoun(TagLetter t) {
         t = t.add("Частина мови => S:займенник");
         t = t.add("Словазмяненне => N:N:словазмяненне як у назоўніка;A:N:словазмяненне як у прыметніка;0:нязменны");
         t = t.add(
@@ -280,7 +278,7 @@ public class BelarusianTags {
         z = z.add("Лік => S:адзіночны лік;P:множны лік;X:-");
     }
 
-    private void prymietnik(TagLetter t) {
+    private void adjective(TagLetter t) {
         t = t.add("Частина мови => A:прикметник");
         t.add("Тип => 0:невідмінюваний").latestInParadigm();
         //t = t.add("Тып => Q:якасны;R:адносны;P:прыналежны;X:-");
@@ -292,7 +290,7 @@ public class BelarusianTags {
         t = t.add("Число => S:однина;P:множина");
     }
 
-    private void dziejaslou(TagLetter t) {
+    private void verb(TagLetter t) {
         t = t.add("Частина мови => V:дієслово");
         t.add("Новий=>+:новий").latestInParadigm();
         //t = t.add("Перехідність => T:перехідний;I:неперехідний;X:-");
@@ -323,7 +321,7 @@ public class BelarusianTags {
         casM = casM.add("Число => S:однина;P:множина");
     }
 
-    private void dziejeprymietnik(TagLetter t) {
+    private void participle(TagLetter t) {
         t = t.add("Часціна мовы => P:дзеепрыметнік");
         t = t.add("Стан => A:незалежны стан;P:залежны стан");
         t = t.add("Час => R:цяперашні час;P:прошлы час");
@@ -336,7 +334,7 @@ public class BelarusianTags {
         pt.add("Кароткая форма => R:ж. і н.");
     }
 
-    private void pryslouje(TagLetter t) {
+    private void adverb(TagLetter t) {
         t = t.add("Частина мовы => R:прислівник");
         t.add("Новий=>+:новий").latestInParadigm();
 //        t = t.add(
@@ -346,7 +344,7 @@ public class BelarusianTags {
         t = t.add("Ступінь порівняння => P:базова форма;C:порівняльна форма;S:найвища форма").latestInParadigm();;
     }
 
-    private void zlucnik(TagLetter t) {
+    private void conjunction(TagLetter t) {
         t = t.add("Частина мови => C:сполучник");
         TagLetter s = t.add("Тип => S:підрядний").latestInParadigm();;
         TagLetter k = t.add("Тип => K:сурядний").latestInParadigm();;
@@ -357,31 +355,31 @@ public class BelarusianTags {
 //                .latestInParadigm();
     }
 
-    private void prynazounik(TagLetter t) {
+    private void preposition(TagLetter t) {
         t.add("Частина мови => I:прийменник").latestInParadigm();
     }
 
-    private void cascica(TagLetter t) {
+    private void particle(TagLetter t) {
         t.add("Частина мови => E:частка").latestInParadigm();
     }
 
-    private void vyklicnik(TagLetter t) {
+    private void interjection(TagLetter t) {
         t.add("Частина мови => Y:вигук").latestInParadigm();
     }
 
-    private void pabocnaje(TagLetter t) {
+    private void other(TagLetter t) {
         t.add("Частина мови => Z:інше").latestInParadigm();
     }
 
-    private void predykatyu(TagLetter t) {
+    private void predicative(TagLetter t) {
         t.add("Частина мови => W:прэдыкатыў").latestInParadigm();
     }
 
-    private void abrev(TagLetter t) {
+    private void abbreviation(TagLetter t) {
         t = t.add("Частина мови => K:абрэвіятуры").latestInParadigm();
     }
 
-    private void castki(TagLetter t) {
+    private void parts(TagLetter t) {
         t = t.add("Частина мови => F:частка слова").latestInParadigm();
 //        t.add("Тып => P:прыстаўка;F:1-я састаўная частка складаных слоў;S:2-я састаўная частка складаных слоў")
 //                .latestInParadigm();

@@ -1,16 +1,12 @@
 package com.github.tamilakrashtan.vesumsearch.server;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.tamilakrashtan.vesumsearch.grammar.Variant;
 import com.github.tamilakrashtan.vesumsearch.grammar.DBTagsGroups;
 import com.github.tamilakrashtan.vesumsearch.grammar.GrammarDB2;
 import com.github.tamilakrashtan.vesumsearch.grammar.GrammarFinder;
-import com.github.tamilakrashtan.vesumsearch.grammar.TextInfo;
-import com.github.tamilakrashtan.vesumsearch.belarusian.BelarusianTags;
-import com.github.tamilakrashtan.vesumsearch.belarusian.TagLetter;
-import com.github.tamilakrashtan.vesumsearch.server.data.GrammarInitial;
-import com.github.tamilakrashtan.vesumsearch.server.data.GrammarInitial.GrammarLetter;
-import com.github.tamilakrashtan.vesumsearch.server.data.InitialData;
+import com.github.tamilakrashtan.vesumsearch.ukrainian.UkrainianTags;
+import com.github.tamilakrashtan.vesumsearch.ukrainian.TagLetter;
+import com.github.tamilakrashtan.vesumsearch.server.GrammarInitial.GrammarLetter;
 import com.github.tamilakrashtan.vesumsearch.utils.SetUtils;
 import org.glassfish.jersey.server.ResourceConfig;
 
@@ -22,26 +18,23 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class KorpusApplication extends ResourceConfig {
+public class GrammarApplication extends ResourceConfig {
     public String grammarDb;
-    public String configDir;
 
     List<String> settings;
     Properties stat;
-    private List<String> textInfos;
     public GrammarDB2 gr;
     public GrammarFinder grFinder;
     private Map<String, Map<String,String>> localization;
     public GrammarInitial grammarInitial;
-    InitialData searchInitial;
 
 
-    public static KorpusApplication instance;
-    public ResourceBundle messagesEn, messagesBe;
+    public static GrammarApplication instance;
+    public ResourceBundle messagesEn, messagesUk;
 
-    public KorpusApplication() {
+    public GrammarApplication() {
         instance = this;
-        messagesBe = ResourceBundle.getBundle("messages", new Locale("be"));
+        messagesUk = ResourceBundle.getBundle("messages", new Locale("uk"));
         messagesEn = ResourceBundle.getBundle("messages", new Locale("en"));
 
         System.out.println("Starting...");
@@ -60,7 +53,7 @@ public class KorpusApplication extends ResourceConfig {
             System.out.println("GrammarDB indexed. Used memory: " + getUsedMemory());
 
             localization = new TreeMap<>();
-            prepareLocalization("be", messagesBe);
+            prepareLocalization("uk", messagesUk);
             prepareLocalization("en", messagesEn);
             prepareInitialGrammar();
             System.out.println("Initialization finished. Used memory: " + getUsedMemory());
@@ -88,7 +81,7 @@ public class KorpusApplication extends ResourceConfig {
     void prepareInitialGrammar() throws Exception {
         grammarInitial = new GrammarInitial();
         grammarInitial.grammarTree = new TreeMap<>();
-        grammarInitial.grammarTree = addGrammar(BelarusianTags.getInstance().getRoot());
+        grammarInitial.grammarTree = addGrammar(UkrainianTags.getInstance().getRoot());
         grammarInitial.grammarWordTypes = DBTagsGroups.wordTypes;
         grammarInitial.grammarWordTypesGroups = DBTagsGroups.tagGroupsByWordType;
         grammarInitial.localization = localization;
@@ -102,8 +95,8 @@ public class KorpusApplication extends ResourceConfig {
                 grammarInitial.skipGrammar.put(part, vs);
             }
         }
-        grammarInitial.slouniki = new ArrayList<>();
-        for (String d : Files.readAllLines(Paths.get(grammarDb + "/slouniki.list"))) {
+        grammarInitial.dictionaries = new ArrayList<>();
+        for (String d : Files.readAllLines(Paths.get(grammarDb + "/dictionaries.list"))) {
             GrammarInitial.GrammarDict dict = new GrammarInitial.GrammarDict();
             int p = d.indexOf('=');
             if (p < 0 || !d.substring(0, p).matches("[a-z0-9]+")) {
@@ -111,13 +104,13 @@ public class KorpusApplication extends ResourceConfig {
             }
             dict.name = d.substring(0, p);
             dict.desc = d.substring(p + 1);
-            grammarInitial.slouniki.add(dict);
+            grammarInitial.dictionaries.add(dict);
         }
         grammarInitial.stat = new ArrayList<>();
         GrammarInitial.Stat grStatTotal = new GrammarInitial.Stat();
         grammarInitial.stat.add(grStatTotal);
         Map<Character, GrammarInitial.Stat> grStats = new TreeMap<>();
-        for (TagLetter.OneLetterInfo li : BelarusianTags.getInstance().getRoot().letters) {
+        for (TagLetter.OneLetterInfo li : UkrainianTags.getInstance().getRoot().letters) {
             GrammarInitial.Stat gs = new GrammarInitial.Stat();
             gs.title = "&nbsp;&nbsp;&nbsp;&nbsp;" + li.description;
             grammarInitial.stat.add(gs);
@@ -143,14 +136,6 @@ public class KorpusApplication extends ResourceConfig {
                 }
             }
         });
-    }
-
-    public TextInfo getTextInfo(int pos) {
-        try {
-            return new ObjectMapper().readValue(textInfos.get(pos), TextInfo.class);
-        } catch (Exception ex) {
-            throw new RuntimeException(ex);
-        }
     }
 
     private Map<Character, GrammarLetter> addGrammar(TagLetter letters) {

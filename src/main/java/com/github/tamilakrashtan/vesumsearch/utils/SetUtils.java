@@ -57,28 +57,28 @@ public class SetUtils {
         return out.isEmpty() ? null : String.join(",", out);
     }
 
-    public static boolean hasSlounik(Form f, String slounik) {
-        return hasTag(f.getSlouniki(), slounik);
+    public static boolean hasDictionary(Form f, String dictionary) {
+        return hasTag(f.getDictionaries(), dictionary);
     }
 
-    public static boolean hasSlounik(Variant v, String slounik) {
-        return hasTag(v.getSlouniki(), slounik);
+    public static boolean hasDictionary(Variant v, String dictionary) {
+        return hasTag(v.getDictionaries(), dictionary);
     }
 
-    public static void addSlounik(Form f, String slounik) {
-        f.setSlouniki(addTag(f.getSlouniki(), slounik));
+    public static void addDictionary(Form f, String dictionary) {
+        f.setDictionaries(addTag(f.getDictionaries(), dictionary));
     }
 
-    public static void addSlounik(Variant v, String slounik) {
-        v.setSlouniki(addTag(v.getSlouniki(), slounik));
+    public static void addDictionary(Variant v, String dictionary) {
+        v.setDictionaries(addTag(v.getDictionaries(), dictionary));
     }
 
-    public static Map<String, String> getSlouniki(String slouniki) {
-        if (slouniki == null) {
+    public static Map<String, String> getDictionaries(String dictionaries) {
+        if (dictionaries == null) {
             return Collections.emptyMap();
         }
         Map<String, String> result = new TreeMap<>();
-        for (String s : slouniki.split(",")) {
+        for (String s : dictionaries.split(",")) {
             s = s.trim();
             if (s.isEmpty()) {
                 continue;
@@ -93,24 +93,24 @@ public class SetUtils {
         return result;
     }
 
-    public static void removeSlounik(Form f, String slounik) {
-        f.setSlouniki(removeTag(f.getSlouniki(), slounik));
+    public static void removeDictionary(Form f, String dictionary) {
+        f.setDictionaries(removeTag(f.getDictionaries(), dictionary));
     }
 
-    public static boolean hasPravapis(Form f, String pravapis) {
-        return hasTag(f.getPravapis(), pravapis);
+    public static boolean hasOrthography(Form f, String orthography) {
+        return hasTag(f.getOrthography(), orthography);
     }
 
-    public static boolean hasPravapis(Variant v, String pravapis) {
-        return hasTag(v.getPravapis(), pravapis);
+    public static boolean hasOrthography(Variant v, String orthography) {
+        return hasTag(v.getOrthography(), orthography);
     }
 
-    public static void addPravapis(Form f, String pravapis) {
-        f.setPravapis(addTag(f.getPravapis(), pravapis));
+    public static void addOrthography(Form f, String orthography) {
+        f.setOrthography(addTag(f.getOrthography(), orthography));
     }
 
-    public static void addPravapis(Variant v, String pravapis) {
-        v.setPravapis(addTag(v.getPravapis(), pravapis));
+    public static void addOrthography(Variant v, String orthography) {
+        v.setOrthography(addTag(v.getOrthography(), orthography));
     }
 
     public static String tag(Paradigm p, Variant v) {

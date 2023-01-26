@@ -25,17 +25,9 @@ import jakarta.xml.bind.annotation.XmlType;
 public enum VariantType {
 
 
-    /**
-     * Нестандартная
-     * 
-     */
     @XmlEnumValue("nonstandard")
     NONSTANDARD("nonstandard"),
 
-    /**
-     * Патэнцыйная
-     * 
-     */
     @XmlEnumValue("potential")
     POTENTIAL("potential");
     private final String value;

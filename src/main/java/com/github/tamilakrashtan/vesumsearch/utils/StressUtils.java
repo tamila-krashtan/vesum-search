@@ -1,7 +1,7 @@
 package com.github.tamilakrashtan.vesumsearch.utils;
 
-import com.github.tamilakrashtan.vesumsearch.belarusian.BelarusianTags;
-import com.github.tamilakrashtan.vesumsearch.belarusian.BelarusianWordNormalizer;
+import com.github.tamilakrashtan.vesumsearch.ukrainian.UkrainianTags;
+import com.github.tamilakrashtan.vesumsearch.ukrainian.UkrainianWordNormalizer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class StressUtils {
 
-    public static char STRESS_CHAR = BelarusianWordNormalizer.pravilny_nacisk;
+    public static char STRESS_CHAR = UkrainianWordNormalizer.correct_stress;
     public static String STRESS_CHARS = "+\u0301\u00b4";
 
     public static String unstress(String stressedWord) {
@@ -39,55 +39,6 @@ public class StressUtils {
         return false;
     }
 
-    /**
-     * Find stress syll by ё, о using possible value. If possible < 0 - find first.
-     */
-    public static int getUsuallyStressedSyll(String word, int possible) {
-        int r = 0;
-        if (possible >= 0) {
-            for (int i = 0; i < word.length(); i++) {
-                char c = word.charAt(i);
-                if (possible == r && BelarusianTags.USUALLY_STRESSED.indexOf(c) >= 0) {
-                    return r;
-                }
-                if (BelarusianTags.HALOSNYJA.indexOf(c) >= 0) {
-                    r++;
-                }
-            }
-        }
-        int count = 0;
-        int result = -1;
-        r = 0;
-        for (int i = 0; i < word.length(); i++) {
-            char c = word.charAt(i);
-            if (BelarusianTags.USUALLY_STRESSED.indexOf(c) >= 0) {
-                result = r;
-                count++;
-            }
-            if (BelarusianTags.HALOSNYJA.indexOf(c) >= 0) {
-                r++;
-            }
-            if (c == '-') {
-                return -1;
-            }
-        }
-        return count == 1 ? result : -1;
-    }
-
-    public static String setUsuallyStress(String word) {
-        if (hasStress(word)) {
-            return word;
-        }
-        if (syllCount(word) == 1) {
-            return setStressFromStart(word, 0);
-        }
-        int u = getUsuallyStressedSyll(word, -1);
-        if (u >= 0) {
-            return setStressFromStart(word, u);
-        }
-        return word;
-    }
-
     public static boolean isAssignable(String destination, String withStress) {
         if (destination.equals(unstress(destination))) {
             return destination.equals(unstress(withStress));
@@ -104,8 +55,8 @@ public class StressUtils {
             if (STRESS_CHARS.indexOf(c1) >= 0) {
                 return r;
             }
-            boolean halosnaja = BelarusianTags.HALOSNYJA.indexOf(c) >= 0;
-            if (halosnaja) {
+            boolean vowel = UkrainianTags.VOWELS.indexOf(c) >= 0;
+            if (vowel) {
                 r++;
             }
         }
@@ -121,8 +72,8 @@ public class StressUtils {
             if (STRESS_CHARS.indexOf(c1) >= 0) {
                 result.add(r);
             }
-            boolean halosnaja = BelarusianTags.HALOSNYJA.indexOf(c) >= 0;
-            if (halosnaja) {
+            boolean vowel = UkrainianTags.VOWELS.indexOf(c) >= 0;
+            if (vowel) {
                 r++;
             }
         }
@@ -136,8 +87,8 @@ public class StressUtils {
             if (STRESS_CHARS.indexOf(c) >= 0) {
                 return r;
             }
-            boolean halosnaja = BelarusianTags.HALOSNYJA.indexOf(c) >= 0;
-            if (halosnaja) {
+            boolean vowel = UkrainianTags.VOWELS.indexOf(c) >= 0;
+            if (vowel) {
                 r++;
             }
         }
@@ -152,8 +103,8 @@ public class StressUtils {
             if (STRESS_CHARS.indexOf(c) >= 0) {
                 result.add(r);
             }
-            boolean halosnaja = BelarusianTags.HALOSNYJA.indexOf(c) >= 0;
-            if (halosnaja) {
+            boolean vowel = UkrainianTags.VOWELS.indexOf(c) >= 0;
+            if (vowel) {
                 r++;
             }
         }
@@ -166,8 +117,8 @@ public class StressUtils {
         }
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
-            boolean halosnaja = BelarusianTags.HALOSNYJA.indexOf(c) >= 0;
-            if (halosnaja) {
+            boolean vowel = UkrainianTags.VOWELS.indexOf(c) >= 0;
+            if (vowel) {
                 if (pos == 0) {
                     return word.substring(0, i + 1) + STRESS_CHAR + word.substring(i + 1);
                 } else {
@@ -184,8 +135,8 @@ public class StressUtils {
         }
         for (int i = word.length() - 1; i >= 0; i--) {
             char c = word.charAt(i);
-            boolean halosnaja = BelarusianTags.HALOSNYJA.indexOf(c) >= 0;
-            if (halosnaja) {
+            boolean vowel = UkrainianTags.VOWELS.indexOf(c) >= 0;
+            if (vowel) {
                 if (pos == 0) {
                     return word.substring(0, i + 1) + STRESS_CHAR + word.substring(i + 1);
                 } else {
@@ -201,13 +152,13 @@ public class StressUtils {
             int pos = -1;
             int mainStresses = 0;
             while ((pos = w.indexOf(STRESS_CHAR, pos + 1)) >= 0) {
-                if (BelarusianTags.HALOSNYJA.indexOf(w.charAt(pos - 1)) < 0) {
-                    throw new Exception("Націск не на галосную");
+                if (UkrainianTags.VOWELS.indexOf(w.charAt(pos - 1)) < 0) {
+                    throw new Exception("Stress not on the vowel");
                 }
                 mainStresses++;
             }
             if (mainStresses > 1) {
-                throw new Exception("Зашмат асноўных націскаў у " + word);
+                throw new Exception("Too many main stresses in " + word);
             }
         }
     }
@@ -216,20 +167,20 @@ public class StressUtils {
         int r = 0;
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
-            boolean halosnaja = BelarusianTags.HALOSNYJA.indexOf(c) >= 0;
-            if (halosnaja) {
+            boolean vowel = UkrainianTags.VOWELS.indexOf(c) >= 0;
+            if (vowel) {
                 r++;
             }
         }
         return r;
     }
 
-    public static char syllHal(String word, int pos) {
+    public static char syllVowel(String word, int pos) {
         int r = 0;
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
-            boolean halosnaja = BelarusianTags.HALOSNYJA.indexOf(c) >= 0;
-            if (halosnaja) {
+            boolean vowel = UkrainianTags.VOWELS.indexOf(c) >= 0;
+            if (vowel) {
                 if (pos == r) {
                     return c;
                 }
@@ -239,13 +190,13 @@ public class StressUtils {
         return 0;
     }
 
-    public static String setSyllHal(String word, int pos, char cr) {
+    public static String setSyllVowel(String word, int pos, char cr) {
         int r = 0;
         StringBuilder s = new StringBuilder(word);
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
-            boolean halosnaja = BelarusianTags.HALOSNYJA.indexOf(c) >= 0;
-            if (halosnaja) {
+            boolean vowel = UkrainianTags.VOWELS.indexOf(c) >= 0;
+            if (vowel) {
                 if (pos == r) {
                     s.setCharAt(i, cr);
                     return s.toString();

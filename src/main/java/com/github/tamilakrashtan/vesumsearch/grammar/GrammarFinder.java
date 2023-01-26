@@ -1,7 +1,6 @@
 package com.github.tamilakrashtan.vesumsearch.grammar;
 
-import com.github.tamilakrashtan.vesumsearch.belarusian.BelarusianWordNormalizer;
-import com.github.tamilakrashtan.vesumsearch.utils.StressUtils;
+import com.github.tamilakrashtan.vesumsearch.ukrainian.UkrainianWordNormalizer;
 
 import java.util.*;
 import java.util.stream.Stream;
@@ -10,8 +9,6 @@ public class GrammarFinder implements IGrammarFinder {
     private static final int HASHTABLE_SIZE = 256 * 1024;
     private static final Paradigm[] EMPTY = new Paradigm[0];
     private final Paradigm[][] table;
-    private final Map<String,String> morph = new HashMap<>();
-    private final Map<String,String> fan = new HashMap<>();
 
     public GrammarFinder(GrammarDB2 gr) {
         long be = System.currentTimeMillis();
@@ -27,12 +24,6 @@ public class GrammarFinder implements IGrammarFinder {
                         putToPrepare(f.getValue(), prepare, p);
                     }
                 });
-                v.getMorph().forEach(m -> {
-                    putToMorph(m);
-                });
-                v.getFan().forEach(f -> {
-                    putToFan(f);
-                });
             });
         });
         table = prepareToFinal(prepare);
@@ -41,7 +32,7 @@ public class GrammarFinder implements IGrammarFinder {
     }
 
     private void putToPrepare(String w, List<List<Paradigm>> prepare, Paradigm p) {
-        int hash = BelarusianWordNormalizer.hash(w);
+        int hash = UkrainianWordNormalizer.hash(w);
         int indexByHash = Math.abs(hash) % HASHTABLE_SIZE;
         List<Paradigm> list = prepare.get(indexByHash);
         synchronized (list) {
@@ -51,26 +42,6 @@ public class GrammarFinder implements IGrammarFinder {
                 }
             }
             list.add(p);
-        }
-    }
-
-    private void putToMorph(String m) {
-        String key = m.replace("-", "").replace('ґ', 'г').toLowerCase();
-        synchronized (morph) {
-            String prev = morph.put(key, m);
-            if (prev != null && !prev.equals(m)) {
-                throw new RuntimeException("Different morph for " + key + ": " + m + " / " + prev);
-            }
-        }
-    }
-
-    private void putToFan(Fan f) {
-        String key = f.getS().replace("+", "").toLowerCase();
-        synchronized (fan) {
-            String prev = fan.put(key, f.getValue());
-            if (prev != null && !prev.equals(f.getValue())) {
-                System.err.println("Different fan for " + key + ": " + f.getValue() + " / " + prev);
-            }
         }
     }
 
@@ -92,7 +63,7 @@ public class GrammarFinder implements IGrammarFinder {
      * Find paradigms by lemma or form (lower case).
      */
     public Paradigm[] getParadigms(String word) {
-        int hash = BelarusianWordNormalizer.hash(word);
+        int hash = UkrainianWordNormalizer.hash(word);
         int indexByHash = Math.abs(hash) % HASHTABLE_SIZE;
         Paradigm[] result = table[indexByHash];
         return result != null ? result : EMPTY;
@@ -100,15 +71,5 @@ public class GrammarFinder implements IGrammarFinder {
 
     public Stream<Paradigm[]> getSimilarGroups() {
         return Arrays.stream(table).filter(r -> r != null);
-    }
-
-    public String getMorph(String word) {
-        word = StressUtils.unstress(word).replace('ґ', 'г').toLowerCase();
-        return morph.get(word);
-    }
-
-    public String getFan(String word) {
-        word = StressUtils.unstress(word).toLowerCase();
-        return fan.get(word);
     }
 }

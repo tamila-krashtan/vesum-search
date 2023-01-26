@@ -2,7 +2,6 @@
 var GrammarService = /** @class */ (function () {
     function GrammarService() {
         var _this = this;
-        this.inputWord = new WordRequest();
         this.inputOrder = "STANDARD"; // "STANDARD" | "REVERSE";
         grammarui.showStatus("Читаються початкові дані...");
         fetch('grammar/initial')
@@ -274,11 +273,6 @@ var SearchTotalResult = /** @class */ (function () {
     }
     return SearchTotalResult;
 }());
-var SentencesRequest = /** @class */ (function () {
-    function SentencesRequest() {
-    }
-    return SentencesRequest;
-}());
 $.views.settings.allowCode(true);
 $.views.converters("roundnum", roundnum);
 $.views.converters("json", function (val) {
@@ -308,24 +302,13 @@ $.views.converters("wordtail", function (val) {
         return "";
     }
 });
-$.views.converters("korpusname", function (val) {
-    return val.replace(/\|\|.+/g, '');
-});
-$.views.converters("korpusdesc", function (val) {
-    return val.replace(/.+\|\|/g, '');
-});
-$.views.converters("naciski", function (val) {
+$.views.converters("stress", function (val) {
     return val != null ? val.replaceAll("+", "\u0301") : val;
 });
-var korpusui = null;
-var korpusService = null;
 var localization = null;
 var dialogSources = null;
-var dialogSubcorpuses = null;
 var dialogText = null;
-var dialogStyleGenres = null;
 var dialogWordGrammar = null;
-var spisy = {};
 var PopoverPlaceVertical;
 (function (PopoverPlaceVertical) {
     PopoverPlaceVertical[PopoverPlaceVertical["TOP"] = 0] = "TOP";
@@ -383,7 +366,7 @@ var BasePopover = /** @class */ (function () {
     return BasePopover;
 }());
 /*
- * Паказвае інфармацыю пра слова, разам з табліцай граматычных форм.
+ * Shows information about the word with the grammar forms table.
  */
 var DialogGrammarDB = /** @class */ (function () {
     function DialogGrammarDB(data) {
@@ -501,7 +484,7 @@ var DialogGrammarDB = /** @class */ (function () {
             rv.forms = [];
             rv.catnames = [];
             rv.dictionaries = [];
-            for (var _b = 0, _c = grammarService.initial.slouniki; _b < _c.length; _b++) {
+            for (var _b = 0, _c = grammarService.initial.dictionaries; _b < _c.length; _b++) {
                 var sl = _c[_b];
                 if (v.dictionaries.indexOf(sl.name) >= 0) {
                     rv.dictionaries.push(sl);
@@ -583,90 +566,8 @@ var DialogGrammarDB = /** @class */ (function () {
     };
     return DialogGrammarDB;
 }());
-var DialogList = /** @class */ (function () {
-    function DialogList(list, controlId, title) {
-        this.controlId = controlId;
-        var selectedSubcorpuses = document.getElementById('inputFilterCorpus').innerText.split(';');
-        var fullList = [];
-        if (!selectedSubcorpuses) {
-            selectedSubcorpuses = Object.keys(list);
-        }
-        for (var _i = 0, selectedSubcorpuses_1 = selectedSubcorpuses; _i < selectedSubcorpuses_1.length; _i++) {
-            var s = selectedSubcorpuses_1[_i];
-            if (list[s]) {
-                fullList = fullList.concat(list[s]);
-            }
-        }
-        var BE = new Intl.Collator('be');
-        fullList = fullList.filter(function (item, index) {
-            return (fullList.indexOf(item) == index);
-        }).sort(function (a, b) { return BE.compare(a, b); });
-        var html = $.templates("#template-list").render({
-            list: fullList,
-            title: title
-        });
-        $('#dialog-list-place').html(html);
-        var fs = document.getElementById(this.controlId).innerText.split(';');
-        fs.forEach(function (v) {
-            var cb = document.querySelector("#dialog-list input[type='checkbox'][name='" + v + "']");
-            if (cb) {
-                cb.checked = true;
-            }
-        });
-        $('#dialog-list').modal('show');
-    }
-    DialogList.prototype.onOk = function () {
-        var collection = document.querySelectorAll("#dialog-list input[type='checkbox']");
-        var result = [];
-        var hasUnchecked = false;
-        collection.forEach(function (cb) {
-            if (cb.checked) {
-                result.push(cb.name);
-            }
-            else {
-                hasUnchecked = true;
-            }
-        });
-        if (!hasUnchecked) {
-            result = [];
-        }
-        document.getElementById(this.controlId).innerText = result.length == 0 ? "Усе" : result.join(';');
-        $('#dialog-list').modal('hide');
-    };
-    DialogList.prototype.onCancel = function () {
-        $('#dialog-list').modal('hide');
-    };
-    DialogList.prototype.all = function (v) {
-        var collection = document.querySelectorAll("#dialog-list input[type='checkbox']");
-        collection.forEach(function (cb) { return cb.checked = v; });
-    };
-    DialogList.prototype.filter = function (elem) {
-        var s = elem.value.trim().toLowerCase();
-        var collection = document.querySelectorAll("#dialog-list input[type='checkbox']");
-        collection.forEach(function (cb) {
-            cb.closest('div').style.display = cb.checked || cb.name.toLowerCase().indexOf(s) >= 0 ? "block" : "none";
-        });
-    };
-    return DialogList;
-}());
-var DialogText = /** @class */ (function () {
-    function DialogText(row, target) {
-        var html = $.templates("#template-text").render({
-            biblio: row.doc,
-            detailsText: row.origText
-        });
-        $('#dialog-text').html(html);
-        $('#dialog-text').modal('show');
-        korpusui.visitedList.push(row.docId);
-        target.classList.add('visited');
-    }
-    DialogText.prototype.cancel = function () {
-        $('#dialog-text').modal('hide');
-    };
-    return DialogText;
-}());
 /*
- * Паказвае граматычныя тэгі для фільтрацыі граматыкі.
+ * Shows grammar tags for grammar filtering
  */
 var DialogWordGrammar = /** @class */ (function () {
     function DialogWordGrammar(inner) {
@@ -859,21 +760,6 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var PopoverBiblio = /** @class */ (function (_super) {
-    __extends(PopoverBiblio, _super);
-    function PopoverBiblio(event, doc, page) {
-        var _this = _super.call(this) || this;
-        var html = $.templates("#template-biblio").render({ doc: doc, page: page });
-        $('#dialog-biblio-details').html(html);
-        var popover = document.getElementById('dialog-biblio');
-        _this.showAt(event.target, 'dialog-biblio', PopoverPlaceVertical.TOP, PopoverPlaceHorizontal.RIGHT);
-        return _this;
-    }
-    PopoverBiblio.prototype.leave = function () {
-        $('#dialog-biblio').modal('hide');
-    };
-    return PopoverBiblio;
-}(BasePopover));
 var PopoverWord = /** @class */ (function (_super) {
     __extends(PopoverWord, _super);
     function PopoverWord(event) {
@@ -892,25 +778,6 @@ var PopoverWord = /** @class */ (function (_super) {
         }
         return _this;
     }
-    PopoverWord.prototype.html = function (lemma, cat) {
-        var o = "";
-        if (lemma) {
-            var lemmas = lemma.split(';');
-            o += '<b>Пачатковая форма</b>:&nbsp;' + lemmas.join(', ');
-        }
-        if (cat) {
-            o += '<br/><b>Граматыка</b>:';
-            for (var _i = 0, _a = cat.split(';'); _i < _a.length; _i++) {
-                var c = _a[_i];
-                o += '<br/>' + c + ':&nbsp;';
-                var oo = Grammar.parseCode(korpusService.initial.grammar, c);
-                if (oo) {
-                    o += oo.map(function (kv) { return kv.value; }).join(', ').replace(' ', '&nbsp;');
-                }
-            }
-        }
-        return o;
-    };
     return PopoverWord;
 }(BasePopover));
 function popoverWordHide() {
@@ -998,13 +865,6 @@ var BaseParams = /** @class */ (function () {
     }
     return BaseParams;
 }());
-var SearchParams = /** @class */ (function (_super) {
-    __extends(SearchParams, _super);
-    function SearchParams() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return SearchParams;
-}(BaseParams));
 var ClusterParams = /** @class */ (function (_super) {
     __extends(ClusterParams, _super);
     function ClusterParams() {
@@ -1012,205 +872,6 @@ var ClusterParams = /** @class */ (function (_super) {
     }
     return ClusterParams;
 }(BaseParams));
-var SearchResults = /** @class */ (function () {
-    function SearchResults(o) {
-        this.docId = o.docId;
-        this.doc = o.doc;
-        this.text = new Paragraph();
-        this.text.page = o.text.page;
-        this.text.sentences = o.text.sentences;
-    }
-    return SearchResults;
-}());
-var ResultKwicOutRow = /** @class */ (function () {
-    function ResultKwicOutRow(o) {
-        this.doc = o.doc;
-        this.origText = o.text;
-    }
-    return ResultKwicOutRow;
-}());
-var ResultKwicOut = /** @class */ (function () {
-    function ResultKwicOut(o, wordsInRequest) {
-        this.rows = [];
-        for (var _i = 0, o_1 = o; _i < o_1.length; _i++) {
-            var orow = o_1[_i];
-            var r = new SearchResults(orow);
-            for (var i = 0; i < r.text.sentences.length; i++) {
-                for (var j = 0; j < r.text.sentences[i].words.length; j++) {
-                    if (r.text.sentences[i].words[j].requestedWord && j + wordsInRequest < r.text.sentences[i].words.length) {
-                        // show
-                        var row = new ResultKwicOutRow(r);
-                        var wordsTo = this.showRow(row, r.text.sentences[i], j, wordsInRequest);
-                        this.rows.push(row);
-                        j = wordsTo;
-                    }
-                }
-            }
-        }
-    }
-    ResultKwicOut.prototype.showRow = function (out, sentence, wordsFrom, wordsCount) {
-        var wordsTo = wordsFrom;
-        out.kwicBefore = [];
-        for (var i = wordsFrom - 1, count = 0; i >= 0 && count < 5; i--) {
-            out.kwicBefore.push(sentence.words[i]);
-            if (sentence.words[i].normalized) {
-                count++;
-            }
-        }
-        out.kwicBefore.reverse();
-        out.kwicWords = [];
-        for (var i = wordsFrom, count = 0; i < sentence.words.length && count < wordsCount; i++) {
-            out.kwicWords.push(sentence.words[i]);
-            if (sentence.words[i].normalized) {
-                count++;
-                wordsTo = i;
-            }
-        }
-        out.kwicAfter = [];
-        for (var i = wordsTo + 1, count = 0; i < sentence.words.length && count < 5; i++) {
-            out.kwicAfter.push(sentence.words[i]);
-            if (sentence.words[i].normalized) {
-                count++;
-            }
-        }
-        return wordsTo;
-    };
-    return ResultKwicOut;
-}());
-var ResultSearchOutRow = /** @class */ (function () {
-    function ResultSearchOutRow(o) {
-        this.words = [];
-        this.docId = o.docId;
-        this.doc = o.doc;
-        this.origText = o.text;
-    }
-    return ResultSearchOutRow;
-}());
-var ResultSearchOut = /** @class */ (function () {
-    function ResultSearchOut(o, wordsInRequest) {
-        this.rows = [];
-        for (var _i = 0, o_2 = o; _i < o_2.length; _i++) {
-            var orow = o_2[_i];
-            var r = new SearchResults(orow);
-            var num = this.getRequestedWordsCountInResult(r.text);
-            var wordsCount = void 0;
-            switch (num) {
-                case 0:
-                case 1:
-                    wordsCount = 5;
-                    break;
-                case 2:
-                    wordsCount = 3;
-                    break;
-                case 3:
-                    wordsCount = 2;
-                    break;
-                default:
-                    wordsCount = 2;
-                    break;
-            }
-            var out = new ResultSearchOutRow(r);
-            this.outputText(r.text, out, wordsCount, 0, " ... ");
-            this.rows.push(out);
-        }
-    }
-    ResultSearchOut.prototype.outputText = function (words, row, wordAround, sentencesAround, separatorText) {
-        var begin = new TextPos(words, 0, 0);
-        var end = new TextPos(words, words.sentences.length - 1, words.sentences[words.sentences.length - 1].words.length - 1);
-        var pos = this.getNextRequestedWordPosAfter(words, null);
-        var currentAroundFrom = pos.addWords(-wordAround);
-        if (sentencesAround != 0) {
-            currentAroundFrom = currentAroundFrom.addSequences(-sentencesAround);
-        }
-        var currentAroundTo = pos.addWords(wordAround);
-        if (sentencesAround != 0) {
-            currentAroundTo = currentAroundTo.addSequences(sentencesAround);
-        }
-        if (currentAroundFrom.after(begin)) {
-            row.words.push(new WordResult(separatorText));
-        }
-        while (true) {
-            var next = this.getNextRequestedWordPosAfter(words, pos);
-            if (next == null) {
-                break;
-            }
-            var nextAroundFrom = next.addWords(-wordAround);
-            if (sentencesAround != 0) {
-                nextAroundFrom = nextAroundFrom.addSequences(-sentencesAround);
-            }
-            var nextAroundTo = next.addWords(wordAround);
-            if (sentencesAround != 0) {
-                nextAroundTo = nextAroundTo.addSequences(sentencesAround);
-            }
-            if (currentAroundTo.addWords(2).after(nextAroundFrom)) {
-                // merge
-                currentAroundTo = nextAroundTo;
-            }
-            else {
-                this.output(words, row, currentAroundFrom, currentAroundTo);
-                row.words.push(new WordResult(separatorText));
-                currentAroundFrom = nextAroundFrom;
-                currentAroundTo = nextAroundTo;
-            }
-            pos = next;
-        }
-        this.output(words, row, currentAroundFrom, currentAroundTo);
-        if (end.after(currentAroundTo)) {
-            row.words.push(new WordResult(separatorText));
-        }
-    };
-    ResultSearchOut.prototype.output = function (words, row, from, to) {
-        var curr = from;
-        while (true) {
-            var w = words.sentences[curr.sentence].words[curr.word];
-            row.words.push(w);
-            var next = curr.addWords(1);
-            if (curr.equals(to)) {
-                break;
-            }
-            curr = next;
-        }
-    };
-    ResultSearchOut.prototype.getRequestedWordsCountInResult = function (words) {
-        var count = 0;
-        for (var _i = 0, _a = words.sentences; _i < _a.length; _i++) {
-            var row = _a[_i];
-            for (var _b = 0, _c = row.words; _b < _c.length; _b++) {
-                var w = _c[_b];
-                if (w.requestedWord) {
-                    count++;
-                }
-            }
-        }
-        return count;
-    };
-    ResultSearchOut.prototype.getNextRequestedWordPosAfter = function (words, currentPos) {
-        var startI, startJ;
-        if (currentPos == null) {
-            startI = 0;
-            startJ = 0;
-        }
-        else {
-            var next = currentPos.addWords(1);
-            if (next.equals(currentPos)) {
-                return null;
-            }
-            startI = next.sentence;
-            startJ = next.word;
-        }
-        var j = startJ;
-        for (var i = startI; i < words.sentences.length; i++) {
-            for (; j < words.sentences[i].words.length; j++) {
-                if (words.sentences[i].words[j].requestedWord) {
-                    return new TextPos(words, i, j);
-                }
-            }
-            j = 0;
-        }
-        return null;
-    };
-    return ResultSearchOut;
-}());
 var LatestMark = /** @class */ (function () {
     function LatestMark() {
         this.doc = null;
@@ -1245,33 +906,6 @@ var StandardTextRequest = /** @class */ (function () {
     function StandardTextRequest() {
     }
     return StandardTextRequest;
-}());
-var WordRequest = /** @class */ (function () {
-    function WordRequest() {
-        this.word = "";
-        this.grammar = null;
-    }
-    return WordRequest;
-}());
-var WordResult = /** @class */ (function () {
-    function WordResult(text) {
-        this.text = text;
-        this.normalized = text;
-    }
-    WordResult.prototype.getOutput = function () {
-        return this.source != null ? this.source : this.normalized;
-    };
-    return WordResult;
-}());
-var Sentence = /** @class */ (function () {
-    function Sentence() {
-    }
-    return Sentence;
-}());
-var Paragraph = /** @class */ (function () {
-    function Paragraph() {
-    }
-    return Paragraph;
 }());
 var Grammar = /** @class */ (function () {
     function Grammar() {
@@ -1353,7 +987,7 @@ function fulltrim(s) {
     return s ? s : null;
 }
 function roundnum(v) {
-    var f = new Intl.NumberFormat('be', { maximumSignificantDigits: 3 });
+    var f = new Intl.NumberFormat('uk', { maximumSignificantDigits: 3 });
     if (v < 1000) {
         return v.toString();
     }
@@ -1367,135 +1001,4 @@ function roundnum(v) {
         return "~" + f.format(v / 1000000000) + " млрд";
     }
 }
-/**
- * Mathematics for word position processing in text(paragraph).
- */
-var TextPos = /** @class */ (function () {
-    function TextPos(text, sentence, word) {
-        this.text = text;
-        this.sentence = sentence;
-        this.word = word;
-    }
-    TextPos.prototype.addWords = function (count) {
-        var r = new TextPos(this.text, this.sentence, this.word);
-        if (count >= 0) {
-            for (var i = 0; i < count; i++) {
-                r.nextWord();
-            }
-        }
-        else {
-            for (var i = 0; i < -count; i++) {
-                r.prevWord();
-            }
-        }
-        return r;
-    };
-    TextPos.prototype.addSequences = function (count) {
-        var newSentence = this.sentence + count;
-        var newWord;
-        if (count >= 0) {
-            if (newSentence >= this.text.sentences.length) {
-                newSentence = this.text.sentences.length - 1;
-            }
-            newWord = this.text[newSentence].length - 1;
-        }
-        else {
-            if (newSentence < 0) {
-                newSentence = 0;
-            }
-            newWord = 0;
-        }
-        return new TextPos(this.text, newSentence, newWord);
-    };
-    TextPos.prototype.nextWord = function () {
-        if (this.word + 1 < this.text.sentences[this.sentence].words.length) {
-            this.word++;
-        }
-        else if (this.sentence + 1 < this.text.sentences.length) {
-            this.sentence++;
-            this.word = 0;
-        }
-    };
-    TextPos.prototype.prevWord = function () {
-        if (this.word > 0) {
-            this.word--;
-        }
-        else if (this.sentence > 0) {
-            this.sentence--;
-            this.word = this.text.sentences[this.sentence].words.length - 1;
-        }
-    };
-    TextPos.prototype.normalize = function () {
-        while (true) {
-            if (this.sentence >= 0 && this.sentence < this.text.sentences.length && this.word >= 0
-                && this.word < this.text.sentences[this.sentence].words.length) {
-                return;
-            }
-            if (this.sentence < 0) {
-                this.sentence = 0;
-                this.word = 0;
-                return;
-            }
-            else if (this.sentence >= this.text.sentences.length) {
-                this.sentence = this.text.sentences.length - 1;
-                this.word = this.text.sentences[this.sentence].words.length - 1;
-                return;
-            }
-            if (this.word >= this.text.sentences[this.sentence].words.length) {
-                this.word -= this.text.sentences[this.sentence].words.length;
-                this.sentence++;
-                continue;
-            }
-            else if (this.word < 0) {
-                this.sentence--;
-                if (this.sentence >= 0) {
-                    this.word += this.text.sentences[this.sentence].words.length;
-                }
-                continue;
-            }
-            throw new Error("Error TextPos.normalize");
-        }
-    };
-    TextPos.prototype.equals = function (o) {
-        return this.text == o.text && this.sentence == o.sentence && this.word == o.word;
-    };
-    TextPos.prototype.after = function (o) {
-        if (this.sentence > o.sentence) {
-            return true;
-        }
-        else if (this.sentence == o.sentence && this.word > o.word) {
-            return true;
-        }
-        return false;
-    };
-    TextPos.min = function (o1, o2) {
-        if (o1.sentence < o2.sentence) {
-            return o1;
-        }
-        if (o1.sentence > o2.sentence) {
-            return o2;
-        }
-        if (o1.word < o2.word) {
-            return o1;
-        }
-        else {
-            return o2;
-        }
-    };
-    TextPos.max = function (o1, o2) {
-        if (o1.sentence > o2.sentence) {
-            return o1;
-        }
-        if (o1.sentence < o2.sentence) {
-            return o2;
-        }
-        if (o1.word > o2.word) {
-            return o1;
-        }
-        else {
-            return o2;
-        }
-    };
-    return TextPos;
-}());
-//# sourceMappingURL=app2.js.map
+//# sourceMappingURL=app.js.map

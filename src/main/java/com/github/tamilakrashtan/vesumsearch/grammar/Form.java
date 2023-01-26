@@ -1,4 +1,3 @@
-
 package com.github.tamilakrashtan.vesumsearch.grammar;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -20,8 +19,8 @@ import jakarta.xml.bind.annotation.XmlValue;
  *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
  *       &lt;attribute name="tag" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
  *       &lt;attribute name="type" type="{}FormType" />
- *       &lt;attribute name="slouniki" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="pravapis" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       &lt;attribute name="dictionaries" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       &lt;attribute name="orthography" type="{http://www.w3.org/2001/XMLSchema}string" />
  *       &lt;attribute name="options" type="{}FormOptions" />
  *       &lt;attribute name="govern" type="{http://www.w3.org/2001/XMLSchema}string" />
  *       &lt;attribute name="todo" type="{http://www.w3.org/2001/XMLSchema}string" />
@@ -46,10 +45,10 @@ public class Form {
     protected String tag;
     @XmlAttribute(name = "type")
     protected FormType type;
-    @XmlAttribute(name = "slouniki")
-    protected String slouniki;
-    @XmlAttribute(name = "pravapis")
-    protected String pravapis;
+    @XmlAttribute(name = "dictionaries")
+    protected String dictionaries;
+    @XmlAttribute(name = "orthography")
+    protected String orthography;
     @XmlAttribute(name = "options")
     protected FormOptions options;
     @XmlAttribute(name = "govern")
@@ -132,51 +131,51 @@ public class Form {
     }
 
     /**
-     * Gets the value of the slouniki property.
+     * Gets the value of the dictionaries property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getSlouniki() {
-        return slouniki;
+    public String getDictionaries() {
+        return dictionaries;
     }
 
     /**
-     * Sets the value of the slouniki property.
+     * Sets the value of the dictionaries property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setSlouniki(String value) {
-        this.slouniki = value;
+    public void setDictionaries(String value) {
+        this.dictionaries = value;
     }
 
     /**
-     * Gets the value of the pravapis property.
+     * Gets the value of the orthography property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getPravapis() {
-        return pravapis;
+    public String getOrthography() {
+        return orthography;
     }
 
     /**
-     * Sets the value of the pravapis property.
+     * Sets the value of the orthography property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setPravapis(String value) {
-        this.pravapis = value;
+    public void setOrthography(String value) {
+        this.orthography = value;
     }
 
     /**

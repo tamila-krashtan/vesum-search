@@ -1,4 +1,3 @@
-
 package com.github.tamilakrashtan.vesumsearch.grammar;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -31,8 +30,8 @@ import jakarta.xml.bind.annotation.XmlValue;
 @XmlType(name = "", propOrder = {
     "value"
 })
-@XmlRootElement(name = "Slounik")
-public class Slounik {
+@XmlRootElement(name = "Dictionary")
+public class Dictionary {
 
     @XmlValue
     protected String value;

@@ -1,4 +1,4 @@
-package com.github.tamilakrashtan.vesumsearch.belarusian;
+package com.github.tamilakrashtan.vesumsearch.ukrainian;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ public class TagLetter {
     /**
      * Add child info like:
      * 
-     * Cascina => A:Nazounik;V:Dziejaslou;...
+     * Part => A:Noun;V:Verb;...
      */
     public TagLetter add(String text) {
         int pos = text.indexOf("=>");
