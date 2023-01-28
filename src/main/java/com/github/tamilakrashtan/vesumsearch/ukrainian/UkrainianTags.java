@@ -46,7 +46,7 @@ public class UkrainianTags {
         other(root);
         //predicative(root);
         //abbreviation(root);
-        parts(root);
+        //parts(root);
 
         checkParadigmMarks(root, "", 0);
         checkDuplicateGroups(root, new ArrayList<>());
