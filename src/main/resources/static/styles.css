@@ -44,9 +44,9 @@ body {
   padding: 0;
 }
 .navbar-brand {
-  font-family: 'Lobster', cursive;
+  font-family: 'Noto Serif';
   font-size: 2.2em;
-  color: #d9534f!important;
+  color: #006fe6!important;
 }
 
 .wordFound {
