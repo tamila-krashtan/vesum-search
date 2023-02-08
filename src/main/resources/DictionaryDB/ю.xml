@@ -607,7 +607,7 @@
       <Form tag="VP">ювіляти</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="410117" lemma="Ювківці" tag="NPINP">
+  <Paradigm pdgId="410117" lemma="Ювківці" tag="NPINX">
     <Variant id="a" lemma="Ювківці">
       <Form tag="NP">Ювківці</Form>
       <Form tag="GP">Ювківців</Form>
@@ -4125,7 +4125,7 @@
       <Form tag="VP">юнаки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="410325" lemma="Юнаки" tag="NPINP">
+  <Paradigm pdgId="410325" lemma="Юнаки" tag="NPINX">
     <Variant id="a" lemma="Юнаки">
       <Form tag="NP">Юнаки</Form>
       <Form tag="GP">Юнаків</Form>
@@ -4371,7 +4371,7 @@
       <Form tag="VP">юначки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="410335" lemma="Юначки" tag="NPINP" meaning="Малі/Великі Юначки">
+  <Paradigm pdgId="410335" lemma="Юначки" tag="NPINX" meaning="Малі/Великі Юначки">
     <Variant id="a" lemma="Юначки">
       <Form tag="NP">Юначки</Form>
       <Form tag="GP">Юначків</Form>
@@ -4382,7 +4382,7 @@
       <Form tag="VP">Юначки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="410336" lemma="Юнашки" tag="NPINP">
+  <Paradigm pdgId="410336" lemma="Юнашки" tag="NPINX">
     <Variant id="a" lemma="Юнашки">
       <Form tag="NP">Юнашки</Form>
       <Form tag="GP">Юнашок</Form>
@@ -6805,7 +6805,7 @@
       <Form tag="PVP">юринецькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="410477" lemma="Юринці" tag="NPINP">
+  <Paradigm pdgId="410477" lemma="Юринці" tag="NPINX">
     <Variant id="a" lemma="Юринці">
       <Form tag="NP">Юринці</Form>
       <Form tag="GP">Юринців</Form>
@@ -7378,7 +7378,7 @@
       <Form tag="VS">Юркевич</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="410510" lemma="Юрки" tag="NPINP">
+  <Paradigm pdgId="410510" lemma="Юрки" tag="NPINX">
     <Variant id="a" lemma="Юрки">
       <Form tag="NP">Юрки</Form>
       <Form tag="GP">Юрків</Form>
@@ -7514,7 +7514,7 @@
       <Form tag="PVP">юрківські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="410517" lemma="Юрківці" tag="NPINP">
+  <Paradigm pdgId="410517" lemma="Юрківці" tag="NPINX">
     <Variant id="a" lemma="Юрківці">
       <Form tag="NP">Юрківці</Form>
       <Form tag="GP">Юрківців</Form>
@@ -8222,7 +8222,7 @@
       <Form tag="VP">юрособи</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="410558" lemma="Юрочки" tag="NPINP">
+  <Paradigm pdgId="410558" lemma="Юрочки" tag="NPINX">
     <Variant id="a" lemma="Юрочки">
       <Form tag="NP">Юрочки</Form>
       <Form tag="GP">Юрочок</Form>
@@ -8566,7 +8566,7 @@
       <Form tag="VS">Юрчак</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="410579" lemma="Юрченки" tag="NPINP">
+  <Paradigm pdgId="410579" lemma="Юрченки" tag="NPINX">
     <Variant id="a" lemma="Юрченки">
       <Form tag="NP">Юрченки</Form>
       <Form tag="GP">Юрченків</Form>
@@ -8914,7 +8914,7 @@
       <Form tag="VS">Юсипович</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="410602" lemma="Юсківці" tag="NPINP">
+  <Paradigm pdgId="410602" lemma="Юсківці" tag="NPINX">
     <Variant id="a" lemma="Юсківці">
       <Form tag="NP">Юсківці</Form>
       <Form tag="GP">Юсківців</Form>
@@ -10069,7 +10069,7 @@
       <Form tag="VS">Юськів</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="410667" lemma="Юськівці" tag="NPINP">
+  <Paradigm pdgId="410667" lemma="Юськівці" tag="NPINX">
     <Variant id="a" lemma="Юськівці">
       <Form tag="NP">Юськівці</Form>
       <Form tag="GP">Юськівців</Form>
@@ -10595,7 +10595,7 @@
       <Form tag="PVP">юхимівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="410700" lemma="Юхимівці" tag="NPINP">
+  <Paradigm pdgId="410700" lemma="Юхимівці" tag="NPINX">
     <Variant id="a" lemma="Юхимівці">
       <Form tag="NP">Юхимівці</Form>
       <Form tag="GP">Юхимівців</Form>
@@ -10705,7 +10705,7 @@
       <Form tag="VS">Юхненко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="410709" lemma="Юхни" tag="NPINP">
+  <Paradigm pdgId="410709" lemma="Юхни" tag="NPINX">
     <Variant id="a" lemma="Юхни">
       <Form tag="NP">Юхни</Form>
       <Form tag="GP">Юхнів</Form>
@@ -10833,7 +10833,7 @@
       <Form tag="VP">юхти</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="410717" lemma="Юхти" tag="NPINP">
+  <Paradigm pdgId="410717" lemma="Юхти" tag="NPINX">
     <Variant id="a" lemma="Юхти">
       <Form tag="NP">Юхти</Form>
       <Form tag="GP">Юхтів</Form>
@@ -11014,7 +11014,7 @@
       <Form tag="VS">Юшкевич</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="410729" lemma="Юшки" tag="NPINP">
+  <Paradigm pdgId="410729" lemma="Юшки" tag="NPINX">
     <Variant id="a" lemma="Юшки">
       <Form tag="NP">Юшки</Form>
       <Form tag="GP">Юшок</Form>
@@ -11074,7 +11074,7 @@
       <Form tag="PVP">юшківецькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="410732" lemma="Юшківці" tag="NPINP">
+  <Paradigm pdgId="410732" lemma="Юшківці" tag="NPINX">
     <Variant id="a" lemma="Юшківці">
       <Form tag="NP">Юшківці</Form>
       <Form tag="GP">Юшківців</Form>

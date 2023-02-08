@@ -3176,7 +3176,7 @@
       <Form tag="VP">цвіклі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="389303" lemma="Цвіклівці" tag="NPINP">
+  <Paradigm pdgId="389303" lemma="Цвіклівці" tag="NPINX">
     <Variant id="a" lemma="Цвіклівці">
       <Form tag="NP">Цвіклівці</Form>
       <Form tag="GP">Цвіклівців</Form>
@@ -5815,7 +5815,7 @@
       <Form tag="VP">цевеківці</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="389472" lemma="Цевеличі" tag="NPINP">
+  <Paradigm pdgId="389472" lemma="Цевеличі" tag="NPINX">
     <Variant id="a" lemma="Цевеличі">
       <Form tag="NP">Цевеличі</Form>
       <Form tag="GP">Цевеличів</Form>
@@ -13922,7 +13922,7 @@
       <Form tag="LS">Цеппеліну</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="389839" lemma="Цепцевичі" tag="NPINP">
+  <Paradigm pdgId="389839" lemma="Цепцевичі" tag="NPINX">
     <Variant id="a" lemma="Цепцевичі">
       <Form tag="NP">Цепцевичі</Form>
       <Form tag="GP">Цепцевичів</Form>
@@ -16052,7 +16052,7 @@
       <Form tag="VP">цефалометри</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="389943" lemma="цефалоспорини" tag="NCINP">
+  <Paradigm pdgId="389943" lemma="цефалоспорини" tag="NCINX">
     <Variant id="a" lemma="цефалоспорини">
       <Form tag="NP">цефалоспорини</Form>
       <Form tag="GP">цефалоспоринів</Form>
@@ -17146,7 +17146,7 @@
       <Form tag="VS">Цибко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390015" lemma="Циблі" tag="NPINP">
+  <Paradigm pdgId="390015" lemma="Циблі" tag="NPINX">
     <Variant id="a" lemma="Циблі">
       <Form tag="NP">Циблі</Form>
       <Form tag="GP">Циблів</Form>
@@ -17352,7 +17352,7 @@
       <Form tag="PVP">цибулеві</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390026" lemma="Цибуленки" tag="NPINP">
+  <Paradigm pdgId="390026" lemma="Цибуленки" tag="NPINX">
     <Variant id="a" lemma="Цибуленки">
       <Form tag="NP">Цибуленки</Form>
       <Form tag="GP">Цибуленків</Form>
@@ -17591,7 +17591,7 @@
       <Form tag="VS">цибулиноподібносте</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390037" lemma="Цибулі" tag="NPINP">
+  <Paradigm pdgId="390037" lemma="Цибулі" tag="NPINX">
     <Variant id="a" lemma="Цибулі">
       <Form tag="NP">Цибулі</Form>
       <Form tag="GP">Цибулів</Form>
@@ -17690,7 +17690,7 @@
       <Form tag="VP">цибульки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390043" lemma="Цибульки" tag="NPINP">
+  <Paradigm pdgId="390043" lemma="Цибульки" tag="NPINX">
     <Variant id="a" lemma="Цибульки">
       <Form tag="NP">Цибульки</Form>
       <Form tag="GP">Цибульок</Form>
@@ -18968,7 +18968,7 @@
       <Form tag="VS">циганеріє</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390117" lemma="Цигани" tag="NPINP">
+  <Paradigm pdgId="390117" lemma="Цигани" tag="NPINX">
     <Variant id="a" lemma="Цигани">
       <Form tag="NP">Цигани</Form>
       <Form tag="GP">Циган</Form>
@@ -19049,7 +19049,7 @@
       <Form tag="VS">Циганівко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390122" lemma="Циганівці" tag="NPINP">
+  <Paradigm pdgId="390122" lemma="Циганівці" tag="NPINX">
     <Variant id="a" lemma="Циганівці">
       <Form tag="NP">Циганівці</Form>
       <Form tag="GP">Циганівців</Form>
@@ -20080,7 +20080,7 @@
       <Form tag="VP">цикадки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390183" lemma="цикадкові" tag="NCANP">
+  <Paradigm pdgId="390183" lemma="цикадкові" tag="NCANX">
     <Variant id="a" lemma="цикадкові">
       <Form tag="NP">цикадкові</Form>
       <Form tag="GP">цикадкових</Form>
@@ -20128,7 +20128,7 @@
       <Form tag="PVP">цикадові</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390185" lemma="Цикали" tag="NPINP">
+  <Paradigm pdgId="390185" lemma="Цикали" tag="NPINX">
     <Variant id="a" lemma="Цикали">
       <Form tag="NP">Цикали</Form>
       <Form tag="GP">Цикалів</Form>
@@ -22902,7 +22902,7 @@
       <Form tag="VP">цилюрики</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390327" lemma="Цилюрики" tag="NPINP">
+  <Paradigm pdgId="390327" lemma="Цилюрики" tag="NPINX">
     <Variant id="a" lemma="Цилюрики">
       <Form tag="NP">Цилюрики</Form>
       <Form tag="GP">Цилюриків</Form>
@@ -23039,7 +23039,7 @@
       <Form tag="VS">Цимбаленко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390337" lemma="цимбали" tag="NCINP">
+  <Paradigm pdgId="390337" lemma="цимбали" tag="NCINX">
     <Variant id="a" lemma="цимбали">
       <Form tag="NP">цимбали</Form>
       <Form tag="GP">цимбал</Form>
@@ -23051,7 +23051,7 @@
       <Form tag="VP">цимбали</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390338" lemma="цимбалики" tag="NCINP">
+  <Paradigm pdgId="390338" lemma="цимбалики" tag="NCINX">
     <Variant id="a" lemma="цимбалики">
       <Form tag="NP">цимбалики</Form>
       <Form tag="GP">цимбаликів</Form>
@@ -24397,7 +24397,7 @@
       <Form tag="VS">Цинциннаті</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390412" lemma="цинь" tag="NCINP">
+  <Paradigm pdgId="390412" lemma="цинь" tag="NCINX">
     <Variant id="a" lemma="цинь">
       <Form tag="NP">цинь</Form>
       <Form tag="GP">цинь</Form>
@@ -25655,7 +25655,7 @@
       <Form tag="PVP">циркумфлексові</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390475" lemma="Циркуни" tag="NPINP">
+  <Paradigm pdgId="390475" lemma="Циркуни" tag="NPINX">
     <Variant id="a" lemma="Циркуни">
       <Form tag="NP">Циркуни</Form>
       <Form tag="GP">Циркунів</Form>
@@ -28109,7 +28109,7 @@
       <Form tag="PVP">цитрусові</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390591" lemma="цитрусові" tag="NCINP">
+  <Paradigm pdgId="390591" lemma="цитрусові" tag="NCINX">
     <Variant id="a" lemma="цитрусові">
       <Form tag="NP">цитрусові</Form>
       <Form tag="GP">цитрусових</Form>
@@ -28635,7 +28635,7 @@
       <Form tag="PXP">цифрувалися</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390627" lemma="цихліди" tag="NCINP">
+  <Paradigm pdgId="390627" lemma="цихліди" tag="NCINX">
     <Variant id="a" lemma="цихліди">
       <Form tag="NP">цихліди</Form>
       <Form tag="GP">цихлідів</Form>
@@ -28790,7 +28790,7 @@
       <Form tag="VS">Цицкун</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390640" lemma="Цицори" tag="NPINP">
+  <Paradigm pdgId="390640" lemma="Цицори" tag="NPINX">
     <Variant id="a" lemma="Цицори">
       <Form tag="NP">Цицори</Form>
       <Form tag="GP">Цицорів</Form>
@@ -29553,7 +29553,7 @@
       <Form tag="PXP">цівкали</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390680" lemma="Цівки" tag="NPINP">
+  <Paradigm pdgId="390680" lemma="Цівки" tag="NPINX">
     <Variant id="a" lemma="Цівки">
       <Form tag="NP">Цівки</Form>
       <Form tag="GP">Цівок</Form>
@@ -29564,7 +29564,7 @@
       <Form tag="VP">Цівки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390681" lemma="Цівківці" tag="NPINP">
+  <Paradigm pdgId="390681" lemma="Цівківці" tag="NPINX">
     <Variant id="a" lemma="Цівківці">
       <Form tag="NP">Цівківці</Form>
       <Form tag="GP">Цівківців</Form>
@@ -30467,7 +30467,7 @@
       <Form tag="VP">цілевказання</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390732" lemma="цілевказівки" tag="NCINP">
+  <Paradigm pdgId="390732" lemma="цілевказівки" tag="NCINX">
     <Variant id="a" lemma="цілевказівки">
       <Form tag="NP">цілевказівки</Form>
       <Form tag="GP">цілевказівок</Form>
@@ -32891,7 +32891,7 @@
       <Form tag="PVP">цільнозернові</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390842" lemma="цільнокісткові" tag="NCANP">
+  <Paradigm pdgId="390842" lemma="цільнокісткові" tag="NCANX">
     <Variant id="a" lemma="цільнокісткові">
       <Form tag="NP">цільнокісткові</Form>
       <Form tag="GP">цільнокісткових</Form>
@@ -34267,7 +34267,7 @@
       <Form tag="VP">ціпилна</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390919" lemma="Ціпівки" tag="NPINP">
+  <Paradigm pdgId="390919" lemma="Ціпівки" tag="NPINX">
     <Variant id="a" lemma="Ціпівки">
       <Form tag="NP">Ціпівки</Form>
       <Form tag="GP">Ціпівок</Form>
@@ -34297,7 +34297,7 @@
       <Form tag="VP">ціпки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390921" lemma="Ціпки" tag="NPINP">
+  <Paradigm pdgId="390921" lemma="Ціпки" tag="NPINX">
     <Variant id="a" lemma="Ціпки">
       <Form tag="NP">Ціпки</Form>
       <Form tag="GP">Ціпків</Form>
@@ -35094,7 +35094,7 @@
       <Form tag="VS">Цмівко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="390972" lemma="Цміни" tag="NPINP">
+  <Paradigm pdgId="390972" lemma="Цміни" tag="NPINX">
     <Variant id="a" lemma="Цміни">
       <Form tag="NP">Цміни</Form>
       <Form tag="GP">Цмін</Form>
@@ -35640,7 +35640,7 @@
       <Form tag="VS">ЦО</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391008" lemma="ЦОВВ" tag="NCIBC" meaning="центральні органи виконавчої влади">
+  <Paradigm pdgId="391008" lemma="ЦОВВ" tag="NCIBX" meaning="центральні органи виконавчої влади">
     <Variant id="a" lemma="ЦОВВ">
       <Form tag="NP">ЦОВВ</Form>
       <Form tag="GP">ЦОВВ</Form>
@@ -36538,7 +36538,7 @@
       <Form tag="VP">ЦСПРД</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391077" lemma="ЦСР" tag="NCIBC" meaning="Цілі сталого розвитку">
+  <Paradigm pdgId="391077" lemma="ЦСР" tag="NCIBX" meaning="Цілі сталого розвитку">
     <Variant id="a" lemma="ЦСР">
       <Form tag="NP">ЦСР</Form>
       <Form tag="GP">ЦСР</Form>
@@ -37945,7 +37945,7 @@
       <Form tag="VP">цукрокомбінати</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391148" lemma="цукролітики" tag="NCINP">
+  <Paradigm pdgId="391148" lemma="цукролітики" tag="NCINX">
     <Variant id="a" lemma="цукролітики">
       <Form tag="NP">цукролітики</Form>
       <Form tag="GP">цукролітиків</Form>
@@ -38421,7 +38421,7 @@
       <Form tag="PXP">цукруватіли</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391173" lemma="Цукури" tag="NPINP">
+  <Paradigm pdgId="391173" lemma="Цукури" tag="NPINX">
     <Variant id="a" lemma="Цукури">
       <Form tag="NP">Цукури</Form>
       <Form tag="GP">Цукурів</Form>
@@ -38757,7 +38757,7 @@
       <Form tag="P">цупкенько</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391196" lemma="Цупки" tag="NPINP">
+  <Paradigm pdgId="391196" lemma="Цупки" tag="NPINX">
     <Variant id="a" lemma="Цупки">
       <Form tag="NP">Цупки</Form>
       <Form tag="GP">Цупків</Form>
@@ -39913,7 +39913,7 @@
       <Form tag="VS">цьмакання</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391272" lemma="Цьови" tag="NPINP">
+  <Paradigm pdgId="391272" lemma="Цьови" tag="NPINX">
     <Variant id="a" lemma="Цьови">
       <Form tag="NP">Цьови</Form>
       <Form tag="GP">Цьовів</Form>
@@ -41033,7 +41033,7 @@
       <Form tag="LS">Цюрупі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391356" lemma="Цюрупи" tag="NPINP">
+  <Paradigm pdgId="391356" lemma="Цюрупи" tag="NPINX">
     <Variant id="a" lemma="Цюрупи">
       <Form tag="NP">Цюрупи</Form>
       <Form tag="GP">Цюрупів</Form>

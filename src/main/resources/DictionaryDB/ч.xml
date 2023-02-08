@@ -207,7 +207,7 @@
       <Form tag="VP">чабаненки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391449" lemma="Чабани" tag="NPINP">
+  <Paradigm pdgId="391449" lemma="Чабани" tag="NPINX">
     <Variant id="a" lemma="Чабани">
       <Form tag="NP">Чабани</Form>
       <Form tag="GP">Чабанів</Form>
@@ -1708,7 +1708,7 @@
       <Form tag="PVP">чагаристі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391535" lemma="Чагарі" tag="NPINP">
+  <Paradigm pdgId="391535" lemma="Чагарі" tag="NPINX">
     <Variant id="a" lemma="Чагарі">
       <Form tag="NP">Чагарі</Form>
       <Form tag="GP">Чагарів</Form>
@@ -1730,7 +1730,7 @@
       <Form tag="VS">Чагарівко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391537" lemma="Чагарі-Збаразькі" tag="NPINP">
+  <Paradigm pdgId="391537" lemma="Чагарі-Збаразькі" tag="NPINX">
     <Variant id="a" lemma="Чагарі-Збаразькі">
       <Form tag="NP">Чагарі-Збаразькі</Form>
       <Form tag="GP">Чагарів-Збаразьких</Form>
@@ -2811,7 +2811,7 @@
       <Form tag="VS">чаю-каво</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391597" lemma="Чайки" tag="NPINP">
+  <Paradigm pdgId="391597" lemma="Чайки" tag="NPINX">
     <Variant id="a" lemma="Чайки">
       <Form tag="NP">Чайки</Form>
       <Form tag="GP">Чайок</Form>
@@ -3018,7 +3018,7 @@
       <Form tag="PVP">чайковицькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391608" lemma="Чайковичі" tag="NPINP">
+  <Paradigm pdgId="391608" lemma="Чайковичі" tag="NPINX">
     <Variant id="a" lemma="Чайковичі">
       <Form tag="NP">Чайковичі</Form>
       <Form tag="GP">Чайковичів</Form>
@@ -3029,7 +3029,7 @@
       <Form tag="VP">Чайковичі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391609" lemma="чайкові" tag="NCANP">
+  <Paradigm pdgId="391609" lemma="чайкові" tag="NCANX">
     <Variant id="a" lemma="чайкові">
       <Form tag="NP">чайкові</Form>
       <Form tag="GP">чайкових</Form>
@@ -3370,7 +3370,7 @@
       <Form tag="PVP">чайно-кавові</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391626" lemma="чайові" tag="NCINP">
+  <Paradigm pdgId="391626" lemma="чайові" tag="NCINX">
     <Variant id="a" lemma="чайові">
       <Form tag="NP">чайові</Form>
       <Form tag="GP">чайових</Form>
@@ -3529,7 +3529,7 @@
       <Form tag="PVP">чайчинецькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391634" lemma="Чайчинці" tag="NPINP">
+  <Paradigm pdgId="391634" lemma="Чайчинці" tag="NPINX">
     <Variant id="a" lemma="Чайчинці">
       <Form tag="NP">Чайчинці</Form>
       <Form tag="GP">Чайчинців</Form>
@@ -4307,7 +4307,7 @@
       <Form tag="VS">Чанаккале</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391692" lemma="чанахи" tag="NCINP">
+  <Paradigm pdgId="391692" lemma="чанахи" tag="NCINX">
     <Variant id="a" lemma="чанахи">
       <Form tag="NP">чанахи</Form>
       <Form tag="GP">чанахів</Form>
@@ -4690,7 +4690,7 @@
       <Form tag="">чао</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391712" lemma="ЧАП" tag="NCIBP">
+  <Paradigm pdgId="391712" lemma="ЧАП" tag="NCIBX">
     <Variant id="a" lemma="ЧАП">
       <Form tag="NP">ЧАП</Form>
       <Form tag="GP">ЧАП</Form>
@@ -4945,7 +4945,7 @@
       <Form tag="LS">Чапкісу</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391729" lemma="чаплеві" tag="NCANP">
+  <Paradigm pdgId="391729" lemma="чаплеві" tag="NCANX">
     <Variant id="a" lemma="чаплеві">
       <Form tag="NP">чаплеві</Form>
       <Form tag="GP">чаплевих</Form>
@@ -5209,7 +5209,7 @@
       <Form tag="PVP">чаплинські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391743" lemma="Чаплинці" tag="NPINP">
+  <Paradigm pdgId="391743" lemma="Чаплинці" tag="NPINX">
     <Variant id="a" lemma="Чаплинці">
       <Form tag="NP">Чаплинці</Form>
       <Form tag="GP">Чаплинців</Form>
@@ -5220,7 +5220,7 @@
       <Form tag="VP">Чаплинці</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391744" lemma="Чаплищі" tag="NPINP">
+  <Paradigm pdgId="391744" lemma="Чаплищі" tag="NPINX">
     <Variant id="a" lemma="Чаплищі">
       <Form tag="NP">Чаплищі</Form>
       <Form tag="GP">Чаплищів</Form>
@@ -5231,7 +5231,7 @@
       <Form tag="VP">Чаплищі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391745" lemma="Чаплі" tag="NPINP">
+  <Paradigm pdgId="391745" lemma="Чаплі" tag="NPINX">
     <Variant id="a" lemma="Чаплі">
       <Form tag="NP">Чаплі</Form>
       <Form tag="GP">Чапел</Form>
@@ -5654,7 +5654,7 @@
       <Form tag="VS">чар-зілля</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391770" lemma="чари" tag="NCINP">
+  <Paradigm pdgId="391770" lemma="чари" tag="NCINX">
     <Variant id="a" lemma="чари">
       <Form tag="NP">чари</Form>
       <Form tag="GP">чарів</Form>
@@ -6646,7 +6646,7 @@
       <Form tag="VP">чароньки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391823" lemma="чароньки" tag="NCINP">
+  <Paradigm pdgId="391823" lemma="чароньки" tag="NCINX">
     <Variant id="a" lemma="чароньки">
       <Form tag="NP">чароньки</Form>
       <Form tag="GP">чароньків</Form>
@@ -7446,7 +7446,7 @@
       <Form tag="PVP">часлівецькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391868" lemma="Часлівці" tag="NPINP">
+  <Paradigm pdgId="391868" lemma="Часлівці" tag="NPINX">
     <Variant id="a" lemma="Часлівці">
       <Form tag="NP">Часлівці</Form>
       <Form tag="GP">Часлівців</Form>
@@ -7751,7 +7751,7 @@
       <Form tag="VP">часнички</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391883" lemma="Часнівці" tag="NPINP">
+  <Paradigm pdgId="391883" lemma="Часнівці" tag="NPINX">
     <Variant id="a" lemma="Часнівці">
       <Form tag="NP">Часнівці</Form>
       <Form tag="GP">Часнівців</Form>
@@ -9832,7 +9832,7 @@
       <Form tag="VS">частухо</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="391976" lemma="частухові" tag="NCINP">
+  <Paradigm pdgId="391976" lemma="частухові" tag="NCINX">
     <Variant id="a" lemma="частухові">
       <Form tag="NP">частухові</Form>
       <Form tag="GP">частухових</Form>
@@ -12900,7 +12900,7 @@
       <Form tag="VS">Чеберяк</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392168" lemma="Чеберяки" tag="NPINP">
+  <Paradigm pdgId="392168" lemma="Чеберяки" tag="NPINX">
     <Variant id="a" lemma="Чеберяки">
       <Form tag="NP">Чеберяки</Form>
       <Form tag="GP">Чеберяків</Form>
@@ -12971,7 +12971,7 @@
       <Form tag="PVP">чебишовські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392172" lemma="Чебоксари" tag="NPINP">
+  <Paradigm pdgId="392172" lemma="Чебоксари" tag="NPINX">
     <Variant id="a" lemma="Чебоксари">
       <Form tag="NP">Чебоксари</Form>
       <Form tag="GP">Чебоксар</Form>
@@ -15323,7 +15323,7 @@
       <Form tag="VS">Чемеринський</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392310" lemma="Чемеринці" tag="NPINP">
+  <Paradigm pdgId="392310" lemma="Чемеринці" tag="NPINX">
     <Variant id="a" lemma="Чемеринці">
       <Form tag="NP">Чемеринці</Form>
       <Form tag="GP">Чемеринців</Form>
@@ -15347,7 +15347,7 @@
       <Form tag="LS">Чемерису</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392312" lemma="Чемериси-Барські" tag="NPINP">
+  <Paradigm pdgId="392312" lemma="Чемериси-Барські" tag="NPINX">
     <Variant id="a" lemma="Чемериси-Барські">
       <Form tag="NP">Чемериси-Барські</Form>
       <Form tag="GP">Чемерисів-Барських</Form>
@@ -15471,7 +15471,7 @@
       <Form tag="VP">чемерівки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392318" lemma="Чемерівці" tag="NPINP">
+  <Paradigm pdgId="392318" lemma="Чемерівці" tag="NPINX">
     <Variant id="a" lemma="Чемерівці">
       <Form tag="NP">Чемерівці</Form>
       <Form tag="GP">Чемерівців</Form>
@@ -16417,7 +16417,7 @@
       <Form tag="VP">ченчики</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392371" lemma="Ченчики" tag="NPINP">
+  <Paradigm pdgId="392371" lemma="Ченчики" tag="NPINX">
     <Variant id="a" lemma="Ченчики">
       <Form tag="NP">Ченчики</Form>
       <Form tag="GP">Ченчиків</Form>
@@ -16586,7 +16586,7 @@
       <Form tag="VS">Чепелик</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392386" lemma="Чепелі" tag="NPINP">
+  <Paradigm pdgId="392386" lemma="Чепелі" tag="NPINX">
     <Variant id="a" lemma="Чепелі">
       <Form tag="NP">Чепелі</Form>
       <Form tag="GP">Чепелів</Form>
@@ -16845,7 +16845,7 @@
       <Form tag="VP">чепіги</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392403" lemma="Чепіжинці" tag="NPINP">
+  <Paradigm pdgId="392403" lemma="Чепіжинці" tag="NPINX">
     <Variant id="a" lemma="Чепіжинці">
       <Form tag="NP">Чепіжинці</Form>
       <Form tag="GP">Чепіжинців</Form>
@@ -17005,7 +17005,7 @@
       <Form tag="PVP">чепоніські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392412" lemma="Чепоноси" tag="NPINP">
+  <Paradigm pdgId="392412" lemma="Чепоноси" tag="NPINX">
     <Variant id="a" lemma="Чепоноси">
       <Form tag="NP">Чепоноси</Form>
       <Form tag="GP">Чепоносів</Form>
@@ -17657,7 +17657,7 @@
       <Form tag="PVP">чепцеві</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392452" lemma="Чепці" tag="NPINP">
+  <Paradigm pdgId="392452" lemma="Чепці" tag="NPINX">
     <Variant id="a" lemma="Чепці">
       <Form tag="NP">Чепці</Form>
       <Form tag="GP">Чепців</Form>
@@ -17870,7 +17870,7 @@
       <Form tag="VS">червцю</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392466" lemma="черви" tag="NCANP">
+  <Paradigm pdgId="392466" lemma="черви" tag="NCANX">
     <Variant id="a" lemma="черви">
       <Form tag="NP">черви</Form>
       <Form tag="GP">червів</Form>
@@ -18032,7 +18032,7 @@
       <Form tag="VP">червиці</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392477" lemma="Червища" tag="NPINP" meaning="Старі Червища">
+  <Paradigm pdgId="392477" lemma="Червища" tag="NPINX" meaning="Старі Червища">
     <Variant id="a" lemma="Червища">
       <Form tag="NP">Червища</Form>
       <Form tag="GP">Червищ</Form>
@@ -23672,7 +23672,7 @@
       <Form tag="PVP">червонохвості</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392696" lemma="Червонохижинці" tag="NPINP">
+  <Paradigm pdgId="392696" lemma="Червонохижинці" tag="NPINX">
     <Variant id="a" lemma="Червонохижинці">
       <Form tag="NP">Червонохижинці</Form>
       <Form tag="GP">Червонохижинців</Form>
@@ -25171,7 +25171,7 @@
       <Form tag="VP">чердаки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392760" lemma="Черевані" tag="NPINP">
+  <Paradigm pdgId="392760" lemma="Черевані" tag="NPINX">
     <Variant id="a" lemma="Черевані">
       <Form tag="NP">Черевані</Form>
       <Form tag="GP">Череванів</Form>
@@ -25475,7 +25475,7 @@
       <Form tag="VP">черевини</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392778" lemma="черевиченьки" tag="NCINP">
+  <Paradigm pdgId="392778" lemma="черевиченьки" tag="NCINX">
     <Variant id="a" lemma="черевиченьки">
       <Form tag="NP">черевиченьки</Form>
       <Form tag="GP">черевиченьків</Form>
@@ -25595,7 +25595,7 @@
       <Form tag="VP">черевички</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392784" lemma="Черевки" tag="NPINP">
+  <Paradigm pdgId="392784" lemma="Черевки" tag="NPINX">
     <Variant id="a" lemma="Черевки">
       <Form tag="NP">Черевки</Form>
       <Form tag="GP">Черевків</Form>
@@ -25876,7 +25876,7 @@
       <Form tag="PVP">черевоногі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392797" lemma="черевоногі" tag="NCANP">
+  <Paradigm pdgId="392797" lemma="черевоногі" tag="NCANX">
     <Variant id="a" lemma="черевоногі">
       <Form tag="NP">черевоногі</Form>
       <Form tag="GP">черевоногих</Form>
@@ -26041,7 +26041,7 @@
       <Form tag="VP">чередники</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392808" lemma="Чередники" tag="NPINP">
+  <Paradigm pdgId="392808" lemma="Чередники" tag="NPINX">
     <Variant id="a" lemma="Чередники">
       <Form tag="NP">Чередники</Form>
       <Form tag="GP">Чередників</Form>
@@ -26591,7 +26591,7 @@
       <Form tag="PVP">черезступеневі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392841" lemma="Череївці" tag="NPINP">
+  <Paradigm pdgId="392841" lemma="Череївці" tag="NPINX">
     <Variant id="a" lemma="Череївці">
       <Form tag="NP">Череївці</Form>
       <Form tag="GP">Череївців</Form>
@@ -26829,7 +26829,7 @@
       <Form tag="VS">Черемухівко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392855" lemma="Черемушки" tag="NPINP">
+  <Paradigm pdgId="392855" lemma="Черемушки" tag="NPINX">
     <Variant id="a" lemma="Черемушки">
       <Form tag="NP">Черемушки</Form>
       <Form tag="GP">Черемушків</Form>
@@ -27451,7 +27451,7 @@
       <Form tag="PVP">черепашинецькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392885" lemma="Черепашинці" tag="NPINP">
+  <Paradigm pdgId="392885" lemma="Черепашинці" tag="NPINX">
     <Variant id="a" lemma="Черепашинці">
       <Form tag="NP">Черепашинці</Form>
       <Form tag="GP">Черепашинців</Form>
@@ -27584,7 +27584,7 @@
       <Form tag="VS">Черепинко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392893" lemma="Черепинки" tag="NPINP">
+  <Paradigm pdgId="392893" lemma="Черепинки" tag="NPINX">
     <Variant id="a" lemma="Черепинки">
       <Form tag="NP">Черепинки</Form>
       <Form tag="GP">Черепинок</Form>
@@ -27855,7 +27855,7 @@
       <Form tag="PVP">черепівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392904" lemma="Черепківці" tag="NPINP">
+  <Paradigm pdgId="392904" lemma="Черепківці" tag="NPINX">
     <Variant id="a" lemma="Черепківці">
       <Form tag="NP">Черепківці</Form>
       <Form tag="GP">Черепківців</Form>
@@ -28004,7 +28004,7 @@
       <Form tag="PVP">черепні</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392910" lemma="черепні" tag="NCANP">
+  <Paradigm pdgId="392910" lemma="черепні" tag="NCANX">
     <Variant id="a" lemma="черепні">
       <Form tag="NP">черепні</Form>
       <Form tag="GP">черепних</Form>
@@ -28437,7 +28437,7 @@
       <Form tag="VP">черешеньки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392931" lemma="Черешеньки" tag="NPINP">
+  <Paradigm pdgId="392931" lemma="Черешеньки" tag="NPINX">
     <Variant id="a" lemma="Черешеньки">
       <Form tag="NP">Черешеньки</Form>
       <Form tag="GP">Черешеньок</Form>
@@ -28691,7 +28691,7 @@
       <Form tag="VP">черідки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392945" lemma="Черіївці" tag="NPINP">
+  <Paradigm pdgId="392945" lemma="Черіївці" tag="NPINX">
     <Variant id="a" lemma="Черіївці">
       <Form tag="NP">Черіївці</Form>
       <Form tag="GP">Черієвець</Form>
@@ -28874,7 +28874,7 @@
       <Form tag="VP">черкасці</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392959" lemma="Черкаси" tag="NPINP">
+  <Paradigm pdgId="392959" lemma="Черкаси" tag="NPINX">
     <Variant id="a" lemma="Черкаси">
       <Form tag="NP">Черкаси</Form>
       <Form tag="GP">Черкас</Form>
@@ -29293,7 +29293,7 @@
       <Form tag="VS">Черкашина</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392981" lemma="Черкащани" tag="NPINP">
+  <Paradigm pdgId="392981" lemma="Черкащани" tag="NPINX">
     <Variant id="a" lemma="Черкащани">
       <Form tag="NP">Черкащани</Form>
       <Form tag="GP">Черкащан</Form>
@@ -29522,7 +29522,7 @@
       <Form tag="VP">черкеси</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="392996" lemma="Черкеси" tag="NPINP">
+  <Paradigm pdgId="392996" lemma="Черкеси" tag="NPINX">
     <Variant id="a" lemma="Черкеси">
       <Form tag="NP">Черкеси</Form>
       <Form tag="GP">Черкесів</Form>
@@ -29895,7 +29895,7 @@
       <Form tag="VS">черлідингу</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393019" lemma="Черляни" tag="NPINP">
+  <Paradigm pdgId="393019" lemma="Черляни" tag="NPINX">
     <Variant id="a" lemma="Черляни">
       <Form tag="NP">Черляни</Form>
       <Form tag="GP">Черлян</Form>
@@ -30241,7 +30241,7 @@
       <Form tag="PVP">чернелівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393036" lemma="Чернелівці" tag="NPINP">
+  <Paradigm pdgId="393036" lemma="Чернелівці" tag="NPINX">
     <Variant id="a" lemma="Чернелівці">
       <Form tag="NP">Чернелівці</Form>
       <Form tag="GP">Чернелівців</Form>
@@ -31038,7 +31038,7 @@
       <Form tag="PVP">чернихівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393077" lemma="Чернихівці" tag="NPINP">
+  <Paradigm pdgId="393077" lemma="Чернихівці" tag="NPINX">
     <Variant id="a" lemma="Чернихівці">
       <Form tag="NP">Чернихівці</Form>
       <Form tag="GP">Чернихівців</Form>
@@ -31307,7 +31307,7 @@
       <Form tag="VP">чернички</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393091" lemma="Чернички" tag="NPINP">
+  <Paradigm pdgId="393091" lemma="Чернички" tag="NPINX">
     <Variant id="a" lemma="Чернички">
       <Form tag="NP">Чернички</Form>
       <Form tag="GP">Черничок</Form>
@@ -31437,7 +31437,7 @@
       <Form tag="VS">Чернишенко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393101" lemma="Черниші" tag="NPINP">
+  <Paradigm pdgId="393101" lemma="Черниші" tag="NPINX">
     <Variant id="a" lemma="Черниші">
       <Form tag="NP">Черниші</Form>
       <Form tag="GP">Чернишів</Form>
@@ -31495,7 +31495,7 @@
       <Form tag="PVP">чернишівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393104" lemma="Чернишки" tag="NPINP">
+  <Paradigm pdgId="393104" lemma="Чернишки" tag="NPINX">
     <Variant id="a" lemma="Чернишки">
       <Form tag="NP">Чернишки</Form>
       <Form tag="GP">Чернишок</Form>
@@ -31679,7 +31679,7 @@
       <Form tag="PVP">чернівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393115" lemma="Чернівці" tag="NPINP">
+  <Paradigm pdgId="393115" lemma="Чернівці" tag="NPINX">
     <Variant id="a" lemma="Чернівці">
       <Form tag="NP">Чернівці</Form>
       <Form tag="GP">Чернівців</Form>
@@ -32684,7 +32684,7 @@
       <Form tag="VS">Черняк</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393180" lemma="Черняки" tag="NPINP">
+  <Paradigm pdgId="393180" lemma="Черняки" tag="NPINX">
     <Variant id="a" lemma="Черняки">
       <Form tag="NP">Черняки</Form>
       <Form tag="GP">Черняків</Form>
@@ -32870,7 +32870,7 @@
       <Form tag="PVP">чернятинські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393189" lemma="Чернятинці" tag="NPINP">
+  <Paradigm pdgId="393189" lemma="Чернятинці" tag="NPINX">
     <Variant id="a" lemma="Чернятинці">
       <Form tag="NP">Чернятинці</Form>
       <Form tag="GP">Чернятинців</Form>
@@ -33111,7 +33111,7 @@
       <Form tag="VP">Черняховські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393203" lemma="черокі" tag="NCANP">
+  <Paradigm pdgId="393203" lemma="черокі" tag="NCANX">
     <Variant id="a" lemma="черокі">
       <Form tag="NP">черокі</Form>
       <Form tag="GP">черокі</Form>
@@ -33555,7 +33555,7 @@
       <Form tag="PXP">черпнули</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393227" lemma="Черповоди" tag="NPINP">
+  <Paradigm pdgId="393227" lemma="Черповоди" tag="NPINX">
     <Variant id="a" lemma="Черповоди">
       <Form tag="NP">Черповоди</Form>
       <Form tag="GP">Черповодів</Form>
@@ -33644,7 +33644,7 @@
       <Form tag="VP">черсаки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393232" lemma="черсакові" tag="NCINP">
+  <Paradigm pdgId="393232" lemma="черсакові" tag="NCINX">
     <Variant id="a" lemma="черсакові">
       <Form tag="NP">черсакові</Form>
       <Form tag="GP">черсакових</Form>
@@ -34023,7 +34023,7 @@
       <Form tag="VS">Черхаво</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393257" lemma="Черці" tag="NPINP" meaning="колиш">
+  <Paradigm pdgId="393257" lemma="Черці" tag="NPINX" meaning="колиш">
     <Variant id="a" lemma="Черці">
       <Form tag="NP">Черці</Form>
       <Form tag="GP">Черців</Form>
@@ -34257,7 +34257,7 @@
       <Form tag="VS">Черчиллю</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393269" lemma="Черчичі" tag="NPINP">
+  <Paradigm pdgId="393269" lemma="Черчичі" tag="NPINX">
     <Variant id="a" lemma="Черчичі">
       <Form tag="NP">Черчичі</Form>
       <Form tag="GP">Черчичів</Form>
@@ -34675,7 +34675,7 @@
       <Form tag="PVP">чеснії</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393288" lemma="Чесники" tag="NPINP">
+  <Paradigm pdgId="393288" lemma="Чесники" tag="NPINX">
     <Variant id="a" lemma="Чесники">
       <Form tag="NP">Чесники</Form>
       <Form tag="GP">Чесників</Form>
@@ -35147,7 +35147,7 @@
       <Form tag="VS">Честерфілде</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393319" lemma="Честині" tag="NPINP">
+  <Paradigm pdgId="393319" lemma="Честині" tag="NPINX">
     <Variant id="a" lemma="Честині">
       <Form tag="NP">Честині</Form>
       <Form tag="GP">Честинь</Form>
@@ -35709,7 +35709,7 @@
       <Form tag="VP">четверні</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393343" lemma="четвернята" tag="NCANP">
+  <Paradigm pdgId="393343" lemma="четвернята" tag="NCANX">
     <Variant id="a" lemma="четвернята">
       <Form tag="NP">четвернята</Form>
       <Form tag="GP">четвернят</Form>
@@ -35762,7 +35762,7 @@
       <Form tag="PVP">четвероногі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393346" lemma="четвероногі" tag="NCANP">
+  <Paradigm pdgId="393346" lemma="четвероногі" tag="NCANX">
     <Variant id="a" lemma="четвероногі">
       <Form tag="NP">четвероногі</Form>
       <Form tag="GP">четвероногих</Form>
@@ -36637,7 +36637,7 @@
       <Form tag="PXP">чехвостили</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393396" lemma="Чехи" tag="NPINP">
+  <Paradigm pdgId="393396" lemma="Чехи" tag="NPINX">
     <Variant id="a" lemma="Чехи">
       <Form tag="NP">Чехи</Form>
       <Form tag="GP">Чехів</Form>
@@ -36737,7 +36737,7 @@
       <Form tag="PVP">чехівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393402" lemma="Чехівці" tag="NPINP">
+  <Paradigm pdgId="393402" lemma="Чехівці" tag="NPINX">
     <Variant id="a" lemma="Чехівці">
       <Form tag="NP">Чехівці</Form>
       <Form tag="GP">Чехівців</Form>
@@ -38139,7 +38139,7 @@
       <Form tag="VS">Чжу</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393489" lemma="чжуан" tag="NCANP" meaning="народ">
+  <Paradigm pdgId="393489" lemma="чжуан" tag="NCANX" meaning="народ">
     <Variant id="a" lemma="чжуан">
       <Form tag="NP">чжуан</Form>
       <Form tag="GP">чжуан</Form>
@@ -38600,7 +38600,7 @@
       <Form tag="VP">чижі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393522" lemma="Чижевичі" tag="NPINP">
+  <Paradigm pdgId="393522" lemma="Чижевичі" tag="NPINX">
     <Variant id="a" lemma="Чижевичі">
       <Form tag="NP">Чижевичі</Form>
       <Form tag="GP">Чижевичів</Form>
@@ -38837,7 +38837,7 @@
       <Form tag="VP">чижихи</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393536" lemma="Чижичі" tag="NPINP">
+  <Paradigm pdgId="393536" lemma="Чижичі" tag="NPINX">
     <Variant id="a" lemma="Чижичі">
       <Form tag="NP">Чижичі</Form>
       <Form tag="GP">Чижичів</Form>
@@ -38848,7 +38848,7 @@
       <Form tag="VP">Чижичі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393537" lemma="Чижі" tag="NPINP">
+  <Paradigm pdgId="393537" lemma="Чижі" tag="NPINX">
     <Variant id="a" lemma="Чижі">
       <Form tag="NP">Чижі</Form>
       <Form tag="GP">Чижів</Form>
@@ -38918,7 +38918,7 @@
       <Form tag="PVP">чижівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393541" lemma="Чижки" tag="NPINP">
+  <Paradigm pdgId="393541" lemma="Чижки" tag="NPINX">
     <Variant id="a" lemma="Чижки">
       <Form tag="NP">Чижки</Form>
       <Form tag="GP">Чижків</Form>
@@ -41554,7 +41554,7 @@
       <Form tag="VP">чипсети</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393719" lemma="чипси" tag="NCINP">
+  <Paradigm pdgId="393719" lemma="чипси" tag="NCINX">
     <Variant id="a" lemma="чипси">
       <Form tag="NP">чипси</Form>
       <Form tag="GP">чипсів</Form>
@@ -42870,7 +42870,7 @@
       <Form tag="VP">чистики</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393801" lemma="чистикоподібні" tag="NCANP">
+  <Paradigm pdgId="393801" lemma="чистикоподібні" tag="NCANX">
     <Variant id="a" lemma="чистикоподібні">
       <Form tag="NP">чистикоподібні</Form>
       <Form tag="GP">чистикоподібних</Form>
@@ -43694,7 +43694,7 @@
       <Form tag="PVP">чистокровніші</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393842" lemma="Чистопади" tag="NPINP">
+  <Paradigm pdgId="393842" lemma="Чистопади" tag="NPINX">
     <Variant id="a" lemma="Чистопади">
       <Form tag="NP">Чистопади</Form>
       <Form tag="GP">Чистопадів</Form>
@@ -44373,7 +44373,7 @@
       <Form tag="VP">чистунки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393871" lemma="чистунові" tag="NCANP">
+  <Paradigm pdgId="393871" lemma="чистунові" tag="NCANX">
     <Variant id="a" lemma="чистунові">
       <Form tag="NP">чистунові</Form>
       <Form tag="GP">чистунових</Form>
@@ -45935,7 +45935,7 @@
       <Form tag="VS">Чичук</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="393963" lemma="Чишки" tag="NPINP">
+  <Paradigm pdgId="393963" lemma="Чишки" tag="NPINX">
     <Variant id="a" lemma="Чишки">
       <Form tag="NP">Чишки</Form>
       <Form tag="GP">Чишок</Form>
@@ -46866,7 +46866,7 @@
       <Form tag="P">чіпко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394019" lemma="чіпкохвості" tag="NCANP">
+  <Paradigm pdgId="394019" lemma="чіпкохвості" tag="NCANX">
     <Variant id="a" lemma="чіпкохвості">
       <Form tag="NP">чіпкохвості</Form>
       <Form tag="GP">чіпкохвостих</Form>
@@ -47091,7 +47091,7 @@
       <Form tag="VP">чіпсети</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394033" lemma="чіпси" tag="NCINP">
+  <Paradigm pdgId="394033" lemma="чіпси" tag="NCINX">
     <Variant id="a" lemma="чіпси">
       <Form tag="NP">чіпси</Form>
       <Form tag="GP">чіпсів</Form>
@@ -47360,7 +47360,7 @@
       <Form tag="VP">чічки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394052" lemma="Чішки" tag="NPINP">
+  <Paradigm pdgId="394052" lemma="Чішки" tag="NPINX">
     <Variant id="a" lemma="Чішки">
       <Form tag="NP">Чішки</Form>
       <Form tag="GP">Чішок</Form>
@@ -47665,7 +47665,7 @@
       <Form tag="PVP">членисті</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394069" lemma="членисті" tag="NCANP">
+  <Paradigm pdgId="394069" lemma="членисті" tag="NCANX">
     <Variant id="a" lemma="членисті">
       <Form tag="NP">членисті</Form>
       <Form tag="GP">членистих</Form>
@@ -47725,7 +47725,7 @@
       <Form tag="PVP">членистоногі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394072" lemma="членистоногі" tag="NCANP">
+  <Paradigm pdgId="394072" lemma="членистоногі" tag="NCANX">
     <Variant id="a" lemma="членистоногі">
       <Form tag="NP">членистоногі</Form>
       <Form tag="GP">членистоногих</Form>
@@ -49128,7 +49128,7 @@
       <Form tag="VP">чоботарі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394171" lemma="Чоботарі" tag="NPINP">
+  <Paradigm pdgId="394171" lemma="Чоботарі" tag="NPINX">
     <Variant id="a" lemma="Чоботарі">
       <Form tag="NP">Чоботарі</Form>
       <Form tag="GP">Чоботарів</Form>
@@ -49318,7 +49318,7 @@
       <Form tag="VP">чоботища</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394184" lemma="чоботята" tag="NCINP">
+  <Paradigm pdgId="394184" lemma="чоботята" tag="NCINX">
     <Variant id="a" lemma="чоботята">
       <Form tag="NP">чоботята</Form>
       <Form tag="GP">чоботят</Form>
@@ -49329,7 +49329,7 @@
       <Form tag="VP">чоботята</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394185" lemma="Чобручі" tag="NPINP" meaning="Нові Чобручі">
+  <Paradigm pdgId="394185" lemma="Чобручі" tag="NPINX" meaning="Нові Чобручі">
     <Variant id="a" lemma="Чобручі">
       <Form tag="NP">Чобручі</Form>
       <Form tag="GP">Чобручів</Form>
@@ -50609,7 +50609,7 @@
       <Form tag="PVP">чоласті</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394262" lemma="Чолгині" tag="NPINP">
+  <Paradigm pdgId="394262" lemma="Чолгині" tag="NPINX">
     <Variant id="a" lemma="Чолгині">
       <Form tag="NP">Чолгині</Form>
       <Form tag="GP">Чолгинь</Form>
@@ -51674,7 +51674,7 @@
       <Form tag="VP">чопики</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394323" lemma="Чопилки" tag="NPINP">
+  <Paradigm pdgId="394323" lemma="Чопилки" tag="NPINX">
     <Variant id="a" lemma="Чопилки">
       <Form tag="NP">Чопилки</Form>
       <Form tag="GP">Чопилків</Form>
@@ -51685,7 +51685,7 @@
       <Form tag="VP">Чопилки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394324" lemma="Чопівці" tag="NPINP">
+  <Paradigm pdgId="394324" lemma="Чопівці" tag="NPINX">
     <Variant id="a" lemma="Чопівці">
       <Form tag="NP">Чопівці</Form>
       <Form tag="GP">Чопівців</Form>
@@ -51732,7 +51732,7 @@
       <Form tag="PVP">чопові</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394326" lemma="Чоповичі" tag="NPINP">
+  <Paradigm pdgId="394326" lemma="Чоповичі" tag="NPINX">
     <Variant id="a" lemma="Чоповичі">
       <Form tag="NP">Чоповичі</Form>
       <Form tag="GP">Чоповичів</Form>
@@ -52248,7 +52248,7 @@
       <Form tag="VP">чорнетки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394356" lemma="Чорниводи" tag="NPINP">
+  <Paradigm pdgId="394356" lemma="Чорниводи" tag="NPINX">
     <Variant id="a" lemma="Чорниводи">
       <Form tag="NP">Чорниводи</Form>
       <Form tag="GP">Чорнивод</Form>
@@ -52801,7 +52801,7 @@
       <Form tag="VP">чорниші</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394379" lemma="чорні" tag="NCINP" meaning="шахові фігури">
+  <Paradigm pdgId="394379" lemma="чорні" tag="NCINX" meaning="шахові фігури">
     <Variant id="a" lemma="чорні">
       <Form tag="NP">чорні</Form>
       <Form tag="GP">чорних</Form>
@@ -52859,7 +52859,7 @@
       <Form tag="PVP">чорнівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394384" lemma="Чорнії" tag="NPINP">
+  <Paradigm pdgId="394384" lemma="Чорнії" tag="NPINX">
     <Variant id="a" lemma="Чорнії">
       <Form tag="NP">Чорнії</Form>
       <Form tag="GP">Чорніїв</Form>
@@ -53149,7 +53149,7 @@
       <Form tag="P">чорно</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394402" lemma="Чорнобаї" tag="NPINP">
+  <Paradigm pdgId="394402" lemma="Чорнобаї" tag="NPINX">
     <Variant id="a" lemma="Чорнобаї">
       <Form tag="NP">Чорнобаї</Form>
       <Form tag="GP">Чорнобаїв</Form>
@@ -54620,7 +54620,7 @@
       <Form tag="PVP">чорногорські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394473" lemma="Чорногорці" tag="NPINP">
+  <Paradigm pdgId="394473" lemma="Чорногорці" tag="NPINX">
     <Variant id="a" lemma="Чорногорці">
       <Form tag="NP">Чорногорці</Form>
       <Form tag="GP">Чорногорців</Form>
@@ -54812,7 +54812,7 @@
       <Form tag="VP">чорногузенята</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394483" lemma="Чорногузи" tag="NPINP">
+  <Paradigm pdgId="394483" lemma="Чорногузи" tag="NPINX">
     <Variant id="a" lemma="Чорногузи">
       <Form tag="NP">Чорногузи</Form>
       <Form tag="GP">Чорногузів</Form>
@@ -55400,7 +55400,7 @@
       <Form tag="PVP">чорнокінецько-волянські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394507" lemma="Чорнокінці" tag="NPINP" meaning="Малі/Великі Чорнокінці">
+  <Paradigm pdgId="394507" lemma="Чорнокінці" tag="NPINX" meaning="Малі/Великі Чорнокінці">
     <Variant id="a" lemma="Чорнокінці">
       <Form tag="NP">Чорнокінці</Form>
       <Form tag="GP">Чорнокінців</Form>
@@ -55567,7 +55567,7 @@
       <Form tag="VP">чорнокнижниці</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394515" lemma="Чорнокозинці" tag="NPINP">
+  <Paradigm pdgId="394515" lemma="Чорнокозинці" tag="NPINX">
     <Variant id="a" lemma="Чорнокозинці">
       <Form tag="NP">Чорнокозинці</Form>
       <Form tag="GP">Чорнокозинців</Form>
@@ -55722,7 +55722,7 @@
       <Form tag="PVP">чорнокрилі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394521" lemma="Чорнокунці" tag="NPINP">
+  <Paradigm pdgId="394521" lemma="Чорнокунці" tag="NPINX">
     <Variant id="a" lemma="Чорнокунці">
       <Form tag="NP">Чорнокунці</Form>
       <Form tag="GP">Чорнокунців</Form>
@@ -55769,7 +55769,7 @@
       <Form tag="PVP">чорнолакові</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394523" lemma="Чорнолізці" tag="NPINP">
+  <Paradigm pdgId="394523" lemma="Чорнолізці" tag="NPINX">
     <Variant id="a" lemma="Чорнолізці">
       <Form tag="NP">Чорнолізці</Form>
       <Form tag="GP">Чорнолізців</Form>
@@ -56762,7 +56762,7 @@
       <Form tag="VS">Чорноплатове</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394568" lemma="Чорноплеси" tag="NPINP">
+  <Paradigm pdgId="394568" lemma="Чорноплеси" tag="NPINX">
     <Variant id="a" lemma="Чорноплеси">
       <Form tag="NP">Чорноплеси</Form>
       <Form tag="GP">Чорноплес</Form>
@@ -57826,7 +57826,7 @@
       <Form tag="PVP">чорнотицькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394608" lemma="Чорнотичі" tag="NPINP">
+  <Paradigm pdgId="394608" lemma="Чорнотичі" tag="NPINX">
     <Variant id="a" lemma="Чорнотичі">
       <Form tag="NP">Чорнотичі</Form>
       <Form tag="GP">Чорнотичів</Form>
@@ -58422,7 +58422,7 @@
       <Form tag="VP">чорнухи</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394632" lemma="Чорнухи" tag="NPINP">
+  <Paradigm pdgId="394632" lemma="Чорнухи" tag="NPINX">
     <Variant id="a" lemma="Чорнухи">
       <Form tag="NP">Чорнухи</Form>
       <Form tag="GP">Чорнух</Form>
@@ -58604,7 +58604,7 @@
       <Form tag="PVP">чорнушовицькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394640" lemma="Чорнушовичі" tag="NPINP">
+  <Paradigm pdgId="394640" lemma="Чорнушовичі" tag="NPINX">
     <Variant id="a" lemma="Чорнушовичі">
       <Form tag="NP">Чорнушовичі</Form>
       <Form tag="GP">Чорнушовичів</Form>
@@ -59010,7 +59010,7 @@
       <Form tag="VP">чорняки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394658" lemma="Чорняки" tag="NPINP">
+  <Paradigm pdgId="394658" lemma="Чорняки" tag="NPINX">
     <Variant id="a" lemma="Чорняки">
       <Form tag="NP">Чорняки</Form>
       <Form tag="GP">Чорняків</Form>
@@ -60287,7 +60287,7 @@
       <Form tag="VP">чотарі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394735" lemma="Чотирбоки" tag="NPINP">
+  <Paradigm pdgId="394735" lemma="Чотирбоки" tag="NPINX">
     <Variant id="a" lemma="Чотирбоки">
       <Form tag="NP">Чотирбоки</Form>
       <Form tag="GP">Чотирбоків</Form>
@@ -62741,7 +62741,7 @@
       <Form tag="PVP">чотиризубцеві</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="394817" lemma="чотиризяброві" tag="NCANP">
+  <Paradigm pdgId="394817" lemma="чотиризяброві" tag="NCANX">
     <Variant id="a" lemma="чотиризяброві">
       <Form tag="NP">чотиризяброві</Form>
       <Form tag="GP">чотиризябрових</Form>
@@ -70948,7 +70948,7 @@
       <Form tag="PVP">чотирьох'ярусні</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="395082" lemma="чотки" tag="NCINP">
+  <Paradigm pdgId="395082" lemma="чотки" tag="NCINX">
     <Variant id="a" lemma="чотки">
       <Form tag="NP">чотки</Form>
       <Form tag="GP">чоток</Form>
@@ -72100,7 +72100,7 @@
       <Form tag="PVP">чубинські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="395151" lemma="Чубинці" tag="NPINP">
+  <Paradigm pdgId="395151" lemma="Чубинці" tag="NPINX">
     <Variant id="a" lemma="Чубинці">
       <Form tag="NP">Чубинці</Form>
       <Form tag="GP">Чубинців</Form>
@@ -72993,7 +72993,7 @@
       <Form tag="VP">чугайстири</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="395207" lemma="Чугалі" tag="NPINP">
+  <Paradigm pdgId="395207" lemma="Чугалі" tag="NPINX">
     <Variant id="a" lemma="Чугалі">
       <Form tag="NP">Чугалі</Form>
       <Form tag="GP">Чугалів</Form>
@@ -73550,7 +73550,7 @@
       <Form tag="VP">чудачки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="395235" lemma="Чудви" tag="NPINP">
+  <Paradigm pdgId="395235" lemma="Чудви" tag="NPINX">
     <Variant id="a" lemma="Чудви">
       <Form tag="NP">Чудви</Form>
       <Form tag="GP">Чудвів</Form>
@@ -74040,7 +74040,7 @@
       <Form tag="VS">Чудине</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="395260" lemma="Чудинівці" tag="NPINP">
+  <Paradigm pdgId="395260" lemma="Чудинівці" tag="NPINX">
     <Variant id="a" lemma="Чудинівці">
       <Form tag="NP">Чудинівці</Form>
       <Form tag="GP">Чудинівців</Form>
@@ -74305,7 +74305,7 @@
       <Form tag="PVP">чуднівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="395274" lemma="Чуднівці" tag="NPINP">
+  <Paradigm pdgId="395274" lemma="Чуднівці" tag="NPINX">
     <Variant id="a" lemma="Чуднівці">
       <Form tag="NP">Чуднівці</Form>
       <Form tag="GP">Чуднівців</Form>
@@ -77245,7 +77245,7 @@
       <Form tag="VS">Чулкова</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="395427" lemma="Чуловичі" tag="NPINP">
+  <Paradigm pdgId="395427" lemma="Чуловичі" tag="NPINX">
     <Variant id="a" lemma="Чуловичі">
       <Form tag="NP">Чуловичі</Form>
       <Form tag="GP">Чуловичів</Form>
@@ -77412,7 +77412,7 @@
       <Form tag="VP">чумаки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="395439" lemma="Чумаки" tag="NPINP">
+  <Paradigm pdgId="395439" lemma="Чумаки" tag="NPINX">
     <Variant id="a" lemma="Чумаки">
       <Form tag="NP">Чумаки</Form>
       <Form tag="GP">Чумаків</Form>
@@ -77572,7 +77572,7 @@
       <Form tag="PXP">чумакували</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="395449" lemma="Чумалі" tag="NPINP">
+  <Paradigm pdgId="395449" lemma="Чумалі" tag="NPINX">
     <Variant id="a" lemma="Чумалі">
       <Form tag="NP">Чумалі</Form>
       <Form tag="GP">Чумалів</Form>
@@ -79853,7 +79853,7 @@
       <Form tag="VS">чухачко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="395587" lemma="Чухелі" tag="NPINP">
+  <Paradigm pdgId="395587" lemma="Чухелі" tag="NPINX">
     <Variant id="a" lemma="Чухелі">
       <Form tag="NP">Чухелі</Form>
       <Form tag="GP">Чухелів</Form>
@@ -80380,7 +80380,7 @@
       <Form tag="LS">Чучману</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="395626" lemma="Чучмани" tag="NPINP">
+  <Paradigm pdgId="395626" lemma="Чучмани" tag="NPINX">
     <Variant id="a" lemma="Чучмани">
       <Form tag="NP">Чучмани</Form>
       <Form tag="GP">Чучманів</Form>

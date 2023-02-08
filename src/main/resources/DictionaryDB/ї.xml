@@ -11,7 +11,7 @@
       <Form tag="VS">Ївго</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="144781" lemma="Ївженки" tag="NPINP">
+  <Paradigm pdgId="144781" lemma="Ївженки" tag="NPINX">
     <Variant id="a" lemma="Ївженки">
       <Form tag="NP">Ївженки</Form>
       <Form tag="GP">Ївженків</Form>
@@ -1030,7 +1030,7 @@
       <Form tag="VS">їжачнику</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="144836" lemma="їжачоголівкові" tag="NCANP">
+  <Paradigm pdgId="144836" lemma="їжачоголівкові" tag="NCANX">
     <Variant id="a" lemma="їжачоголівкові">
       <Form tag="NP">їжачоголівкові</Form>
       <Form tag="GP">їжачоголівкових</Form>
@@ -1192,7 +1192,7 @@
       <Form tag="PVP">їжівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="144845" lemma="Їжівці" tag="NPINP">
+  <Paradigm pdgId="144845" lemma="Їжівці" tag="NPINX">
     <Variant id="a" lemma="Їжівці">
       <Form tag="NP">Їжівці</Form>
       <Form tag="GP">Їжівців</Form>

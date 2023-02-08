@@ -278,7 +278,7 @@
       <Form tag="PVP">жабинські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108858" lemma="Жабинці" tag="NPINP">
+  <Paradigm pdgId="108858" lemma="Жабинці" tag="NPINX">
     <Variant id="a" lemma="Жабинці">
       <Form tag="NP">Жабинці</Form>
       <Form tag="GP">Жабинців</Form>
@@ -398,7 +398,7 @@
       <Form tag="VP">жабки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108865" lemma="Жабки" tag="NPINP">
+  <Paradigm pdgId="108865" lemma="Жабки" tag="NPINX">
     <Variant id="a" lemma="Жабки">
       <Form tag="NP">Жабки</Form>
       <Form tag="GP">Жабок</Form>
@@ -657,7 +657,7 @@
       <Form tag="VS">Жабокричко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108880" lemma="Жабокруки" tag="NPINP">
+  <Paradigm pdgId="108880" lemma="Жабокруки" tag="NPINX">
     <Variant id="a" lemma="Жабокруки">
       <Form tag="NP">Жабокруки</Form>
       <Form tag="GP">Жабокруків</Form>
@@ -1542,7 +1542,7 @@
       <Form tag="VS">Жадане</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108935" lemma="Жадани" tag="NPINP">
+  <Paradigm pdgId="108935" lemma="Жадани" tag="NPINX">
     <Variant id="a" lemma="Жадани">
       <Form tag="NP">Жадани</Form>
       <Form tag="GP">Жаданів</Form>
@@ -2515,7 +2515,7 @@
       <Form tag="VS">Жадсон</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108982" lemma="Жадьки" tag="NPINP">
+  <Paradigm pdgId="108982" lemma="Жадьки" tag="NPINX">
     <Variant id="a" lemma="Жадьки">
       <Form tag="NP">Жадьки</Form>
       <Form tag="GP">Жадьків</Form>
@@ -2706,7 +2706,7 @@
       <Form tag="VP">жайворони</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108991" lemma="Жайворонки" tag="NPINP">
+  <Paradigm pdgId="108991" lemma="Жайворонки" tag="NPINX">
     <Variant id="a" lemma="Жайворонки">
       <Form tag="NP">Жайворонки</Form>
       <Form tag="GP">Жайворонків</Form>
@@ -2789,7 +2789,7 @@
       <Form tag="PVP">жайворонкові</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108994" lemma="жайворонкові" tag="NCANP">
+  <Paradigm pdgId="108994" lemma="жайворонкові" tag="NCANX">
     <Variant id="a" lemma="жайворонкові">
       <Form tag="NP">жайворонкові</Form>
       <Form tag="GP">жайворонкових</Form>
@@ -3475,7 +3475,7 @@
       <Form tag="VP">жалення</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109031" lemma="Жалибори" tag="NPINP">
+  <Paradigm pdgId="109031" lemma="Жалибори" tag="NPINX">
     <Variant id="a" lemma="Жалибори">
       <Form tag="NP">Жалибори</Form>
       <Form tag="GP">Жалиборів</Form>
@@ -4557,7 +4557,7 @@
       <Form tag="PVP">жалосні</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109093" lemma="жалощі" tag="NCINP">
+  <Paradigm pdgId="109093" lemma="жалощі" tag="NCINX">
     <Variant id="a" lemma="жалощі">
       <Form tag="NP">жалощі</Form>
       <Form tag="GP">жалощів</Form>
@@ -4883,7 +4883,7 @@
       <Form tag="P">жалюгідно</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109115" lemma="жалюзі" tag="NCINP">
+  <Paradigm pdgId="109115" lemma="жалюзі" tag="NCINX">
     <Variant id="a" lemma="жалюзі">
       <Form tag="NP">жалюзі</Form>
       <Form tag="GP">жалюзів</Form>
@@ -6654,7 +6654,7 @@
       <Form tag="VS">жарення</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109202" lemma="Жари" tag="NPINP">
+  <Paradigm pdgId="109202" lemma="Жари" tag="NPINX">
     <Variant id="a" lemma="Жари">
       <Form tag="NP">Жари</Form>
       <Form tag="GP">Жарів</Form>
@@ -7231,7 +7231,7 @@
       <Form tag="PVP">жарничні</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109235" lemma="жарнівки" tag="NCINP">
+  <Paradigm pdgId="109235" lemma="жарнівки" tag="NCINX">
     <Variant id="a" lemma="жарнівки">
       <Form tag="NP">жарнівки</Form>
       <Form tag="GP">жарнівок</Form>
@@ -8195,7 +8195,7 @@
       <Form tag="VP">жартуни</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109279" lemma="жартушки" tag="NCINP">
+  <Paradigm pdgId="109279" lemma="жартушки" tag="NCINX">
     <Variant id="a" lemma="жартушки">
       <Form tag="NP">жартушки</Form>
       <Form tag="GP">жартушок</Form>
@@ -9549,7 +9549,7 @@
       <Form tag="PVP">жашковицькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109348" lemma="Жашковичі" tag="NPINP">
+  <Paradigm pdgId="109348" lemma="Жашковичі" tag="NPINX">
     <Variant id="a" lemma="Жашковичі">
       <Form tag="NP">Жашковичі</Form>
       <Form tag="GP">Жашковичів</Form>
@@ -9711,7 +9711,7 @@
       <Form tag="PVP">жборівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109355" lemma="Жборівці" tag="NPINP">
+  <Paradigm pdgId="109355" lemma="Жборівці" tag="NPINX">
     <Variant id="a" lemma="Жборівці">
       <Form tag="NP">Жборівці</Form>
       <Form tag="GP">Жборівців</Form>
@@ -10443,7 +10443,7 @@
       <Form tag="LS">Ждану</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109414" lemma="Ждани" tag="NPINP">
+  <Paradigm pdgId="109414" lemma="Ждани" tag="NPINX">
     <Variant id="a" lemma="Ждани">
       <Form tag="NP">Ждани</Form>
       <Form tag="GP">Жданів</Form>
@@ -10490,7 +10490,7 @@
       <Form tag="PVP">ждані</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109416" lemma="жданики" tag="NCINP">
+  <Paradigm pdgId="109416" lemma="жданики" tag="NCINX">
     <Variant id="a" lemma="жданики">
       <Form tag="NP">жданики</Form>
       <Form tag="GP">ждаників</Form>
@@ -10501,7 +10501,7 @@
       <Form tag="VP">жданики</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109417" lemma="ждані" tag="NCANP">
+  <Paradigm pdgId="109417" lemma="ждані" tag="NCANX">
     <Variant id="a" lemma="ждані">
       <Form tag="NP">ждані</Form>
       <Form tag="GP">жданих</Form>
@@ -10572,7 +10572,7 @@
       <Form tag="PVP">жданівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109421" lemma="Жданки" tag="NPINP">
+  <Paradigm pdgId="109421" lemma="Жданки" tag="NPINX">
     <Variant id="a" lemma="Жданки">
       <Form tag="NP">Жданки</Form>
       <Form tag="GP">Жданків</Form>
@@ -10583,7 +10583,7 @@
       <Form tag="VP">Жданки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109422" lemma="жданки" tag="NCINP">
+  <Paradigm pdgId="109422" lemma="жданки" tag="NCINX">
     <Variant id="a" lemma="жданки">
       <Form tag="NP">жданки</Form>
       <Form tag="GP">жданків</Form>
@@ -11438,7 +11438,7 @@
       <Form tag="PVP">жебраючі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109474" lemma="жебри" tag="NCINP">
+  <Paradigm pdgId="109474" lemma="жебри" tag="NCINX">
     <Variant id="a" lemma="жебри">
       <Form tag="NP">жебри</Form>
       <Form tag="GP">жебрів</Form>
@@ -13912,7 +13912,7 @@
       <Form tag="PVP">желятинові</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109612" lemma="жемайти" tag="NCANP">
+  <Paradigm pdgId="109612" lemma="жемайти" tag="NCANX">
     <Variant id="a" lemma="жемайти">
       <Form tag="NP">жемайти</Form>
       <Form tag="GP">жемайтів</Form>
@@ -13960,7 +13960,7 @@
       <Form tag="PVP">жемелинецькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109614" lemma="Жемелинці" tag="NPINP">
+  <Paradigm pdgId="109614" lemma="Жемелинці" tag="NPINX">
     <Variant id="a" lemma="Жемелинці">
       <Form tag="NP">Жемелинці</Form>
       <Form tag="GP">Жемелинців</Form>
@@ -14584,7 +14584,7 @@
       <Form tag="PVP">женишківські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109647" lemma="Женишківці" tag="NPINP">
+  <Paradigm pdgId="109647" lemma="Женишківці" tag="NPINX">
     <Variant id="a" lemma="Женишківці">
       <Form tag="NP">Женишківці</Form>
       <Form tag="GP">Женишківців</Form>
@@ -15281,7 +15281,7 @@
       <Form tag="VS">Жербицький</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109686" lemma="Жерделі" tag="NPINP">
+  <Paradigm pdgId="109686" lemma="Жерделі" tag="NPINX">
     <Variant id="a" lemma="Жерделі">
       <Form tag="NP">Жерделі</Form>
       <Form tag="GP">Жерделів</Form>
@@ -16103,7 +16103,7 @@
       <Form tag="PXP">жеребилися</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109727" lemma="Жеребки" tag="NPINP">
+  <Paradigm pdgId="109727" lemma="Жеребки" tag="NPINX">
     <Variant id="a" lemma="Жеребки">
       <Form tag="NP">Жеребки</Form>
       <Form tag="GP">Жеребків</Form>
@@ -16523,7 +16523,7 @@
       <Form tag="VP">жереб'ята</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109754" lemma="Жереб'янки" tag="NPINP">
+  <Paradigm pdgId="109754" lemma="Жереб'янки" tag="NPINX">
     <Variant id="a" lemma="Жереб'янки">
       <Form tag="NP">Жереб'янки</Form>
       <Form tag="GP">Жереб'янків</Form>
@@ -16690,7 +16690,7 @@
       <Form tag="VS">Жеревпілля</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109763" lemma="Жеревці" tag="NPINP">
+  <Paradigm pdgId="109763" lemma="Жеревці" tag="NPINX">
     <Variant id="a" lemma="Жеревці">
       <Form tag="NP">Жеревці</Form>
       <Form tag="GP">Жеревців</Form>
@@ -17647,7 +17647,7 @@
       <Form tag="VP">жертвопринесення</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="109812" lemma="жертвоприносини" tag="NCINP">
+  <Paradigm pdgId="109812" lemma="жертвоприносини" tag="NCINX">
     <Variant id="a" lemma="жертвоприносини">
       <Form tag="NP">жертвоприносини</Form>
       <Form tag="GP">жертвоприносин</Form>
@@ -22506,7 +22506,7 @@
       <Form tag="VS">жидику</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110075" lemma="Жидиничі" tag="NPINP">
+  <Paradigm pdgId="110075" lemma="Жидиничі" tag="NPINX">
     <Variant id="a" lemma="Жидиничі">
       <Form tag="NP">Жидиничі</Form>
       <Form tag="GP">Жидиничів</Form>
@@ -23321,7 +23321,7 @@
       <Form tag="LS">Жижці</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110119" lemma="жижки" tag="NCINP">
+  <Paradigm pdgId="110119" lemma="жижки" tag="NCINX">
     <Variant id="a" lemma="жижки">
       <Form tag="NP">жижки</Form>
       <Form tag="GP">жижок</Form>
@@ -23416,7 +23416,7 @@
       <Form tag="VS">Жижкун</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110125" lemma="Жижниківці" tag="NPINP">
+  <Paradigm pdgId="110125" lemma="Жижниківці" tag="NPINX">
     <Variant id="a" lemma="Жижниківці">
       <Form tag="NP">Жижниківці</Form>
       <Form tag="GP">Жижниківців</Form>
@@ -24219,7 +24219,7 @@
       <Form tag="PVP">жилинські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110170" lemma="Жилинці" tag="NPINP">
+  <Paradigm pdgId="110170" lemma="Жилинці" tag="NPINX">
     <Variant id="a" lemma="Жилинці">
       <Form tag="NP">Жилинці</Form>
       <Form tag="GP">Жилинців</Form>
@@ -25558,7 +25558,7 @@
       <Form tag="VS">Жириновський</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110242" lemma="Жиричі" tag="NPINP">
+  <Paradigm pdgId="110242" lemma="Жиричі" tag="NPINX">
     <Variant id="a" lemma="Жиричі">
       <Form tag="NP">Жиричі</Form>
       <Form tag="GP">Жиричів</Form>
@@ -25687,7 +25687,7 @@
       <Form tag="PXP">жиріли</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110250" lemma="Жирки" tag="NPINP">
+  <Paradigm pdgId="110250" lemma="Жирки" tag="NPINX">
     <Variant id="a" lemma="Жирки">
       <Form tag="NP">Жирки</Form>
       <Form tag="GP">Жирків</Form>
@@ -27629,7 +27629,7 @@
       <Form tag="VS">Жискаре</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110341" lemma="жита" tag="NCINP">
+  <Paradigm pdgId="110341" lemma="жита" tag="NCINX">
     <Variant id="a" lemma="жита">
       <Form tag="NP">жита</Form>
       <Form tag="GP">житів</Form>
@@ -27640,7 +27640,7 @@
       <Form tag="VP">жита</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110342" lemma="Житані" tag="NPINP">
+  <Paradigm pdgId="110342" lemma="Житані" tag="NPINX">
     <Variant id="a" lemma="Житані">
       <Form tag="NP">Житані</Form>
       <Form tag="GP">Житанів</Form>
@@ -27988,7 +27988,7 @@
       <Form tag="VS">Житине</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110362" lemma="Житинці" tag="NPINP">
+  <Paradigm pdgId="110362" lemma="Житинці" tag="NPINX">
     <Variant id="a" lemma="Житинці">
       <Form tag="NP">Житинці</Form>
       <Form tag="GP">Житинців</Form>
@@ -28739,7 +28739,7 @@
       <Form tag="VP">житлокомунгоспи</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110392" lemma="житлокомунпослуги" tag="NCINP">
+  <Paradigm pdgId="110392" lemma="житлокомунпослуги" tag="NCINX">
     <Variant id="a" lemma="житлокомунпослуги">
       <Form tag="NP">житлокомунпослуги</Form>
       <Form tag="GP">житлокомунпослуг</Form>
@@ -28980,7 +28980,7 @@
       <Form tag="VP">житники</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110405" lemma="Житники" tag="NPINP">
+  <Paradigm pdgId="110405" lemma="Житники" tag="NPINX">
     <Variant id="a" lemma="Житники">
       <Form tag="NP">Житники</Form>
       <Form tag="GP">Житників</Form>
@@ -31399,7 +31399,7 @@
       <Form tag="PVP">жищинецькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110510" lemma="Жищинці" tag="NPINP">
+  <Paradigm pdgId="110510" lemma="Жищинці" tag="NPINX">
     <Variant id="a" lemma="Жищинці">
       <Form tag="NP">Жищинці</Form>
       <Form tag="GP">Жищинців</Form>
@@ -32186,7 +32186,7 @@
       <Form tag="VP">ЖКП</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110547" lemma="ЖК-послуги" tag="NCINP">
+  <Paradigm pdgId="110547" lemma="ЖК-послуги" tag="NCINX">
     <Variant id="a" lemma="ЖК-послуги">
       <Form tag="NP">ЖК-послуги</Form>
       <Form tag="GP">ЖК-послуг</Form>
@@ -32846,7 +32846,7 @@
       <Form tag="PXP">жмакалися</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110588" lemma="жмаки" tag="NCINP">
+  <Paradigm pdgId="110588" lemma="жмаки" tag="NCINX">
     <Variant id="a" lemma="жмаки">
       <Form tag="NP">жмаки</Form>
       <Form tag="GP">жмаків</Form>
@@ -33150,7 +33150,7 @@
       <Form tag="VS">жмиху</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110608" lemma="жмихи" tag="NCINP">
+  <Paradigm pdgId="110608" lemma="жмихи" tag="NCINX">
     <Variant id="a" lemma="жмихи">
       <Form tag="NP">жмихи</Form>
       <Form tag="GP">жмихів</Form>
@@ -33435,7 +33435,7 @@
       <Form tag="VS">Жмуре</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110628" lemma="жмури" tag="NCINP">
+  <Paradigm pdgId="110628" lemma="жмури" tag="NCINX">
     <Variant id="a" lemma="жмури">
       <Form tag="NP">жмури</Form>
       <Form tag="GP">жмурів</Form>
@@ -33502,7 +33502,7 @@
       <Form tag="PXP">жмурилися</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110633" lemma="жмурки" tag="NCINP" meaning="xv2">
+  <Paradigm pdgId="110633" lemma="жмурки" tag="NCINX" meaning="xv2">
     <Variant id="a" lemma="жмурки">
       <Form tag="NP">жмурки</Form>
       <Form tag="GP">жмурок</Form>
@@ -33824,7 +33824,7 @@
       <Form tag="PVP">жниборідські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110651" lemma="Жнибороди" tag="NPINP">
+  <Paradigm pdgId="110651" lemma="Жнибороди" tag="NPINX">
     <Variant id="a" lemma="Жнибороди">
       <Form tag="NP">Жнибороди</Form>
       <Form tag="GP">Жнибород</Form>
@@ -33871,7 +33871,7 @@
       <Form tag="PVP">жнибородські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110653" lemma="жнива" tag="NCINP">
+  <Paradigm pdgId="110653" lemma="жнива" tag="NCINX">
     <Variant id="a" lemma="жнива">
       <Form tag="NP">жнива</Form>
       <Form tag="GP">жнив</Form>
@@ -34479,7 +34479,7 @@
       <Form tag="VS">Жовкво</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110684" lemma="Жовкині" tag="NPINP">
+  <Paradigm pdgId="110684" lemma="Жовкині" tag="NPINX">
     <Variant id="a" lemma="Жовкині">
       <Form tag="NP">Жовкині</Form>
       <Form tag="GP">Жовкинь</Form>
@@ -35502,7 +35502,7 @@
       <Form tag="PVP">жовтанецькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110733" lemma="Жовтанці" tag="NPINP">
+  <Paradigm pdgId="110733" lemma="Жовтанці" tag="NPINX">
     <Variant id="a" lemma="Жовтанці">
       <Form tag="NP">Жовтанці</Form>
       <Form tag="GP">Жовтанців</Form>
@@ -35828,7 +35828,7 @@
       <Form tag="PVP">жовтецеві</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110746" lemma="жовтецеві" tag="NCANP">
+  <Paradigm pdgId="110746" lemma="жовтецеві" tag="NCANX">
     <Variant id="a" lemma="жовтецеві">
       <Form tag="NP">жовтецеві</Form>
       <Form tag="GP">жовтецевих</Form>
@@ -37495,7 +37495,7 @@
       <Form tag="PVP">жовтолиці</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110816" lemma="жовтолиці" tag="NCANP">
+  <Paradigm pdgId="110816" lemma="жовтолиці" tag="NCANX">
     <Variant id="a" lemma="жовтолиці">
       <Form tag="NP">жовтолиці</Form>
       <Form tag="GP">жовтолицих</Form>
@@ -38595,7 +38595,7 @@
       <Form tag="PVP">жовтцеві</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110856" lemma="жовтцеві" tag="NCANP">
+  <Paradigm pdgId="110856" lemma="жовтцеві" tag="NCANX">
     <Variant id="a" lemma="жовтцеві">
       <Form tag="NP">жовтцеві</Form>
       <Form tag="GP">жовтцевих</Form>
@@ -39699,7 +39699,7 @@
       <Form tag="VS">Жолдак</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110906" lemma="Жолдаки" tag="NPINP">
+  <Paradigm pdgId="110906" lemma="Жолдаки" tag="NPINX">
     <Variant id="a" lemma="Жолдаки">
       <Form tag="NP">Жолдаки</Form>
       <Form tag="GP">Жолдаків</Form>
@@ -39941,7 +39941,7 @@
       <Form tag="VP">жолобці</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110920" lemma="Жолоби" tag="NPINP">
+  <Paradigm pdgId="110920" lemma="Жолоби" tag="NPINX">
     <Variant id="a" lemma="Жолоби">
       <Form tag="NP">Жолоби</Form>
       <Form tag="GP">Жолобів</Form>
@@ -40064,7 +40064,7 @@
       <Form tag="PVP">жолобівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110927" lemma="Жолобки" tag="NPINP">
+  <Paradigm pdgId="110927" lemma="Жолобки" tag="NPINX">
     <Variant id="a" lemma="Жолобки">
       <Form tag="NP">Жолобки</Form>
       <Form tag="GP">Жолобків</Form>
@@ -40845,7 +40845,7 @@
       <Form tag="VS">Жолудівко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="110965" lemma="Жолудки" tag="NPINP">
+  <Paradigm pdgId="110965" lemma="Жолудки" tag="NPINX">
     <Variant id="a" lemma="Жолудки">
       <Form tag="NP">Жолудки</Form>
       <Form tag="GP">Жолудків</Form>
@@ -41903,7 +41903,7 @@
       <Form tag="VS">Жорник</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111019" lemma="Жорниська" tag="NPINP">
+  <Paradigm pdgId="111019" lemma="Жорниська" tag="NPINX">
     <Variant id="a" lemma="Жорниська">
       <Form tag="NP">Жорниська</Form>
       <Form tag="GP">Жорниськ</Form>
@@ -42148,7 +42148,7 @@
       <Form tag="PVP">жорнові</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111029" lemma="Жорнокльови" tag="NPINP">
+  <Paradigm pdgId="111029" lemma="Жорнокльови" tag="NPINX">
     <Variant id="a" lemma="Жорнокльови">
       <Form tag="NP">Жорнокльови</Form>
       <Form tag="GP">Жорнокльовів</Form>
@@ -42219,7 +42219,7 @@
       <Form tag="VS">Жорняк</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111033" lemma="Жорняки" tag="NPINP">
+  <Paradigm pdgId="111033" lemma="Жорняки" tag="NPINX">
     <Variant id="a" lemma="Жорняки">
       <Form tag="NP">Жорняки</Form>
       <Form tag="GP">Жорняків</Form>
@@ -43015,7 +43015,7 @@
       <Form tag="PVP">жостерові</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111072" lemma="жостерові" tag="NCINP">
+  <Paradigm pdgId="111072" lemma="жостерові" tag="NCINX">
     <Variant id="a" lemma="жостерові">
       <Form tag="NP">жостерові</Form>
       <Form tag="GP">жостерових</Form>
@@ -43302,7 +43302,7 @@
       <Form tag="PVP">жубровицькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111086" lemma="Жубровичі" tag="NPINP">
+  <Paradigm pdgId="111086" lemma="Жубровичі" tag="NPINX">
     <Variant id="a" lemma="Жубровичі">
       <Form tag="NP">Жубровичі</Form>
       <Form tag="GP">Жубровичів</Form>
@@ -43773,7 +43773,7 @@
       <Form tag="PVP">жужелицеві</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111111" lemma="жужелицеві" tag="NCANP">
+  <Paradigm pdgId="111111" lemma="жужелицеві" tag="NCANX">
     <Variant id="a" lemma="жужелицеві">
       <Form tag="NP">жужелицеві</Form>
       <Form tag="GP">жужелицевих</Form>
@@ -43850,7 +43850,7 @@
       <Form tag="PXP">жужелювали</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111118" lemma="Жужеляни" tag="NPINP">
+  <Paradigm pdgId="111118" lemma="Жужеляни" tag="NPINX">
     <Variant id="a" lemma="Жужеляни">
       <Form tag="NP">Жужеляни</Form>
       <Form tag="GP">Жужелян</Form>
@@ -44274,7 +44274,7 @@
       <Form tag="PVP">жуйні</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111139" lemma="жуйні" tag="NCANP">
+  <Paradigm pdgId="111139" lemma="жуйні" tag="NCANX">
     <Variant id="a" lemma="жуйні">
       <Form tag="NP">жуйні</Form>
       <Form tag="GP">жуйних</Form>
@@ -44358,7 +44358,7 @@
       <Form tag="VP">жуки-гнойовики</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111144" lemma="Жуки" tag="NPINP">
+  <Paradigm pdgId="111144" lemma="Жуки" tag="NPINX">
     <Variant id="a" lemma="Жуки">
       <Form tag="NP">Жуки</Form>
       <Form tag="GP">Жуків</Form>
@@ -44478,7 +44478,7 @@
       <Form tag="PVP">жуківські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111150" lemma="Жуківці" tag="NPINP" meaning="xv2">
+  <Paradigm pdgId="111150" lemma="Жуківці" tag="NPINX" meaning="xv2">
     <Variant id="a" lemma="Жуківці">
       <Form tag="NP">Жуківці</Form>
       <Form tag="GP">Жуківців</Form>
@@ -44998,7 +44998,7 @@
       <Form tag="PVP">жукотинські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111177" lemma="Жукотки" tag="NPINP">
+  <Paradigm pdgId="111177" lemma="Жукотки" tag="NPINX">
     <Variant id="a" lemma="Жукотки">
       <Form tag="NP">Жукотки</Form>
       <Form tag="GP">Жукотків</Form>
@@ -45269,7 +45269,7 @@
       <Form tag="PVP">жулинські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111191" lemma="Жуличі" tag="NPINP">
+  <Paradigm pdgId="111191" lemma="Жуличі" tag="NPINX">
     <Variant id="a" lemma="Жуличі">
       <Form tag="NP">Жуличі</Form>
       <Form tag="GP">Жуличів</Form>
@@ -45598,7 +45598,7 @@
       <Form tag="VS">Жуляєва</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111209" lemma="Жуляни" tag="NPINP">
+  <Paradigm pdgId="111209" lemma="Жуляни" tag="NPINX">
     <Variant id="a" lemma="Жуляни">
       <Form tag="NP">Жуляни</Form>
       <Form tag="GP">Жулян</Form>
@@ -45832,7 +45832,7 @@
       <Form tag="VP">жупанці</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111223" lemma="Жупани" tag="NPINP">
+  <Paradigm pdgId="111223" lemma="Жупани" tag="NPINX">
     <Variant id="a" lemma="Жупани">
       <Form tag="NP">Жупани</Form>
       <Form tag="GP">Жупанів</Form>
@@ -46239,7 +46239,7 @@
       <Form tag="VP">журавлі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111246" lemma="Журавеньки" tag="NPINP">
+  <Paradigm pdgId="111246" lemma="Журавеньки" tag="NPINX">
     <Variant id="a" lemma="Журавеньки">
       <Form tag="NP">Журавеньки</Form>
       <Form tag="GP">Журавеньок</Form>
@@ -46432,7 +46432,7 @@
       <Form tag="PVP">журавицькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111254" lemma="Журавичі" tag="NPINP">
+  <Paradigm pdgId="111254" lemma="Журавичі" tag="NPINX">
     <Variant id="a" lemma="Журавичі">
       <Form tag="NP">Журавичі</Form>
       <Form tag="GP">Журавичів</Form>
@@ -46509,7 +46509,7 @@
       <Form tag="VP">журавки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111258" lemma="Журавки" tag="NPINP">
+  <Paradigm pdgId="111258" lemma="Журавки" tag="NPINX">
     <Variant id="a" lemma="Журавки">
       <Form tag="NP">Журавки</Form>
       <Form tag="GP">Журавок</Form>
@@ -46623,7 +46623,7 @@
       <Form tag="VP">журавленята</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111263" lemma="журавлеподібні" tag="NCANP">
+  <Paradigm pdgId="111263" lemma="журавлеподібні" tag="NCANX">
     <Variant id="a" lemma="журавлеподібні">
       <Form tag="NP">журавлеподібні</Form>
       <Form tag="GP">журавлеподібних</Form>
@@ -46897,7 +46897,7 @@
       <Form tag="PVP">журавлинські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111274" lemma="Журавлинці" tag="NPINP">
+  <Paradigm pdgId="111274" lemma="Журавлинці" tag="NPINX">
     <Variant id="a" lemma="Журавлинці">
       <Form tag="NP">Журавлинці</Form>
       <Form tag="GP">Журавлинців</Form>
@@ -47004,7 +47004,7 @@
       <Form tag="VP">журавлиці</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111280" lemma="Журавлі" tag="NPINP">
+  <Paradigm pdgId="111280" lemma="Журавлі" tag="NPINX">
     <Variant id="a" lemma="Журавлі">
       <Form tag="NP">Журавлі</Form>
       <Form tag="GP">Журавлів</Form>
@@ -47140,7 +47140,7 @@
       <Form tag="PVP">журавненські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111287" lemma="Журавники" tag="NPINP">
+  <Paradigm pdgId="111287" lemma="Журавники" tag="NPINX">
     <Variant id="a" lemma="Журавники">
       <Form tag="NP">Журавники</Form>
       <Form tag="GP">Журавників</Form>
@@ -47368,7 +47368,7 @@
       <Form tag="LS">Журайтісу</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111300" lemma="Жураки" tag="NPINP">
+  <Paradigm pdgId="111300" lemma="Жураки" tag="NPINX">
     <Variant id="a" lemma="Жураки">
       <Form tag="NP">Жураки</Form>
       <Form tag="GP">Жураків</Form>
@@ -47759,7 +47759,7 @@
       <Form tag="VS">журбинко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111323" lemma="Журбинці" tag="NPINP">
+  <Paradigm pdgId="111323" lemma="Журбинці" tag="NPINX">
     <Variant id="a" lemma="Журбинці">
       <Form tag="NP">Журбинці</Form>
       <Form tag="GP">Журбинців</Form>
@@ -47865,7 +47865,7 @@
       <Form tag="PVP">журжевицькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111330" lemma="Журжевичі" tag="NPINP">
+  <Paradigm pdgId="111330" lemma="Журжевичі" tag="NPINX">
     <Variant id="a" lemma="Журжевичі">
       <Form tag="NP">Журжевичі</Form>
       <Form tag="GP">Журжевичів</Form>
@@ -47912,7 +47912,7 @@
       <Form tag="PVP">журжинецькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111332" lemma="Журжинці" tag="NPINP">
+  <Paradigm pdgId="111332" lemma="Журжинці" tag="NPINX">
     <Variant id="a" lemma="Журжинці">
       <Form tag="NP">Журжинці</Form>
       <Form tag="GP">Журжинців</Form>
@@ -48854,7 +48854,7 @@
       <Form tag="VP">жучища</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="111388" lemma="Жучківці" tag="NPINP">
+  <Paradigm pdgId="111388" lemma="Жучківці" tag="NPINX">
     <Variant id="a" lemma="Жучківці">
       <Form tag="NP">Жучківці</Form>
       <Form tag="GP">Жучківців</Form>

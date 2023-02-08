@@ -79,7 +79,7 @@
       <Form tag="VP">ґаблища</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="82118" lemma="ґаблі" tag="NCINP">
+  <Paradigm pdgId="82118" lemma="ґаблі" tag="NCINX">
     <Variant id="a" lemma="ґаблі">
       <Form tag="NP">ґаблі</Form>
       <Form tag="GP">ґаблів</Form>
@@ -3626,7 +3626,7 @@
       <Form tag="VS">Ґергарде</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="82333" lemma="ґерґелі" tag="NCANP">
+  <Paradigm pdgId="82333" lemma="ґерґелі" tag="NCANX">
     <Variant id="a" lemma="ґерґелі">
       <Form tag="NP">ґерґелі</Form>
       <Form tag="GP">ґерґелів</Form>
@@ -3912,7 +3912,7 @@
       <Form tag="PVP">ґерлиґуваті</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="82356" lemma="Ґернсі" tag="NPINC">
+  <Paradigm pdgId="82356" lemma="Ґернсі" tag="NPINX">
     <Variant id="a" lemma="Ґернсі">
       <Form tag="NP">Ґернсі</Form>
       <Form tag="GP">Ґернсі</Form>
@@ -6226,7 +6226,7 @@
       <Form tag="PVP">ґорбачовські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="82487" lemma="Ґорґани" tag="NPINP">
+  <Paradigm pdgId="82487" lemma="Ґорґани" tag="NPINX">
     <Variant id="a" lemma="Ґорґани">
       <Form tag="NP">Ґорґани</Form>
       <Form tag="GP">Ґорґан</Form>
@@ -6893,7 +6893,7 @@
       <Form tag="VS">ґрато</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="82529" lemma="ґрати" tag="NCINP">
+  <Paradigm pdgId="82529" lemma="ґрати" tag="NCINX">
     <Variant id="a" lemma="ґрати">
       <Form tag="NP">ґрати</Form>
       <Form tag="GP">ґрат</Form>
@@ -7218,7 +7218,7 @@
       <Form tag="PVP">ґратчасті</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="82547" lemma="ґрафіті" tag="NCINP">
+  <Paradigm pdgId="82547" lemma="ґрафіті" tag="NCINX">
     <Variant id="a" lemma="ґрафіті">
       <Form tag="NP">ґрафіті</Form>
       <Form tag="GP">ґрафіті</Form>
@@ -7611,7 +7611,7 @@
       <Form tag="LS">Ґризі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="82575" lemma="ґринджоли" tag="NCINP">
+  <Paradigm pdgId="82575" lemma="ґринджоли" tag="NCINX">
     <Variant id="a" lemma="ґринджоли">
       <Form tag="NP">ґринджоли</Form>
       <Form tag="GP">ґринджол</Form>
@@ -7622,7 +7622,7 @@
       <Form tag="VP">ґринджоли</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="82576" lemma="ґринджолята" tag="NCINP">
+  <Paradigm pdgId="82576" lemma="ґринджолята" tag="NCINX">
     <Variant id="a" lemma="ґринджолята">
       <Form tag="NP">ґринджолята</Form>
       <Form tag="GP">ґринджолят</Form>
@@ -8567,7 +8567,7 @@
       <Form tag="PVP">ґрунтознавчі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="82623" lemma="ґрунтоматеріали" tag="NCINP">
+  <Paradigm pdgId="82623" lemma="ґрунтоматеріали" tag="NCINX">
     <Variant id="a" lemma="ґрунтоматеріали">
       <Form tag="NP">ґрунтоматеріали</Form>
       <Form tag="GP">ґрунтоматеріалів</Form>
@@ -9897,7 +9897,7 @@
       <Form tag="VS">ґумо</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="82689" lemma="ґумаки" tag="NCINP">
+  <Paradigm pdgId="82689" lemma="ґумаки" tag="NCINX">
     <Variant id="a" lemma="ґумаки">
       <Form tag="NP">ґумаки</Form>
       <Form tag="GP">ґумаків</Form>

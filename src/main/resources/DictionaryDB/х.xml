@@ -720,7 +720,7 @@
       <Form tag="VS">Хабло</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="384367" lemma="Хабомаї" tag="NPINP">
+  <Paradigm pdgId="384367" lemma="Хабомаї" tag="NPINX">
     <Variant id="a" lemma="Хабомаї">
       <Form tag="NP">Хабомаї</Form>
       <Form tag="GP">Хабомаї</Form>
@@ -731,7 +731,7 @@
       <Form tag="VP">Хабомаї</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="384368" lemma="Хабомай" tag="NPINP">
+  <Paradigm pdgId="384368" lemma="Хабомай" tag="NPINX">
     <Variant id="a" lemma="Хабомай">
       <Form tag="NP">Хабомай</Form>
       <Form tag="GP">Хабомай</Form>
@@ -1403,7 +1403,7 @@
       <Form tag="VS">ХАЕС</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="384418" lemma="Хаєнки" tag="NPINP">
+  <Paradigm pdgId="384418" lemma="Хаєнки" tag="NPINX">
     <Variant id="a" lemma="Хаєнки">
       <Form tag="NP">Хаєнки</Form>
       <Form tag="GP">Хаєнок</Form>
@@ -4461,7 +4461,7 @@
       <Form tag="VP">халепки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="384605" lemma="Халепці" tag="NPINP">
+  <Paradigm pdgId="384605" lemma="Халепці" tag="NPINX">
     <Variant id="a" lemma="Халепці">
       <Form tag="NP">Халепці</Form>
       <Form tag="GP">Халепців</Form>
@@ -5652,7 +5652,7 @@
       <Form tag="PVP">халькосферні</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="384672" lemma="хальциди" tag="NCANP">
+  <Paradigm pdgId="384672" lemma="хальциди" tag="NCANX">
     <Variant id="a" lemma="хальциди">
       <Form tag="NP">хальциди</Form>
       <Form tag="GP">хальцидів</Form>
@@ -6320,7 +6320,7 @@
       <Form tag="PVP">хамелеонові</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="384709" lemma="хамелеонові" tag="NCANP">
+  <Paradigm pdgId="384709" lemma="хамелеонові" tag="NCANX">
     <Variant id="a" lemma="хамелеонові">
       <Form tag="NP">хамелеонові</Form>
       <Form tag="GP">хамелеонових</Form>
@@ -7949,7 +7949,7 @@
       <Form tag="VS">Хантере</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="384803" lemma="ханти" tag="NCANP">
+  <Paradigm pdgId="384803" lemma="ханти" tag="NCANX">
     <Variant id="a" lemma="ханти">
       <Form tag="NP">ханти</Form>
       <Form tag="GP">хантів</Form>
@@ -10650,7 +10650,7 @@
       <Form tag="VP">хардтопи</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="384965" lemma="Харенки" tag="NPINP">
+  <Paradigm pdgId="384965" lemma="Харенки" tag="NPINX">
     <Variant id="a" lemma="Харенки">
       <Form tag="NP">Харенки</Form>
       <Form tag="GP">Харенків</Form>
@@ -11546,7 +11546,7 @@
       <Form tag="VP">харіуси</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385019" lemma="харіусові" tag="NCANP">
+  <Paradigm pdgId="385019" lemma="харіусові" tag="NCANX">
     <Variant id="a" lemma="харіусові">
       <Form tag="NP">харіусові</Form>
       <Form tag="GP">харіусових</Form>
@@ -11661,7 +11661,7 @@
       <Form tag="VS">Харкевич</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385027" lemma="харки-макогоники" tag="NCINP">
+  <Paradigm pdgId="385027" lemma="харки-макогоники" tag="NCINX">
     <Variant id="a" lemma="харки-макогоники">
       <Form tag="NP">харки-макогоники</Form>
       <Form tag="GP">харків-макогоників</Form>
@@ -11861,7 +11861,7 @@
       <Form tag="PVP">харківські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385038" lemma="Харківці" tag="NPINP">
+  <Paradigm pdgId="385038" lemma="Харківці" tag="NPINX">
     <Variant id="a" lemma="Харківці">
       <Form tag="NP">Харківці</Form>
       <Form tag="GP">Харківців</Form>
@@ -12564,7 +12564,7 @@
       <Form tag="VS">Харрісон</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385083" lemma="Харсіки" tag="NPINP">
+  <Paradigm pdgId="385083" lemma="Харсіки" tag="NPINX">
     <Variant id="a" lemma="Харсіки">
       <Form tag="NP">Харсіки</Form>
       <Form tag="GP">Харсіків</Form>
@@ -12734,7 +12734,7 @@
       <Form tag="LS">Хартману</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385092" lemma="Хартонівці" tag="NPINP">
+  <Paradigm pdgId="385092" lemma="Хартонівці" tag="NPINX">
     <Variant id="a" lemma="Хартонівці">
       <Form tag="NP">Хартонівці</Form>
       <Form tag="GP">Хартонівців</Form>
@@ -13171,7 +13171,7 @@
       <Form tag="VP">харчевні</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385118" lemma="Харченки" tag="NPINP">
+  <Paradigm pdgId="385118" lemma="Харченки" tag="NPINX">
     <Variant id="a" lemma="Харченки">
       <Form tag="NP">Харченки</Form>
       <Form tag="GP">Харченків</Form>
@@ -14263,7 +14263,7 @@
       <Form tag="VP">хатки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385183" lemma="Хатки" tag="NPINP">
+  <Paradigm pdgId="385183" lemma="Хатки" tag="NPINX">
     <Variant id="a" lemma="Хатки">
       <Form tag="NP">Хатки</Form>
       <Form tag="GP">Хаток</Form>
@@ -14917,7 +14917,7 @@
       <Form tag="VS">Хацкевич</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385222" lemma="Хацьки" tag="NPINP">
+  <Paradigm pdgId="385222" lemma="Хацьки" tag="NPINX">
     <Variant id="a" lemma="Хацьки">
       <Form tag="NP">Хацьки</Form>
       <Form tag="GP">Хацьків</Form>
@@ -15756,7 +15756,7 @@
       <Form tag="VP">хваління</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385270" lemma="хвалощі" tag="NCINP">
+  <Paradigm pdgId="385270" lemma="хвалощі" tag="NCINX">
     <Variant id="a" lemma="хвалощі">
       <Form tag="NP">хвалощі</Form>
       <Form tag="GP">хвалощів</Form>
@@ -15778,7 +15778,7 @@
       <Form tag="VS">хвальбо</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385272" lemma="Хвальки" tag="NPINP">
+  <Paradigm pdgId="385272" lemma="Хвальки" tag="NPINX">
     <Variant id="a" lemma="Хвальки">
       <Form tag="NP">Хвальки</Form>
       <Form tag="GP">Хвальків</Form>
@@ -16399,7 +16399,7 @@
       <Form tag="P">хвастовито</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385313" lemma="хвастощі" tag="NCINP">
+  <Paradigm pdgId="385313" lemma="хвастощі" tag="NCINX">
     <Variant id="a" lemma="хвастощі">
       <Form tag="NP">хвастощі</Form>
       <Form tag="GP">хвастощів</Form>
@@ -17754,7 +17754,7 @@
       <Form tag="VP">хвилиночки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385387" lemma="Хвилі" tag="NPINP">
+  <Paradigm pdgId="385387" lemma="Хвилі" tag="NPINX">
     <Variant id="a" lemma="Хвилі">
       <Form tag="NP">Хвилі</Form>
       <Form tag="GP">Хвиль</Form>
@@ -18973,7 +18973,7 @@
       <Form tag="VP">хвойники</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385467" lemma="хвойні" tag="NCINP">
+  <Paradigm pdgId="385467" lemma="хвойні" tag="NCINX">
     <Variant id="a" lemma="хвойні">
       <Form tag="NP">хвойні</Form>
       <Form tag="GP">хвойних</Form>
@@ -19957,7 +19957,7 @@
       <Form tag="VS">Хвороще</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385516" lemma="хворощі" tag="NCINP">
+  <Paradigm pdgId="385516" lemma="хворощі" tag="NCINX">
     <Variant id="a" lemma="хворощі">
       <Form tag="NP">хворощі</Form>
       <Form tag="GP">хворощів</Form>
@@ -20119,7 +20119,7 @@
       <Form tag="PXP">хвосталися</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385523" lemma="хвостаті" tag="NCANP">
+  <Paradigm pdgId="385523" lemma="хвостаті" tag="NCANX">
     <Variant id="a" lemma="хвостаті">
       <Form tag="NP">хвостаті</Form>
       <Form tag="GP">хвостатих</Form>
@@ -20747,7 +20747,7 @@
       <Form tag="PVP">хвощові</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385557" lemma="хвощові" tag="NCINP">
+  <Paradigm pdgId="385557" lemma="хвощові" tag="NCINX">
     <Variant id="a" lemma="хвощові">
       <Form tag="NP">хвощові</Form>
       <Form tag="GP">хвощових</Form>
@@ -23880,7 +23880,7 @@
       <Form tag="VP">хемотропізми</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385730" lemma="хемотрофи" tag="NCINP">
+  <Paradigm pdgId="385730" lemma="хемотрофи" tag="NCINX">
     <Variant id="a" lemma="хемотрофи">
       <Form tag="NP">хемотрофи</Form>
       <Form tag="GP">хемотрофів</Form>
@@ -25033,7 +25033,7 @@
       <Form tag="VS">Хетелю</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385796" lemma="хети" tag="NCANP">
+  <Paradigm pdgId="385796" lemma="хети" tag="NCANX">
     <Variant id="a" lemma="хети">
       <Form tag="NP">хети</Form>
       <Form tag="GP">хетів</Form>
@@ -26250,7 +26250,7 @@
       <Form tag="PVP">хижинські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385869" lemma="Хижинці" tag="NPINP">
+  <Paradigm pdgId="385869" lemma="Хижинці" tag="NPINX">
     <Variant id="a" lemma="Хижинці">
       <Form tag="NP">Хижинці</Form>
       <Form tag="GP">Хижинців</Form>
@@ -26444,7 +26444,7 @@
       <Form tag="VP">хижки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385883" lemma="Хижки" tag="NPINP">
+  <Paradigm pdgId="385883" lemma="Хижки" tag="NPINX">
     <Variant id="a" lemma="Хижки">
       <Form tag="NP">Хижки</Form>
       <Form tag="GP">Хижок</Form>
@@ -26491,7 +26491,7 @@
       <Form tag="PVP">хижківські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385885" lemma="Хижники" tag="NPINP">
+  <Paradigm pdgId="385885" lemma="Хижники" tag="NPINX">
     <Variant id="a" lemma="Хижники">
       <Form tag="NP">Хижники</Form>
       <Form tag="GP">Хижників</Form>
@@ -27030,7 +27030,7 @@
       <Form tag="VS">Хиліне</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385925" lemma="Хильки" tag="NPINP">
+  <Paradigm pdgId="385925" lemma="Хильки" tag="NPINX">
     <Variant id="a" lemma="Хильки">
       <Form tag="NP">Хильки</Form>
       <Form tag="GP">Хильків</Form>
@@ -27173,7 +27173,7 @@
       <Form tag="P">хильцем</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385937" lemma="Хильчиці" tag="NPINP">
+  <Paradigm pdgId="385937" lemma="Хильчиці" tag="NPINX">
     <Variant id="a" lemma="Хильчиці">
       <Form tag="NP">Хильчиці</Form>
       <Form tag="GP">Хильчиць</Form>
@@ -27184,7 +27184,7 @@
       <Form tag="VP">Хильчиці</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385938" lemma="Хильчичі" tag="NPINP">
+  <Paradigm pdgId="385938" lemma="Хильчичі" tag="NPINX">
     <Variant id="a" lemma="Хильчичі">
       <Form tag="NP">Хильчичі</Form>
       <Form tag="GP">Хильчичів</Form>
@@ -27371,7 +27371,7 @@
       <Form tag="PVP">химеризуючі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385954" lemma="химерики" tag="NCINP">
+  <Paradigm pdgId="385954" lemma="химерики" tag="NCINX">
     <Variant id="a" lemma="химерики">
       <Form tag="NP">химерики</Form>
       <Form tag="GP">химериків</Form>
@@ -27937,7 +27937,7 @@
       <Form tag="VP">химородниці</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385986" lemma="химородні" tag="NCINP">
+  <Paradigm pdgId="385986" lemma="химородні" tag="NCINX">
     <Variant id="a" lemma="химородні">
       <Form tag="NP">химородні</Form>
       <Form tag="GP">химородень</Form>
@@ -28154,7 +28154,7 @@
       <Form tag="PVP">хиноцькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="385998" lemma="Хиночі" tag="NPINP">
+  <Paradigm pdgId="385998" lemma="Хиночі" tag="NPINX">
     <Variant id="a" lemma="Хиночі">
       <Form tag="NP">Хиночі</Form>
       <Form tag="GP">Хиночів</Form>
@@ -29395,7 +29395,7 @@
       <Form tag="VS">Хитра</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386062" lemma="Хитрейки" tag="NPINP">
+  <Paradigm pdgId="386062" lemma="Хитрейки" tag="NPINX">
     <Variant id="a" lemma="Хитрейки">
       <Form tag="NP">Хитрейки</Form>
       <Form tag="GP">Хитрейків</Form>
@@ -29783,7 +29783,7 @@
       <Form tag="P">хитромудро</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386081" lemma="хитромудрощі" tag="NCINP">
+  <Paradigm pdgId="386081" lemma="хитромудрощі" tag="NCINX">
     <Variant id="a" lemma="хитромудрощі">
       <Form tag="NP">хитромудрощі</Form>
       <Form tag="GP">хитромудрощів</Form>
@@ -29935,7 +29935,7 @@
       <Form tag="VP">хитросплетіння</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386088" lemma="хитрощі" tag="NCINP">
+  <Paradigm pdgId="386088" lemma="хитрощі" tag="NCINX">
     <Variant id="a" lemma="хитрощі">
       <Form tag="NP">хитрощі</Form>
       <Form tag="GP">хитрощів</Form>
@@ -30304,7 +30304,7 @@
       <Form tag="VP">хитуни</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386110" lemma="Хитці" tag="NPINP">
+  <Paradigm pdgId="386110" lemma="Хитці" tag="NPINX">
     <Variant id="a" lemma="Хитці">
       <Form tag="NP">Хитці</Form>
       <Form tag="GP">Хитців</Form>
@@ -30441,7 +30441,7 @@
       <Form tag="VS">хихітне</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386123" lemma="хихоньки" tag="NCINP">
+  <Paradigm pdgId="386123" lemma="хихоньки" tag="NCINX">
     <Variant id="a" lemma="хихоньки">
       <Form tag="NP">хихоньки</Form>
       <Form tag="GP">хихоньок</Form>
@@ -30564,7 +30564,7 @@
       <Form tag="VS">Хичеве</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386135" lemma="Хишевичі" tag="NPINP">
+  <Paradigm pdgId="386135" lemma="Хишевичі" tag="NPINX">
     <Variant id="a" lemma="Хишевичі">
       <Form tag="NP">Хишевичі</Form>
       <Form tag="GP">Хишевичів</Form>
@@ -30655,7 +30655,7 @@
       <Form tag="">хібащо</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386144" lemma="Хібіни" tag="NPINP">
+  <Paradigm pdgId="386144" lemma="Хібіни" tag="NPINX">
     <Variant id="a" lemma="Хібіни">
       <Form tag="NP">Хібіни</Form>
       <Form tag="GP">Хібін</Form>
@@ -31001,7 +31001,7 @@
       <Form tag="VS">хіджро</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386164" lemma="хідлі" tag="NCINP">
+  <Paradigm pdgId="386164" lemma="хідлі" tag="NCINX">
     <Variant id="a" lemma="хідлі">
       <Form tag="NP">хідлі</Form>
       <Form tag="GP">хідлів</Form>
@@ -31088,7 +31088,7 @@
       <Form tag="PVP">хідновицькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386168" lemma="Хідновичі" tag="NPINP">
+  <Paradigm pdgId="386168" lemma="Хідновичі" tag="NPINX">
     <Variant id="a" lemma="Хідновичі">
       <Form tag="NP">Хідновичі</Form>
       <Form tag="GP">Хідновичів</Form>
@@ -31801,7 +31801,7 @@
       <Form tag="VP">хімвиробництва</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386220" lemma="хімвідходи" tag="NCINP">
+  <Paradigm pdgId="386220" lemma="хімвідходи" tag="NCINX">
     <Variant id="a" lemma="хімвідходи">
       <Form tag="NP">хімвідходи</Form>
       <Form tag="GP">хімвідходів</Form>
@@ -31812,7 +31812,7 @@
       <Form tag="VP">хімвідходи</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386221" lemma="хімвійська" tag="NCINP">
+  <Paradigm pdgId="386221" lemma="хімвійська" tag="NCINX">
     <Variant id="a" lemma="хімвійська">
       <Form tag="NP">хімвійська</Form>
       <Form tag="GP">хімвійськ</Form>
@@ -32014,7 +32014,7 @@
       <Form tag="VP">хімзаводи</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386235" lemma="хімзасоби" tag="NCINP">
+  <Paradigm pdgId="386235" lemma="хімзасоби" tag="NCINX">
     <Variant id="a" lemma="хімзасоби">
       <Form tag="NP">хімзасоби</Form>
       <Form tag="GP">хімзасобів</Form>
@@ -33242,7 +33242,7 @@
       <Form tag="VP">хімкабінети</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386297" lemma="Хімки" tag="NPINP">
+  <Paradigm pdgId="386297" lemma="Хімки" tag="NPINX">
     <Variant id="a" lemma="Хімки">
       <Form tag="NP">Хімки</Form>
       <Form tag="GP">Хімок</Form>
@@ -33927,7 +33927,7 @@
       <Form tag="VP">хімтермінали</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386333" lemma="хімтехнології" tag="NCINP">
+  <Paradigm pdgId="386333" lemma="хімтехнології" tag="NCINX">
     <Variant id="a" lemma="хімтехнології">
       <Form tag="NP">хімтехнології</Form>
       <Form tag="GP">хімтехнологій</Form>
@@ -33938,7 +33938,7 @@
       <Form tag="VP">хімтехнології</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386334" lemma="хімтовари" tag="NCINP">
+  <Paradigm pdgId="386334" lemma="хімтовари" tag="NCINX">
     <Variant id="a" lemma="хімтовари">
       <Form tag="NP">хімтовари</Form>
       <Form tag="GP">хімтоварів</Form>
@@ -36482,7 +36482,7 @@
       <Form tag="VP">хіт-паради</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386461" lemma="хітридієві" tag="NCINP">
+  <Paradigm pdgId="386461" lemma="хітридієві" tag="NCINX">
     <Variant id="a" lemma="хітридієві">
       <Form tag="NP">хітридієві</Form>
       <Form tag="GP">хітридієвих</Form>
@@ -36708,7 +36708,7 @@
       <Form tag="VP">хламиди</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386481" lemma="хламідії" tag="NCINP">
+  <Paradigm pdgId="386481" lemma="хламідії" tag="NCINX">
     <Variant id="a" lemma="хламідії">
       <Form tag="NP">хламідії</Form>
       <Form tag="GP">хламідій</Form>
@@ -36794,7 +36794,7 @@
       <Form tag="VP">хламідомонади</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386485" lemma="хламідоспори" tag="NCINP">
+  <Paradigm pdgId="386485" lemma="хламідоспори" tag="NCINX">
     <Variant id="a" lemma="хламідоспори">
       <Form tag="NP">хламідоспори</Form>
       <Form tag="GP">хламідоспор</Form>
@@ -37328,7 +37328,7 @@
       <Form tag="PVP">хлипкіші</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386524" lemma="Хлиплі" tag="NPINP">
+  <Paradigm pdgId="386524" lemma="Хлиплі" tag="NPINX">
     <Variant id="a" lemma="Хлиплі">
       <Form tag="NP">Хлиплі</Form>
       <Form tag="GP">Хлиплів</Form>
@@ -40072,7 +40072,7 @@
       <Form tag="VS">Хлівнюк</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386660" lemma="Хлівчани" tag="NPINP">
+  <Paradigm pdgId="386660" lemma="Хлівчани" tag="NPINX">
     <Variant id="a" lemma="Хлівчани">
       <Form tag="NP">Хлівчани</Form>
       <Form tag="GP">Хлівчан</Form>
@@ -40638,7 +40638,7 @@
       <Form tag="PVP">хлопуваті</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386691" lemma="хлопунці" tag="NCANP">
+  <Paradigm pdgId="386691" lemma="хлопунці" tag="NCANX">
     <Variant id="a" lemma="хлопунці">
       <Form tag="NP">хлопунці</Form>
       <Form tag="GP">хлопунців</Form>
@@ -41091,7 +41091,7 @@
       <Form tag="VP">хлопчиська</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386712" lemma="Хлопчиці" tag="NPINP">
+  <Paradigm pdgId="386712" lemma="Хлопчиці" tag="NPINX">
     <Variant id="a" lemma="Хлопчиці">
       <Form tag="NP">Хлопчиці</Form>
       <Form tag="GP">Хлопчиць</Form>
@@ -41237,7 +41237,7 @@
       <Form tag="PVP">хлоп'якуваті</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386719" lemma="Хлоп'яники" tag="NPINP">
+  <Paradigm pdgId="386719" lemma="Хлоп'яники" tag="NPINX">
     <Variant id="a" lemma="Хлоп'яники">
       <Form tag="NP">Хлоп'яники</Form>
       <Form tag="GP">Хлоп'яників</Form>
@@ -44237,7 +44237,7 @@
       <Form tag="VP">хлудинки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386852" lemma="Хлупляни" tag="NPINP">
+  <Paradigm pdgId="386852" lemma="Хлупляни" tag="NPINX">
     <Variant id="a" lemma="Хлупляни">
       <Form tag="NP">Хлупляни</Form>
       <Form tag="GP">Хлуплян</Form>
@@ -45260,7 +45260,7 @@
       <Form tag="PXP">хлядрували</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386939" lemma="хляки" tag="NCINP">
+  <Paradigm pdgId="386939" lemma="хляки" tag="NCINX">
     <Variant id="a" lemma="хляки">
       <Form tag="NP">хляки</Form>
       <Form tag="GP">хляків</Form>
@@ -45290,7 +45290,7 @@
       <Form tag="VP">хляндри</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="386941" lemma="Хляни" tag="NPINP">
+  <Paradigm pdgId="386941" lemma="Хляни" tag="NPINX">
     <Variant id="a" lemma="Хляни">
       <Form tag="NP">Хляни</Form>
       <Form tag="GP">Хлянів</Form>
@@ -46462,7 +46462,7 @@
       <Form tag="VS">Хмеленко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387019" lemma="хмелепродукти" tag="NCINP">
+  <Paradigm pdgId="387019" lemma="хмелепродукти" tag="NCINX">
     <Variant id="a" lemma="хмелепродукти">
       <Form tag="NP">хмелепродукти</Form>
       <Form tag="GP">хмелепродуктів</Form>
@@ -48831,7 +48831,7 @@
       <Form tag="PVP">хоботні</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387172" lemma="хоботні" tag="NCANP">
+  <Paradigm pdgId="387172" lemma="хоботні" tag="NCANX">
     <Variant id="a" lemma="хоботні">
       <Form tag="NP">хоботні</Form>
       <Form tag="GP">хоботних</Form>
@@ -49307,7 +49307,7 @@
       <Form tag="VS">Ховківко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387202" lemma="Ховми" tag="NPINP">
+  <Paradigm pdgId="387202" lemma="Ховми" tag="NPINX">
     <Variant id="a" lemma="Ховми">
       <Form tag="NP">Ховми</Form>
       <Form tag="GP">Ховмів</Form>
@@ -49630,7 +49630,7 @@
       <Form tag="VP">ходаки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387218" lemma="Ходаки" tag="NPINP">
+  <Paradigm pdgId="387218" lemma="Ходаки" tag="NPINX">
     <Variant id="a" lemma="Ходаки">
       <Form tag="NP">Ходаки</Form>
       <Form tag="GP">Ходаків</Form>
@@ -49707,7 +49707,7 @@
       <Form tag="PVP">ходаківські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387222" lemma="Ходаківці" tag="NPINP">
+  <Paradigm pdgId="387222" lemma="Ходаківці" tag="NPINX">
     <Variant id="a" lemma="Ходаківці">
       <Form tag="NP">Ходаківці</Form>
       <Form tag="GP">Ходаківців</Form>
@@ -49871,7 +49871,7 @@
       <Form tag="PVP">ходацькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387232" lemma="Ходачки" tag="NPINP">
+  <Paradigm pdgId="387232" lemma="Ходачки" tag="NPINX">
     <Variant id="a" lemma="Ходачки">
       <Form tag="NP">Ходачки</Form>
       <Form tag="GP">Ходачків</Form>
@@ -50069,7 +50069,7 @@
       <Form tag="VS">Ходжкін</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387245" lemma="ходики" tag="NCINP">
+  <Paradigm pdgId="387245" lemma="ходики" tag="NCINX">
     <Variant id="a" lemma="ходики">
       <Form tag="NP">ходики</Form>
       <Form tag="GP">ходиків</Form>
@@ -50080,7 +50080,7 @@
       <Form tag="VP">ходики</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387246" lemma="ходилиці" tag="NCINP">
+  <Paradigm pdgId="387246" lemma="ходилиці" tag="NCINX">
     <Variant id="a" lemma="ходилиці">
       <Form tag="NP">ходилиці</Form>
       <Form tag="GP">ходилиць</Form>
@@ -50127,7 +50127,7 @@
       <Form tag="PVP">ходильні</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387248" lemma="ходильниці" tag="NCINP">
+  <Paradigm pdgId="387248" lemma="ходильниці" tag="NCINX">
     <Variant id="a" lemma="ходильниці">
       <Form tag="NP">ходильниці</Form>
       <Form tag="GP">ходильниць</Form>
@@ -50416,7 +50416,7 @@
       <Form tag="PVP">ходовицькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387265" lemma="Ходовичі" tag="NPINP">
+  <Paradigm pdgId="387265" lemma="Ходовичі" tag="NPINX">
     <Variant id="a" lemma="Ходовичі">
       <Form tag="NP">Ходовичі</Form>
       <Form tag="GP">Ходовичів</Form>
@@ -50565,7 +50565,7 @@
       <Form tag="VP">ходоміри</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387272" lemma="Ходори" tag="NPINP">
+  <Paradigm pdgId="387272" lemma="Ходори" tag="NPINX">
     <Variant id="a" lemma="Ходори">
       <Form tag="NP">Ходори</Form>
       <Form tag="GP">Ходорів</Form>
@@ -50635,7 +50635,7 @@
       <Form tag="PVP">ходорівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387276" lemma="Ходорівці" tag="NPINP">
+  <Paradigm pdgId="387276" lemma="Ходорівці" tag="NPINX">
     <Variant id="a" lemma="Ходорівці">
       <Form tag="NP">Ходорівці</Form>
       <Form tag="GP">Ходорівців</Form>
@@ -50705,7 +50705,7 @@
       <Form tag="PVP">ходорківські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387280" lemma="Ходорківці" tag="NPINP">
+  <Paradigm pdgId="387280" lemma="Ходорківці" tag="NPINX">
     <Variant id="a" lemma="Ходорківці">
       <Form tag="NP">Ходорківці</Form>
       <Form tag="GP">Ходорківців</Form>
@@ -50782,7 +50782,7 @@
       <Form tag="LS">Ходосу</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387285" lemma="Ходоси" tag="NPINP">
+  <Paradigm pdgId="387285" lemma="Ходоси" tag="NPINX">
     <Variant id="a" lemma="Ходоси">
       <Form tag="NP">Ходоси</Form>
       <Form tag="GP">Ходосів</Form>
@@ -51073,7 +51073,7 @@
       <Form tag="VP">ходунки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387302" lemma="ходунці" tag="NCINP">
+  <Paradigm pdgId="387302" lemma="ходунці" tag="NCINX">
     <Variant id="a" lemma="ходунці">
       <Form tag="NP">ходунці</Form>
       <Form tag="GP">ходунців</Form>
@@ -51095,7 +51095,7 @@
       <Form tag="VS">Ходуне</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387304" lemma="Ходурки" tag="NPINP">
+  <Paradigm pdgId="387304" lemma="Ходурки" tag="NPINX">
     <Variant id="a" lemma="Ходурки">
       <Form tag="NP">Ходурки</Form>
       <Form tag="GP">Ходурків</Form>
@@ -51857,7 +51857,7 @@
       <Form tag="PVP">холерні</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387347" lemma="холерні" tag="NCANP">
+  <Paradigm pdgId="387347" lemma="холерні" tag="NCANX">
     <Variant id="a" lemma="холерні">
       <Form tag="NP">холерні</Form>
       <Form tag="GP">холерних</Form>
@@ -52587,7 +52587,7 @@
       <Form tag="PVP">холмецькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387388" lemma="Холми" tag="NPINP">
+  <Paradigm pdgId="387388" lemma="Холми" tag="NPINX">
     <Variant id="a" lemma="Холми">
       <Form tag="NP">Холми</Form>
       <Form tag="GP">Холмів</Form>
@@ -55109,7 +55109,7 @@
       <Form tag="VP">холокости</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387519" lemma="Холоневичі" tag="NPINP">
+  <Paradigm pdgId="387519" lemma="Холоневичі" tag="NPINX">
     <Variant id="a" lemma="Холоневичі">
       <Form tag="NP">Холоневичі</Form>
       <Form tag="GP">Холоневичів</Form>
@@ -55315,7 +55315,7 @@
       <Form tag="VP">холопи</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387530" lemma="Холопичі" tag="NPINP">
+  <Paradigm pdgId="387530" lemma="Холопичі" tag="NPINX">
     <Variant id="a" lemma="Холопичі">
       <Form tag="NP">Холопичі</Form>
       <Form tag="GP">Холопичів</Form>
@@ -56063,7 +56063,7 @@
       <Form tag="LS">Холяві</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387572" lemma="Холявки" tag="NPINP">
+  <Paradigm pdgId="387572" lemma="Холявки" tag="NPINX">
     <Variant id="a" lemma="Холявки">
       <Form tag="NP">Холявки</Form>
       <Form tag="GP">Холявок</Form>
@@ -56151,7 +56151,7 @@
       <Form tag="VS">Хомейні</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387579" lemma="Хоменки" tag="NPINP">
+  <Paradigm pdgId="387579" lemma="Хоменки" tag="NPINX">
     <Variant id="a" lemma="Хоменки">
       <Form tag="NP">Хоменки</Form>
       <Form tag="GP">Хоменків</Form>
@@ -56248,7 +56248,7 @@
       <Form tag="VS">Хомцю</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387585" lemma="Хоми" tag="NPINP">
+  <Paradigm pdgId="387585" lemma="Хоми" tag="NPINX">
     <Variant id="a" lemma="Хоми">
       <Form tag="NP">Хоми</Form>
       <Form tag="GP">Хомів</Form>
@@ -56406,7 +56406,7 @@
       <Form tag="VS">Хоминське</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387596" lemma="Хоминці" tag="NPINP">
+  <Paradigm pdgId="387596" lemma="Хоминці" tag="NPINX">
     <Variant id="a" lemma="Хоминці">
       <Form tag="NP">Хоминці</Form>
       <Form tag="GP">Хоминців</Form>
@@ -56490,7 +56490,7 @@
       <Form tag="VS">Хомич</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387601" lemma="Хомичі" tag="NPINP">
+  <Paradigm pdgId="387601" lemma="Хомичі" tag="NPINX">
     <Variant id="a" lemma="Хомичі">
       <Form tag="NP">Хомичі</Form>
       <Form tag="GP">Хомичів</Form>
@@ -56566,7 +56566,7 @@
       <Form tag="VS">Хомівно</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387607" lemma="Хомівці" tag="NPINP">
+  <Paradigm pdgId="387607" lemma="Хомівці" tag="NPINX">
     <Variant id="a" lemma="Хомівці">
       <Form tag="NP">Хомівці</Form>
       <Form tag="GP">Хомівців</Form>
@@ -56993,7 +56993,7 @@
       <Form tag="VS">Хомутиннік</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387634" lemma="Хомутинці" tag="NPINP">
+  <Paradigm pdgId="387634" lemma="Хомутинці" tag="NPINX">
     <Variant id="a" lemma="Хомутинці">
       <Form tag="NP">Хомутинці</Form>
       <Form tag="GP">Хомутинців</Form>
@@ -57367,7 +57367,7 @@
       <Form tag="PVP">хом'якові</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387656" lemma="хом'якові" tag="NCANP">
+  <Paradigm pdgId="387656" lemma="хом'якові" tag="NCANX">
     <Variant id="a" lemma="хом'якові">
       <Form tag="NP">хом'якові</Form>
       <Form tag="GP">хом'якових</Form>
@@ -57730,7 +57730,7 @@
       <Form tag="VS">Хонсю</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387677" lemma="Хоньківці" tag="NPINP">
+  <Paradigm pdgId="387677" lemma="Хоньківці" tag="NPINX">
     <Variant id="a" lemma="Хоньківці">
       <Form tag="NP">Хоньківці</Form>
       <Form tag="GP">Хоньківців</Form>
@@ -57969,7 +57969,7 @@
       <Form tag="PVP">хоптинецькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387690" lemma="Хоптинці" tag="NPINP">
+  <Paradigm pdgId="387690" lemma="Хоптинці" tag="NPINX">
     <Variant id="a" lemma="Хоптинці">
       <Form tag="NP">Хоптинці</Form>
       <Form tag="GP">Хоптинців</Form>
@@ -58313,7 +58313,7 @@
       <Form tag="PVP">хордові</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387707" lemma="хордові" tag="NCANP">
+  <Paradigm pdgId="387707" lemma="хордові" tag="NCANX">
     <Variant id="a" lemma="хордові">
       <Form tag="NP">хордові</Form>
       <Form tag="GP">хордових</Form>
@@ -58846,7 +58846,7 @@
       <Form tag="VS">хоросте</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387733" lemma="Хорішки" tag="NPINP">
+  <Paradigm pdgId="387733" lemma="Хорішки" tag="NPINX">
     <Variant id="a" lemma="Хорішки">
       <Form tag="NP">Хорішки</Form>
       <Form tag="GP">Хорішків</Form>
@@ -59103,7 +59103,7 @@
       <Form tag="VS">хоркотливосте</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387749" lemma="Хорли" tag="NPINP">
+  <Paradigm pdgId="387749" lemma="Хорли" tag="NPINX">
     <Variant id="a" lemma="Хорли">
       <Form tag="NP">Хорли</Form>
       <Form tag="GP">Хорлів</Form>
@@ -59150,7 +59150,7 @@
       <Form tag="PVP">хорлівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387751" lemma="Хорлупи" tag="NPINP">
+  <Paradigm pdgId="387751" lemma="Хорлупи" tag="NPINX">
     <Variant id="a" lemma="Хорлупи">
       <Form tag="NP">Хорлупи</Form>
       <Form tag="GP">Хорлуп</Form>
@@ -59366,7 +59366,7 @@
       <Form tag="PVP">хоробицькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387761" lemma="Хоробичі" tag="NPINP">
+  <Paradigm pdgId="387761" lemma="Хоробичі" tag="NPINX">
     <Variant id="a" lemma="Хоробичі">
       <Form tag="NP">Хоробичі</Form>
       <Form tag="GP">Хоробичів</Form>
@@ -59735,7 +59735,7 @@
       <Form tag="PVP">хоровецькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387780" lemma="Хорови" tag="NPINP">
+  <Paradigm pdgId="387780" lemma="Хорови" tag="NPINX">
     <Variant id="a" lemma="Хорови">
       <Form tag="NP">Хорови</Form>
       <Form tag="GP">Хоров</Form>
@@ -60149,7 +60149,7 @@
       <Form tag="P">хором</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387803" lemma="хороми" tag="NCINP">
+  <Paradigm pdgId="387803" lemma="хороми" tag="NCINX">
     <Variant id="a" lemma="хороми">
       <Form tag="NP">хороми</Form>
       <Form tag="GP">хоромів</Form>
@@ -60923,7 +60923,7 @@
       <Form tag="PXP">хорошіли</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387848" lemma="Хорошки" tag="NPINP">
+  <Paradigm pdgId="387848" lemma="Хорошки" tag="NPINX">
     <Variant id="a" lemma="Хорошки">
       <Form tag="NP">Хорошки</Form>
       <Form tag="GP">Хорошок</Form>
@@ -61627,7 +61627,7 @@
       <Form tag="VS">Хоружинська</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387887" lemma="Хоружі" tag="NPINP">
+  <Paradigm pdgId="387887" lemma="Хоружі" tag="NPINX">
     <Variant id="a" lemma="Хоружі">
       <Form tag="NP">Хоружі</Form>
       <Form tag="GP">Хоружів</Form>
@@ -63211,7 +63211,7 @@
       <Form tag="PVP">хотуницькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387971" lemma="Хотуничі" tag="NPINP">
+  <Paradigm pdgId="387971" lemma="Хотуничі" tag="NPINX">
     <Variant id="a" lemma="Хотуничі">
       <Form tag="NP">Хотуничі</Form>
       <Form tag="GP">Хотуничів</Form>
@@ -63232,7 +63232,7 @@
       <Form tag="">хоть</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="387974" lemma="Хотьківці" tag="NPINP">
+  <Paradigm pdgId="387974" lemma="Хотьківці" tag="NPINX">
     <Variant id="a" lemma="Хотьківці">
       <Form tag="NP">Хотьківці</Form>
       <Form tag="GP">Хотьківців</Form>
@@ -63925,7 +63925,7 @@
       <Form tag="VS">Хоцуне</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388015" lemma="Хоцьки" tag="NPINP">
+  <Paradigm pdgId="388015" lemma="Хоцьки" tag="NPINX">
     <Variant id="a" lemma="Хоцьки">
       <Form tag="NP">Хоцьки</Form>
       <Form tag="GP">Хоцьків</Form>
@@ -64172,7 +64172,7 @@
       <Form tag="VS">ХПІ</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388035" lemma="Х-промені" tag="NCINP">
+  <Paradigm pdgId="388035" lemma="Х-промені" tag="NCINX">
     <Variant id="a" lemma="Х-промені">
       <Form tag="NP">Х-промені</Form>
       <Form tag="GP">Х-променів</Form>
@@ -64631,7 +64631,7 @@
       <Form tag="VS">Храпач</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388064" lemma="Храпачі" tag="NPINP">
+  <Paradigm pdgId="388064" lemma="Храпачі" tag="NPINX">
     <Variant id="a" lemma="Храпачі">
       <Form tag="NP">Храпачі</Form>
       <Form tag="GP">Храпачів</Form>
@@ -65001,7 +65001,7 @@
       <Form tag="PVP">хребетні</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388082" lemma="хребетні" tag="NCANP">
+  <Paradigm pdgId="388082" lemma="хребетні" tag="NCANX">
     <Variant id="a" lemma="хребетні">
       <Form tag="NP">хребетні</Form>
       <Form tag="GP">хребетних</Form>
@@ -65479,7 +65479,7 @@
       <Form tag="VP">хрестильні</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388108" lemma="хрестини" tag="NCINP">
+  <Paradigm pdgId="388108" lemma="хрестини" tag="NCINX">
     <Variant id="a" lemma="хрестини">
       <Form tag="NP">хрестини</Form>
       <Form tag="GP">хрестин</Form>
@@ -66398,7 +66398,7 @@
       <Form tag="PVP">хрестоцвіті</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388145" lemma="хрестоцвіті" tag="NCINP">
+  <Paradigm pdgId="388145" lemma="хрестоцвіті" tag="NCINX">
     <Variant id="a" lemma="хрестоцвіті">
       <Form tag="NP">хрестоцвіті</Form>
       <Form tag="GP">хрестоцвітих</Form>
@@ -66409,7 +66409,7 @@
       <Form tag="VP">хрестоцвіті</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388146" lemma="хрестоцвітні" tag="NCINP">
+  <Paradigm pdgId="388146" lemma="хрестоцвітні" tag="NCINX">
     <Variant id="a" lemma="хрестоцвітні">
       <Form tag="NP">хрестоцвітні</Form>
       <Form tag="GP">хрестоцвітних</Form>
@@ -66432,7 +66432,7 @@
       <Form tag="VS">хрестоцілування</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388148" lemma="хрестці" tag="NCINP">
+  <Paradigm pdgId="388148" lemma="хрестці" tag="NCINX">
     <Variant id="a" lemma="хрестці">
       <Form tag="NP">хрестці</Form>
       <Form tag="GP">хрестців</Form>
@@ -67333,7 +67333,7 @@
       <Form tag="VP">хрипи</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388191" lemma="Хрипаличі" tag="NPINP">
+  <Paradigm pdgId="388191" lemma="Хрипаличі" tag="NPINX">
     <Variant id="a" lemma="Хрипаличі">
       <Form tag="NP">Хрипаличі</Form>
       <Form tag="GP">Хрипаличів</Form>
@@ -67469,7 +67469,7 @@
       <Form tag="PVP">хрипкенькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388198" lemma="Хрипки" tag="NPINP">
+  <Paradigm pdgId="388198" lemma="Хрипки" tag="NPINX">
     <Variant id="a" lemma="Хрипки">
       <Form tag="NP">Хрипки</Form>
       <Form tag="GP">Хрипків</Form>
@@ -68097,7 +68097,7 @@
       <Form tag="VP">хрипуни</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388237" lemma="Хрипуни" tag="NPINP">
+  <Paradigm pdgId="388237" lemma="Хрипуни" tag="NPINX">
     <Variant id="a" lemma="Хрипуни">
       <Form tag="NP">Хрипуни</Form>
       <Form tag="GP">Хрипунів</Form>
@@ -68409,7 +68409,7 @@
       <Form tag="VP">Христини</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388256" lemma="христини" tag="NCINP">
+  <Paradigm pdgId="388256" lemma="христини" tag="NCINX">
     <Variant id="a" lemma="христини">
       <Form tag="NP">христини</Form>
       <Form tag="GP">христин</Form>
@@ -70520,7 +70520,7 @@
       <Form tag="PVP">хрінівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388366" lemma="Хрінники" tag="NPINP">
+  <Paradigm pdgId="388366" lemma="Хрінники" tag="NPINX">
     <Variant id="a" lemma="Хрінники">
       <Form tag="NP">Хрінники</Form>
       <Form tag="GP">Хрінників</Form>
@@ -71106,7 +71106,7 @@
       <Form tag="VS">Хроленко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388400" lemma="Хроли" tag="NPINP">
+  <Paradigm pdgId="388400" lemma="Хроли" tag="NPINX">
     <Variant id="a" lemma="Хроли">
       <Form tag="NP">Хроли</Form>
       <Form tag="GP">Хролів</Form>
@@ -71234,7 +71234,7 @@
       <Form tag="VP">хромати</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388407" lemma="хроматиди" tag="NCINP">
+  <Paradigm pdgId="388407" lemma="хроматиди" tag="NCINX">
     <Variant id="a" lemma="хроматиди">
       <Form tag="NP">хроматиди</Form>
       <Form tag="GP">хроматид</Form>
@@ -71754,7 +71754,7 @@
       <Form tag="VS">Хромівко</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388432" lemma="хромісти" tag="NCINP">
+  <Paradigm pdgId="388432" lemma="хромісти" tag="NCINX">
     <Variant id="a" lemma="хромісти">
       <Form tag="NP">хромісти</Form>
       <Form tag="GP">хроміст</Form>
@@ -74916,7 +74916,7 @@
       <Form tag="">хррр</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388590" lemma="Хрулі" tag="NPINP">
+  <Paradigm pdgId="388590" lemma="Хрулі" tag="NPINX">
     <Variant id="a" lemma="Хрулі">
       <Form tag="NP">Хрулі</Form>
       <Form tag="GP">Хрулів</Form>
@@ -77013,7 +77013,7 @@
       <Form tag="PVP">хрящовинні</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388737" lemma="хрящові" tag="NCANP">
+  <Paradigm pdgId="388737" lemma="хрящові" tag="NCANX">
     <Variant id="a" lemma="хрящові">
       <Form tag="NP">хрящові</Form>
       <Form tag="GP">хрящових</Form>
@@ -78260,7 +78260,7 @@
       <Form tag="PVP">худиківські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388816" lemma="Худиківці" tag="NPINP">
+  <Paradigm pdgId="388816" lemma="Худиківці" tag="NPINX">
     <Variant id="a" lemma="Худиківці">
       <Form tag="NP">Худиківці</Form>
       <Form tag="GP">Худиківців</Form>
@@ -78341,7 +78341,7 @@
       <Form tag="VS">худібчино</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388822" lemma="Худіївці" tag="NPINP">
+  <Paradigm pdgId="388822" lemma="Худіївці" tag="NPINX">
     <Variant id="a" lemma="Худіївці">
       <Form tag="NP">Худіївці</Form>
       <Form tag="GP">Худієвець</Form>
@@ -80036,7 +80036,7 @@
       <Form tag="VP">худяки</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="388897" lemma="Худяки" tag="NPINP">
+  <Paradigm pdgId="388897" lemma="Худяки" tag="NPINX">
     <Variant id="a" lemma="Худяки">
       <Form tag="NP">Худяки</Form>
       <Form tag="GP">Худяків</Form>
@@ -82006,7 +82006,7 @@
       <Form tag="PVP">хутірські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="389014" lemma="хутірські" tag="NCANP">
+  <Paradigm pdgId="389014" lemma="хутірські" tag="NCANX">
     <Variant id="a" lemma="хутірські">
       <Form tag="NP">хутірські</Form>
       <Form tag="GP">хутірських</Form>
@@ -82202,7 +82202,7 @@
       <Form tag="VP">хуторці</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="389025" lemma="Хутори" tag="NPINP">
+  <Paradigm pdgId="389025" lemma="Хутори" tag="NPINX">
     <Variant id="a" lemma="Хутори">
       <Form tag="NP">Хутори</Form>
       <Form tag="GP">Хуторів</Form>
@@ -82213,7 +82213,7 @@
       <Form tag="VP">Хутори</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="389026" lemma="Хутори-Кривошиїнецькі" tag="NPINP">
+  <Paradigm pdgId="389026" lemma="Хутори-Кривошиїнецькі" tag="NPINX">
     <Variant id="a" lemma="Хутори-Кривошиїнецькі">
       <Form tag="NP">Хутори-Кривошиїнецькі</Form>
       <Form tag="GP">Хуторів-Кривошиїнецьких</Form>

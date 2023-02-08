@@ -2713,7 +2713,7 @@
       <Form tag="VS">йодокисню</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="145038" lemma="йодокомплекси" tag="NCINP">
+  <Paradigm pdgId="145038" lemma="йодокомплекси" tag="NCINX">
     <Variant id="a" lemma="йодокомплекси">
       <Form tag="NP">йодокомплекси</Form>
       <Form tag="GP">йодокомплексів</Form>
@@ -4026,7 +4026,7 @@
       <Form tag="VS">Йонеско</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="145120" lemma="Йоничі" tag="NPINP">
+  <Paradigm pdgId="145120" lemma="Йоничі" tag="NPINX">
     <Variant id="a" lemma="Йоничі">
       <Form tag="NP">Йоничі</Form>
       <Form tag="GP">Йоничів</Form>
@@ -5422,7 +5422,7 @@
       <Form tag="VP">йорданці</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="145190" lemma="Йорданешти" tag="NPINP">
+  <Paradigm pdgId="145190" lemma="Йорданешти" tag="NPINX">
     <Variant id="a" lemma="Йорданешти">
       <Form tag="NP">Йорданешти</Form>
       <Form tag="GP">Йорданешт</Form>
@@ -6192,7 +6192,7 @@
       <Form tag="VP">Йосипи</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="145232" lemma="Йосипенки" tag="NPINP">
+  <Paradigm pdgId="145232" lemma="Йосипенки" tag="NPINX">
     <Variant id="a" lemma="Йосипенки">
       <Form tag="NP">Йосипенки</Form>
       <Form tag="GP">Йосипенків</Form>
@@ -6321,7 +6321,7 @@
       <Form tag="PVP">йосипівські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="145239" lemma="Йосипівці" tag="NPINP">
+  <Paradigm pdgId="145239" lemma="Йосипівці" tag="NPINX">
     <Variant id="a" lemma="Йосипівці">
       <Form tag="NP">Йосипівці</Form>
       <Form tag="GP">Йосипівців</Form>
@@ -6430,7 +6430,7 @@
       <Form tag="VS">Йосиповичу</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="145244" lemma="Йосиповичі" tag="NPINP">
+  <Paradigm pdgId="145244" lemma="Йосиповичі" tag="NPINX">
     <Variant id="a" lemma="Йосиповичі">
       <Form tag="NP">Йосиповичі</Form>
       <Form tag="GP">Йосиповичів</Form>

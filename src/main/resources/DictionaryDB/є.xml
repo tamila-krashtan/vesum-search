@@ -2602,7 +2602,7 @@
       <Form tag="VP">євроакції</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="107763" lemma="євроамбіції" tag="NCINP">
+  <Paradigm pdgId="107763" lemma="євроамбіції" tag="NCINX">
     <Variant id="a" lemma="євроамбіції">
       <Form tag="NP">євроамбіції</Form>
       <Form tag="GP">євроамбіцій</Form>
@@ -3054,7 +3054,7 @@
       <Form tag="VS">Євробаскете</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="107783" lemma="євробаталії" tag="NCINP">
+  <Paradigm pdgId="107783" lemma="євробаталії" tag="NCINX">
     <Variant id="a" lemma="євробаталії">
       <Form tag="NP">євробаталії</Form>
       <Form tag="GP">євробаталій</Form>
@@ -3262,7 +3262,7 @@
       <Form tag="VP">євробони</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="107793" lemma="євробонди" tag="NCINP">
+  <Paradigm pdgId="107793" lemma="євробонди" tag="NCINX">
     <Variant id="a" lemma="євробонди">
       <Form tag="NP">євробонди</Form>
       <Form tag="GP">євробондів</Form>
@@ -3491,7 +3491,7 @@
       <Form tag="VP">євровибори</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="107806" lemma="євровимоги" tag="NCINP">
+  <Paradigm pdgId="107806" lemma="євровимоги" tag="NCINX">
     <Variant id="a" lemma="євровимоги">
       <Form tag="NP">євровимоги</Form>
       <Form tag="GP">євровимог</Form>
@@ -3782,7 +3782,7 @@
       <Form tag="VP">єврогрупи</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="107821" lemma="євродвері" tag="NCINP">
+  <Paradigm pdgId="107821" lemma="євродвері" tag="NCINX">
     <Variant id="a" lemma="євродвері">
       <Form tag="NP">євродвері</Form>
       <Form tag="GP">євродверей</Form>
@@ -3794,7 +3794,7 @@
       <Form tag="VP">євродвері</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="107822" lemma="євродебати" tag="NCINP">
+  <Paradigm pdgId="107822" lemma="євродебати" tag="NCINX">
     <Variant id="a" lemma="євродебати">
       <Form tag="NP">євродебати</Form>
       <Form tag="GP">євродебатів</Form>
@@ -4161,7 +4161,7 @@
       <Form tag="VS">євродосвіде</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="107842" lemma="євродотації" tag="NCINP">
+  <Paradigm pdgId="107842" lemma="євродотації" tag="NCINX">
     <Variant id="a" lemma="євродотації">
       <Form tag="NP">євродотації</Form>
       <Form tag="GP">євродотацій</Form>
@@ -4172,7 +4172,7 @@
       <Form tag="VP">євродотації</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="107843" lemma="євродрузі" tag="NCANP">
+  <Paradigm pdgId="107843" lemma="євродрузі" tag="NCANX">
     <Variant id="a" lemma="євродрузі">
       <Form tag="NP">євродрузі</Form>
       <Form tag="GP">євродрузів</Form>
@@ -4390,7 +4390,7 @@
       <Form tag="VP">єврожурі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="107856" lemma="єврозакони" tag="NCINP">
+  <Paradigm pdgId="107856" lemma="єврозакони" tag="NCINX">
     <Variant id="a" lemma="єврозакони">
       <Form tag="NP">єврозакони</Form>
       <Form tag="GP">єврозаконів</Form>
@@ -4413,7 +4413,7 @@
       <Form tag="VS">єврозаконодавство</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="107858" lemma="єврозаконопроекти" tag="NCINP">
+  <Paradigm pdgId="107858" lemma="єврозаконопроекти" tag="NCINX">
     <Variant id="a" lemma="єврозаконопроекти" orthography="ua_1992">
       <Form tag="NP">єврозаконопроекти</Form>
       <Form tag="GP">єврозаконопроектів</Form>
@@ -4424,7 +4424,7 @@
       <Form tag="VP">єврозаконопроекти</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="107859" lemma="єврозаконопроєкти" tag="NCINP">
+  <Paradigm pdgId="107859" lemma="єврозаконопроєкти" tag="NCINX">
     <Variant id="a" lemma="єврозаконопроєкти" orthography="ua_2019">
       <Form tag="NP">єврозаконопроєкти</Form>
       <Form tag="GP">єврозаконопроєктів</Form>
@@ -4594,7 +4594,7 @@
       <Form tag="VS">євроідентичносте</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="107869" lemma="євроілюзії" tag="NCINP">
+  <Paradigm pdgId="107869" lemma="євроілюзії" tag="NCINX">
     <Variant id="a" lemma="євроілюзії">
       <Form tag="NP">євроілюзії</Form>
       <Form tag="GP">євроілюзій</Form>
@@ -4638,7 +4638,7 @@
       <Form tag="VP">євроімпортери</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="107872" lemma="євроінституції" tag="NCINP">
+  <Paradigm pdgId="107872" lemma="євроінституції" tag="NCINX">
     <Variant id="a" lemma="євроінституції">
       <Form tag="NP">євроінституції</Form>
       <Form tag="GP">євроінституцій</Form>
@@ -5176,7 +5176,7 @@
       <Form tag="VS">Євроконтролю</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="107902" lemma="єврокоридори" tag="NCINP">
+  <Paradigm pdgId="107902" lemma="єврокоридори" tag="NCINX">
     <Variant id="a" lemma="єврокоридори">
       <Form tag="NP">єврокоридори</Form>
       <Form tag="GP">єврокоридорів</Form>
@@ -7138,7 +7138,7 @@
       <Form tag="VP">європесимісти</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108003" lemma="європи" tag="NCINP">
+  <Paradigm pdgId="108003" lemma="європи" tag="NCINX">
     <Variant id="a" lemma="європи">
       <Form tag="NP">європи</Form>
       <Form tag="GP">європ</Form>
@@ -7703,7 +7703,7 @@
       <Form tag="VS">єврореалізме</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108033" lemma="єврореалії" tag="NCINP">
+  <Paradigm pdgId="108033" lemma="єврореалії" tag="NCINX">
     <Variant id="a" lemma="єврореалії">
       <Form tag="NP">єврореалії</Form>
       <Form tag="GP">єврореалій</Form>
@@ -8957,7 +8957,7 @@
       <Form tag="VS">євротехно</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108096" lemma="євротовари" tag="NCINP">
+  <Paradigm pdgId="108096" lemma="євротовари" tag="NCINX">
     <Variant id="a" lemma="євротовари">
       <Form tag="NP">євротовари</Form>
       <Form tag="GP">євротоварів</Form>
@@ -9786,7 +9786,7 @@
       <Form tag="PVP">євроцентричні</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108135" lemma="євроцінності" tag="NCINP">
+  <Paradigm pdgId="108135" lemma="євроцінності" tag="NCINX">
     <Variant id="a" lemma="євроцінності">
       <Form tag="NP">євроцінності</Form>
       <Form tag="GP">євроцінностей</Form>
@@ -16053,7 +16053,7 @@
       <Form tag="PVP">єлиховицькі</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108463" lemma="Єлиховичі" tag="NPINP">
+  <Paradigm pdgId="108463" lemma="Єлиховичі" tag="NPINX">
     <Variant id="a" lemma="Єлиховичі">
       <Form tag="NP">Єлиховичі</Form>
       <Form tag="GP">Єлиховичів</Form>
@@ -17227,7 +17227,7 @@
       <Form tag="VS">Ємцеве</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108529" lemma="Ємці" tag="NPINP">
+  <Paradigm pdgId="108529" lemma="Ємці" tag="NPINX">
     <Variant id="a" lemma="Ємці">
       <Form tag="NP">Ємці</Form>
       <Form tag="GP">Ємців</Form>
@@ -17616,7 +17616,7 @@
       <Form tag="PVP">єнісейські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108553" lemma="Єнківці" tag="NPINP">
+  <Paradigm pdgId="108553" lemma="Єнківці" tag="NPINX">
     <Variant id="a" lemma="Єнківці">
       <Form tag="NP">Єнківці</Form>
       <Form tag="GP">Єнківців</Form>
@@ -17862,7 +17862,7 @@
       <Form tag="VS">Єнсен</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108566" lemma="Єньки" tag="NPINP">
+  <Paradigm pdgId="108566" lemma="Єньки" tag="NPINX">
     <Variant id="a" lemma="Єньки">
       <Form tag="NP">Єньки</Form>
       <Form tag="GP">Єньків</Form>
@@ -19506,7 +19506,7 @@
       <Form tag="PVP">єрихонські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108653" lemma="Єрки" tag="NPINP">
+  <Paradigm pdgId="108653" lemma="Єрки" tag="NPINX">
     <Variant id="a" lemma="Єрки">
       <Form tag="NP">Єрки</Form>
       <Form tag="GP">Єрків</Form>
@@ -19529,7 +19529,7 @@
       <Form tag="VS">Єркове</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108655" lemma="Єрківці" tag="NPINP">
+  <Paradigm pdgId="108655" lemma="Єрківці" tag="NPINX">
     <Variant id="a" lemma="Єрківці">
       <Form tag="NP">Єрківці</Form>
       <Form tag="GP">Єрківців</Form>
@@ -20769,7 +20769,7 @@
       <Form tag="VS">ЄРЦ</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108728" lemma="Єрчики" tag="NPINP">
+  <Paradigm pdgId="108728" lemma="Єрчики" tag="NPINX">
     <Variant id="a" lemma="Єрчики">
       <Form tag="NP">Єрчики</Form>
       <Form tag="GP">Єрчиків</Form>
@@ -21119,7 +21119,7 @@
       <Form tag="PVP">єсенінські</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108750" lemma="Єсентуки" tag="NPINP">
+  <Paradigm pdgId="108750" lemma="Єсентуки" tag="NPINX">
     <Variant id="a" lemma="Єсентуки">
       <Form tag="NP">Єсентуки</Form>
       <Form tag="GP">Єсентуків</Form>
@@ -22239,7 +22239,7 @@
       <Form tag="VS">Єханурова</Form>
     </Variant>
   </Paradigm>
-  <Paradigm pdgId="108817" lemma="ЄХБ" tag="NCIBP" meaning="євангельські християни-баптисти">
+  <Paradigm pdgId="108817" lemma="ЄХБ" tag="NCIBX" meaning="євангельські християни-баптисти">
     <Variant id="a" lemma="ЄХБ">
       <Form tag="NP">ЄХБ</Form>
       <Form tag="GP">ЄХБ</Form>
