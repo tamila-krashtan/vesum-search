@@ -85,10 +85,10 @@
                             <label class="radio-inline pl-2"><input type="radio" id="inputOrderStandard" name="inputOrder" class="form-control mr-2" value="STANDARD" checked> Звичайний</label>
                             <label class="radio-inline pl-2"><input type="radio" id="inputOrderReverse"  name="inputOrder" class="form-control mr-2" value="REVERSE"> Зворотній</label>
                         </div>
-                        <div id="grammar-show-forms" class="form-inline my-1 word-select" style="display: none">
+<!--                        <div id="grammar-show-forms" class="form-inline my-1 word-select" style="display: none">
                             <span id="grammarwordshow-grammar" class="d-none wordgram-grammar-string"></span>
                             <label>Показувати особливу форму: <a href="#" id="grammarwordshow-grammarshow" class="form-control wordgram-display wordgram-display-formsonly ml-2"
-                                                                  onClick="dialogWordGrammar = DialogWordGrammar.createFormOnlyTagsDialog(this, 'grammarword-grammar'); return false;">---</a>
+                                                                  onClick="dialogWordGrammar = DialogWordGrammar.createFormOnlyTagsDialog(this, 'grammarword-grammar'); return false;">-&#45;&#45;</a>
                             </label>
                         </div>
                         <div id="grammar-show-grouping" class="form-inline my-1" style="display: none">
@@ -96,7 +96,7 @@
                         </div>
                         <div id="grammar-show-noforms" class="form-inline my-1" style="display: none">
                             Якщо укласти граматику і обрати частину мови, у якій слово може мати декілька форм, можна виводити форму, інакшу від початкової
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
@@ -621,6 +621,7 @@
                         <div class="card-body">
                             Вихідне джерело словника знаходиться на <a href="https://github.com/brown-uk/dict_uk">github.com</a> і розповсюджуються під ліцензією <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL-3.0 license</a>. <br/>
                             У пошуку використаний візуальний вихідний файл словника, <a href="https://github.com/tamila-krashtan/dictionary-format-translator">перетворений</a> на xml-формат.
+                            Оригінальна веб-сторінка ВЕСУМу: https://vesum.nlp.net.ua/
                         </div>
                     </div>
                 </div>
@@ -792,21 +793,14 @@
 
     <script id="template-grammardb-noun" type="text/x-jsrender">
   <table class="table-borders hspacing">
-    <tr><td class="grtagcenter">Число</td><td class="grtagcenter">Відмінок</td><td> </td></tr>
-    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Відмінок:N;Число:S',~v)}}</td></tr>
-    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Відмінок:G;Число:S',~v)}}</td></tr>
-    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Відмінок:D;Число:S',~v)}}</td></tr>
-    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">Зн.</td><td class="grvalue">{{:~root.getter('Відмінок:A;Число:S',~v)}}</td></tr>
-    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">Ор.</td><td class="grvalue">{{:~root.getter('Відмінок:I;Число:S',~v)}}</td></tr>
-    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Відмінок:L;Число:S',~v)}}</td></tr>
-    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">Кл.</td><td class="grvalue">{{:~root.getter('Відмінок:V;Число:S',~v)}}</td></tr>
-    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Відмінок:N;Число:P',~v)}}</td></tr>
-    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Відмінок:G;Число:P',~v)}}</td></tr>
-    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Відмінок:D;Число:P',~v)}}</td></tr>
-    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">Зн.</td><td class="grvalue">{{:~root.getter('Відмінок:A;Число:P',~v)}}</td></tr>
-    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">Ор.</td><td class="grvalue">{{:~root.getter('Відмінок:I;Число:P',~v)}}</td></tr>
-    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Відмінок:L;Число:P',~v)}}</td></tr>
-    <tr class="gr-p2"><td class="grtag">мн.</td><td class="grtag">Кл.</td><td class="grvalue">{{:~root.getter('Відмінок:V;Число:P',~v)}}</td></tr>
+    <tr><td class="grtagcenter"></td><td class="grtagcenter">Однина</td><td class="grtagcenter">Множина</td></tr>
+    <tr class="gr-p1"><td class="grtag">Називний</td><td class="grvalue">{{:~root.getter('Відмінок:N;Число:S',~v)}}</td><td class="grvalue">{{:~root.getter('Відмінок:N;Число:P',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">Родовий</td><td class="grvalue">{{:~root.getter('Відмінок:G;Число:S',~v)}}</td><td class="grvalue">{{:~root.getter('Відмінок:G;Число:P',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">Давальний</td><td class="grvalue">{{:~root.getter('Відмінок:D;Число:S',~v)}}</td><td class="grvalue">{{:~root.getter('Відмінок:D;Число:P',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">Знахідний</td><td class="grvalue">{{:~root.getter('Відмінок:A;Число:S',~v)}}</td><td class="grvalue">{{:~root.getter('Відмінок:A;Число:P',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">Орудний</td><td class="grvalue">{{:~root.getter('Відмінок:I;Число:S',~v)}}</td><td class="grvalue">{{:~root.getter('Відмінок:I;Число:P',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">Місцевий</td><td class="grvalue">{{:~root.getter('Відмінок:L;Число:S',~v)}}</td><td class="grvalue">{{:~root.getter('Відмінок:L;Число:P',~v)}}</td></tr>
+    <tr class="gr-p1"><td class="grtag">Кличний</td><td class="grvalue">{{:~root.getter('Відмінок:V;Число:S',~v)}}</td><td class="grvalue">{{:~root.getter('Відмінок:V;Число:P',~v)}}</td></tr>
   </table>
   {{> ~root.log(~v) }}
 </script>
@@ -851,35 +845,36 @@
 
     <script id="template-grammardb-adjective" type="text/x-jsrender">
   <table class="table-borders hspacing">
-    <tr><td class="grtagcenter">Число</td><td class="grtagcenter">Рід</td><td class="grtagcenter">Відмінок</td><td> </td></tr>
-    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">ч.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:N;Число:S',~v)}}</td></tr>
-    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">ч.</td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:G;Число:S',~v)}}</td></tr>
-    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">ч.</td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:D;Число:S',~v)}}</td></tr>
-    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">ч.</td><td class="grtag">Зн.</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:A;Число:S',~v)}}</td></tr>
-    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">ч.</td><td class="grtag">Ор.</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:I;Число:S',~v)}}</td></tr>
-    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">ч.</td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:L;Число:S',~v)}}</td></tr>
-    <tr class="gr-p1"><td class="grtag">одн.</td><td class="grtag">ч.</td><td class="grtag">Кл.</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:V;Число:S',~v)}}</td></tr>
-    <tr class="gr-p2"><td class="grtag">одн.</td><td class="grtag">с.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Рід:N;Відмінок:N;Число:S',~v)}}</td></tr>
-    <tr class="gr-p2"><td class="grtag">одн.</td><td class="grtag">с.</td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Рід:N;Відмінок:G;Число:S',~v)}}</td></tr>
-    <tr class="gr-p2"><td class="grtag">одн.</td><td class="grtag">с.</td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Рід:N;Відмінок:D;Число:S',~v)}}</td></tr>
-    <tr class="gr-p2"><td class="grtag">одн.</td><td class="grtag">с.</td><td class="grtag">Зн.</td><td class="grvalue">{{:~root.getter('Рід:N;Відмінок:A;Число:S',~v)}}</td></tr>
-    <tr class="gr-p2"><td class="grtag">одн.</td><td class="grtag">с.</td><td class="grtag">Ор.</td><td class="grvalue">{{:~root.getter('Рід:N;Відмінок:I;Число:S',~v)}}</td></tr>
-    <tr class="gr-p2"><td class="grtag">одн.</td><td class="grtag">с.</td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Рід:N;Відмінок:L;Число:S',~v)}}</td></tr>
-    <tr class="gr-p2"><td class="grtag">одн.</td><td class="grtag">с.</td><td class="grtag">Кл.</td><td class="grvalue">{{:~root.getter('Рід:N;Відмінок:V;Число:S',~v)}}</td></tr>
-    <tr class="gr-p3"><td class="grtag">одн.</td><td class="grtag">ж.</td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Рід:F;Відмінок:N;Число:S',~v)}}</td></tr>
-    <tr class="gr-p3"><td class="grtag">одн.</td><td class="grtag">ж.</td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Рід:F;Відмінок:G;Число:S',~v)}}</td></tr>
-    <tr class="gr-p3"><td class="grtag">одн.</td><td class="grtag">ж.</td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Рід:F;Відмінок:D;Число:S',~v)}}</td></tr>
-    <tr class="gr-p3"><td class="grtag">одн.</td><td class="grtag">ж.</td><td class="grtag">Зн.</td><td class="grvalue">{{:~root.getter('Рід:F;Відмінок:A;Число:S',~v)}}</td></tr>
-    <tr class="gr-p3"><td class="grtag">одн.</td><td class="grtag">ж.</td><td class="grtag">Ор.</td><td class="grvalue">{{:~root.getter('Рід:F;Відмінок:I;Число:S',~v)}}</td></tr>
-    <tr class="gr-p3"><td class="grtag">одн.</td><td class="grtag">ж.</td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Рід:F;Відмінок:L;Число:S',~v)}}</td></tr>
-    <tr class="gr-p3"><td class="grtag">одн.</td><td class="grtag">ж.</td><td class="grtag">Кл.</td><td class="grvalue">{{:~root.getter('Рід:F;Відмінок:V;Число:S',~v)}}</td></tr>
-    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">Н.</td><td class="grvalue">{{:~root.getter('Відмінок:N;Число:P',~v)}}</td></tr>
-    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">Р.</td><td class="grvalue">{{:~root.getter('Відмінок:G;Число:P',~v)}}</td></tr>
-    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">Д.</td><td class="grvalue">{{:~root.getter('Відмінок:D;Число:P',~v)}}</td></tr>
-    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">Зн.</td><td class="grvalue">{{:~root.getter('Відмінок:A;Число:P',~v)}}</td></tr>
-    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">Ор.</td><td class="grvalue">{{:~root.getter('Відмінок:I;Число:P',~v)}}</td></tr>
-    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">М.</td><td class="grvalue">{{:~root.getter('Відмінок:L;Число:P',~v)}}</td></tr>
-    <tr class="gr-p4"><td class="grtag">мн.</td><td> </td><td class="grtag">Кл.</td><td class="grvalue">{{:~root.getter('Відмінок:V;Число:P',~v)}}</td></tr>
+    <tr><td class="grtagcenter" rowspan="2"> </td><td class="grtagcenter" colspan="3">Однина</td><td class="grtagcenter" rowspan="2">Множина</td></tr>
+    <tr><td class="grtagcenter">Чоловічий</td><td class="grtagcenter">Жіночий</td><td class="grtagcenter">Середній</td></tr>
+    <tr><td class="grtag">Називний</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:N;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Рід:N;Відмінок:N;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Рід:F;Відмінок:N;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Відмінок:N;Число:P',~v)}}</td></tr>
+    <tr><td class="grtag">Родовий</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:G;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Рід:N;Відмінок:G;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Рід:F;Відмінок:G;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Відмінок:G;Число:P',~v)}}</td></tr>
+    <tr><td class="grtag">Давальний</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:D;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Рід:N;Відмінок:D;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Рід:F;Відмінок:D;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Відмінок:D;Число:P',~v)}}</td></tr>
+    <tr><td class="grtag">Знахідний</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:A;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Рід:N;Відмінок:A;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Рід:F;Відмінок:A;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Відмінок:A;Число:P',~v)}}</td></tr>
+    <tr><td class="grtag">Орудний</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:I;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Рід:N;Відмінок:I;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Рід:F;Відмінок:I;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Відмінок:I;Число:P',~v)}}</td></tr>
+    <tr><td class="grtag">Місцевий</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:L;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Рід:N;Відмінок:L;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Рід:F;Відмінок:L;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Відмінок:L;Число:P',~v)}}</td></tr>
+    <tr><td class="grtag">Кличний</td><td class="grvalue">{{:~root.getter('Рід:M;Відмінок:V;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Рід:N;Відмінок:V;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Рід:F;Відмінок:V;Число:S',~v)}}</td>
+        <td class="grvalue">{{:~root.getter('Відмінок:V;Число:P',~v)}}</td></tr>
   </table>
   {{> ~root.log(~v) }}
 </script>
