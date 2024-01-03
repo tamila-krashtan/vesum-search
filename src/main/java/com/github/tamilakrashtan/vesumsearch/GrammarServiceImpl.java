@@ -1,20 +1,16 @@
 package com.github.tamilakrashtan.vesumsearch;
 
-import com.github.tamilakrashtan.vesumsearch.grammar.Form;
-import com.github.tamilakrashtan.vesumsearch.grammar.Paradigm;
-import com.github.tamilakrashtan.vesumsearch.grammar.Variant;
-import com.github.tamilakrashtan.vesumsearch.grammar.DBTagsGroups;
+import com.github.tamilakrashtan.vesumsearch.grammar.*;
 import com.github.tamilakrashtan.vesumsearch.ukrainian.UkrainianTags;
 import com.github.tamilakrashtan.vesumsearch.ukrainian.UkrainianWordNormalizer;
 import com.github.tamilakrashtan.vesumsearch.ukrainian.FormsReadyFilter;
-import com.github.tamilakrashtan.vesumsearch.grammar.GrammarSearchResult;
-import com.github.tamilakrashtan.vesumsearch.grammar.LemmaInfo;
 import com.github.tamilakrashtan.vesumsearch.server.GrammarInitial;
 import com.github.tamilakrashtan.vesumsearch.server.GrammarApplication;
 import com.github.tamilakrashtan.vesumsearch.server.Settings;
 import com.github.tamilakrashtan.vesumsearch.server.WordsDetailsChecks;
 import com.github.tamilakrashtan.vesumsearch.utils.SetUtils;
 import com.github.tamilakrashtan.vesumsearch.utils.StressUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,6 +29,11 @@ import java.util.stream.StreamSupport;
 @RestController
 @RequestMapping("/grammar")
 public class GrammarServiceImpl {
+
+    @Autowired
+    private DBFormService formService;
+    @Autowired
+    private DBLemmaService lemmaService;
 
     public static Locale UK = new Locale("uk");
     public static Collator UKR = Collator.getInstance(UK);
@@ -111,7 +112,7 @@ public class GrammarServiceImpl {
             }
             Stream<LemmaInfo> output;
             if (rq.word == null || WordsDetailsChecks.needWildcardRegexp(rq.word)) {
-                output = StreamSupport.stream(new SearchWidlcards(rq.word, reGrammar, rq.multiForm, rq.fullDatabase, reOutputGrammar),
+                output = StreamSupport.stream(new SearchWildcards(rq.word, reGrammar, rq.multiForm, rq.fullDatabase, reOutputGrammar),
                         false);
             } else {
                 output = searchExact(rq.word, reGrammar, rq.multiForm, rq.fullDatabase, reOutputGrammar);
@@ -193,7 +194,7 @@ public class GrammarServiceImpl {
         }
     }
 
-    class SearchWidlcards extends Spliterators.AbstractSpliterator<LemmaInfo> {
+    class SearchWildcards extends Spliterators.AbstractSpliterator<LemmaInfo> {
         private final Pattern re;
         private final Pattern reGrammar;
         private final boolean multiform;
@@ -203,15 +204,16 @@ public class GrammarServiceImpl {
         private final List<Paradigm> data;
         private int dataPos;
 
-        public SearchWidlcards(String word, Pattern reGrammar, boolean multiform, boolean fullDatabase,
-                Pattern reOutputGrammar) {
+        public SearchWildcards(String word, Pattern reGrammar, boolean multiform, boolean fullDatabase,
+                               Pattern reOutputGrammar) {
             super(Long.MAX_VALUE, 0);
             this.re = word == null ? null : WordsDetailsChecks.getWildcardRegexp(word.trim());
             this.reGrammar = reGrammar;
             this.multiform = multiform;
             this.fullDatabase = fullDatabase;
             this.reOutputGrammar = reOutputGrammar;
-            data = getApp().gr.getAllParadigms();
+            //data = getApp().gr.getAllParadigms();
+            data = grammarApp.grFinder.getParadigmsByRegex(formService, lemmaService, this.re);
         }
 
         @Override
@@ -233,7 +235,7 @@ public class GrammarServiceImpl {
     private Stream<LemmaInfo> searchExact(String word, Pattern reGrammar, boolean multiform, boolean fullDatabase,
             Pattern reOutputGrammar) {
         String normWord = UkrainianWordNormalizer.lightNormalized(word.trim());
-        Paradigm[] data = getApp().grFinder.getParadigms(normWord);
+        List<Paradigm> data = getApp().grFinder.getParadigms(formService, lemmaService, normWord);
         List<LemmaInfo> result = new ArrayList<>();
         for (Paradigm p : data) {
             createLemmaInfoFromParadigm(p, s -> UkrainianWordNormalizer.equals(normWord, s), multiform, fullDatabase,
@@ -248,6 +250,7 @@ public class GrammarServiceImpl {
         for (Variant v : p.getVariant()) {
             List<Form> forms = fullDatabase ? v.getForm()
                     : FormsReadyFilter.getAcceptedForms(p, v);
+            System.out.println(forms.toString());
             if (forms == null) {
                 return;
             }
@@ -317,31 +320,21 @@ public class GrammarServiceImpl {
     @GetMapping(value = "/details/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public LemmaInfo.LemmaParadigm getLemmaDetails(@PathVariable(name="id") long pdgId) throws Exception {
         try {
-            for (Paradigm p : getApp().gr.getAllParadigms()) {
-                if (p.getPdgId() == pdgId) {
-                    return conv(p, false);
-                }
-            }
+            return conv(grammarApp.grFinder.getParadigmById(formService, lemmaService, (int) pdgId), false);
         } catch (Exception ex) {
             ex.printStackTrace();
             throw ex;
         }
-        return null;
     }
 
     @GetMapping(value = "/detailsFull/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public LemmaInfo.LemmaParadigm getLemmaFullDetails(@RequestParam(name="id", required=true) long pdgId) throws Exception {
         try {
-            for (Paradigm p : getApp().gr.getAllParadigms()) {
-                if (p.getPdgId() == pdgId) {
-                    return conv(p, true);
-                }
-            }
+            return conv(grammarApp.grFinder.getParadigmById(formService, lemmaService, (int) pdgId), true);
         } catch (Exception ex) {
             ex.printStackTrace();
             throw ex;
         }
-        return null;
     }
 
     @GetMapping(value = "lemmas/{form}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -350,7 +343,7 @@ public class GrammarServiceImpl {
         Set<String> result = Collections.synchronizedSet(new TreeSet<>());
         try {
             form = UkrainianWordNormalizer.lightNormalized(form);
-            for (Paradigm p : getApp().grFinder.getParadigms(form)) {
+            for (Paradigm p : getApp().grFinder.getParadigms(formService, lemmaService, form)) {
                 for (Variant v : p.getVariant()) {
                     for (Form f : v.getForm()) {
                         if (UkrainianWordNormalizer.equals(f.getValue(), form)) {

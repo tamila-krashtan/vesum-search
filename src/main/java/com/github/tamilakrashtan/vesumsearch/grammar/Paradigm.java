@@ -7,6 +7,7 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -447,6 +448,11 @@ public class Paradigm {
      */
     public void setMeaning(String value) {
         this.meaning = value;
+    }
+
+    public void setVariant(Variant variant) {
+
+        this.variant = Collections.singletonList(variant);
     }
 
 }

@@ -350,4 +350,9 @@ public class Variant {
         this.regulation = value;
     }
 
+    public void setForms(List<Form> forms) {
+
+        this.form = forms;
+    }
+
 }

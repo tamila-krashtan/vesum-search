@@ -33,6 +33,10 @@ public class GrammarDB2 {
         return allParadigms;
     }
 
+    public long getNumberOfParadigms(DBLemmaService lemmaService) {
+        return lemmaService.count();
+    }
+
     public static GrammarDB2 initializeFromJar() throws Exception {
         long be = System.currentTimeMillis();
         GrammarDB2 r = null;

@@ -1,9 +1,6 @@
 package com.github.tamilakrashtan.vesumsearch.server;
 
-import com.github.tamilakrashtan.vesumsearch.grammar.Variant;
-import com.github.tamilakrashtan.vesumsearch.grammar.DBTagsGroups;
-import com.github.tamilakrashtan.vesumsearch.grammar.GrammarDB2;
-import com.github.tamilakrashtan.vesumsearch.grammar.GrammarFinder;
+import com.github.tamilakrashtan.vesumsearch.grammar.*;
 import com.github.tamilakrashtan.vesumsearch.ukrainian.UkrainianTags;
 import com.github.tamilakrashtan.vesumsearch.ukrainian.TagLetter;
 import com.github.tamilakrashtan.vesumsearch.server.GrammarInitial.GrammarLetter;
@@ -39,6 +36,7 @@ public class GrammarApplication extends ResourceConfig {
 
         System.out.println("Starting...");
         try {
+            //grammarDb = "artifact/DictionaryDB";
             grammarDb = "src/main/resources/DictionaryDB";
             settings = new ArrayList<>();
 

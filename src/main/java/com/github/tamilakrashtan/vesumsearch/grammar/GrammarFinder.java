@@ -3,9 +3,11 @@ package com.github.tamilakrashtan.vesumsearch.grammar;
 import com.github.tamilakrashtan.vesumsearch.ukrainian.UkrainianWordNormalizer;
 
 import java.util.*;
-import java.util.stream.Stream;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-public class GrammarFinder implements IGrammarFinder {
+public class GrammarFinder {
+
     private static final int HASHTABLE_SIZE = 256 * 1024;
     private static final Paradigm[] EMPTY = new Paradigm[0];
     private final Paradigm[][] table;
@@ -62,14 +64,76 @@ public class GrammarFinder implements IGrammarFinder {
     /**
      * Find paradigms by lemma or form (lower case).
      */
-    public Paradigm[] getParadigms(String word) {
-        int hash = UkrainianWordNormalizer.hash(word);
-        int indexByHash = Math.abs(hash) % HASHTABLE_SIZE;
-        Paradigm[] result = table[indexByHash];
-        return result != null ? result : EMPTY;
+    public List<Paradigm> getParadigms(DBFormService formService, DBLemmaService lemmaService, String word) {
+
+        List<DBForm> matchedForms = formService.findByForm(word);
+        Set<Integer> lemmaIds = matchedForms.stream().map(DBForm::getLemmaId).collect(Collectors.toSet());
+        //List<DBForm> allMatchedForms = formService.findByLemma_ids(lemmaIds);
+        return getParadigmsFromLemmas(lemmaService.findByIds(lemmaIds), matchedForms);
     }
 
-    public Stream<Paradigm[]> getSimilarGroups() {
-        return Arrays.stream(table).filter(r -> r != null);
+    public List<Paradigm> getParadigmsByRegex(DBFormService formService, DBLemmaService lemmaService, Pattern pattern) {
+
+        List<DBForm> matchedForms = formService.findByFormLike(pattern);
+        Set<Integer> lemmaIds = matchedForms.stream().map(DBForm::getLemmaId).collect(Collectors.toSet());
+        //List<DBForm> allMatchedForms = formService.findByLemma_ids(lemmaIds);
+        return getParadigmsFromLemmas(lemmaService.findByIds(lemmaIds), matchedForms);
+    }
+
+    private List<Paradigm> getParadigmsFromLemmas(List<DBLemma> lemmas, List<DBForm> matchedForms) {
+
+        return lemmas.parallelStream().map(l -> this.getParadigmFromLemma(l, matchedForms)).collect(Collectors.toList());
+    }
+
+    public Paradigm getParadigmById(DBFormService formService, DBLemmaService lemmaService, int id) {
+
+        Optional<DBLemma> optionalLemma = lemmaService.findById(id);
+        return optionalLemma.map(l->getParadigmFromLemma(formService, l)).orElse(null);
+    }
+
+    public Paradigm getParadigmFromLemma(DBLemma lemma, List<DBForm> matchedForms) {
+
+        //TODO get rid of the Paradigm and such classes altogether and rewrite this
+        Paradigm paradigm = new Paradigm();
+        paradigm.setPdgId(lemma.getId());
+        paradigm.setLemma(lemma.getLemma());
+        paradigm.setTag(lemma.getTags());
+
+        Variant variant = new Variant();
+        variant.setLemma(lemma.getLemma());
+        paradigm.setVariant(variant);
+
+        List<Form> lemmaForms = new ArrayList<>();
+        for (DBForm dbForm : matchedForms.stream().filter(dbForm -> dbForm.getLemmaId() == lemma.getId()).toList()) {
+            Form form = new Form();
+            form.setValue(dbForm.getForm());
+            form.setTag(dbForm.getTags());
+            lemmaForms.add(form);
+        }
+        variant.setForms(lemmaForms);
+        return paradigm;
+    }
+
+    public Paradigm getParadigmFromLemma(DBFormService formService, DBLemma lemma) {
+
+        //TODO get rid of the Paradigm and such classes altogether and rewrite this
+        Paradigm paradigm = new Paradigm();
+        paradigm.setPdgId(lemma.getId());
+        paradigm.setLemma(lemma.getLemma());
+        paradigm.setTag(lemma.getTags());
+
+        Variant variant = new Variant();
+        variant.setLemma(lemma.getLemma());
+        paradigm.setVariant(variant);
+
+        List<Form> lemmaForms = new ArrayList<>();
+        for (DBForm dbForm : formService.findByLemma_id(lemma.getId())) {
+            Form form = new Form();
+            form.setValue(dbForm.getForm());
+            form.setTag(dbForm.getTags());
+            lemmaForms.add(form);
+        }
+        variant.setForms(lemmaForms);
+        return paradigm;
     }
 }
