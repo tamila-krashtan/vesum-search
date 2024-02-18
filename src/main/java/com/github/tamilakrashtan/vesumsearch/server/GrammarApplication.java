@@ -40,11 +40,7 @@ public class GrammarApplication extends ResourceConfig {
             grammarDb = "src/main/resources/DictionaryDB";
             settings = new ArrayList<>();
 
-            if (!grammarDb.isEmpty()) {
-                gr = GrammarDB2.initializeFromDir(grammarDb);
-            } else {
-                gr = GrammarDB2.empty();
-            }
+            gr = GrammarDB2.empty();
             System.out.println("GrammarDB loaded with " + gr.getAllParadigms().size() + " paradigms. Used memory: "
                     + getUsedMemory());
             grFinder = new GrammarFinder(gr);

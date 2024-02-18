@@ -47,7 +47,7 @@ public class GrammarDB2 {
             }
         }
         if (r == null) {
-            r = initializeFromDir("DictionaryDB");
+            r = empty();
         }
         long af = System.currentTimeMillis();
         System.out.println("GrammarDB deserialization time: " + (af - be) + "ms");
@@ -56,12 +56,6 @@ public class GrammarDB2 {
 
     public static GrammarDB2 empty() {
         return new GrammarDB2();
-    }
-
-    public static GrammarDB2 initializeFromDir(String dir) throws Exception {
-        File[] forLoads = getFilesForLoad(new File(dir));
-        GrammarDB2 r = new GrammarDB2(forLoads);
-        return r;
     }
 
     public static GrammarDB2 initializeFromFile(File file) throws Exception {
@@ -79,23 +73,6 @@ public class GrammarDB2 {
         }
         long af = System.currentTimeMillis();
         System.out.println("GrammarDB serialization time: " + (af - be) + "ms");
-    }
-
-    /**
-     * Get files for loading(xml and themes.txt)
-     */
-    public static File[] getFilesForLoad(File dir) throws Exception {
-        File[] result = dir.listFiles(new FileFilter() {
-            public boolean accept(File pathname) {
-                return pathname.isFile() && (pathname.getName().endsWith(".xml")
-                        || pathname.getName().endsWith(".xml.gz"));
-            }
-        });
-        if (result == null) {
-            throw new Exception("There are no files for GrammarDB in the " + dir.getAbsolutePath());
-        }
-        Arrays.sort(result);
-        return result;
     }
 
     private static GrammarDB2 loadFromCache(Input input) throws Exception {
