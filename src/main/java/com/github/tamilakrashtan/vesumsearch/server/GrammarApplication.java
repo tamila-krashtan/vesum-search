@@ -90,16 +90,16 @@ public class GrammarApplication extends ResourceConfig {
             }
         }
         grammarInitial.dictionaries = new ArrayList<>();
-        for (String d : Files.readAllLines(Paths.get(grammarDb + "/dictionaries.list"))) {
-            GrammarInitial.GrammarDict dict = new GrammarInitial.GrammarDict();
-            int p = d.indexOf('=');
-            if (p < 0 || !d.substring(0, p).matches("[a-z0-9]+")) {
-                throw new Exception("Wrong dictionary name format: " + d);
-            }
-            dict.name = d.substring(0, p);
-            dict.desc = d.substring(p + 1);
-            grammarInitial.dictionaries.add(dict);
-        }
+//        for (String d : Files.readAllLines(Paths.get(grammarDb + "/dictionaries.list"))) {
+//            GrammarInitial.GrammarDict dict = new GrammarInitial.GrammarDict();
+//            int p = d.indexOf('=');
+//            if (p < 0 || !d.substring(0, p).matches("[a-z0-9]+")) {
+//                throw new Exception("Wrong dictionary name format: " + d);
+//            }
+//            dict.name = d.substring(0, p);
+//            dict.desc = d.substring(p + 1);
+//            grammarInitial.dictionaries.add(dict);
+//        }
         grammarInitial.stat = new ArrayList<>();
         GrammarInitial.Stat grStatTotal = new GrammarInitial.Stat();
         grammarInitial.stat.add(grStatTotal);
